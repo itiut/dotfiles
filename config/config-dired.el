@@ -5,8 +5,7 @@
 
 (define-key dired-mode-map (kbd "<return>") 'dired-find-alternate-file) ; 同じバッファで開く
 (define-key dired-mode-map (kbd "C-<return>") 'dired-find-file) ; 新しいバッファで開く
-(define-key dired-mode-map (kbd "C-t")
-  (lookup-key (current-global-map) (kbd "C-t")))
+(define-key dired-mode-map (kbd "C-t") (lookup-key global-map (kbd "C-t")))
 
 
 ;;; wdired

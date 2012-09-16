@@ -4,7 +4,7 @@
 
 (add-hook 'js2-mode-hook
           '(lambda ()
-             (local-set-key (kbd "C-a") (lookup-key (current-global-map) (kbd "C-a")))
+             (local-set-key (kbd "C-a") (lookup-key global-map (kbd "C-a")))
              (local-set-key (kbd "C-c C-j") 'run-js)
              (local-set-key (kbd "C-c C-e") 'js-send-last-sexp)
              (local-set-key (kbd "C-c e")   'js-send-last-sexp-and-go)

@@ -209,7 +209,8 @@
     redo+
     smart-compile
     tabbar
-    yalinum))
+    yalinum
+    zencoding-mode))
 
 (el-get 'sync my-el-get-sources)
 
@@ -240,6 +241,7 @@
 
 ;; site-lisp
 (load "config/config-color-theme")
+(load "config/config-yasnippet-bundle")
 
 ;; face
 (load "config/config-face")
@@ -259,35 +261,19 @@
   (list 'c-mode-hook
         'c++-mode-hook
         'emacs-lisp-mode-hook
+        'html-mode-hook
         'js2-mode-hook))
 
 (dolist (hook my-coding-mode-hook-list)
   (add-hook hook 'my-coding-mode-hook))
 
 
-;;; lisp-mode, emacs-lisp-mode
-;; (defun my-lisp-elisp-mode-hook ()
-;;   (when (executable-find "sbcl")
-;;     (setq inferior-lisp-program "sbcl")
-
-;; ;; slime
-;; ;; $ sudo apt-get install slime
-;;   (when (require 'slime nil t)
-;;     (slime-setup)
-;;     (local-set-key (kbd "C-c C-q") 'slime-close-all-parens-in-sexp))))
-
-;; (add-hook 'lisp-mode-hook 'my-lisp-elisp-mode-hook)
-;; (add-hook 'emacs-lisp-mode-hook 'my-lisp-elisp-mode-hook)
-
 
 ;;; tuareg-mode-custom
 ;;; (auto-install-from-url "https://bitbucket.org/camlspotter/tuareg-mode-custom/raw/60b617a66e4d/tuareg.el")
 ;;; (auto-install-from-url "https://bitbucket.org/camlspotter/tuareg-mode-custom/raw/60b617a66e4d/camldebug.el")
 ;; (when (require 'tuareg nil t)
-;;   (add-hook 'tuareg-mode-hook
-;;             '(lambda ()
-;;                (setq tuareg-case-arrow-extra-indent 1)))
-
+;;   (setq tuareg-case-arrow-extra-indent 1)
 ;;   (setq auto-mode-alist
 ;;         (append '(("\\.ml[ily]?$" . tuareg-mode)
 ;;                   ("\\.topml$" . tuareg-mode))

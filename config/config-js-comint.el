@@ -1,7 +1,7 @@
 ;;; js-comint
 (require 'js-comint)
-(when (executable-find "node")
-  (setq inferior-js-program-command "node"))
+
+(setq inferior-js-program-command "node")
 
 (add-hook 'inferior-js-mode-hook
           '(lambda ()
