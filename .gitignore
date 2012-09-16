@@ -1,0 +1,6 @@
+*.elc
+
+el-get/
+.cache/
+
+!.gitignore
