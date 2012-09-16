@@ -204,6 +204,7 @@
     helm
     js-comint
     js2-mode
+    key-chord
     moccur-edit
     point-undo
     redo+
@@ -232,6 +233,7 @@
     flymake
     recentf
     uniquify
+    view-mode
     whitespace
 
     ;; major-mode
