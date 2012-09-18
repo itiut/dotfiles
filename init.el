@@ -229,7 +229,8 @@
 
 ;; builtin
 (defvar my-builtin-sources
-  '(dired
+  '(compilation-mode
+    dired
     flymake
     recentf
     uniquify
@@ -264,6 +265,7 @@
         'c++-mode-hook
         'emacs-lisp-mode-hook
         'html-mode-hook
+        'jade-mode-hook
         'js2-mode-hook))
 
 (dolist (hook my-coding-mode-hook-list)
