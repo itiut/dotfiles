@@ -202,6 +202,7 @@
     color-moccur
     goto-chg
     helm
+    jade-mode
     js-comint
     js2-mode
     key-chord
@@ -266,7 +267,8 @@
         'emacs-lisp-mode-hook
         'html-mode-hook
         'jade-mode-hook
-        'js2-mode-hook))
+        'js2-mode-hook
+        'stylus-mode-hook))
 
 (dolist (hook my-coding-mode-hook-list)
   (add-hook hook 'my-coding-mode-hook))
