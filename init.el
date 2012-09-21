@@ -124,7 +124,7 @@
 (global-set-key (kbd "C-x ?") 'help-for-help)                     ; ヘルプ表示
 (global-set-key (kbd "C-x K") 'kill-buffer-and-window)            ; windowごとbufferをkill
 (global-set-key (kbd "M-g")   'goto-line)                         ; 指定行へ移動
-(global-set-key (kbd "C-S-o") 'open-line-above)                   ; 1行上に改行を挿入
+(global-set-key (kbd "C-S-o") 'open-line-above)                   ; vimの'O'
 
 ;; Shift+カーソルでウインドウの移動
 (setq windmove-wrap-around t)
@@ -170,8 +170,9 @@
   (other-window 1))
 
 (defun open-line-above ()
-  "行頭に移動して改行し、改行位置へ移動し、インデントする。"
+  "vimの'O'."
   (interactive)
+  (indent-according-to-mode)
   (move-beginning-of-line 1)
   (newline)
   (let ((current-prefix-arg 1))
