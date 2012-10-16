@@ -207,6 +207,7 @@
     js-comint
     js2-mode
     key-chord
+    markdown-mode
     moccur-edit
     point-undo
     redo+
@@ -269,6 +270,7 @@
         'html-mode-hook
         'jade-mode-hook
         'js2-mode-hook
+        'markdown-mode-hook
         'stylus-mode-hook))
 
 (dolist (hook my-coding-mode-hook-list)
