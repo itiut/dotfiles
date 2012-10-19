@@ -255,7 +255,7 @@
 
 ;;; my-cofing-mode
 (defun my-coding-mode-hook ()
-  ;; whiltespace
+  ;; whitespace
   (whitespace-mode 1)
   ;; yalinum
   (yalinum-mode 1)
