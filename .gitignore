@@ -1,6 +1,7 @@
 *.elc
 
 el-get/
-.cache/
+.cache/*
 
 !.gitignore
+!.gitkeep
