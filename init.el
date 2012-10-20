@@ -125,6 +125,7 @@
 (global-set-key (kbd "C-x K") 'kill-buffer-and-window)            ; windowごとbufferをkill
 (global-set-key (kbd "M-g")   'goto-line)                         ; 指定行へ移動
 (global-set-key (kbd "C-S-o") 'open-line-above)                   ; vimの'O'
+(global-set-key (kbd "<f5>")  'revert-buffer)                     ; ファイルを読み込み直す
 
 ;; Shift+カーソルでウインドウの移動
 (setq windmove-wrap-around t)
