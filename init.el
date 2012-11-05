@@ -167,7 +167,9 @@
   "ウィンドウが1つなら作成し, 他のウインドウへ移動する。"
   (interactive)
   (when (one-window-p)
-    (split-window-horizontally))
+    (if (< (frame-pixel-width) (frame-pixel-height))
+        (split-window-vertically)
+      (split-window-horizontally)))
   (other-window 1))
 
 (defun open-line-above ()
