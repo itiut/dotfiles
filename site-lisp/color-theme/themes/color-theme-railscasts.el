@@ -76,7 +76,7 @@
      (font-lock-preprocessor-face ((t (:foreground "#CC7833"))))
      (font-lock-reference-face ((t (:foreground "LightSteelBlue"))))
      (font-lock-string-face ((t (:foreground "#A5C261"))))
-     (font-lock-type-face ((t (:foreground "white"))))
+     (font-lock-type-face ((t (:foreground "#cc99cc"))))
      (font-lock-variable-name-face ((t (:foreground "LightSteelBlue"))))
      (font-lock-warning-face ((t (:foreground "Pink"))))
      (paren-face-match-light ((t (:foreground "#FFC66D" :background "#555577"))))
