@@ -216,6 +216,7 @@
     redo+
     smart-compile
     tabbar
+    tuareg-mode
     yalinum
     zencoding-mode))
 
@@ -274,19 +275,8 @@
         'jade-mode-hook
         'js2-mode-hook
         'markdown-mode-hook
-        'stylus-mode-hook))
+        'stylus-mode-hook
+        'tuareg-mode-hook))
 
 (dolist (hook my-coding-mode-hook-list)
   (add-hook hook 'my-coding-mode-hook))
-
-
-
-;;; tuareg-mode-custom
-;;; (auto-install-from-url "https://bitbucket.org/camlspotter/tuareg-mode-custom/raw/60b617a66e4d/tuareg.el")
-;;; (auto-install-from-url "https://bitbucket.org/camlspotter/tuareg-mode-custom/raw/60b617a66e4d/camldebug.el")
-;; (when (require 'tuareg nil t)
-;;   (setq tuareg-case-arrow-extra-indent 1)
-;;   (setq auto-mode-alist
-;;         (append '(("\\.ml[ily]?$" . tuareg-mode)
-;;                   ("\\.topml$" . tuareg-mode))
-;;                 auto-mode-alist)))
