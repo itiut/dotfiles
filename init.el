@@ -246,6 +246,7 @@
 
     ;; major-mode
     c-c++-mode
+    emacs-lisp-mode
     ))
 (my-load-configs my-builtin-sources)
 
