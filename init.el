@@ -33,6 +33,9 @@
 ;; クリップボードとyankバッファを同期
 (setq x-select-enable-clipboard t)
 
+;; タブを半角スペース4つ分で表示
+(setq default-tab-width 4)
+
 ;; 半角スペースでインデント
 (setq-default indent-tabs-mode nil)
 
@@ -259,7 +262,7 @@
 
 
 ;;; my-cofing-mode
-(defun my-coding-mode-hook ()
+(defun my-coding-mode-setup ()
   ;; whitespace
   (whitespace-mode 1)
   ;; yalinum
@@ -280,4 +283,4 @@
         'tuareg-mode-hook))
 
 (dolist (hook my-coding-mode-hook-list)
-  (add-hook hook 'my-coding-mode-hook))
+  (add-hook hook 'my-coding-mode-setup))
