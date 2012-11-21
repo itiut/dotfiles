@@ -34,7 +34,7 @@
 (setq x-select-enable-clipboard t)
 
 ;; タブを半角スペース4つ分で表示
-(setq default-tab-width 4)
+(setq-default tab-width 4)
 
 ;; 半角スペースでインデント
 (setq-default indent-tabs-mode nil)
