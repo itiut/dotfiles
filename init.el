@@ -250,6 +250,7 @@
     ;; major-mode
     c-c++-mode
     emacs-lisp-mode
+    verilog-mode
     ))
 (my-load-configs my-builtin-sources)
 
@@ -280,7 +281,8 @@
         'js2-mode-hook
         'markdown-mode-hook
         'stylus-mode-hook
-        'tuareg-mode-hook))
+        'tuareg-mode-hook
+        'verilog-mode-hook))
 
 (dolist (hook my-coding-mode-hook-list)
   (add-hook hook 'my-coding-mode-setup))
