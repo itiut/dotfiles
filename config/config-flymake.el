@@ -25,5 +25,19 @@
   (flymake-simple-make-or-generic-init
    "g++" '("-Wall" "-Wextra" "-pedantic" "-Wno-long-long" "-fsyntax-only")))
 
+;; Verilog HDL
+(defun flymake-verilog-init ()
+  (let* ((temp (flymake-init-create-temp-buffer-copy 'flymake-create-temp-inplace))
+         (local (file-relative-name temp (file-name-directory buffer-file-name))))
+    (list "iverilog" (list "-tnull" local))))
+
+(setq flymake-err-line-patterns
+      (append
+       '(("\\(.*?\\):\\([0-9]+\\): \\(.*\\)$" 1 2 nil 3)
+         ("\\(^No top level modules\\)$" nil nil nil 0)
+         ("\\(Unknown module type\\)" nil nil nil 0))
+       flymake-err-line-patterns))
+
 (push '("\\.c\\'" flymake-c-init) flymake-allowed-file-name-masks)
 (push '("\\.cpp\\'" flymake-cc-init) flymake-allowed-file-name-masks)
+(push '("\\.v\\'" flymake-verilog-init) flymake-allowed-file-name-masks)

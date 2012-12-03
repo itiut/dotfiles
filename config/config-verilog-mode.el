@@ -12,6 +12,8 @@
         verilog-auto-endcomments         t
         verilog-minimum-comment-distance 40
         verilog-indent-begin-after-if    t
-        verilog-auto-lineup              '(all)))
+        verilog-auto-lineup              '(all))
+
+  (flymake-mode 1))
 
 (add-hook 'verilog-mode-hook 'my-verilog-mode-setup)
