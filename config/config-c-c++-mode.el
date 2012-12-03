@@ -4,14 +4,7 @@
   (c-set-offset 'innamespace 0)
   (c-set-offset 'arglist-close 0)
 
-  ;; flymake
-  (flymake-mode 1)
-
-  ;; @name      yasnppet
-  ;; @brief     スニペット機能
-  ;; @install   http://code.google.com/p/yasnippet/downloads/list からダウンロード
-  ;; (require 'yasnippet-bundle))
-  )
+  (flymake-mode 1))
 
 (add-hook 'c-mode-hook 'my-c-c++-mode-setup)
 (add-hook 'c++-mode-hook 'my-c-c++-mode-setup)
