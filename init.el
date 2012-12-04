@@ -7,7 +7,7 @@
 
 ;; 言語設定
 (set-language-environment 'Japanese)
-(prefer-coding-system 'utf-8)
+(prefer-coding-system 'utf-8-unix)
 
 ;; バックアップファイルを作成しない
 (setq backup-inhibited t)
