@@ -207,6 +207,7 @@
     auto-complete-clang
     c-eldoc
     color-moccur
+    gnuplot-mode
     goto-chg
     helm
     jade-mode
@@ -276,6 +277,7 @@
   (list 'c-mode-hook
         'c++-mode-hook
         'emacs-lisp-mode-hook
+        'gnuplot-mode-hook
         'html-mode-hook
         'jade-mode-hook
         'js2-mode-hook
