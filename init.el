@@ -243,6 +243,7 @@
   '(compilation-mode
     dired
     flymake
+    imenu
     recentf
     uniquify
     view-mode
