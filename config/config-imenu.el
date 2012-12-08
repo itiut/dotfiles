@@ -3,4 +3,4 @@
 (setq imenu-auto-rescan t)
 (setq imenu-after-jump-hook
       '(lambda ()
-         (recenter 11)))
+         (recenter 10)))
