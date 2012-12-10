@@ -31,13 +31,6 @@
          (local (file-relative-name temp (file-name-directory buffer-file-name))))
     (list "iverilog" (list "-tnull" local))))
 
-(setq flymake-err-line-patterns
-      (append
-       '(("\\(.*?\\):\\([0-9]+\\): \\(.*\\)$" 1 2 nil 3)
-         ("\\(^No top level modules\\)$" nil nil nil 0)
-         ("\\(Unknown module type\\)" nil nil nil 0))
-       flymake-err-line-patterns))
-
 (push '("\\.c\\'" flymake-c-init) flymake-allowed-file-name-masks)
 (push '("\\.cpp\\'" flymake-cc-init) flymake-allowed-file-name-masks)
 (push '("\\.v\\'" flymake-verilog-init) flymake-allowed-file-name-masks)
