@@ -217,6 +217,7 @@
     markdown-mode
     moccur-edit
     point-undo
+    railscasts-theme
     redo+
     smart-compile
     tabbar
@@ -257,7 +258,6 @@
 (my-load-configs my-builtin-sources)
 
 ;; site-lisp
-(load "config/config-color-theme")
 (load "config/config-yasnippet-bundle")
 
 ;; face
