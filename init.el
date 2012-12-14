@@ -223,6 +223,7 @@
     tabbar
     tuareg-mode
     yalinum
+    yasnippet
     zencoding-mode))
 
 (el-get 'sync my-el-get-sources)
@@ -256,9 +257,6 @@
     verilog-mode
     ))
 (my-load-configs my-builtin-sources)
-
-;; site-lisp
-(load "config/config-yasnippet-bundle")
 
 ;; face
 (load "config/config-face")
