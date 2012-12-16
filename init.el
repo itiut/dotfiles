@@ -210,6 +210,7 @@
     gnuplot-mode
     goto-chg
     helm
+    helm-c-yasnippet
     jade-mode
     js-comint
     js2-mode

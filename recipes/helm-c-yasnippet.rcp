@@ -1,0 +1,7 @@
+(:name helm-c-yasnippet
+       :description "helm source for yasnippet.el"
+       :website "https://github.com/emacs-helm/helm-c-yasnippet"
+       :type github
+       :pkgname "emacs-helm/helm-c-yasnippet"
+       :features "helm-c-yasnippet"
+       :depends (helm yasnippet))
