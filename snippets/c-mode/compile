@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: -*- compile-command: ... -*-
+# key: compile
+# --
+/* -*- compile-command: "gcc -Wall -Wextra -O2 -std=gnu99 `(file-relative-name buffer-file-name)`$1" -*- */$0

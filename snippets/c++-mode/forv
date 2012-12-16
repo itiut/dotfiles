@@ -1,0 +1,6 @@
+# name: for (vector<T>::iterator ...; ...; ...) { ... }
+# key: forv
+# --
+for (vector<${1:T}>::iterator ${3:it} = ${2:v}.begin(); $3 != $2.end(); $3++) {
+    $0
+}
