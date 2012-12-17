@@ -211,6 +211,7 @@
     goto-chg
     helm
     helm-c-yasnippet
+    helm-gtags
     jade-mode
     js-comint
     js2-mode
