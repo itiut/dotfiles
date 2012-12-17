@@ -1,7 +1,9 @@
 ;;; flymake
 (require 'flymake)
-(global-set-key "\M-p" 'flymake-goto-prev-error)
-(global-set-key "\M-n" 'flymake-goto-next-error)
+(add-hook 'flymake-mode-hook
+          '(lambda ()
+             (local-set-key (kbd "M-p") 'flymake-goto-prev-error)
+             (local-set-key (kbd "M-n") 'flymake-goto-next-error)))
 
 (defun flymake-simple-generic-init (cmd &optional opts)
   (let* ((temp-file  (flymake-init-create-temp-buffer-copy
@@ -34,3 +36,10 @@
 (push '("\\.c\\'" flymake-c-init) flymake-allowed-file-name-masks)
 (push '("\\.cpp\\'" flymake-cc-init) flymake-allowed-file-name-masks)
 (push '("\\.v\\'" flymake-verilog-init) flymake-allowed-file-name-masks)
+
+(defun my-flymake-mode-setup ()
+  (flymake-mode 1))
+
+(add-hook 'c-mode-hook 'my-flymake-mode-setup)
+(add-hook 'c++-mode-hook 'my-flymake-mode-setup)
+(add-hook 'verilog-mode-hook 'my-flymake-mode-setup)
