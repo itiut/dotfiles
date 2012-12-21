@@ -9,6 +9,9 @@
 (set-language-environment 'Japanese)
 (prefer-coding-system 'utf-8-unix)
 
+;; 終了時に確認
+(setq confirm-kill-emacs 'y-or-n-p)
+
 ;; バックアップファイルを作成しない
 (setq backup-inhibited t)
 
