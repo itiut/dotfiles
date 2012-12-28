@@ -227,6 +227,7 @@
 
 (defvar my-el-get-sources
   '(el-get
+    arduino-mode
     auto-async-byte-compile
     auto-complete
     auto-complete-clang
@@ -300,7 +301,8 @@
   )
 
 (defvar my-coding-mode-hook-list
-  (list 'c-mode-hook
+  (list 'arduino-mode-hook
+        'c-mode-hook
         'c++-mode-hook
         'emacs-lisp-mode-hook
         'gnuplot-mode-hook
