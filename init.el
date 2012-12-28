@@ -9,6 +9,9 @@
 (set-language-environment 'Japanese)
 (prefer-coding-system 'utf-8-unix)
 
+;; 終了時に確認
+(setq confirm-kill-emacs 'y-or-n-p)
+
 ;; バックアップファイルを作成しない
 (setq backup-inhibited t)
 
@@ -113,26 +116,29 @@
 
 
 ;;;; 操作
-;; 無効にするキーバインド
-(global-unset-key (kbd "C-z"))  ; 最小化
-(global-unset-key (kbd "C-\\")) ; 日本語入力
-
 ;; C-hをBackspaceに
 (keyboard-translate ?\C-h ?\C-?)
-
-;; 有効にするキーバインド
-(global-set-key (kbd "C-a")   'beginning-of-visual-indented-line) ; 行頭のインデントを行き来する
-(global-set-key (kbd "C-t")   'other-window-or-split)             ; 他のウィンドウへ移動
-(global-set-key (kbd "C-c l") 'toggle-truncate-lines)             ; 折り返しのトグル
-(global-set-key (kbd "C-x ?") 'help-for-help)                     ; ヘルプ表示
-(global-set-key (kbd "C-x K") 'kill-buffer-and-window)            ; windowごとbufferをkill
-(global-set-key (kbd "M-g")   'goto-line)                         ; 指定行へ移動
-(global-set-key (kbd "C-S-o") 'open-line-above)                   ; vimの'O'
-(global-set-key (kbd "<f5>")  'revert-buffer)                     ; ファイルを読み込み直す
 
 ;; Shift+カーソルでウインドウの移動
 (setq windmove-wrap-around t)
 (windmove-default-keybindings)
+
+;; 無効にするキーバインド
+(global-unset-key (kbd "C-z"))          ; 最小化
+(global-unset-key (kbd "C-\\"))         ; 日本語入力
+
+;; 有効にするキーバインド
+(global-set-key (kbd "C-a")   'beginning-of-visual-indented-line)
+(global-set-key (kbd "C-t")   'other-window-or-split)
+(global-set-key (kbd "C-c l") 'toggle-truncate-lines)
+(global-set-key (kbd "C-x ?") 'help-for-help)
+(global-set-key (kbd "C-x K") 'kill-buffer-and-window)
+(global-set-key (kbd "M-g")   'goto-line)
+(global-set-key (kbd "C-S-o") 'open-line-above)
+(global-set-key (kbd "<f5>")  'revert-buffer)
+(global-set-key (kbd "C-w")   'kill-region-or-backward-kill-word)
+(global-set-key (kbd "M-d")   'kill-word-or-delete-horizontal-space)
+
 
 (defun beginning-of-indented-line (current-point)
   "インデント文字を飛ばした行頭に戻る。ただし、ポイントから行頭までの間にインデント文字しかない場合は、行頭に戻る。"
@@ -184,6 +190,25 @@
   (let ((current-prefix-arg 1))
     (call-interactively 'previous-line))
   (indent-according-to-mode))
+
+(defun kill-region-or-backward-kill-word ()
+  "リージョンが活性化していればリージョン削除. 非活性であれば, 直前の単語を削除"
+  (interactive)
+  (if (region-active-p)
+      (kill-region (point) (mark))
+    (backward-kill-word 1)))
+
+(defun kill-word-or-delete-horizontal-space (arg)
+  "カーソール位置前後が空白であれば空白削除. 空白でなければ単語削除."
+  (interactive "p")
+  (let ((pos (point)))
+    (if (and (not (eobp))
+             (= (char-syntax (char-after pos)) 32)
+             (= (char-syntax (char-after (1+ pos))) 32))
+        (prog1 (delete-horizontal-space)
+          (unless (memq (char-after pos) '(?( ?) ?{ ?} ?[ ?]))
+            (insert " ")))
+      (kill-word arg))))
 
 
 
