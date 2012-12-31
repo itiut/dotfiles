@@ -95,18 +95,11 @@
 ;; 起動画面を表示しない
 (setq inhibit-splash-screen t)
 
-;; X Window Systemで起動時に最大化
-(defun set-x-full-screen ()
-  (interactive)
-  (x-send-client-message nil 0 nil "_NET_WM_STATE" 32
-                         '(2 "_NET_WM_STATE_MAXIMIZED_VERT" 0))
-  (x-send-client-message nil 0 nil "_NET_WM_STATE" 32
-                         '(2 "_NET_WM_STATE_MAXIMIZED_HORZ" 0)))
-(cond
- ((eq window-system 'x)
+;; 起動時に最大化
+(when window-system
   (add-hook 'after-init-hook
             '(lambda ()
-               (run-with-idle-timer 0.1 nil 'set-x-full-screen)))))
+               (run-with-idle-timer 0.1 nil '(lambda () (set-frame-parameter nil 'fullscreen 'maximized))))))
 
 ;; 1行ずつスクロール
 (setq scroll-conservatively 35
@@ -141,7 +134,7 @@
 (global-set-key (kbd "<f5>")  'revert-buffer)
 (global-set-key (kbd "C-w")   'kill-region-or-backward-kill-word)
 (global-set-key (kbd "M-d")   'kill-word-or-delete-horizontal-space)
-
+(global-set-key (kbd "<f11>") 'toggle-fullscreen-maximized)
 
 (defun beginning-of-indented-line (current-point)
   "インデント文字を飛ばした行頭に戻る。ただし、ポイントから行頭までの間にインデント文字しかない場合は、行頭に戻る。"
@@ -212,6 +205,12 @@
           (unless (memq (char-after pos) '(?( ?) ?{ ?} ?[ ?]))
             (insert " ")))
       (kill-word arg))))
+
+(defun toggle-fullscreen-maximized ()
+  "フルスクリーンと最大化をトグル."
+  (interactive)
+  (set-frame-parameter nil 'fullscreen
+                       (if (eq 'fullboth (frame-parameter nil 'fullscreen)) 'maximized 'fullboth)))
 
 
 
