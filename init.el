@@ -2,8 +2,7 @@
 (add-to-list 'load-path "~/.emacs.d/")
 
 ;; 外部ブラウザをgoogle-crhomeに
-(setq browse-url-browser-function 'browse-url-generic
-      browse-url-generic-program "google-chrome")
+(setq browse-url-browser-function 'browse-url-generic browse-url-generic-program "google-chrome")
 
 ;; 言語設定
 (set-language-environment 'Japanese)
