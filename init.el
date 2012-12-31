@@ -26,6 +26,9 @@
 ;; vc-modeをオフ
 (setq vc-handled-backends ())
 
+;; 更新時に自動でrevert-buffer
+(global-auto-revert-mode 1)
+
 ;; "yes or no"を"y or n"に
 (fset 'yes-or-no-p 'y-or-n-p)
 
