@@ -215,14 +215,14 @@
 
 ;;;; el-get
 (add-to-list 'load-path (expand-file-name "el-get/el-get/" user-emacs-directory))
-(unless (require 'el-get nil t)
-  (url-retrieve
-   "https://raw.github.com/dimitri/el-get/master/el-get-install.el"
-   (lambda (s)
-     (let (el-get-master-branch)
-       (goto-char (point-max))
-       (eval-print-last-sexp))))
-  (el-get-emacswiki-refresh el-get-recipe-path-emacswiki t))
+
+(unless (require 'el-get nil 'noerror)
+  (with-current-buffer
+      (url-retrieve-synchronously
+       "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
+    (let (el-get-master-branch el-get-install-skip-emacswiki-recipes)
+      (goto-char (point-max))
+      (eval-print-last-sexp))))
 
 (add-to-list 'el-get-recipe-path (expand-file-name "recipes/" user-emacs-directory))
 
