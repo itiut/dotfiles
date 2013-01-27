@@ -244,6 +244,7 @@
     js-comint
     js2-mode
     key-chord
+    mark-multiple
     markdown-mode
     moccur-edit
     point-undo
