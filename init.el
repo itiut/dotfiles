@@ -239,6 +239,7 @@
     helm
     helm-c-yasnippet
     helm-gtags
+    highlight-symbol
     jade-mode
     js-comint
     js2-mode
