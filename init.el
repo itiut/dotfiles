@@ -135,17 +135,6 @@
 (global-set-key (kbd "M-d")   'kill-word-or-delete-horizontal-space)
 (global-set-key (kbd "<f11>") 'toggle-fullscreen-maximized)
 
-(defun beginning-of-indented-line (current-point)
-  "インデント文字を飛ばした行頭に戻る。ただし、ポイントから行頭までの間にインデント文字しかない場合は、行頭に戻る。"
-  (interactive "d")
-  (if (string-match
-       "^[ \t]+$"
-       (save-excursion
-         (buffer-substring-no-properties
-          (progn (beginning-of-line) (point))
-          current-point)))
-      (beginning-of-line)
-    (back-to-indentation)))
 
 (defun beginning-of-visual-indented-line (current-point)
   "インデント文字を飛ばした行頭に戻る。ただし、ポイントから行頭までの間にインデント文字しかない場合は、行頭に戻る。"
