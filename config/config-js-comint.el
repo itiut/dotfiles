@@ -1,7 +1,7 @@
 ;;; js-comint
 (require 'js-comint)
 
-(setq inferior-js-program-command "node")
+(setq inferior-js-program-command "~/.nodebrew/current/bin/node")
 
 (add-hook 'inferior-js-mode-hook
           '(lambda ()
