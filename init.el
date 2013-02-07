@@ -222,29 +222,30 @@
     auto-complete
     auto-complete-clang
     c-eldoc
-    color-moccur
-    gnuplot-mode
+;    color-moccur
+;    gnuplot-mode
     goto-chg
     helm
     helm-c-yasnippet
-    helm-gtags
+;    helm-gtags
     highlight-symbol
     jade-mode
     js-comint
     js2-mode
     key-chord
     mark-multiple
-    markdown-mode
-    moccur-edit
+;    markdown-mode
+;    moccur-edit
     point-undo
     railscasts-theme
     redo+
     smart-compile
     tabbar
-    tuareg-mode
+;    tuareg-mode
     yalinum
     yasnippet
-    zencoding-mode))
+;    zencoding-mode
+    ))
 
 (el-get 'sync my-el-get-sources)
 
