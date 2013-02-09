@@ -1,15 +1,23 @@
 ;; load-pathの設定
 (add-to-list 'load-path "~/.emacs.d/")
 
-;; 外部ブラウザをgoogle-crhomeに
-(setq browse-url-browser-function 'browse-url-generic browse-url-generic-program "google-chrome")
-
 ;; 言語設定
 (set-language-environment 'Japanese)
 (prefer-coding-system 'utf-8-unix)
 
+;; 起動時に必要ならinit.elをバイトコンパイル
+(add-hook 'after-init-hook
+          '(lambda ()
+             (let* ((el (expand-file-name "init.el" user-emacs-directory))
+                    (elc (concat el "c")))
+               (when (file-newer-than-file-p el elc)
+                 (byte-compile-file el)))))
+
 ;; 終了時に確認
 (setq confirm-kill-emacs 'y-or-n-p)
+
+;; 外部ブラウザをgoogle-crhomeに
+(setq browse-url-browser-function 'browse-url-generic browse-url-generic-program "google-chrome")
 
 ;; バックアップファイルを作成しない
 (setq backup-inhibited t)
@@ -263,7 +271,16 @@
 (defun my-load-configs (sources)
   "Load config files of sources."
   (dolist (src sources)
-    (load (concat my-config-file-prefix (symbol-name src)) t)))
+    (my-compile-and-load (concat my-config-file-prefix (symbol-name src)))))
+
+(defun my-compile-and-load (path)
+  "Byte-compile if necessary, and load."
+  (let* ((file (expand-file-name path user-emacs-directory))
+         (el (concat file ".el"))
+         (elc (concat file ".elc")))
+    (when (file-newer-than-file-p el elc)
+      (byte-compile-file el))
+    (load file 'noerror)))
 
 ;; el-get
 (my-load-configs my-el-get-sources)
@@ -287,10 +304,10 @@
 (my-load-configs my-builtin-sources)
 
 ;; face
-(load "config/config-face")
+(my-compile-and-load "config/config-face")
 
 
-;;; my-cofing-mode
+;;; my-coding-mode
 (defun my-coding-mode-setup ()
   ;; whitespace
   (whitespace-mode 1)
