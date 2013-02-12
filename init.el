@@ -1,5 +1,12 @@
-;; load-pathの設定
-(add-to-list 'load-path "~/.emacs.d/")
+;; pathの設定
+(setq user-emacs-directory (expand-file-name "~/.emacs.d/"))
+(add-to-list 'load-path user-emacs-directory)
+
+;; ディレクトリの設定
+(defvar my-cache-dir (concat user-emacs-directory ".cache/"))
+(defvar my-config-dir (concat user-emacs-directory "config/"))
+(defvar my-config-file-prefix "config-")
+(defvar my-etc-dir (concat user-emacs-directory "etc/"))
 
 ;; 言語設定
 (set-language-environment 'Japanese)
@@ -25,7 +32,7 @@
 ;; オートセーブファイルを作成しない
 (auto-save-mode -1)
 (setq delete-auto-save-files t)         ; 終了時に削除
-(setq auto-save-list-file-prefix (expand-file-name ".cache/.saves-" user-emacs-directory))
+(setq auto-save-list-file-prefix (expand-file-name ".saves-" my-cache-dir))
 
 ;; abbrevsを ".abbrev_defs" に保存しない
 (setq save-abbrevs nil)
@@ -228,7 +235,7 @@
       (goto-char (point-max))
       (eval-print-last-sexp))))
 
-(add-to-list 'el-get-recipe-path (expand-file-name "recipes/" user-emacs-directory))
+(add-to-list 'el-get-recipe-path (expand-file-name "recipes/" my-etc-dir))
 
 (defvar my-el-get-sources
   '(el-get
@@ -267,20 +274,22 @@
 
 
 ;;;; config
-(defvar my-config-file-prefix "config/config-")
 (defun my-load-configs (sources)
   "Load config files of sources."
   (dolist (src sources)
-    (my-compile-and-load (concat my-config-file-prefix (symbol-name src)))))
+    (my-load-config (symbol-name src))))
+
+(defun my-load-config (name)
+  "Load config file."
+  (my-compile-and-load (expand-file-name (concat my-config-file-prefix name) my-config-dir)))
 
 (defun my-compile-and-load (path)
   "Byte-compile if necessary, and load."
-  (let* ((file (expand-file-name path user-emacs-directory))
-         (el (concat file ".el"))
-         (elc (concat file ".elc")))
+  (let* ((el (concat path ".el"))
+         (elc (concat path ".elc")))
     (when (file-newer-than-file-p el elc)
       (byte-compile-file el))
-    (load file 'noerror)))
+    (load path 'noerror)))
 
 ;; el-get
 (my-load-configs my-el-get-sources)
@@ -304,7 +313,7 @@
 (my-load-configs my-builtin-sources)
 
 ;; face
-(my-compile-and-load "config/config-face")
+(my-load-config "face")
 
 
 ;;; my-coding-mode
