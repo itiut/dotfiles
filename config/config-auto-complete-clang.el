@@ -4,7 +4,7 @@
 (defun my-ac-clang-setup ()
   ;; プリコンパイルヘッダの設定
   ;; これだとC++/Cの両方では動かせなさそう
-  ;; (setq ac-clang-prefix-header (expand-file-name "etc/ac-clang/stdafx.pch" user-emacs-directory))
+  ;; (setq ac-clang-prefix-header (expand-file-name "ac-clang/stdafx.pch" my-etc-dir))
 
   (setq ac-clang-flags '("-w" "-ferror-limit" "1"))
   (setq ac-clang-flags (append
