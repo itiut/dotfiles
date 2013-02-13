@@ -2,4 +2,4 @@
 # name: console.log(data, ...)
 # key: clog
 # --
-console.log(${1:data});
+console.log(${1:data})
