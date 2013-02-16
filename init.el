@@ -1,7 +1,7 @@
 ;; pathの設定
 (setq user-emacs-directory (expand-file-name "~/.emacs.d/"))
 (add-to-list 'load-path user-emacs-directory)
-nn
+
 ;; ディレクトリの設定
 (defvar my-cache-dir (concat user-emacs-directory ".cache/"))
 (defvar my-config-dir (concat user-emacs-directory "config/"))
@@ -301,6 +301,7 @@ nn
     flymake
     imenu
     recentf
+    server
     uniquify
     view-mode
     whitespace
