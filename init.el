@@ -138,18 +138,19 @@
 (global-unset-key (kbd "C-\\"))         ; 日本語入力
 
 ;; 有効にするキーバインド
-(global-set-key (kbd "C-j")   'indent-and-newline-and-indent)
-(global-set-key (kbd "C-a")   'beginning-of-visual-indented-line)
-(global-set-key (kbd "C-t")   'other-window-or-split)
+(global-set-key (kbd "C-j") 'indent-and-newline-and-indent)
+(global-set-key (kbd "C-a") 'beginning-of-visual-indented-line)
+(global-set-key (kbd "C-t") 'other-window-or-split)
 (global-set-key (kbd "C-c l") 'toggle-truncate-lines)
 (global-set-key (kbd "C-x ?") 'help-for-help)
 (global-set-key (kbd "C-x K") 'kill-buffer-and-window)
-(global-set-key (kbd "M-g")   'goto-line)
+(global-set-key (kbd "M-g") 'goto-line)
 (global-set-key (kbd "C-S-o") 'open-line-above)
-(global-set-key (kbd "<f5>")  'revert-buffer)
-(global-set-key (kbd "C-w")   'kill-region-or-backward-kill-word)
-(global-set-key (kbd "M-d")   'kill-word-or-delete-horizontal-space)
+(global-set-key (kbd "<f5>") 'revert-buffer)
+(global-set-key (kbd "C-w") 'kill-region-or-backward-kill-word)
+(global-set-key (kbd "M-d") 'kill-word-or-delete-horizontal-space)
 (global-set-key (kbd "<f11>") 'toggle-fullscreen-maximized)
+(global-set-key (kbd "C-x C-t") 'open-current-directory-in-tmux-new-window)
 
 
 (defun indent-and-newline-and-indent ()
@@ -159,7 +160,7 @@
   (newline-and-indent))
 
 (defun beginning-of-visual-indented-line (current-point)
-  "インデント文字を飛ばした行頭に戻る。ただし、ポイントから行頭までの間にインデント文字しかない場合は、行頭に戻る。"
+  "インデント文字を飛ばした行頭に戻る. ただし, ポイントから行頭までの間にインデント文字しかない場合は, 行頭に戻る."
   (interactive "d")
   (let ((vhead-pos (save-excursion (progn (beginning-of-visual-line) (point))))
         (head-pos (save-excursion (progn (beginning-of-line) (point)))))
@@ -179,7 +180,7 @@
      (t (beginning-of-visual-line)))))
 
 (defun other-window-or-split ()
-  "ウィンドウが1つなら作成し, 他のウインドウへ移動する。"
+  "ウィンドウが1つなら作成し, 他のウインドウへ移動."
   (interactive)
   (when (one-window-p)
     (if (< (frame-pixel-width) (frame-pixel-height))
@@ -198,7 +199,7 @@
   (indent-according-to-mode))
 
 (defun kill-region-or-backward-kill-word ()
-  "リージョンが活性化していればリージョン削除. 非活性であれば, 直前の単語を削除"
+  "リージョンが活性化していればリージョン削除. 非活性であれば, 直前の単語を削除."
   (interactive)
   (if (region-active-p)
       (kill-region (point) (mark))
@@ -221,6 +222,18 @@
   (interactive)
   (set-frame-parameter nil 'fullscreen
                        (if (eq 'fullboth (frame-parameter nil 'fullscreen)) 'maximized 'fullboth)))
+
+(defun open-current-directory-in-tmux-new-window ()
+  "カレントディレクトリをtmuxの新しいwindowで開く."
+  (interactive)
+  (let* ((dir (if buffer-file-name
+                  (file-name-directory buffer-file-name)
+                (expand-file-name "~/")))
+         (cmd (concat "tmux new-window \"cd " dir "; exec $SHELL\"")))
+    (cond ((eq (shell-command cmd) 0)
+           (message "Open directory %s in tmux new window." dir))
+          (t
+           (message "Failed to create new window in tmux.")))))
 
 
 
