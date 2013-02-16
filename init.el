@@ -1,7 +1,7 @@
 ;; pathの設定
 (setq user-emacs-directory (expand-file-name "~/.emacs.d/"))
 (add-to-list 'load-path user-emacs-directory)
-
+nn
 ;; ディレクトリの設定
 (defvar my-cache-dir (concat user-emacs-directory ".cache/"))
 (defvar my-config-dir (concat user-emacs-directory "config/"))
@@ -331,13 +331,13 @@
         'c-mode-hook
         'c++-mode-hook
         'emacs-lisp-mode-hook
-        'gnuplot-mode-hook
+;        'gnuplot-mode-hook
         'html-mode-hook
         'jade-mode-hook
         'js2-mode-hook
-        'markdown-mode-hook
+;        'markdown-mode-hook
         'stylus-mode-hook
-        'tuareg-mode-hook
+;        'tuareg-mode-hook
         'verilog-mode-hook))
 
 (dolist (hook my-coding-mode-hook-list)
