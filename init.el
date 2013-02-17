@@ -313,6 +313,7 @@
     dired
     flymake
     imenu
+    notifications
     recentf
     server
     uniquify
