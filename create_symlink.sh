@@ -11,7 +11,7 @@ for dotfile in .?*; do
         .gitmodules)
             continue;;
         *)
-            ln -Fis "$PWD/$dotfile" $HOME
+            ln -is "$PWD/$dotfile" $HOME
             ;;
     esac
 done
