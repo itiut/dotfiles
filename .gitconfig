@@ -1,0 +1,29 @@
+[user]
+	name = Yuichi TANIKAWA
+	email = t.yuichi111@gmail.com
+[core]
+	excludesfile = ~/.gitignore
+	pager = less -r
+	editor = vim
+[color]
+	ui = auto
+[push]
+	default = upstream
+[branch]
+	autosetuprebase = always
+[merge]
+	ff = false
+[pull]
+	rebase = true
+[alias]
+	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
+	aa = !git add . && git status
+	bare = init --bare --shared=true
+	br = branch -a
+	ci = commit
+	co = checkout
+	di = diff
+	dic = diff --cached
+	info = remote show origin
+	st = status
+	this = !git init && git add . && git commit -m \"Initial commit\"
