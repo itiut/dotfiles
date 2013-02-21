@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: document.addEventListener('DOMContentLoaded', function, false);
+# key: domcl
+# --
+document.addEventListener('DOMContentLoaded', function() {
+  $0
+}, false);
