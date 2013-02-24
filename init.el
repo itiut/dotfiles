@@ -259,6 +259,7 @@
     c-eldoc
 ;    color-moccur
 ;    gnuplot-mode
+    deferred
     goto-chg
     helm
     helm-c-yasnippet
