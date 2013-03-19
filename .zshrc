@@ -7,6 +7,7 @@ export ZSHDIR=${HOME}/.zsh.d
 # Pathの設定
 export PATH=${HOME}/android-sdks/platform-tools:${PATH}
 export PATH=${HOME}/.nodebrew/current/bin:${PATH}
+export PATH=${HOME}/.rbenv/bin:${PATH}
 export PATH=/opt/altera/11.0sp1/quartus/bin:/opt/altera/11.0sp1/modelsim_ase/bin:${PATH}
 
 # 補完
@@ -179,3 +180,9 @@ screen|screen-bce)
      }
 ;;
 esac
+
+# npm completion
+eval "$(npm completion 2>/dev/null)"
+
+# rbenv completion
+eval "$(rbenv init -)"
