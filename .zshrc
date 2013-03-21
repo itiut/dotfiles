@@ -185,4 +185,4 @@ esac
 eval "$(npm completion 2>/dev/null)"
 
 # rbenv completion
-eval "$(rbenv init -)"
+eval "$(rbenv init - 2>/dev/null)"
