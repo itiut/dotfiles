@@ -265,6 +265,7 @@
     helm-c-yasnippet
 ;    helm-gtags
     highlight-symbol
+    inf-ruby
     jade-mode
     js-comint
     js2-mode
