@@ -1,44 +1,46 @@
-" バックアップを作らない
+" encoding
+set encoding=utf-8
+
+" do not create backup files
 set nobackup
 
-" スワップファイルを作らない
+" do not create swap files
 set noswapfile
 
-" 行番号を表示する
+" print line numbers
 set number
 
-" ウィンドウタイトルに編集中のファイル名を表示する
+" print file names on window title
 set title
 
-" 入力中のコマンドをステータスに表示する
+" print commands on status line
 set showcmd
 
-" ステータスラインを常に表示する
+" always show status line
 set laststatus=2
 
-" 括弧を閉じたときに対応する括弧を表示する
+" highlight according parenthesis when closing
 set showmatch
 set matchtime=2
 
-" 不可視文字(タブ,行末スペースなど)を表示する
+" show tabs and trailing blanks
 set list
 set listchars=tab:»-,trail:-,extends:»,precedes:«
 
-" タブをスペースに置換する
+" replace tab with spaces
 set expandtab
 
-" タブ幅を4に固定する
+" tab size
 set tabstop=4
 set shiftwidth=4
 set softtabstop=0
 
-" インデントの設定
+" indentation
 set autoindent
 set smartindent
 
-" インサートモードを Ctrl+g で抜ける
+" ESC by C-g
 inoremap <C-g> <ESC>
 
-" カラースキーマの設定
+" syntax
 syntax enable
-

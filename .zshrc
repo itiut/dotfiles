@@ -1,96 +1,33 @@
-# 文字コード
-export LANG=ja_JP.UTF-8
+# LANG
+export LANG=us_EN.UTF-8
 
-# zshディレクトリ
+# ZSHDIR
 export ZSHDIR=${HOME}/.zsh.d
 
-# Pathの設定
-export PATH=${HOME}/android-sdks/platform-tools:${PATH}
-export PATH=${HOME}/.nodebrew/current/bin:${PATH}
+# PATH
 export PATH=${HOME}/.rbenv/bin:${PATH}
-export PATH=/opt/altera/11.0sp1/quartus/bin:/opt/altera/11.0sp1/modelsim_ase/bin:${PATH}
+export PATH=${HOME}/.nodebrew/current/bin:${PATH}
+export PATH=${HOME}/android-sdks/platform-tools:${PATH}
 
-# 補完
-autoload -U compinit; compinit
+# EDITOR
+export EDITOR=vim
 
-# Emacsキーバインド
+# use Emacs keybindings
 bindkey -e
 
-# 履歴
-# 履歴を保存するファイル指定
-HISTFILE=${ZSHDIR}/.zsh_history
-
-# 履歴の件数
-HISTSIZE=10000
-SAVEHIST=10000
-
-# 履歴を共有する
-setopt share_history
-
-# 重複するコマンドを履歴に記録しない
-setopt hist_ignore_all_dups
-
-# 先頭にスペースを入れると履歴に記録しない
-setopt hist_ignore_space
-
-# 履歴にhistoryコマンドを記録しない
-setopt hist_no_store
-
-# 余分なスペースを削除して履歴に記録する
-setopt hist_reduce_blanks
-
-# 補完候補が複数ある時に、一覧表示
-setopt auto_list
-
-# 保管結果をできるだけ詰める
-setopt list_packed
-
-# 補完の時に大文字小文字を区別しない(但し大文字は小文字に変換しない)
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
-
-# 補完キー（Tab, Ctrl+I) を連打するだけで順に補完候補を自動で補完
-setopt auto_menu
-
-# Shift+Tabで逆順に補完
-bindkey "\e[Z" reverse-menu-complete
-
-# カッコの対応などを自動的に補完
-setopt auto_param_keys
-
-# ディレクトリ名の補完で末尾の / を自動的に付加し、次の補完に備える
-setopt auto_param_slash
-
-# 補完候補リストの日本語を正しく表示
-setopt print_eight_bit
-
-# コマンド訂正
-setopt correct
-
-# 履歴の検索
-autoload history-search-end
-zle -N history-beginning-search-backward-end history-search-end
-zle -N history-beginning-search-forward-end history-search-end
-bindkey "^P" history-beginning-search-backward-end
-bindkey "^N" history-beginning-search-forward-end
-
-# 色の設定
-export LSCOLORS=gxfxxxxxcxxxxxxxxxgxgx
-export LS_COLORS='di=01;36:ln=01;35:ex=01;32'
-zstyle ':completion:*' list-colors 'di=01;36' 'ln=01;35' 'ex=01;32'
-
-# エイリアスの設定
+# aliases
 alias -g L="| less"
 alias -g H="| head"
 alias -g T="| tail"
 alias -g G="| grep"
 
 alias ls="ls --classify --color"
-alias la="ls -a"
+alias la="ls --all"
 alias ll="ls -l"
-alias lla="ls -al"
-alias cp="cp -i"
-alias mv="mv -i"
-alias rm="rm -i"
+alias lla="ls -l --all"
+alias cp="cp --intaractive"
+alias mv="mv --interactive"
+alias rm="rm --interactive"
 alias grep="grep --color"
 
 alias a="./a.out"
@@ -101,16 +38,94 @@ alias l="ls"
 alias o="xdg-open"
 alias v="vim"
 
-# ディレクトリ名だけでcdする
+# history file
+HISTFILE=${ZSHDIR}/.zsh_history
+
+# history size
+HISTSIZE=10000
+SAVEHIST=10000
+
+# share command history data
+setopt share_history
+
+# remove duplication commands
+setopt hist_ignore_all_dups
+
+# ignore commands which are the same as previous one
+setopt hist_ignore_dups
+
+# ignore commands when the first charactor is a space
+setopt hist_ignore_space
+
+# remove the 'history' command
+setopt hist_no_store
+
+# remove superflous blanks from commands
+setopt hist_reduce_blanks
+
+# search history
+autoload history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey "^P" history-beginning-search-backward-end
+bindkey "^N" history-beginning-search-forward-end
+
+# use completion
+autoload -Uz compinit; compinit
+
+# automatically list choices on an ambiguous completion
+setopt auto_list
+
+# make the completion list smaller
+setopt list_packed
+
+# do not distinguish lowercases from uppercases
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
+# next completion by <tab>, C-i
+setopt auto_menu
+
+# previous completion by <S-tab>
+bindkey "\e[Z" reverse-menu-complete
+
+# insert the parameter-following character immediately after parameter names
+setopt auto_param_keys
+
+# automatically insert '/' after directory names
+setopt auto_param_slash
+
+# print 8-bit characters correctly
+setopt print_eight_bit
+
+# correct the spelling of commands
+setopt correct
+
+# from default .zshrc
+zstyle ':completion:*' auto-description 'specify: %d'
+zstyle ':completion:*' completer _expand _complete _correct _approximate
+zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=* l:|=*'
+zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
+zstyle ':completion:*' use-compctl false
+zstyle ':completion:*' verbose true
+
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
+zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+
+# LSCOLORS
+export LSCOLORS=gxfxxxxxcxxxxxxxxxgxgx
+export LS_COLORS='di=01;36:ln=01;35:ex=01;32'
+zstyle ':completion:*' list-colors 'di=01;36' 'ln=01;35' 'ex=01;32'
+
+# run `cd` if the command is only a directory name
 setopt auto_cd
 
-# cdするときに自動でpushdする
+# run `pushd` when `cd`
 setopt auto_pushd
 
-#cdした後に自動でlsする
+# run `ls` after `cd`
 function chpwd() { ls }
 
-# ^ でcd ..する
+# run `cd ..` by ^
 function cdup() {
     echo
     cd ..
@@ -119,14 +134,11 @@ function cdup() {
 zle -N cdup
 bindkey '\^' cdup
 
-# ビープ音をならなさない
-setopt nobeep
+# do not beep
+setopt no_beep
 
-# グロブ(*)でマッチングエラーを出さない
-setopt nonomatch
-
-# エディタ
-export EDITOR=vim
+# do not print matching errors by glob
+setopt no_nomatch
 
 # autojump
 # $ sudo apt-get install autojump
@@ -145,14 +157,14 @@ zstyle ':completion:*' completer _oldlist _complete
 # zsh-git-prompt
 source "$ZSHDIR/zsh-git-prompt/zshrc.sh"
 __GIT_PROMPT_DIR="$ZSHDIR/zsh-git-prompt"
-# 文字が重ならないようにする
+# do not overlap characters
 ZSH_THEME_GIT_PROMPT_STAGED="$ZSH_THEME_GIT_PROMPT_STAGED "
 ZSH_THEME_GIT_PROMPT_CONFLICTS="$ZSH_THEME_GIT_PROMPT_CONFLICTS "
 ZSH_THEME_GIT_PROMPT_CHANGED="$ZSH_THEME_GIT_PROMPT_CHANGED "
 ZSH_THEME_GIT_PROMPT_UNTRACKED="$ZSH_THEME_GIT_PROMPT_UNTRACKED "
 ZSH_THEME_GIT_PROMPT_CLEAN="$ZSH_THEME_GIT_PROMPT_CLEAN "
 
-# プロンプトの設定
+# PROMPT
 autoload colors; colors
 PROMPT=$'
  %B%F{yellow}%~ $(git_super_status)
@@ -161,28 +173,28 @@ PROMPT2="[%n]> "
 RPROMPT="%B%F{blue}[%*]"
 
 case "${TERM}" in
-# ターミナルの設定
+# gnome-terminal
 kterm*|xterm)
     precmd() {
-        # ウィンドウタイトルにユーザー名とホスト名を表示
+        # print user name and host name on window title
         echo -ne "\033]0;${USER}@${HOST}\007"
     }
 ;;
-# screen, byobuの設定
+# screen, byobu
 screen|screen-bce)
     preexec() {
-        # タイトルにプロセス名を表示
+        # print process name on title
         echo -ne "\ek#${1%% *}\e\\"
     }
     precmd() {
-        # タイトルにディレクトリを名表示
+        # print current directory name on title
         echo -ne "\ek${PWD:t}\e\\"
      }
 ;;
 esac
 
-# npm completion
-eval "$(npm completion 2>/dev/null)"
-
 # rbenv completion
 eval "$(rbenv init - 2>/dev/null)"
+
+# npm completion
+eval "$(npm completion 2>/dev/null)"
