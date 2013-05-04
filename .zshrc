@@ -1,5 +1,5 @@
 # LANG
-export LANG=us_EN.UTF-8
+export LANG=en_US.UTF-8
 
 # ZSHDIR
 export ZSHDIR=${HOME}/.zsh.d
