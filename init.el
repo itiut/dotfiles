@@ -138,7 +138,7 @@
 (global-unset-key (kbd "C-\\"))         ; 日本語入力
 
 ;; 有効にするキーバインド
-(global-set-key (kbd "C-j") 'indent-and-newline-and-indent)
+(global-set-key (kbd "C-S-j") 'indent-and-newline-and-indent)
 (global-set-key (kbd "C-a") 'beginning-of-visual-indented-line)
 (global-set-key (kbd "C-t") 'other-window-or-split)
 (global-set-key (kbd "C-c l") 'toggle-truncate-lines)
@@ -251,7 +251,7 @@
 (add-to-list 'el-get-recipe-path (expand-file-name "recipes/" my-etc-dir))
 
 (defvar my-el-get-sources
-  '(el-get
+  '(
     arduino-mode
     auto-async-byte-compile
     auto-complete
@@ -259,7 +259,7 @@
     c-eldoc
 ;    color-moccur
 ;    gnuplot-mode
-    deferred
+;    deferred
     goto-chg
     helm
     helm-c-yasnippet
@@ -311,21 +311,20 @@
 
 ;; builtin
 (defvar my-builtin-sources
-  '(compilation-mode
+  '(
+    compilation-mode
+    c-c++-mode
     dired
+    emacs-lisp-mode
     flymake
     imenu
     notifications
     recentf
     server
     uniquify
+    verilog-mode
     view-mode
     whitespace
-
-    ;; major-mode
-    c-c++-mode
-    emacs-lisp-mode
-    verilog-mode
     ))
 (my-load-configs my-builtin-sources)
 
