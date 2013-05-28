@@ -348,10 +348,12 @@
         'c++-mode-hook
         'emacs-lisp-mode-hook
 ;        'gnuplot-mode-hook
+        'haml-mode-hook
         'html-mode-hook
         'jade-mode-hook
         'js2-mode-hook
 ;        'markdown-mode-hook
+        'ruby-mode-hook
         'stylus-mode-hook
 ;        'tuareg-mode-hook
         'verilog-mode-hook))
