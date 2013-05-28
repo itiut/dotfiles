@@ -274,6 +274,7 @@
 ;    markdown-mode
 ;    moccur-edit
     point-undo
+    powerline
     railscasts-theme
     redo+
     smart-compile
