@@ -1,11 +1,11 @@
 ;;; inf-ruby
 (autoload 'run-ruby "inf-ruby"
   "Run an inferior Ruby process")
-(autoload 'inf-ruby-keys "inf-ruby"
+(autoload 'inf-ruby-setup-keybindings "inf-ruby"
   "Set local key defs for inf-ruby in ruby-mode")
 (add-hook 'ruby-mode-hook
           '(lambda ()
-             (inf-ruby-keys)))
+             (inf-ruby-setup-keybindings)))
 
 ;; Use rbenv
 (setenv "PATH" (concat (getenv "HOME") "/.rbenv/shims:"
