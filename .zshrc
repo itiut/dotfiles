@@ -134,11 +134,14 @@ setopt no_beep
 # do not print matching errors by glob
 setopt no_nomatch
 
-# autojump
-# $ sudo apt-get install autojump
-if [ -d "/usr/share/autojump" ]; then
-    source "/usr/share/autojump/autojump.zsh"
-fi
+# antigen
+source "$ZSHDIR/antigen/antigen.zsh"
+antigen bundle autojump
+antigen bundle bundler
+antigen bundle heroku
+antigen bundle npm
+antigen bundle rbenv
+antigen apply
 
 # auto-fu.zsh
 source "$ZSHDIR/auto-fu.zsh/auto-fu.zsh"
@@ -186,9 +189,3 @@ screen|screen-bce)
      }
 ;;
 esac
-
-# rbenv completion
-eval "$(rbenv init - 2>/dev/null)"
-
-# npm completion
-eval "$(npm completion 2>/dev/null)"
