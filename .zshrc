@@ -136,12 +136,14 @@ setopt no_nomatch
 
 # antigen
 source "$ZSHDIR/antigen/antigen.zsh"
-antigen bundle autojump
-antigen bundle bundler
-antigen bundle heroku
-antigen bundle npm
-antigen bundle rbenv
-antigen apply
+antigen-bundles <<EOF
+autojump
+bundler
+heroku
+npm
+rbenv
+EOF
+antigen-apply
 
 # auto-fu.zsh
 source "$ZSHDIR/auto-fu.zsh/auto-fu.zsh"
