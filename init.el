@@ -283,6 +283,7 @@
     railscasts-theme
     redo+
     rsense
+    ruby-end
     smart-compile
     tabbar
 ;    tuareg-mode
