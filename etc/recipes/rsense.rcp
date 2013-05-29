@@ -5,5 +5,6 @@
        :options ("xf")
        :url "http://cx4a.org/pub/rsense/rsense-0.3.tar.bz2"
        :load-path ("etc")
+       :build `(("ruby etc/config.rb > ~/.rsense"))
        :post-init (setq rsense-home (expand-file-name "."))
        :features "rsense")
