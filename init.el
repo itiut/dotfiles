@@ -157,6 +157,7 @@
   "現在行をインデントし, その後newline-and-indentする."
   (interactive)
   (indent-according-to-mode)
+  (move-end-of-line 1)
   (newline-and-indent))
 
 (defun beginning-of-visual-indented-line (current-point)
