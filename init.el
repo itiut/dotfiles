@@ -24,7 +24,8 @@
 (setq confirm-kill-emacs 'y-or-n-p)
 
 ;; 外部ブラウザをgoogle-crhomeに
-(setq browse-url-browser-function 'browse-url-generic browse-url-generic-program "google-chrome")
+(unless (call-process-shell-command "which google-chrome")
+  (setq browse-url-browser-function 'browse-url-generic browse-url-generic-program "google-chrome"))
 
 ;; バックアップファイルを作成しない
 (setq backup-inhibited t)
