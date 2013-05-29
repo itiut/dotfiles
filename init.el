@@ -60,6 +60,9 @@
 ;; 半角スペースでインデント
 (setq-default indent-tabs-mode nil)
 
+;; 対応する括弧などを自動で挿入
+(electric-pair-mode 1)
+
 ;; BS,Del,文字入力でリージョン内の文字を削除
 (delete-selection-mode 1)
 
