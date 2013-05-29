@@ -277,6 +277,7 @@
     powerline
     railscasts-theme
     redo+
+    rsense
     smart-compile
     tabbar
 ;    tuareg-mode
@@ -321,6 +322,7 @@
     imenu
     notifications
     recentf
+    ruby-mode
     server
     uniquify
     verilog-mode
