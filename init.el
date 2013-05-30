@@ -265,7 +265,8 @@
 ;    color-moccur
 ;    gnuplot-mode
 ;    deferred
-    flycheck
+;    flycheck
+    flymake-ruby
     goto-chg
     helm
     helm-c-yasnippet
