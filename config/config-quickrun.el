@@ -1,7 +1,8 @@
 ;;; quickrun
 (require 'quickrun)
 (global-set-key (kbd "<f5>") 'my/quickrun-depend-on-region)
-(global-set-key (kbd "M-<f5>") 'quickrun-compile-only)
+(global-set-key (kbd "<C-f5>") 'quickrun-with-arg)
+(global-set-key (kbd "<M-f5>") 'quickrun-compile-only)
 
 (defun my/quickrun-depend-on-region ()
   "If region is active, call quickrun-region. Otherwise call quickrun."
