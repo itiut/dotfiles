@@ -203,11 +203,11 @@
     (call-interactively 'previous-line))
   (indent-according-to-mode))
 
-(defun kill-region-or-backward-kill-word ()
+(defun kill-region-or-backward-kill-word (beg end)
   "リージョンが活性化していればリージョン削除. 非活性であれば, 直前の単語を削除."
-  (interactive)
+  (interactive "r")
   (if (region-active-p)
-      (kill-region (point) (mark))
+      (kill-region beg end)
     (backward-kill-word 1)))
 
 (defun kill-word-or-delete-horizontal-space (arg)
