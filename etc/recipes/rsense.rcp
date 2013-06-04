@@ -1,9 +1,8 @@
 (:name rsense
        :description "RSense client for Emacs"
-       :website "http://cx4a.org/software/rsense/index.html"
-       :type http-tar
-       :options ("xf")
-       :url "http://cx4a.org/pub/rsense/rsense-0.3.tar.bz2"
+       :website "https://github.com/marcus/rsense"
+       :type github
+       :pkgname "marcus/rsense"
        :load-path ("etc")
        :build `(("ruby etc/config.rb > ~/.rsense"))
        :post-init (setq rsense-home (expand-file-name "."))
