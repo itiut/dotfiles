@@ -150,7 +150,6 @@
 (global-set-key (kbd "C-x K") 'kill-buffer-and-window)
 (global-set-key (kbd "M-g") 'goto-line)
 (global-set-key (kbd "C-S-o") 'open-line-above)
-(global-set-key (kbd "<f5>") 'revert-buffer)
 (global-set-key (kbd "C-w") 'kill-region-or-backward-kill-word)
 (global-set-key (kbd "M-d") 'kill-word-or-delete-horizontal-space)
 (global-set-key (kbd "<f11>") 'toggle-fullscreen-maximized)
