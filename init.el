@@ -282,11 +282,12 @@
 ;    moccur-edit
     point-undo
     powerline
+    quickrun
     railscasts-theme
     redo+
     rsense
     ruby-end
-    smart-compile
+;    smart-compile
     tabbar
 ;    tuareg-mode
     yalinum
