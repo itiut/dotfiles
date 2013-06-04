@@ -203,11 +203,11 @@
     (call-interactively 'previous-line))
   (indent-according-to-mode))
 
-(defun kill-region-or-backward-kill-word (beg end)
+(defun kill-region-or-backward-kill-word ()
   "リージョンが活性化していればリージョン削除. 非活性であれば, 直前の単語を削除."
-  (interactive "r")
+  (interactive)
   (if (region-active-p)
-      (kill-region beg end)
+      (kill-region (region-beginning) (region-end))
     (backward-kill-word 1)))
 
 (defun kill-word-or-delete-horizontal-space (arg)
@@ -287,7 +287,7 @@
     redo+
     rsense
     ruby-end
-;    smart-compile
+    smart-compile
     tabbar
 ;    tuareg-mode
     yalinum

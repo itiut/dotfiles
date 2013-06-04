@@ -1,11 +1,11 @@
 ;;; quickrun
 (require 'quickrun)
-(global-set-key (kbd "C-c C-c") 'my/quickrun-depend-on-region)
-(global-set-key (kbd "C-c c") 'quickrun-with-arg)
+(global-set-key (kbd "<f5>") 'my/quickrun-depend-on-region)
+(global-set-key (kbd "M-<f5>") 'quickrun-compile-only)
 
-(defun my/quickrun-depend-on-region (start end)
+(defun my/quickrun-depend-on-region ()
   "If region is active, call quickrun-region. Otherwise call quickrun."
-  (interactive "r")
+  (interactive)
   (if (region-active-p)
-      (quickrun :start start :end end)
+      (quickrun :start (region-beginning) :end (region-end))
     (quickrun)))
