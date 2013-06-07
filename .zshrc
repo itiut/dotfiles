@@ -139,6 +139,7 @@ source "$ZSHDIR/antigen/antigen.zsh"
 antigen-bundles <<EOF
 autojump
 bundler
+gem
 heroku
 npm
 rbenv
