@@ -205,7 +205,7 @@
 (defun kill-region-or-backward-kill-word ()
   "リージョンが活性化していればリージョン削除. 非活性であれば, 直前の単語を削除."
   (interactive)
-  (if (region-active-p)
+  (if (use-region-p)
       (kill-region (region-beginning) (region-end))
     (backward-kill-word 1)))
 
