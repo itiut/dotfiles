@@ -6,7 +6,6 @@ export ZSHDIR=${HOME}/.zsh.d
 
 # PATH
 export PATH=${HOME}/bin:${PATH}
-export PATH=${HOME}/.rbenv/bin:${PATH}
 export PATH=${HOME}/.nodebrew/current/bin:${PATH}
 export PATH=${HOME}/android-sdks/platform-tools:${PATH}
 
