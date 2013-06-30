@@ -15,10 +15,11 @@ export EDITOR=vim
 bindkey -e
 
 # aliases
-alias -g L="| less"
-alias -g H="| head"
-alias -g T="| tail"
+alias -g C="| xclip -in -selection clipboard"
 alias -g G="| grep"
+alias -g H="| head"
+alias -g L="| less"
+alias -g T="| tail"
 
 alias ls="ls --classify --color"
 alias la="ls --all"
