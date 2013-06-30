@@ -188,6 +188,6 @@ screen|screen-bce)
     precmd() {
         # print current directory name on title
         echo -ne "\ek${PWD:t}\e\\"
-     }
+    }
 ;;
 esac
