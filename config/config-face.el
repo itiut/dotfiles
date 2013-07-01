@@ -27,6 +27,8 @@
                     :background my-bg-color
                     :foreground "GreenYellow"
                     :weight 'bold)
+(set-face-attribute 'whitespace-empty nil
+                    :background my-bg-color)
 
 ;; yalinum
 (set-face-attribute 'yalinum-face nil
