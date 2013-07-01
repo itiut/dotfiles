@@ -1,7 +1,14 @@
 ;;; whitespace
 (require 'whitespace)
-;; 行末ブランク, タブ, 全角スペースを可視化
-(setq whitespace-style '(face trailing tabs tab-mark spaces space-mark))
+
+(setq whitespace-style '(face           ; faceで可視化
+                         trailing       ; 行末
+                         tabs           ; タブ
+                         spaces         ; スペース
+                         empty          ; 先頭/末尾の空行
+                         space-mark     ; 表示のマッピング
+                         tab-mark
+                         ))
 
 (setq whitespace-display-mappings
       '((space-mark ?\u3000 [?\u25a1])
@@ -14,3 +21,6 @@
 
 ;; スペースは全角のみ
 (setq whitespace-space-regexp "\\(\u3000+\\)")
+
+;; 保存前にクリーンアップ
+(add-hook 'before-save-hook 'whitespace-cleanup)

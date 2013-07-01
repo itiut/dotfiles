@@ -66,19 +66,6 @@
 ;; BS,Del,文字入力でリージョン内の文字を削除
 (delete-selection-mode 1)
 
-;; 保存時に行末のスペースとファイル末尾のブランクを削除
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
-(add-hook 'before-save-hook 'my-delete-trailing-blank-lines)
-
-(defun my-delete-trailing-blank-lines ()
-  "Deletes all blank lines at the end of the file."
-  (interactive)
-  (save-excursion
-    (save-restriction
-      (widen)
-      (goto-char (point-max))
-      (delete-blank-lines))))
-
 
 
 ;;;; 外観
