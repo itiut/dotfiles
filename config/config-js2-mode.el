@@ -5,12 +5,12 @@
 
 (eval-after-load "js2-mode"
   '(progn
-     (local-set-key (kbd "C-a") (lookup-key global-map (kbd "C-a")))
-     (local-set-key (kbd "C-c C-j") 'run-js)
-     (local-set-key (kbd "C-c C-e") 'js-send-last-sexp)
-     (local-set-key (kbd "C-c e")   'js-send-last-sexp-and-go)
-     (local-set-key (kbd "C-c C-r") 'js-send-region)
-     (local-set-key (kbd "C-c r")   'js-send-region-and-go)
-     (local-set-key (kbd "C-c C-b") 'js-send-buffer)
-     (local-set-key (kbd "C-c b")   'js-send-buffer-and-go)
-     (local-set-key (kbd "C-c C-l") 'js-load-file-and-go)))
+     (define-key js2-mode-map (kbd "C-a") (lookup-key global-map (kbd "C-a")))
+     (define-key js2-mode-map (kbd "C-c C-j") 'run-js)
+     (define-key js2-mode-map (kbd "C-c C-e") 'js-send-last-sexp)
+     (define-key js2-mode-map (kbd "C-c e")   'js-send-last-sexp-and-go)
+     (define-key js2-mode-map (kbd "C-c C-r") 'js-send-region)
+     (define-key js2-mode-map (kbd "C-c r")   'js-send-region-and-go)
+     (define-key js2-mode-map (kbd "C-c C-b") 'js-send-buffer)
+     (define-key js2-mode-map (kbd "C-c b")   'js-send-buffer-and-go)
+     (define-key js2-mode-map (kbd "C-c C-l") 'js-load-file-and-go)))
