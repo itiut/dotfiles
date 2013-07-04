@@ -1,1 +1,1 @@
-source-file /usr/share/byobu/profiles/tmux
+source $BYOBU_PREFIX/share/byobu/profiles/tmux
