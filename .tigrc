@@ -1,2 +1,5 @@
+set show-date = relative
+set show-line-numbers = yes
+
 bind generic g move-first-line
 bind generic G move-last-line
