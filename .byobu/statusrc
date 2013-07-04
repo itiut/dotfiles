@@ -6,7 +6,7 @@
 #
 #    Copyright (C) 2009-2011 Canonical Ltd.
 #
-#    Authors: Dustin Kirkland <kirkland@ubuntu.com>
+#    Authors: Dustin Kirkland <kirkland@byobu.co>
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -73,8 +73,6 @@
 # Default: 0
 #USERS_DISTINCT=0
 
-# If we're not in EC2 (ie, no metadata service, and no known instance type), the
-# ec2_cost status is disabled by default.  To override, and get an esitmate, set
-# this to '1'.
-# Default: 0
-#EC2_ESTIMATE=0
+# Set this to zero to hide seconds int the time display
+# Default 1
+#TIME_SECONDS=0
