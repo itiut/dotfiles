@@ -1,3 +1,2 @@
-source /usr/share/byobu/keybindings/common
+source $BYOBU_PREFIX/share/byobu/keybindings/common
 bindkey "^A"
-escape ^Tt
