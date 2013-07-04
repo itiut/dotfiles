@@ -3,6 +3,7 @@ My dotfiles
 
 * byobu-tmux
 * git
+* tig
 * vim
 * zsh
 
