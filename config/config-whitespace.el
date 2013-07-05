@@ -17,10 +17,10 @@
         ;; character ?\xBB at that column followed by a TAB which goes to
         ;; the next TAB column.
         ;; If this is a problem for you, please, comment the line below.
-        (tab-mark ?\t [?\xBB ?\t] [?\\ ?\t])))
+        (tab-mark ?\t [?\u00BB ?\t] [?\\ ?\t])))
 
 ;; スペースは全角のみ
 (setq whitespace-space-regexp "\\(\u3000+\\)")
 
-;; 保存前にクリーンアップ
-(add-hook 'before-save-hook 'whitespace-cleanup)
+;; 保存前に自動でクリーンアップ
+(setq whitespace-action '(auto-cleanup))
