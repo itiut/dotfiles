@@ -264,7 +264,7 @@
     js2-mode
     key-chord
     mark-multiple
-;    markdown-mode
+    markdown-mode
 ;    moccur-edit
     point-undo
     powerline
@@ -350,7 +350,7 @@
         'html-mode-hook
         'jade-mode-hook
         'js2-mode-hook
-;        'markdown-mode-hook
+        'markdown-mode-hook
         'ruby-mode-hook
         'stylus-mode-hook
 ;        'tuareg-mode-hook
