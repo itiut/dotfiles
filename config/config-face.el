@@ -1,4 +1,4 @@
-;;;; face
+;;; face
 (defvar my/bg-color "#232323")
 (defvar my/fg-color "#E6E1DC")
 

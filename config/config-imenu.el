@@ -1,4 +1,4 @@
-;;;; imenu
+;;; imenu
 (require 'imenu)
 
 (setq imenu-auto-rescan t)

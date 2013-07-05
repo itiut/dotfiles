@@ -1,4 +1,4 @@
-;;;; tabbar
+;;; tabbar
 (require 'tabbar)
 
 (global-set-key (kbd "<C-tab>") 'tabbar-forward-tab)

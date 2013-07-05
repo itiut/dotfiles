@@ -1,4 +1,4 @@
-;;;; point-undo
+;;; point-undo
 (require 'point-undo)
 
 (global-set-key (kbd "<f7>") 'point-undo)

@@ -1,4 +1,4 @@
-;;;; helm-gtags
+;;; helm-gtags
 (require 'helm-config)
 (require 'helm-gtags)
 

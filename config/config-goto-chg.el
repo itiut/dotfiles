@@ -1,4 +1,4 @@
-;;;; goto-chg
+;;; goto-chg
 (require 'goto-chg)
 
 (global-set-key (kbd "<f8>") 'goto-last-change)

@@ -1,4 +1,4 @@
-;;;; mark-multiple
+;;; mark-multiple
 (require 'mark-more-like-this)
 
 (global-set-key (kbd "C-<") 'mark-previous-like-this)

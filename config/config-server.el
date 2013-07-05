@@ -1,4 +1,4 @@
-;;;; server
+;;; server
 (require 'server)
 
 (unless (server-running-p)

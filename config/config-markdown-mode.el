@@ -1,4 +1,4 @@
-;;;; markdown-mode
+;;; markdown-mode
 (require 'markdown-mode)
 (add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
 

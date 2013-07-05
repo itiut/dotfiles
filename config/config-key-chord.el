@@ -1,4 +1,4 @@
-;;;; key-chord
+;;; key-chord
 (require 'key-chord)
 
 (setq key-chord-two-keys-delay 0.04)

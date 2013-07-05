@@ -1,4 +1,4 @@
-;;;; dired
+;;; dired
 (require 'dired)
 
 ;; dired-find-alternate-file を有効化
@@ -9,7 +9,7 @@
 (define-key dired-mode-map (kbd "C-t") (lookup-key global-map (kbd "C-t")))
 
 
-;;;; wdired
+;;; wdired
 (require 'wdired)
 
 (define-key dired-mode-map "r" 'wdired-change-to-wdired-mode)

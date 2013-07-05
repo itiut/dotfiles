@@ -1,4 +1,4 @@
-;;;; zencoding-mode
+;;; zencoding-mode
 (autoload 'zencoding-mode "zencoding-mode" nil t)
 
 (define-key zencoding-mode-keymap (kbd "C-j") (lookup-key global-map (kbd "C-j")))

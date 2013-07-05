@@ -1,4 +1,4 @@
-;;;; flymake
+;;; flymake
 (require 'flymake)
 
 (add-hook 'flymake-mode-hook

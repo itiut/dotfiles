@@ -1,4 +1,4 @@
-;;;; highlight-symbol
+;;; highlight-symbol
 (require 'highlight-symbol)
 
 (global-set-key (kbd "C-<f3>") 'highlight-symbol-at-point)

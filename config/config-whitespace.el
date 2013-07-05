@@ -1,4 +1,4 @@
-;;;; whitespace
+;;; whitespace
 (require 'whitespace)
 
 (setq whitespace-style '(face           ; faceで可視化

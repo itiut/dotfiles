@@ -1,4 +1,4 @@
-;;;; color-moccur
+;;; color-moccur
 (require 'color-moccur)
 
 (global-set-key (kbd "M-o") 'occur-by-moccur) ; 現在のバッファを検索

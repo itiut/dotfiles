@@ -1,4 +1,4 @@
-;;;; compilation-mode
+;;; compilation-mode
 (require 'ansi-color)
 
 (add-hook 'compilation-filter-hook

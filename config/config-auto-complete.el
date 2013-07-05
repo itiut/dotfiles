@@ -1,4 +1,4 @@
-;;;; auto-complete
+;;; auto-complete
 (require 'auto-complete-config)
 
 ;; デフォルトの情報源の設定

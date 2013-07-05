@@ -1,2 +1,2 @@
-;;;; moccur-edit
+;;; moccur-edit
 (require 'moccur-edit)

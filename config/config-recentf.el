@@ -1,4 +1,4 @@
-;;;; recentf
+;;; recentf
 (require 'recentf)
 
 (setq recentf-save-file (expand-file-name (concat ".recentf-" system-name) my/cache-dir))

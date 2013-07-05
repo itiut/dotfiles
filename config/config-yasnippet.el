@@ -1,4 +1,4 @@
-;;;; yasnippet
+;;; yasnippet
 (require 'yasnippet)
 
 (add-to-list 'yas-snippet-dirs (expand-file-name "snippets/" my/etc-dir))
