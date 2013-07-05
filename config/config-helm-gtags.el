@@ -2,13 +2,13 @@
 (require 'helm-config)
 (require 'helm-gtags)
 
-(defun my-helm-gtags-mode-setup ()
+(defun my/helm-gtags-mode-setup ()
   (setq helm-c-gtags-path-style 'relative)
   (setq helm-c-gtags-ignore-case t)
   (helm-gtags-mode))
 
-(add-hook 'c-mode-hook 'my-helm-gtags-mode-setup)
-(add-hook 'c++-mode-hook 'my-helm-gtags-mode-setup)
+(add-hook 'c-mode-hook 'my/helm-gtags-mode-setup)
+(add-hook 'c++-mode-hook 'my/helm-gtags-mode-setup)
 
 ;; key bindings
 (add-hook 'helm-gtags-mode-hook

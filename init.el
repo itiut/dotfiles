@@ -3,10 +3,10 @@
 (add-to-list 'load-path user-emacs-directory)
 
 ;; ディレクトリの設定
-(defvar my-cache-dir (concat user-emacs-directory ".cache/"))
-(defvar my-config-dir (concat user-emacs-directory "config/"))
-(defvar my-config-file-prefix "config-")
-(defvar my-etc-dir (concat user-emacs-directory "etc/"))
+(defvar my/cache-dir (concat user-emacs-directory ".cache/"))
+(defvar my/config-dir (concat user-emacs-directory "config/"))
+(defvar my/config-file-prefix "config-")
+(defvar my/etc-dir (concat user-emacs-directory "etc/"))
 
 ;; 言語設定
 (set-language-environment 'Japanese)
@@ -33,7 +33,7 @@
 ;; オートセーブファイルを作成しない
 (auto-save-mode -1)
 (setq delete-auto-save-files t)         ; 終了時に削除
-(setq auto-save-list-file-prefix (expand-file-name ".saves-" my-cache-dir))
+(setq auto-save-list-file-prefix (expand-file-name ".saves-" my/cache-dir))
 
 ;; abbrevsを ".abbrev_defs" に保存しない
 (setq save-abbrevs nil)
@@ -239,9 +239,9 @@
       (goto-char (point-max))
       (eval-print-last-sexp))))
 
-(add-to-list 'el-get-recipe-path (expand-file-name "recipes/" my-etc-dir))
+(add-to-list 'el-get-recipe-path (expand-file-name "recipes/" my/etc-dir))
 
-(defvar my-el-get-sources
+(defvar my/el-get-sources
   '(
     arduino-mode
     auto-async-byte-compile
@@ -281,21 +281,21 @@
 ;    zencoding-mode
     ))
 
-(el-get 'sync my-el-get-sources)
+(el-get 'sync my/el-get-sources)
 
 
 
 ;;;; config
-(defun my-load-configs (sources)
+(defun my/load-configs (sources)
   "Load config files of sources."
   (dolist (src sources)
-    (my-load-config (symbol-name src))))
+    (my/load-config (symbol-name src))))
 
-(defun my-load-config (name)
+(defun my/load-config (name)
   "Load config file."
-  (my-compile-and-load (expand-file-name (concat my-config-file-prefix name) my-config-dir)))
+  (my/compile-and-load (expand-file-name (concat my/config-file-prefix name) my/config-dir)))
 
-(defun my-compile-and-load (path)
+(defun my/compile-and-load (path)
   "Byte-compile if necessary, and load."
   (let* ((el (concat path ".el"))
          (elc (concat path ".elc")))
@@ -304,10 +304,10 @@
     (load path 'noerror)))
 
 ;; el-get
-(my-load-configs my-el-get-sources)
+(my/load-configs my/el-get-sources)
 
 ;; builtin
-(defvar my-builtin-sources
+(defvar my/builtin-sources
   '(
     compilation-mode
     c-c++-mode
@@ -324,14 +324,14 @@
     view-mode
     whitespace
     ))
-(my-load-configs my-builtin-sources)
+(my/load-configs my/builtin-sources)
 
 ;; face
-(my-load-config "face")
+(my/load-config "face")
 
 
-;;; my-coding-mode
-(defun my-coding-mode-setup ()
+;;; my/coding-mode
+(defun my/coding-mode-setup ()
   ;; whitespace
   (whitespace-mode 1)
   ;; yalinum
@@ -340,7 +340,7 @@
   (auto-complete-mode 1)
   )
 
-(defvar my-coding-mode-hook-list
+(defvar my/coding-mode-hook-list
   (list 'arduino-mode-hook
         'c-mode-hook
         'c++-mode-hook
@@ -356,5 +356,5 @@
 ;        'tuareg-mode-hook
         'verilog-mode-hook))
 
-(dolist (hook my-coding-mode-hook-list)
-  (add-hook hook 'my-coding-mode-setup))
+(dolist (hook my/coding-mode-hook-list)
+  (add-hook hook 'my/coding-mode-setup))

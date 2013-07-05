@@ -1,10 +1,10 @@
 ;;;; auto-complete-clang
 (require 'auto-complete-clang)
 
-(defun my-ac-clang-setup ()
+(defun my/ac-clang-setup ()
   ;; プリコンパイルヘッダの設定
   ;; これだとC++/Cの両方では動かせなさそう
-  ;; (setq ac-clang-prefix-header (expand-file-name "ac-clang/stdafx.pch" my-etc-dir))
+  ;; (setq ac-clang-prefix-header (expand-file-name "ac-clang/stdafx.pch" my/etc-dir))
 
   (setq ac-clang-flags '("-w" "-ferror-limit" "1"))
   (setq ac-clang-flags (append
@@ -20,5 +20,5 @@
                                        "/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed/")) ac-clang-flags))
   (add-to-list 'ac-sources ac-source-clang))
 
-(add-hook 'c-mode-hook 'my-ac-clang-setup)
-(add-hook 'c++-mode-hook 'my-ac-clang-setup)
+(add-hook 'c-mode-hook 'my/ac-clang-setup)
+(add-hook 'c++-mode-hook 'my/ac-clang-setup)

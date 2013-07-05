@@ -1,6 +1,6 @@
 ;;;; face
-(defvar my-bg-color "#232323")
-(defvar my-fg-color "#E6E1DC")
+(defvar my/bg-color "#232323")
+(defvar my/fg-color "#E6E1DC")
 
 ;; フォント(要Ricty)
 (set-face-attribute 'default nil
@@ -16,26 +16,26 @@
 
 ;; whitespace
 (set-face-attribute 'whitespace-trailing nil
-                    :background my-bg-color
+                    :background my/bg-color
                     :foreground "DeepPink"
                     :underline t)
 (set-face-attribute 'whitespace-tab nil
-                    :background my-bg-color
+                    :background my/bg-color
                     :foreground "LightSkyBlue"
                     :underline t)
 (set-face-attribute 'whitespace-space nil
-                    :background my-bg-color
+                    :background my/bg-color
                     :foreground "GreenYellow"
                     :weight 'bold)
 (set-face-attribute 'whitespace-empty nil
-                    :background my-bg-color)
+                    :background my/bg-color)
 
 ;; yalinum
 (set-face-attribute 'yalinum-face nil
-                    :background my-bg-color)
+                    :background my/bg-color)
 (set-face-attribute 'yalinum-bar-face nil
                     :background "DarkOliveGreen"
-                    :foreground my-fg-color)
+                    :foreground my/fg-color)
 
 ;; tabbar
 (set-face-attribute 'tabbar-default nil

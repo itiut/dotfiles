@@ -25,17 +25,17 @@
                  (cons "" nil))))
 
 ;; タブに表示させるバッファ
-(defvar my-tabbar-displayed-buffers
+(defvar my/tabbar-displayed-buffers
   '("*scratch*" "*Backtrace*" "*Colors*" "*Faces*" "*vc-")
   "*Regexps matches buffer names always included tabs.")
 
-(defun my-tabbar-buffer-list ()
+(defun my/tabbar-buffer-list ()
   "Return the list of buffers to show in tabs.
 Exclude buffers whose name starts with a space or an asterisk.
-The current buffer and buffers matches `my-tabbar-displayed-buffers'
+The current buffer and buffers matches `my/tabbar-displayed-buffers'
 are always included."
   (let* ((hides (list ?\  ?\*))
-         (re (regexp-opt my-tabbar-displayed-buffers))
+         (re (regexp-opt my/tabbar-displayed-buffers))
          (cur-buf (current-buffer))
          (tabs (delq nil
                      (mapcar (lambda (buf)
@@ -48,6 +48,6 @@ are always included."
     (if (memq cur-buf tabs)
         tabs
       (cons cur-buf tabs))))
-(setq tabbar-buffer-list-function 'my-tabbar-buffer-list)
+(setq tabbar-buffer-list-function 'my/tabbar-buffer-list)
 
 (tabbar-mode t)

@@ -3,8 +3,8 @@
 
 ;; デフォルトの情報源の設定
 (ac-config-default)
-(setq ac-comphist-file (expand-file-name "ac-comphist.dat" my-cache-dir))
-(add-to-list 'ac-dictionary-directories (expand-file-name "ac-dict/" my-etc-dir))
+(setq ac-comphist-file (expand-file-name "ac-comphist.dat" my/cache-dir))
+(add-to-list 'ac-dictionary-directories (expand-file-name "ac-dict/" my/etc-dir))
 
 (setq ac-use-menu-map t)
 (global-set-key (kbd "M-/") 'ac-start)

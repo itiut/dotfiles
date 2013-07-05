@@ -38,9 +38,9 @@
 (push '("\\.cpp\\'" flymake-cc-init) flymake-allowed-file-name-masks)
 (push '("\\.v\\'" flymake-verilog-init) flymake-allowed-file-name-masks)
 
-(defun my-flymake-mode-setup ()
+(defun my/flymake-mode-setup ()
   (flymake-mode 1))
 
-(add-hook 'c-mode-hook 'my-flymake-mode-setup)
-(add-hook 'c++-mode-hook 'my-flymake-mode-setup)
-(add-hook 'verilog-mode-hook 'my-flymake-mode-setup)
+(add-hook 'c-mode-hook 'my/flymake-mode-setup)
+(add-hook 'c++-mode-hook 'my/flymake-mode-setup)
+(add-hook 'verilog-mode-hook 'my/flymake-mode-setup)
