@@ -1,4 +1,4 @@
-;;; view-mode
+;;;; view-mode
 (setq view-read-only t)
 
 (eval-after-load "view"

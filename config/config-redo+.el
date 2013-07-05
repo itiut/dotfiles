@@ -1,5 +1,6 @@
-;;; redo+
+;;;; redo+
 (require 'redo+)
+
 (global-set-key (kbd "C-?") 'redo)
 (setq undo-no-redo t)
 (setq undo-limit 600000)

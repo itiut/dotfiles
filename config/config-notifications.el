@@ -1,4 +1,4 @@
-;;; notifications
+;;;; notifications
 (require 'notifications)
 
 (add-hook 'after-revert-hook

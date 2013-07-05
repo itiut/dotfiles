@@ -1,4 +1,4 @@
-;;; ruby-mode
+;;;; ruby-mode
 (add-to-list 'auto-mode-alist '("\\Gemfile\\'" . ruby-mode))
 
 (setq ruby-insert-encoding-magic-comment nil)

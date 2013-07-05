@@ -1,5 +1,6 @@
-;;; flymake
+;;;; flymake
 (require 'flymake)
+
 (add-hook 'flymake-mode-hook
           '(lambda ()
              (local-set-key (kbd "M-p") 'flymake-goto-prev-error)

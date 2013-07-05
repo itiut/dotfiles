@@ -1,5 +1,6 @@
-;;; tabbar
+;;;; tabbar
 (require 'tabbar)
+
 (global-set-key (kbd "<C-tab>") 'tabbar-forward-tab)
 (global-set-key (kbd "<C-S-tab>") 'tabbar-backward-tab)
 (global-set-key (kbd "<C-S-iso-lefttab>") 'tabbar-backward-tab)

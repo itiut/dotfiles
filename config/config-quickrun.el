@@ -1,5 +1,6 @@
-;;; quickrun
+;;;; quickrun
 (require 'quickrun)
+
 (global-set-key (kbd "<f5>") 'my/quickrun-depending-on-region)
 (global-set-key (kbd "<C-f5>") 'quickrun-with-arg)
 (global-set-key (kbd "<M-f5>") 'quickrun-compile-only)

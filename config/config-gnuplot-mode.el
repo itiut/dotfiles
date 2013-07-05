@@ -1,4 +1,2 @@
-;;; gnuplot-mode
-(setq auto-mode-alist
-      (append '(("\\.gp$" . gnuplot-mode))
-              auto-mode-alist))
+;;;; gnuplot-mode
+(add-to-list 'auto-mode-alist '("\\.gp\\'" . gnuplot-mode))

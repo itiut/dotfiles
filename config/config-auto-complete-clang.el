@@ -1,4 +1,4 @@
-;;; auto-complete-clang
+;;;; auto-complete-clang
 (require 'auto-complete-clang)
 
 (defun my-ac-clang-setup ()

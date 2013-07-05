@@ -1,4 +1,4 @@
-;;; c-mode, c++-mode
+;;;; c-mode, c++-mode
 (defun my-c-c++-mode-setup ()
   (c-set-style "stroustrup")
   (c-set-offset 'innamespace 0)

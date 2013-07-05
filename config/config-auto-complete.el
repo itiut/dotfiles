@@ -1,5 +1,6 @@
-;;; auto-complete
+;;;; auto-complete
 (require 'auto-complete-config)
+
 ;; デフォルトの情報源の設定
 (ac-config-default)
 (setq ac-comphist-file (expand-file-name "ac-comphist.dat" my-cache-dir))

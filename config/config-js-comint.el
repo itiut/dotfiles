@@ -1,4 +1,4 @@
-;;; js-comint
+;;;; js-comint
 (require 'js-comint)
 
 (setq inferior-js-program-command "~/.nodebrew/current/bin/node")
