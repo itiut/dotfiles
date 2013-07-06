@@ -256,6 +256,7 @@
     goto-chg
     helm
     helm-c-yasnippet
+    helm-descbinds
 ;    helm-gtags
     highlight-symbol
     inf-ruby
