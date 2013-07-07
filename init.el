@@ -29,7 +29,7 @@
 (setq confirm-kill-emacs 'y-or-n-p)
 
 ;; 外部ブラウザをgoogle-crhomeに
-(unless (call-process-shell-command "which" nil nil nil "google-chrome")
+(when (= (call-process-shell-command "which" nil nil nil "google-chrome") 0)
   (setq browse-url-browser-function 'browse-url-generic browse-url-generic-program "google-chrome"))
 
 ;; バックアップファイルを作成しない
