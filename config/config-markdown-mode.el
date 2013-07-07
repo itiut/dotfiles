@@ -11,7 +11,7 @@
 (define-key markdown-mode-map (kbd "C-c C-c p") 'my/toggle-markdown-preview)
 
 (defun my/toggle-markdown-preview ()
-  "カレントバッファをmarkupでプレビュー/プレビューをやめる"
+  "カレントバッファをmarkupでプレビュー/プレビューをやめる."
   (interactive)
   (let ((proc (get-buffer-process "*markup*")))
     (if (and (processp proc)
