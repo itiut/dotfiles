@@ -192,3 +192,11 @@ screen|screen-bce)
     }
 ;;
 esac
+
+# create emacs env file if does not exist or is not updated
+shellenv_el="$HOME/.emacs.d/.cache/shellenv.el"
+if [[ ! -e $shellenv_el || `date +%d` != `date -r $shellenv_el +%d` ]] ; then
+    perl -wle \
+        'do { print qq/(setenv "$_" "$ENV{$_}")/ if exists $ENV{$_} } for @ARGV' \
+        PATH > $shellenv_el
+fi
