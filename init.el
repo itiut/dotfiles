@@ -8,11 +8,6 @@
 (defvar my/config-file-prefix "config-")
 (defvar my/etc-dir (concat user-emacs-directory "etc/"))
 
-;; 環境変数のロード
-(when (load (concat my/cache-dir "shellenv") 'noerror)
-  (dolist (path (reverse (split-string (getenv "PATH") ":")))
-    (add-to-list 'exec-path path)))
-
 ;; 言語設定
 (set-language-environment 'Japanese)
 (prefer-coding-system 'utf-8-unix)
@@ -254,10 +249,11 @@
     auto-complete-clang
     c-eldoc
 ;    color-moccur
-;    gnuplot-mode
 ;    deferred
+    exec-path-from-shell
 ;    flycheck
     flymake-ruby
+;    gnuplot-mode
     goto-chg
     helm
     helm-c-yasnippet
