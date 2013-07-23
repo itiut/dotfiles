@@ -311,6 +311,7 @@
 ;; builtin
 (defvar my/builtin-sources
   '(
+    autoinsert
     compilation-mode
     c-c++-mode
     dired
