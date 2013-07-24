@@ -19,6 +19,7 @@ alias -g C="| xclip -in -selection clipboard"
 alias -g G="| grep"
 alias -g H="| head"
 alias -g L="| less"
+alias -g S="| sed"
 alias -g T="| tail"
 
 alias ls="ls --classify --color"
