@@ -255,6 +255,7 @@
     flymake-ruby
 ;    gnuplot-mode
     goto-chg
+    haskell-mode
     helm
     helm-c-yasnippet
     helm-descbinds
