@@ -93,9 +93,12 @@
 ;; ファイルサイズを表示
 (setq size-indication-mode t)
 
-;; タイトルにフルパスを表示
+;; タイトルにフルパスまたはバッファ名を表示
 (setq frame-title-format
-      (concat "%f - emacs@" system-name))
+      '("%S" (buffer-file-name "%f"
+                               (dired-directory dired-directory "%b"))
+        " - Emacs "
+        emacs-version))
 
 ;; 起動画面を表示しない
 (setq inhibit-splash-screen t)
