@@ -351,6 +351,7 @@
         'emacs-lisp-mode-hook
 ;        'gnuplot-mode-hook
         'haml-mode-hook
+        'haskell-mode-hook
         'html-mode-hook
         'jade-mode-hook
         'js2-mode-hook
