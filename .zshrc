@@ -138,7 +138,6 @@ setopt no_nomatch
 # antigen
 source "$ZSHDIR/antigen/antigen.zsh"
 antigen-bundles <<EOF
-autojump
 bundler
 gem
 heroku
@@ -164,6 +163,10 @@ ZSH_THEME_GIT_PROMPT_CONFLICTS="$ZSH_THEME_GIT_PROMPT_CONFLICTS "
 ZSH_THEME_GIT_PROMPT_CHANGED="$ZSH_THEME_GIT_PROMPT_CHANGED "
 ZSH_THEME_GIT_PROMPT_UNTRACKED="$ZSH_THEME_GIT_PROMPT_UNTRACKED "
 ZSH_THEME_GIT_PROMPT_CLEAN="$ZSH_THEME_GIT_PROMPT_CLEAN "
+
+# z.sh
+_Z_CMD=j
+source "$ZSHDIR/z/z.sh"
 
 # PROMPT
 autoload colors; colors
