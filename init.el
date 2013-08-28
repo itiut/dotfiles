@@ -253,6 +253,7 @@
     flymake-ruby
 ;    gnuplot-mode
     goto-chg
+    haml-mode
     haskell-mode
     helm
     helm-c-yasnippet
