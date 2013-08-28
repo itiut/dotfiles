@@ -60,6 +60,9 @@
 ;; 半角スペースでインデント
 (setq-default indent-tabs-mode nil)
 
+;; オートインデント
+(electric-indent-mode 1)
+
 ;; 対応する括弧などを自動で挿入
 (electric-pair-mode 1)
 
@@ -132,7 +135,6 @@
 (global-unset-key (kbd "C-\\"))         ; 日本語入力
 
 ;; 有効にするキーバインド
-(global-set-key (kbd "C-S-j") 'indent-and-newline-and-indent)
 (global-set-key (kbd "C-a") 'beginning-of-visual-indented-line)
 (global-set-key (kbd "C-t") 'other-window-or-split)
 (global-set-key (kbd "C-c l") 'toggle-truncate-lines)
@@ -145,13 +147,6 @@
 (global-set-key (kbd "<f11>") 'toggle-fullscreen-maximized)
 (global-set-key (kbd "C-x C-t") 'open-current-directory-in-tmux-new-window)
 
-
-(defun indent-and-newline-and-indent ()
-  "現在行をインデントし, その後newline-and-indentする."
-  (interactive)
-  (indent-according-to-mode)
-  (move-end-of-line 1)
-  (newline-and-indent))
 
 (defun beginning-of-visual-indented-line (current-point)
   "インデント文字を飛ばした行頭に戻る. ただし, ポイントから行頭までの間にインデント文字しかない場合は, 行頭に戻る."
