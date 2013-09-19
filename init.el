@@ -241,6 +241,7 @@
 
 (defvar my/el-get-sources
   '(
+    anzu
     arduino-mode
     auto-async-byte-compile
     auto-complete
