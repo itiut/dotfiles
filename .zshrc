@@ -143,6 +143,7 @@ gem
 heroku
 npm
 rbenv
+vagrant
 EOF
 antigen-apply
 
