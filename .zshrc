@@ -138,11 +138,11 @@ setopt no_nomatch
 # antigen
 source "$ZSHDIR/antigen/antigen.zsh"
 antigen-bundles <<EOF
-bundler
+rbenv
 gem
+bundler
 heroku
 npm
-rbenv
 vagrant
 EOF
 antigen-apply
