@@ -270,7 +270,6 @@
     markdown-mode
 ;    moccur-edit
     point-undo
-;    powerline
     quickrun
     railscasts-theme
     recentf-ext
