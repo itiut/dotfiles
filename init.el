@@ -245,7 +245,6 @@
     arduino-mode
     auto-async-byte-compile
     auto-complete
-;    auto-complete-clang
     c-eldoc
     clang-complete-async
 ;    color-moccur
