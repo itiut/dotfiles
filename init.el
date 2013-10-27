@@ -273,6 +273,7 @@
     powerline
     quickrun
     railscasts-theme
+    recentf-ext
     redo+
     rsense
     ruby-end
@@ -320,7 +321,6 @@
     flymake
     imenu
     notifications
-    recentf
     ruby-mode
     server
     uniquify
