@@ -22,11 +22,11 @@
 
 (defun flymake-c-init ()
   (flymake-simple-make-or-generic-init
-   "gcc" '("-Wall" "-Wextra" "-pedantic" "-fsyntax-only" "-std=gnu99")))
+   "clang" '("-Wall" "-Wextra" "-pedantic" "-fsyntax-only" "-std=gnu99")))
 
 (defun flymake-cc-init ()
   (flymake-simple-make-or-generic-init
-   "g++" '("-Wall" "-Wextra" "-pedantic" "-Wno-long-long" "-fsyntax-only")))
+   "clang++" '("-Wall" "-Wextra" "-pedantic" "-Wno-long-long" "-fsyntax-only" "-std=c++11")))
 
 ;; Verilog HDL
 (defun flymake-verilog-init ()

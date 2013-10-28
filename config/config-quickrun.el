@@ -12,15 +12,20 @@
       (quickrun :start (region-beginning) :end (region-end))
     (quickrun)))
 
-(quickrun-add-command "c/gnu99"
-                      '((:command . "gcc -std=gnu99")
-                        (:exec . ("%c %o -o %e %s"
-                                  "%e %a"))
+(quickrun-add-command "c/clang99"
+                      '((:command . "clang")
+                        (:cmdopt . "-std=c99 -O2")
+                        (:exec    . ("%c %o -o %e %s" "%e %a"))
                         (:compile-only . "%c -Wall -Wextra -Werror %o -o %e %s")
-                        (:remove . "%e")
-                        (:description . "Compile C file with gcc (GNU99) and execute"))
+                        (:remove  . ("%e"))
+                        (:description . "Compile C file with llvm/clang and execute"))
                       :default "c")
 
-(quickrun-add-command "c++/g++"
-                      '((:compile-only . "%c -Wall -Wextra -Werror %o -o %e %s"))
-                      :override t)
+(quickrun-add-command "c++/clang++11"
+                      '((:command . "clang++")
+                        (:cmdopt . "-std=c++11 -O2")
+                        (:exec    . ("%c %o -o %e %s" "%e %a"))
+                        (:compile-only . "%c -Wall -Wextra -Werror %o -o %e %s")
+                        (:remove  . ("%e"))
+                        (:description . "Compile C++ file with llvm/clang++ and execute"))
+                      :default "c++")

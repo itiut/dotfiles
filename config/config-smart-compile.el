@@ -5,8 +5,8 @@
 
 (setq smart-compile-alist
       (append '(
-                ("\\.c\\'"          . "gcc -Wall -Wextra -O2 -std=gnu99 %f")
-                ("\\.[Cc]+[Pp]*\\'" . "g++ -Wall -Wextra -O2 %f")
+                ("\\.c\\'"          . "clang -Wall -Wextra -O2 -std=c99 %f")
+                ("\\.[Cc]+[Pp]*\\'" . "clang++ -Wall -Wextra -O2 -std=c++11 %f")
                 ("\\.jade\\'"       . "jade %f")
                 ("\\.styl\\'"       . "stylus %f")
                 ) smart-compile-alist))
