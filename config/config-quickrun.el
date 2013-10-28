@@ -2,7 +2,7 @@
 (require 'quickrun)
 
 (global-set-key (kbd "<f5>") 'my/quickrun-depending-on-region)
-(global-set-key (kbd "<C-f5>") 'quickrun-compile-onpy)
+(global-set-key (kbd "<C-f5>") 'quickrun-compile-only)
 (global-set-key (kbd "<M-f5>") 'quickrun-with-arg)
 
 (defun my/quickrun-depending-on-region ()
