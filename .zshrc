@@ -171,9 +171,12 @@ source "$ZSHDIR/z/z.sh"
 
 # PROMPT
 autoload colors; colors
+local p_cdir="%B%F{yellow}%~"
+local p_info="%B%F{green}[%n@%m]"
+local p_mark="%f%b$"
 PROMPT=$'
- %B%F{yellow}%~ $(git_super_status)
-%B%F{green}[%n@%m]%f%b$ '
+ ${p_cdir} $(git_super_status)
+${p_info}${p_mark} '
 PROMPT2="[%n]> "
 RPROMPT="%B%F{blue}[%*]"
 
