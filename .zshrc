@@ -124,6 +124,7 @@ function chpwd() { ls }
 function cdup() {
     echo
     cd ..
+    echo "\n"                   # avoid being not displayed when PROMPT contains newline
     zle reset-prompt
 }
 zle -N cdup
@@ -140,6 +141,7 @@ function ls-and-git-status() {
         git status -sb
     fi
 
+    echo "\n"                   # avoid being not displayed when PROMPT contains newline
     zle reset-prompt
 }
 zle -N ls-and-git-status
