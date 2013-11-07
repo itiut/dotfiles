@@ -129,6 +129,22 @@ function cdup() {
 zle -N cdup
 bindkey '\^' cdup
 
+# run `ls && git status` by C-t
+function ls-and-git-status() {
+    echo
+    ls
+
+    if [ "$(git rev-parse --is-inside-work-tree 2> /dev/null)" = 'true' ]; then
+        echo
+        echo -e "\e[0;33m--- git status ---\e[0m"
+        git status -sb
+    fi
+
+    zle reset-prompt
+}
+zle -N ls-and-git-status
+bindkey '^T' ls-and-git-status
+
 # do not beep
 setopt no_beep
 
