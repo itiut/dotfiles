@@ -280,6 +280,7 @@
     tabbar
 ;    tuareg-mode
     yalinum
+    yaml-mode
     yasnippet
 ;    zencoding-mode
     ))
