@@ -155,6 +155,7 @@ setopt no_nomatch
 
 # antigen
 source "$ZSHDIR/antigen/antigen.zsh"
+antigen-use oh-my-zsh
 antigen-bundles <<EOF
 rbenv
 gem
