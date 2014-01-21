@@ -171,7 +171,7 @@ antigen-theme $ZSHDIR/itiut.zsh-theme
 antigen-apply
 
 # auto-fu.zsh
-source "$ZSHDIR/auto-fu.zsh/auto-fu.zsh"
+source $ZSHDIR/auto-fu.zsh/auto-fu.zsh
 function zle-line-init () {
 	auto-fu-init
 }
