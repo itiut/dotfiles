@@ -41,7 +41,10 @@ alias t="tig"
 alias v="vim"
 
 # history file
-HISTFILE="$ZSHDIR/.zsh_history"
+HISTDIR="$HOME/Dropbox/.share/.zsh_history"
+if [ -d $HISTDIR ]; then
+    HISTFILE="$HISTDIR/$(hostname).zsh_history"
+fi
 
 # history size
 HISTSIZE=10000
