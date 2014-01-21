@@ -1,5 +1,12 @@
 #!/bin/sh -eu
 
+init_submodules() {
+    echo ""
+    echo "init submodules..."
+
+    git submodule update --init
+}
+
 link_dotfiles() {
     echo ""
     echo "link dotfiles..."
@@ -22,4 +29,5 @@ link_dotfiles() {
 }
 
 cd $(dirname $0)
+init_submodules
 link_dotfiles
