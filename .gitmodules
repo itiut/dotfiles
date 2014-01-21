@@ -1,6 +1,7 @@
 [submodule ".zsh.d/auto-fu.zsh"]
 	path = .zsh.d/auto-fu.zsh
 	url = git://github.com/hchbaw/auto-fu.zsh.git
+	branch = pu
 [submodule ".zsh.d/antigen"]
 	path = .zsh.d/antigen
 	url = git://github.com/zsh-users/antigen.git
