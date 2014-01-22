@@ -1,15 +1,14 @@
 #!/bin/sh -eu
+PROGRAM=$(basename $0)
 
 init_submodules() {
-    echo ""
-    echo "init submodules..."
+    echo "[$PROGRAM] init submodules..."
 
     git submodule update --init
 }
 
 link_dotfiles() {
-    echo ""
-    echo "link dotfiles..."
+    echo "[$PROGRAM] link dotfiles..."
 
     for dotfile in .?*; do
         case $dotfile in
