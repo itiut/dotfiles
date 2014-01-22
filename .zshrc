@@ -70,9 +70,6 @@ setopt list_packed
 # do not distinguish lowercases from uppercases
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
-# next completion by <tab>, C-i
-setopt auto_menu
-
 # previous completion by <S-tab>
 bindkey "\e[Z" reverse-menu-complete
 
