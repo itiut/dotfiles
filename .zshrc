@@ -83,11 +83,6 @@ setopt print_eight_bit
 # correct the spelling of commands
 setopt correct
 
-# LSCOLORS
-export LSCOLORS=gxfxxxxxcxxxxxxxxxgxgx
-export LS_COLORS='di=01;36:ln=01;35:ex=01;32'
-zstyle ':completion:*' list-colors 'di=01;36' 'ln=01;35' 'ex=01;32'
-
 # run `ls` after `cd`
 function chpwd() { ls }
 

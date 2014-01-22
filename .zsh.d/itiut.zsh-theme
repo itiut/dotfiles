@@ -1,3 +1,7 @@
+export LSCOLORS=gxfxxxxxcxxxxxxxxxgxgx
+export LS_COLORS='di=01;36:ln=01;35:ex=01;32'
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+
 local git_info='$(git_prompt_info)$(git_prompt_status)'
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$reset_color%}| %{$fg_bold[blue]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
