@@ -40,30 +40,13 @@ alias o="xdg-open"
 alias t="tig"
 alias v="vim"
 
+## history
+## use oh-my-zsh/lib/history.zsh as default setting
 # history file
 HISTDIR="$HOME/Dropbox/.share/.zsh_history"
 if [ -d $HISTDIR ]; then
     HISTFILE="$HISTDIR/$(hostname).zsh_history"
 fi
-
-# history size
-HISTSIZE=10000
-SAVEHIST=10000
-
-# share command history data
-setopt share_history
-
-# remove duplication commands
-setopt hist_ignore_all_dups
-
-# ignore commands which are the same as previous one
-setopt hist_ignore_dups
-
-# ignore commands when the first charactor is a space
-setopt hist_ignore_space
-
-# remove the 'history' command
-setopt hist_no_store
 
 # remove superflous blanks from commands
 setopt hist_reduce_blanks
