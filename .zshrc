@@ -29,7 +29,6 @@ alias lla="ls -l --all"
 alias cp="cp --interactive"
 alias mv="mv --interactive"
 alias rm="rm --interactive"
-alias grep="grep --color"
 
 alias a="./a.out"
 alias c="cd"
