@@ -36,8 +36,6 @@ alias o="xdg-open"
 alias t="tig"
 alias v="vim"
 
-## history
-## use oh-my-zsh/lib/history.zsh as default setting
 # history file
 HISTDIR="$HOME/Dropbox/.share/.zsh_history"
 if [ -d $HISTDIR ]; then
@@ -54,17 +52,11 @@ zle -N history-beginning-search-forward-end history-search-end
 bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
 
-# use completion
-autoload -Uz compinit; compinit
-
 # automatically list choices on an ambiguous completion
 setopt auto_list
 
 # make the completion list smaller
 setopt list_packed
-
-# do not distinguish lowercases from uppercases
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 # insert the parameter-following character immediately after parameter names
 setopt auto_param_keys
