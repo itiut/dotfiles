@@ -41,7 +41,10 @@ alias t="tig"
 alias v="vim"
 
 # history file
-HISTFILE="$ZSHDIR/.zsh_history"
+HISTDIR="$HOME/Dropbox/.share/.zsh_history"
+if [ -d $HISTDIR ]; then
+    HISTFILE="$HISTDIR/$(hostname).zsh_history"
+fi
 
 # history size
 HISTSIZE=10000
@@ -155,6 +158,7 @@ setopt no_nomatch
 
 # antigen
 source "$ZSHDIR/antigen/antigen.zsh"
+antigen-use oh-my-zsh
 antigen-bundles <<EOF
 rbenv
 gem
@@ -163,40 +167,20 @@ heroku
 npm
 vagrant
 EOF
+antigen-theme $ZSHDIR/itiut.zsh-theme
 antigen-apply
 
 # auto-fu.zsh
-source "$ZSHDIR/auto-fu.zsh/auto-fu.zsh"
+source $ZSHDIR/auto-fu.zsh/auto-fu.zsh
 function zle-line-init () {
 	auto-fu-init
 }
 zle -N zle-line-init
 zstyle ':completion:*' completer _oldlist _complete
 
-# zsh-git-prompt
-source "$ZSHDIR/zsh-git-prompt/zshrc.sh"
-__GIT_PROMPT_DIR="$ZSHDIR/zsh-git-prompt"
-# do not overlap characters
-ZSH_THEME_GIT_PROMPT_STAGED="$ZSH_THEME_GIT_PROMPT_STAGED "
-ZSH_THEME_GIT_PROMPT_CONFLICTS="$ZSH_THEME_GIT_PROMPT_CONFLICTS "
-ZSH_THEME_GIT_PROMPT_CHANGED="$ZSH_THEME_GIT_PROMPT_CHANGED "
-ZSH_THEME_GIT_PROMPT_UNTRACKED="$ZSH_THEME_GIT_PROMPT_UNTRACKED "
-ZSH_THEME_GIT_PROMPT_CLEAN="$ZSH_THEME_GIT_PROMPT_CLEAN "
-
 # z.sh
 _Z_CMD=j
 source "$ZSHDIR/z/z.sh"
-
-# PROMPT
-autoload colors; colors
-local p_cdir="%B%F{yellow}%~"
-local p_info="%B%F{green}[%n@%m]"
-local p_mark="%f%b$"
-PROMPT=$'
- ${p_cdir} $(git_super_status)
-${p_info}${p_mark} '
-PROMPT2="[%n]> "
-RPROMPT="%B%F{blue}[%*]"
 
 case "${TERM}" in
 # gnome-terminal

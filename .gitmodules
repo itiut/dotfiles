@@ -1,12 +1,10 @@
 [submodule ".zsh.d/auto-fu.zsh"]
 	path = .zsh.d/auto-fu.zsh
 	url = git://github.com/hchbaw/auto-fu.zsh.git
-[submodule ".zsh.d/zsh-git-prompt"]
-	path = .zsh.d/zsh-git-prompt
-	url = git://github.com/olivierverdier/zsh-git-prompt.git
-[submodule "antigen"]
+	branch = pu
+[submodule ".zsh.d/antigen"]
 	path = .zsh.d/antigen
 	url = git://github.com/zsh-users/antigen.git
 [submodule ".zsh.d/z"]
 	path = .zsh.d/z
-	url = https://github.com/rupa/z.git
+	url = git://github.com/rupa/z.git
