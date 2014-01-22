@@ -37,9 +37,9 @@ alias t="tig"
 alias v="vim"
 
 # history file
-HISTDIR="$HOME/Dropbox/.share/.zsh_history"
+HISTDIR=$HOME/Dropbox/.share/.zsh_history
 if [ -d $HISTDIR ]; then
-    HISTFILE="$HISTDIR/$(hostname).zsh_history"
+    HISTFILE=$HISTDIR/$(hostname).zsh_history
 fi
 
 # remove superflous blanks from commands
@@ -117,9 +117,9 @@ zle -N zle-keymap-select auto-fu-zle-keymap-select
 
 # z.sh
 _Z_CMD=j
-source "$ZSHDIR/z/z.sh"
+source $ZSHDIR/z/z.sh
 
-case "${TERM}" in
+case ${TERM} in
 # gnome-terminal
 kterm*|xterm)
     precmd() {
