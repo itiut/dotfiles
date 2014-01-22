@@ -11,6 +11,20 @@ export PATH="$HOME/android-sdks/platform-tools:$PATH"
 # EDITOR
 export EDITOR=vim
 
+# antigen
+source $ZSHDIR/antigen/antigen.zsh
+antigen-use oh-my-zsh
+antigen-bundles <<EOBUNDLES
+rbenv
+gem
+bundler
+heroku
+npm
+vagrant
+EOBUNDLES
+antigen-theme $ZSHDIR/itiut.zsh-theme
+antigen-apply
+
 # aliases
 alias -g C="| xclip -in -selection clipboard"
 alias -g G="| grep"
@@ -110,20 +124,6 @@ setopt no_beep
 
 # do not print matching errors by glob
 setopt no_nomatch
-
-# antigen
-source "$ZSHDIR/antigen/antigen.zsh"
-antigen-use oh-my-zsh
-antigen-bundles <<EOF
-rbenv
-gem
-bundler
-heroku
-npm
-vagrant
-EOF
-antigen-theme $ZSHDIR/itiut.zsh-theme
-antigen-apply
 
 # auto-fu.zsh
 source $ZSHDIR/auto-fu.zsh/auto-fu.zsh
