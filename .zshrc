@@ -177,6 +177,7 @@ function zle-line-init () {
 }
 zle -N zle-line-init
 zstyle ':completion:*' completer _oldlist _complete
+zle -N zle-keymap-select auto-fu-zle-keymap-select
 
 # z.sh
 _Z_CMD=j
