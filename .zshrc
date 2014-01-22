@@ -97,9 +97,6 @@ export LSCOLORS=gxfxxxxxcxxxxxxxxxgxgx
 export LS_COLORS='di=01;36:ln=01;35:ex=01;32'
 zstyle ':completion:*' list-colors 'di=01;36' 'ln=01;35' 'ex=01;32'
 
-# run `cd` if the command is only a directory name
-setopt auto_cd
-
 # run `ls` after `cd`
 function chpwd() { ls }
 
