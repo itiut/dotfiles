@@ -100,9 +100,6 @@ zstyle ':completion:*' list-colors 'di=01;36' 'ln=01;35' 'ex=01;32'
 # run `cd` if the command is only a directory name
 setopt auto_cd
 
-# run `pushd` when `cd`
-setopt auto_pushd
-
 # run `ls` after `cd`
 function chpwd() { ls }
 
