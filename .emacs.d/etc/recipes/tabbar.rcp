@@ -1,0 +1,5 @@
+(:name tabbar
+:auto-generated t
+:type emacswiki
+:description "Display a tab bar in the header line"
+:website "https://raw.github.com/emacsmirror/emacswiki.org/master/tabbar.el")

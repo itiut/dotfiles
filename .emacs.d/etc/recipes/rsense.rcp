@@ -1,0 +1,9 @@
+(:name rsense
+       :description "RSense client for Emacs"
+       :website "https://github.com/marcus/rsense"
+       :type github
+       :pkgname "marcus/rsense"
+       :load-path ("etc")
+       :build `(("$HOME/.rbenv/shims/ruby etc/config.rb > ~/.rsense"))
+       :post-init (setq rsense-home (expand-file-name "."))
+       :features "rsense")

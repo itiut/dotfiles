@@ -1,0 +1,6 @@
+(:name jade-mode
+       :description "Major mode for Jade and Stylus"
+       :website "https://github.com/brianc/jade-mode"
+       :type github
+       :pkgname "brianc/jade-mode"
+       :features "jade-mode")

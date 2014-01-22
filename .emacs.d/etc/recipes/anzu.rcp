@@ -1,0 +1,6 @@
+(:name anzu
+       :description "Emacs Port of anzu.vim"
+       :website "https://github.com/syohex/emacs-anzu"
+       :type github
+       :pkgname "syohex/emacs-anzu"
+       :features "anzu")

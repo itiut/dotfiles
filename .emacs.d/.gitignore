@@ -1,0 +1,7 @@
+*.elc
+.cache/*
+el-get/
+tramp
+
+!.gitignore
+!.gitkeep

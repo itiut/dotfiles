@@ -1,0 +1,8 @@
+(:name railscasts-theme
+       :description "Railscasts color theme for GNU Emacs"
+       :website "https://github.com/itiut/railscasts-theme"
+       :type github
+       :pkgname "itiut/railscasts-theme"
+       :minimum-emacs-version 24
+       :post-init (add-to-list 'custom-theme-load-path
+                               default-directory))

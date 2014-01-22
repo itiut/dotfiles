@@ -1,0 +1,6 @@
+(:name exec-path-from-shell
+       :description "Get environment variables such as $PATH from the shell"
+       :website "https://github.com/purcell/exec-path-from-shell"
+       :type github
+       :pkgname "purcell/exec-path-from-shell"
+       :features "exec-path-from-shell")

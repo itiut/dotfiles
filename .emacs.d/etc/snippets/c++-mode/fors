@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: for (string::iterator ...; ...; ...) { ... }
+# key: fors
+# --
+for (string::iterator ${2:it} = ${1:s}.begin(); $2 != $1.end(); $2++) {
+    $0
+}
