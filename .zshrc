@@ -109,7 +109,7 @@ setopt no_nomatch
 # auto-fu.zsh
 source $ZSHDIR/auto-fu.zsh/auto-fu.zsh
 function zle-line-init () {
-	auto-fu-init
+    auto-fu-init
 }
 zle -N zle-line-init
 zstyle ':completion:*' completer _oldlist _complete
