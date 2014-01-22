@@ -11,9 +11,6 @@ export PATH="$HOME/android-sdks/platform-tools:$PATH"
 # EDITOR
 export EDITOR=vim
 
-# use Emacs keybindings
-bindkey -e
-
 # aliases
 alias -g C="| xclip -in -selection clipboard"
 alias -g G="| grep"
@@ -68,9 +65,6 @@ setopt list_packed
 
 # do not distinguish lowercases from uppercases
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
-
-# previous completion by <S-tab>
-bindkey "\e[Z" reverse-menu-complete
 
 # insert the parameter-following character immediately after parameter names
 setopt auto_param_keys
