@@ -2,14 +2,15 @@
 PROGRAM=$(basename $0)
 
 init_submodules() {
-    echo "[$PROGRAM] init submodules..."
-
+    echo "[$PROGRAM] init submodules"
     git submodule update --init
 }
 
-link_dotfiles() {
-    echo "[$PROGRAM] link dotfiles..."
+link_bin_and_dotfiles() {
+    echo "[$PROGRAM] link bin"
+    ln -is "$PWD/bin" $HOME
 
+    echo "[$PROGRAM] link dotfiles"
     for dotfile in .?*; do
         case $dotfile in
             ..)
@@ -29,4 +30,4 @@ link_dotfiles() {
 
 cd $(dirname $0)
 init_submodules
-link_dotfiles
+link_bin_and_dotfiles
