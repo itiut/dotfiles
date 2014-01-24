@@ -1,6 +1,8 @@
 dotfiles
 ====
 
+TODO: update README
+
 私が使っている設定ファイルたちです。
 
 動作環境
