@@ -13,6 +13,8 @@
 	autosetuprebase = always
 [merge]
 	ff = false
+[pull]
+	rebase = true
 [alias]
 	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
 	aa = !git add . && git status
