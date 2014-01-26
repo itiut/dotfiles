@@ -1,7 +1,8 @@
 ;;;; whitespace setting
 
 (custom-set-variables
- '(whitespace-style '(face              ; visualize by face
+ '(whitespace-style '(
+                      ;; do not visualize by fase because of incompatibility with auto-complete
                       trailing          ; spaces on EOL
                       tabs
                       spaces

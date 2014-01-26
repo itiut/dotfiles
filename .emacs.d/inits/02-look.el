@@ -28,6 +28,8 @@
 ;; highlight
 (global-hl-line-mode 1)                 ; current line
 (show-paren-mode 1)                     ; parens
+(custom-set-variables
+ '(show-trailing-whitespace t))         ; spaces before EOL
 
 ;; uniquify
 (require 'uniquify)
