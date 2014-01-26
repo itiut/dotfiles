@@ -41,6 +41,10 @@
     ;; Emacs Lisp
     auto-async-byte-compile
 
+    ;; Ruby
+    inf-ruby
+    ruby-end
+
     ;;; theme
     monokai-theme
     ))
