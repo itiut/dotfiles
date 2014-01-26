@@ -1,10 +1,9 @@
 ;;;; Ruby mode setting
 
-(add-to-list 'auto-mode-alist '("\\.gemspec\\'" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.ru\\'" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\Gemfile\\'" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\Rakefile\\'" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.ru\\'" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("\\Gemfile\\'" . enh-ruby-mode))
 
+;; ruby-mode
 (custom-set-variables
  '(ruby-deep-indent-paren nil)
  '(ruby-deep-indent-paren-style nil)
@@ -28,20 +27,26 @@
       (when (> offset 0)
         (forward-char offset)))))
 
-(eval-after-load "ruby-mode"
-  '(progn
-     ;; rsense
-     (require 'rsense)
-     (custom-set-variables
-      '(rsense-home (expand-file-name "rsense" my/site-lisp-directory)))
+;; enh-ruby-mode
+(custom-set-variables
+ '(enh-ruby-deep-indent-paren nil))
 
-     ;; ruby-end
-     (require 'ruby-end)
-     (custom-set-variables
-      '(ruby-end-insert-newline nil))
-     ))
+(defun my/eval-after-load-ruby-mode ()
+  ;; rsense
+  (require 'rsense)
+  (custom-set-variables
+   '(rsense-home (expand-file-name "rsense" my/site-lisp-directory)))
+
+  ;; ruby-end
+  (require 'ruby-end)
+  (custom-set-variables
+   '(ruby-end-insert-newline nil)))
+
+(eval-after-load "ruby-mode" '(my/eval-after-load-ruby-mode))
+(eval-after-load "enh-ruby-mode" '(my/eval-after-load-ruby-mode))
 
 (defun my/ruby-mode-hook ()
   (add-to-list 'ac-sources 'ac-source-rsense))
 
 (add-hook 'ruby-mode-hook 'my/ruby-mode-hook)
+(add-hook 'enh-ruby-mode-hook 'my/ruby-mode-hook)

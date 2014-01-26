@@ -29,6 +29,7 @@
  ;; modes in which whitespace mode is enabled
  '(whitespace-global-modes '(
                              emacs-lisp-mode
+                             enh-ruby-mode
                              ruby-mode
                              )))
 

@@ -42,6 +42,7 @@
     auto-async-byte-compile
 
     ;; Ruby
+    enh-ruby-mode
     inf-ruby
     ruby-end
 
