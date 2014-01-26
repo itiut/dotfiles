@@ -8,3 +8,6 @@
 [submodule ".zsh.d/z"]
 	path = .zsh.d/z
 	url = git://github.com/rupa/z.git
+[submodule ".emacs.d/site-lisp/rsense"]
+	path = .emacs.d/site-lisp/rsense
+	url = git://github.com/m2ym/rsense.git
