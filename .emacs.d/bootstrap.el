@@ -57,3 +57,13 @@
 (require 'init-loader)
 (byte-recompile-directory init-loader-directory 0)
 (byte-recompile-file (expand-file-name "init.el" user-emacs-directory) nil 0)
+
+;;; user site-lisp
+(defvar my/site-lisp-directory
+  (expand-file-name "site-lisp" user-emacs-directory))
+
+;; rsense
+(let* ((bin (expand-file-name "rsense/etc/config.rb" my/site-lisp-directory))
+       (target (expand-file-name ".rsense" (getenv "HOME")))
+       (cmd (format "%s > %s" bin target)))
+  (shell-command cmd))

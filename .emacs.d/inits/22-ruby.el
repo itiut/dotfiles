@@ -30,6 +30,11 @@
 
 (eval-after-load "ruby-mode"
   '(progn
+     ;; rsense
+     (require 'rsense)
+     (custom-set-variables
+      '(rsense-home (expand-file-name "rsense" my/site-lisp-directory)))
+
      ;; ruby-end
      (require 'ruby-end)
      (custom-set-variables
