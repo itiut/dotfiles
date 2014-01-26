@@ -50,6 +50,9 @@
     rubocop
     ruby-end
 
+    ;;; markup language
+    yaml-mode
+
     ;;; theme
     monokai-theme
     ))

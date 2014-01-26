@@ -31,6 +31,7 @@
                              emacs-lisp-mode
                              enh-ruby-mode
                              ruby-mode
+                             yaml-mode
                              )))
 
 (global-whitespace-mode 1)
