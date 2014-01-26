@@ -63,7 +63,7 @@
   (expand-file-name "site-lisp" user-emacs-directory))
 
 ;; rsense
-(let* ((bin (expand-file-name "rsense/etc/config.rb" my/site-lisp-directory))
+(let* ((script (expand-file-name "rsense/etc/config.rb" my/site-lisp-directory))
        (target (expand-file-name ".rsense" (getenv "HOME")))
-       (cmd (format "%s > %s" bin target)))
+       (cmd (format "ruby %s > %s" script target)))
   (shell-command cmd))
