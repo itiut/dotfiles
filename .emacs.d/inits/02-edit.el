@@ -1,9 +1,13 @@
 ;;;; editing setting
 
-;; 4-space indent
-(setq-default indent-tabs-mode nil
-              tab-width 4
-              tab-stop-list (number-sequence 4 120 4))
+(custom-set-variables
+ ;; 4-space indent
+ '(indent-tabs-mode nil)
+ '(tab-width 4)
+ '(tab-stop-list (number-sequence 4 120 4))
+
+ ;; ensure newline is inserted before EOF when saved
+ '(require-final-newline t))
 
 ;; auto indent
 (electric-indent-mode 1)
