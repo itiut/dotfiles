@@ -8,6 +8,7 @@
 (defvar my/packages
   '(
     ;;; basic
+    exec-path-from-shell
     init-loader
 
     ;; edit
