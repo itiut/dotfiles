@@ -2,6 +2,7 @@
 source $ZSHDIR/antigen/antigen.zsh
 antigen-use oh-my-zsh
 antigen-bundles <<EOBUNDLES
+rbenv
 gem
 bundler
 heroku
