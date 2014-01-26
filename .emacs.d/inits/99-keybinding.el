@@ -100,3 +100,7 @@
 (global-set-key (kbd "M-g M-q") 'quickrun)
 (global-set-key (kbd "M-g M-w") 'quickrun-with-arg)
 (global-set-key (kbd "M-g M-f") 'ffap)
+
+(smartrep-define-key
+    global-map "M-g" '(("M-n" . 'flycheck-tip-cycle)
+                       ("M-p" . 'flycheck-tip-cycle-reverse)))

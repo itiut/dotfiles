@@ -34,6 +34,9 @@
     ;; auto-complete
     auto-complete fuzzy popup
 
+    ;; flycheck
+    flycheck flycheck-tip
+
     quickrun
     recentf-ext
 
@@ -44,6 +47,7 @@
     ;; Ruby
     enh-ruby-mode
     inf-ruby
+    rubocop
     ruby-end
 
     ;;; theme

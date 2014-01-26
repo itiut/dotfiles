@@ -1,5 +1,6 @@
 ;;;; Ruby mode setting
 
+(add-to-list 'interpreter-mode-alist '("ruby" . enh-ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.ru\\'" . enh-ruby-mode))
 (add-to-list 'auto-mode-alist '("\\Gemfile\\'" . enh-ruby-mode))
 
@@ -46,7 +47,8 @@
 (eval-after-load "enh-ruby-mode" '(my/eval-after-load-ruby-mode))
 
 (defun my/ruby-mode-hook ()
-  (add-to-list 'ac-sources 'ac-source-rsense))
+  (add-to-list 'ac-sources 'ac-source-rsense)
+  (rubocop-mode 1))
 
 (add-hook 'ruby-mode-hook 'my/ruby-mode-hook)
 (add-hook 'enh-ruby-mode-hook 'my/ruby-mode-hook)
