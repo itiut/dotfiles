@@ -1,2 +1,13 @@
+*~
+
 *.zsh_history
 .byobu/.ssh-agent
+
+## emacs
+*.elc
+.emacs.d/.mc-lists.el
+.emacs.d/.recentf
+.emacs.d/ac-comphist.dat
+.emacs.d/auto-save-list
+.emacs.d/elpa
+.emacs.d/history

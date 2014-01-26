@@ -17,7 +17,7 @@
 	rebase = true
 [alias]
 	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
-	a = git add
+	a = add
 	aa = !git add --all && git status
 	b = branch
 	ba = branch -a
