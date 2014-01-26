@@ -2,8 +2,9 @@ export LANG=en_US.UTF-8
 
 typeset -U path
 path=(
-    $HOME/bin
-    $HOME/.anyenv/bin
+    $HOME/bin(N-/)
+    $HOME/Dropbox/bin(N-/)
+    $HOME/.anyenv/bin(N-/)
     {/usr/local,/usr,}{/sbin,/bin}(N-/)
 )
 
