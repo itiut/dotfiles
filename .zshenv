@@ -1,11 +1,19 @@
 export LANG=en_US.UTF-8
 
+export ZSHDIR=$HOME/.zsh.d
+
 typeset -U path
 path=(
     # user
     $HOME{/local,/Dropbox,}/bin(N-/)
     # Linux
     {/usr/local,/usr,}{/sbin,/bin}(N-/)
+)
+
+typeset -U fpath
+fpath=(
+    $ZSHDIR/site-functions
+    $fpath
 )
 
 typeset -U manpath
@@ -15,7 +23,5 @@ manpath=(
     # Linux
     {/usr/local,/usr}/share/man(N-/)
 )
-
-export ZSHDIR=$HOME/.zsh.d
 
 export EDITOR=vim
