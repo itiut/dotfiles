@@ -23,6 +23,7 @@
 
     ;; look
     anzu
+    git-gutter-fringe
     highlight-symbol
     yalinum
 
