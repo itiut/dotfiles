@@ -46,7 +46,8 @@
 ;; git-gutter-fringe
 (require 'git-gutter-fringe)
 (global-git-gutter-mode 1)
-(setq git-gutter-fr:side 'right-fringe)
+(setq git-gutter:lighter ""
+      git-gutter-fr:side 'right-fringe)
 
 ;; yalinum
 (global-yalinum-mode 1)

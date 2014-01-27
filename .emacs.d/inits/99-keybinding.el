@@ -43,6 +43,7 @@
 
 (define-key my/ctrl-q-map (kbd "C-q") 'quoted-insert) ; default C-q
 (define-key my/ctrl-q-map (kbd "b") 'describe-bindings)
+(define-key my/ctrl-q-map (kbd "k") 'describe-key)
 (define-key my/ctrl-q-map (kbd "v") 'view-mode)
 
 ;; expand-region
@@ -81,13 +82,19 @@
 (global-set-key (kbd "C-x M-%") 'anzu-query-replace-at-cursor)
 (global-set-key (kbd "C-x %") 'anzu-query-replace-at-cursor-thing)
 
+;; git-gutter
+(global-set-key (kbd "C-x v p") 'git-gutter:stage-hunk)
+(global-set-key (kbd "C-x v =") 'git-gutter:popup-hunk)
+(global-set-key (kbd "C-x v r") 'git-gutter:revert-hunk)
+(smartrep-define-key
+    global-map "C-x" '(("n" . 'git-gutter:next-diff)
+                       ("p" . 'git-gutter:previous-diff)))
+
 ;; highlight-symbol
 (smartrep-define-key
     global-map "M-s" '(("M-s" . 'highlight-symbol-next)
                        ("n"   . 'highlight-symbol-next)
                        ("p"   . 'highlight-symbol-prev)
-                       ("C-n" . 'highlight-symbol-next)
-                       ("C-p" . 'highlight-symbol-prev)
                        ("j"   . 'highlight-symbol-next-in-defun)
                        ("k"   . 'highlight-symbol-prev-in-defun)
                        ("l"   . 'highlight-symbol-list-all)
