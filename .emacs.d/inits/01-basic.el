@@ -5,9 +5,13 @@
 (prefer-coding-system 'utf-8-unix)
 
 ;; history
-(setq history-length 200
+(setq history-length 1000
       history-delete-duplicates t)
-(savehist-mode 1)
+
+;; desktop-save
+(desktop-save-mode 1)
+(add-to-list 'desktop-globals-to-save '(extended-command-history . 100))
+(add-to-list 'desktop-globals-to-save '(kill-ring . 100))
 
 ;; no backup and no auto save file
 (setq backup-inhibited t
