@@ -5,6 +5,7 @@
 
 ## emacs
 *.elc
+.emacs.d/.emacs.desktop*
 .emacs.d/.mc-lists.el
 .emacs.d/.recentf
 .emacs.d/ac-comphist.dat
