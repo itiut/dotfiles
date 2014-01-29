@@ -37,11 +37,11 @@
       (split-window-horizontally)))
   (other-window 1))
 
-(defun my/kill-region-or-backward-kill-word (beg end)
+(defun my/kill-region-or-backward-kill-word ()
   "Kill region if region is active and not empty. Otherwise kill a word just before point."
-  (interactive "r")
+  (interactive)
   (if (use-region-p)
-      (kill-region beg end)
+      (kill-region (region-beginning) (region-end))
     (backward-kill-word 1)))
 
 (defun my/open-line-above ()
