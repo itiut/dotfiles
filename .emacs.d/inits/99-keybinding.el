@@ -24,7 +24,7 @@
 (global-set-key (kbd "C-x C-b") 'helm-mini)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "C-x C-i") 'helm-imenu)
-(global-set-key (kbd "C-x C-l") 'helm-ls-git-ls)
+(global-set-key (kbd "C-x C-l") 'helm-browse-project)
 (global-set-key (kbd "C-x C-r") 'helm-recentf)
 (global-set-key (kbd "C-z") 'helm-resume)
 (global-set-key (kbd "M-o") 'helm-occur)
