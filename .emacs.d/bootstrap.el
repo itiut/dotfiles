@@ -19,6 +19,7 @@
     ;; feel
     ace-jump-mode
     goto-chg
+    jump-char
     point-undo
     smartrep
 

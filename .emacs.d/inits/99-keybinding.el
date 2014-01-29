@@ -75,6 +75,10 @@
     global-map "C-q" '(("-" . 'goto-last-change)
                        ("+" . 'goto-last-change-reverse)))
 
+;; jump-char
+(global-set-key (kbd "M-m") 'jump-char-forward)
+(global-set-key (kbd "M-M") 'jump-char-backward)
+
 ;; point-undo
 (smartrep-define-key
     global-map "C-q" '(("<" . 'point-undo)
