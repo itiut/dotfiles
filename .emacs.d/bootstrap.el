@@ -17,6 +17,7 @@
     undo-tree
 
     ;; feel
+    ace-jump-mode
     goto-chg
     point-undo
     smartrep

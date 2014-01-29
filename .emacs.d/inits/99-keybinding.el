@@ -66,6 +66,10 @@
                        ("o" . 'mc/sort-regions)
                        ("O" . 'mc/reverse-regions)))
 
+;; ace-jump-mode
+(global-set-key (kbd "C-;") 'ace-jump-mode)
+(global-set-key (kbd "C-+") 'ace-jump-mode-pop-mark)
+
 ;; goto-chg
 (smartrep-define-key
     global-map "C-q" '(("-" . 'goto-last-change)
