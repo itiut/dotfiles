@@ -33,6 +33,7 @@
     ;; helm
     helm
     helm-descbinds
+    helm-ls-git
 
     ;; auto-complete
     auto-complete fuzzy popup
