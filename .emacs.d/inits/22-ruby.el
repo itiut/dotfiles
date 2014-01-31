@@ -5,10 +5,9 @@
 (add-to-list 'auto-mode-alist '("\\Gemfile\\'" . enh-ruby-mode))
 
 ;; ruby-mode
-(custom-set-variables
- '(ruby-deep-indent-paren nil)
- '(ruby-deep-indent-paren-style nil)
- '(ruby-insert-encoding-magic-comment nil))
+(custom-set-variables '(ruby-deep-indent-paren nil)
+                      '(ruby-deep-indent-paren-style nil)
+                      '(ruby-insert-encoding-magic-comment nil))
 
 (defadvice ruby-indent-line (after unindent-closing-paren activate)
   (let ((column (current-column))
@@ -29,19 +28,16 @@
         (forward-char offset)))))
 
 ;; enh-ruby-mode
-(custom-set-variables
- '(enh-ruby-deep-indent-paren nil))
+(custom-set-variables '(enh-ruby-deep-indent-paren nil))
 
 (defun my/eval-after-load-ruby-mode ()
   ;; rsense
   (require 'rsense)
-  (custom-set-variables
-   '(rsense-home (expand-file-name "rsense" my/site-lisp-directory)))
+  (custom-set-variables '(rsense-home (expand-file-name "rsense" my/site-lisp-directory)))
 
   ;; ruby-end
   (require 'ruby-end)
-  (custom-set-variables
-   '(ruby-end-insert-newline nil)))
+  (custom-set-variables '(ruby-end-insert-newline nil)))
 
 (eval-after-load 'ruby-mode '(my/eval-after-load-ruby-mode))
 (eval-after-load 'enh-ruby-mode '(my/eval-after-load-ruby-mode))

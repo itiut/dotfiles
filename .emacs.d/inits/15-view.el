@@ -1,7 +1,6 @@
 ;;;; view setting
 
-(custom-set-variables
- '(view-read-only t))
+(custom-set-variables '(view-read-only t))
 
 (eval-after-load 'view
   '(progn

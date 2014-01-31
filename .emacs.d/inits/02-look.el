@@ -26,22 +26,19 @@
 (setq-default truncate-lines t)
 
 ;; highlight
-(global-hl-line-mode 1)                 ; current line
-(show-paren-mode 1)                     ; parens
-(custom-set-variables
- '(show-trailing-whitespace t))         ; spaces before EOL
+(global-hl-line-mode 1)                              ; current line
+(show-paren-mode 1)                                  ; parens
+(custom-set-variables '(show-trailing-whitespace t)) ; spaces before EOL
 
 ;; uniquify
 (require 'uniquify)
-(custom-set-variables
- '(uniquify-buffer-name-style 'post-forward-angle-brackets))
+(custom-set-variables '(uniquify-buffer-name-style 'post-forward-angle-brackets))
 
 ;; anzu
 (global-anzu-mode 1)
-(custom-set-variables
- '(anzu-mode-lighter "")
- '(anzu-deactivate-region t)
- '(anzu-search-threshold 1000))
+(custom-set-variables '(anzu-mode-lighter "")
+                      '(anzu-deactivate-region t)
+                      '(anzu-search-threshold 1000))
 
 ;; git-gutter-fringe
 (require 'git-gutter-fringe)

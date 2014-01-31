@@ -17,8 +17,7 @@
 
 ;; smartrep
 (require 'smartrep)
-(custom-set-variables
- '(smartrep-mode-line-active-bg nil))
+(custom-set-variables '(smartrep-mode-line-active-bg nil))
 
 ;;; functions
 (defun my/smart-beginning-of-line (old-point)
