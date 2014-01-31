@@ -3,7 +3,7 @@
 (custom-set-variables
  '(view-read-only t))
 
-(eval-after-load "view"
+(eval-after-load 'view
   '(progn
      (define-key view-mode-map (kbd "h") 'backward-char)
      (define-key view-mode-map (kbd "j") 'next-line)

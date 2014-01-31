@@ -1,6 +1,6 @@
 ;;;; helm setting
 
-(eval-after-load "helm"
+(eval-after-load 'helm
   '(progn
      (helm-descbinds-mode)
 

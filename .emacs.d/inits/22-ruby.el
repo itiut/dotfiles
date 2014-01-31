@@ -43,8 +43,8 @@
   (custom-set-variables
    '(ruby-end-insert-newline nil)))
 
-(eval-after-load "ruby-mode" '(my/eval-after-load-ruby-mode))
-(eval-after-load "enh-ruby-mode" '(my/eval-after-load-ruby-mode))
+(eval-after-load 'ruby-mode '(my/eval-after-load-ruby-mode))
+(eval-after-load 'enh-ruby-mode '(my/eval-after-load-ruby-mode))
 
 (defun my/ruby-mode-hook ()
   (add-to-list 'ac-sources 'ac-source-rsense)
