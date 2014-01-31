@@ -21,8 +21,8 @@
 (global-auto-revert-mode 1)
 
 ;; disable vc-mode
-(custom-set-variables
- '(vc-handled-backends nil))
+(custom-set-variables '(vc-handled-backends nil))
+(remove-hook 'find-file-hooks 'vc-find-file-hook)
 
 ;; server
 (require 'server)
