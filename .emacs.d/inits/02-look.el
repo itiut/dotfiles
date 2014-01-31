@@ -49,5 +49,8 @@
 (setq git-gutter:lighter ""
       git-gutter-fr:side 'right-fringe)
 
+;; rainbow-delimiters
+(global-rainbow-delimiters-mode 1)
+
 ;; yalinum
 (global-yalinum-mode 1)

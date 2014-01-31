@@ -27,6 +27,7 @@
     anzu
     git-gutter-fringe
     highlight-symbol
+    rainbow-delimiters
     rainbow-mode
     yalinum
 
