@@ -9,7 +9,7 @@ init_submodules() {
 
 link_bin_and_dotfiles() {
     echo "[$PROGRAM] link bin"
-    ln -is "$PWD/bin" $HOME
+    ln -is $PWD/bin $HOME
 
     echo "[$PROGRAM] link dotfiles"
     for dotfile in .?*; do
@@ -23,8 +23,7 @@ link_bin_and_dotfiles() {
             .gitmodules)
                 continue;;
             *)
-                ln -is "$PWD/$dotfile" $HOME
-                ;;
+                ln -is $PWD/$dotfile $HOME;;
         esac
     done
 }
