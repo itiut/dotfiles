@@ -2,9 +2,8 @@
 	name = Yuichi TANIKAWA
 	email = t.yuichi111@gmail.com
 [core]
-	excludesfile = ~/.gitignore
-	pager = less -r
 	editor = vim
+	pager = less -r
 [color]
 	ui = auto
 [push]
