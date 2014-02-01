@@ -1,6 +1,5 @@
-[user]
-	name = Yuichi TANIKAWA
-	email = t.yuichi111@gmail.com
+[include]
+	path = .gitconfig.local
 [core]
 	editor = vim
 	pager = less -r
