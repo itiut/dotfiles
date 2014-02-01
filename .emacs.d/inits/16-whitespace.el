@@ -30,6 +30,7 @@
  '(whitespace-global-modes '(
                              emacs-lisp-mode
                              enh-ruby-mode
+                             gfm-mode
                              ruby-mode
                              yaml-mode
                              )))

@@ -58,6 +58,7 @@
     ruby-end
 
     ;;; markup language
+    markdown-mode
     yaml-mode
 
     ;;; theme
