@@ -29,8 +29,8 @@ link_bin_and_dotfiles() {
     done
 }
 
-link_dropbox_shared_files() {
-    echo "[$PROGRAM] link dropbox shared files"
+link_dropbox_shared_dotfiles() {
+    echo "[$PROGRAM] link dropbox shared dotfiles"
     local paths=$HOME/Dropbox/.share/.?*
     for path in $paths; do
         case $(basename $path) in
@@ -43,4 +43,4 @@ link_dropbox_shared_files() {
 cd $(dirname $0)
 init_submodules
 link_bin_and_dotfiles
-link_dropbox_shared_files
+link_dropbox_shared_dotfiles
