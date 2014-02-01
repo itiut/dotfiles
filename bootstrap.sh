@@ -29,6 +29,18 @@ link_bin_and_dotfiles() {
     done
 }
 
+link_dropbox_shared_files() {
+    echo "[$PROGRAM] link dropbox shared files"
+    local paths=$HOME/Dropbox/.share/.?*
+    for path in $paths; do
+        case $(basename $path) in
+            .gitconfig.local)
+                ln -is $path $HOME;;
+        esac
+    done
+}
+
 cd $(dirname $0)
 init_submodules
 link_bin_and_dotfiles
+link_dropbox_shared_files
