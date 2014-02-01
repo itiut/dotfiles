@@ -1,4 +1,5 @@
-#!/bin/sh -eu
+#!/bin/sh
+set -eu
 PROGRAM=$(basename $0)
 
 init_submodules() {
