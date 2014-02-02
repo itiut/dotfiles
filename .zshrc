@@ -6,7 +6,6 @@ bundler
 gem
 heroku
 npm
-rbenv
 vagrant
 EOBUNDLES
 antigen-theme $ZSHDIR/itiut.zsh-theme

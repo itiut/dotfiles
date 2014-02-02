@@ -5,7 +5,7 @@ export ZSHDIR=$HOME/.zsh.d
 typeset -U path
 path=(
     # user
-    $HOME{/local,/Dropbox,}/bin(N-/)
+    $HOME{/.anyenv,/local,/Dropbox,}/bin(N-/)
     # Linux
     {/usr/local,/usr,}{/sbin,/bin}(N-/)
 )
@@ -25,3 +25,6 @@ manpath=(
 )
 
 export EDITOR=vim
+
+# anyenv
+eval "$(anyenv init -)"
