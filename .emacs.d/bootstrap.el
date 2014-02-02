@@ -59,6 +59,9 @@
     rubocop
     ruby-end
 
+    ;; JavaScript
+    js2-mode
+
     ;;; markup language
     markdown-mode
     yaml-mode
