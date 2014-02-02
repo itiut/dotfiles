@@ -46,6 +46,7 @@
     direx
     gist
     quickrun
+    popwin
     recentf-ext
 
     ;;; programming
