@@ -14,6 +14,7 @@
 (global-set-key (kbd "C-t") 'my/smart-other-window)
 (global-set-key (kbd "C-w") 'my/kill-region-or-backward-kill-word)
 (global-set-key (kbd "C-x K") 'kill-this-buffer)
+(global-set-key (kbd "C-x C-j") 'my/dired-jump)
 (global-set-key (kbd "C-S-k") 'kill-whole-line)
 (global-set-key (kbd "C-S-o") 'my/open-line-above)
 

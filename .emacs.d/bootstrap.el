@@ -43,6 +43,7 @@
     ;; flycheck
     flycheck flycheck-tip
 
+    direx
     gist
     quickrun
     recentf-ext
