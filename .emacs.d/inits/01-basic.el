@@ -1,9 +1,5 @@
 ;;;; basic setting
 
-;; encoding
-(set-language-environment 'Japanese)
-(prefer-coding-system 'utf-8-unix)
-
 ;; history
 (setq history-length 1000
       history-delete-duplicates t)
