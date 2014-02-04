@@ -72,15 +72,19 @@ setopt correct
 # run `ls` after `cd`
 function chpwd() { ls }
 
-# run `cd ..` by ^
-function cdup() {
-    echo
-    cd ..
-    echo "\n"                   # avoid being not displayed when PROMPT contains newline
-    zle reset-prompt
+# run `cd ..` or insert '^' by ^
+function cdup-or-insert-circumflex() {
+    if [[ -z "$BUFFER" ]]; then
+        echo
+        cd ..
+        zle reset-prompt
+        echo "\n"                   # avoid being not displayed when PROMPT contains newline
+    else
+        zle self-insert '^'
+    fi
 }
-zle -N cdup
-bindkey '\^' cdup
+zle -N cdup-or-insert-circumflex
+bindkey '\^' cdup-or-insert-circumflex
 
 # run `ls && git status` by C-t
 function ls-and-git-status() {
