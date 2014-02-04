@@ -1,5 +1,8 @@
 ;;;; helm setting
 
+;; helm-ls-git
+(custom-set-variables '(helm-ls-git-show-abs-or-relative 'relative))
+
 (eval-after-load 'helm
   '(progn
      (helm-descbinds-mode)
