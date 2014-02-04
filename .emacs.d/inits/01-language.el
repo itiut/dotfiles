@@ -16,11 +16,10 @@
       (toggle-input-method)))
   (global-set-key (kbd "<henkan>") 'my/activate-input-method)
 
-  (defadvice mozc-handle-event (around intercept-keys (event))
+  (defadvice mozc-handle-event (around intercept-keys (event) activate)
     "Intercept keys muhenkan and zenkaku-hankaku, before passing keys to mozc-server (which the function mozc-handle-event does), to properly disable mozc-mode."
     (if (memq event '(muhenkan zenkaku-hankaku))
         (progn
           (mozc-clean-up-session)
           (deactivate-input-method))
-      ad-do-it))
-  (ad-activate 'mozc-handle-event))
+      ad-do-it)))
