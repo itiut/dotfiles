@@ -88,4 +88,5 @@
        (script (expand-file-name "rsense/etc/config.rb" my/site-lisp-directory))
        (target (expand-file-name ".rsense" (getenv "HOME")))
        (cmd (format "%s -i -c 'ruby %s > %s'" shell script target)))
-  (shell-command cmd))
+  (when (shell-command cmd)
+    (message "Wrote %s" target)))
