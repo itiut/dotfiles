@@ -19,7 +19,7 @@
 
   (defadvice mozc-handle-event (around intercept-keys (event))
     "Intercept keys muhenkan and zenkaku-hankaku, before passing keys to mozc-server (which the function mozc-handle-event does), to properly disable mozc-mode."
-    (if (memq event '(zenkaku-hankaku muhenkan))
+    (if (memq event '(muhenkan zenkaku-hankaku))
         (progn
           (mozc-clean-up-session)
           (deactivate-input-method))
