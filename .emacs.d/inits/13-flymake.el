@@ -4,8 +4,9 @@
 (custom-set-variables '(flycheck-display-errors-delay 0.5))
 
 (defvar my/flycheck-enable-modes '(
-                                   ruby-mode
                                    enh-ruby-mode
+                                   js2-mode
+                                   ruby-mode
                                    ))
 
 (dolist (mode my/flycheck-enable-modes)
