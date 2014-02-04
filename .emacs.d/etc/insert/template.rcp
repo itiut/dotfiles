@@ -1,6 +1,0 @@
-(:name %file-name-without-ext%
-       :description ""
-       :website "https://github.com/$USER/$REPO"
-       :type github
-       :pkgname "$USER/$REPO"
-       :features "%file-name-without-ext%")
