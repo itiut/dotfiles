@@ -1,6 +1,0 @@
-(:name tuareg-mode
-       :description "Major mode for editing Caml code"
-       :website "https://bitbucket.org/camlspotter/tuareg-mode-custom"
-       :type hg
-       :url "https://bitbucket.org/camlspotter/tuareg-mode-custom"
-       :feature "tuareg-mode")

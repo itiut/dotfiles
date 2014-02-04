@@ -1,7 +1,0 @@
-(:name yasnippet
-       :description "YASnippet is a template system for Emacs."
-       :website "https://github.com/capitaomorte/yasnippet.git"
-       :type github
-       :pkgname "capitaomorte/yasnippet"
-       :features "yasnippet"
-       :compile "yasnippet.el")

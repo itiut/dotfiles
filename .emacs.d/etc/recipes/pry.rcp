@@ -1,6 +1,0 @@
-(:name pry
-       :description "Emacs Pry is package that provides support for running Pry within in Emacs."
-       :website "https://github.com/jacott/emacs-pry"
-       :type github
-       :pkgname "jacott/emacs-pry"
-       :features "pry")

@@ -1,6 +1,0 @@
-(:name arduino-mode
-       :description "Major mode for the Arduino language"
-       :website "https://github.com/bookest/arduino-mode"
-       :type github
-       :pkgname "bookest/arduino-mode"
-       :features "arduino-mode")
