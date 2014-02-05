@@ -9,9 +9,11 @@
 (add-to-list 'desktop-globals-to-save '(extended-command-history . 100))
 (add-to-list 'desktop-globals-to-save '(kill-ring . 100))
 
-;; no backup and no auto save file
-(setq backup-inhibited t
-      delete-auto-save-files t)
+;; no backup file and no auto save file
+(custom-set-variables '(auto-save-default nil)
+                      '(backup-inhibited t)
+                      '(delete-auto-save-files t)
+                      '(make-backup-files nil))
 
 ;; automatically revert buffer when changed
 (global-auto-revert-mode 1)
