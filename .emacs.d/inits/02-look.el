@@ -51,3 +51,8 @@
 
 ;; yalinum
 (global-yalinum-mode 1)
+
+;;; advices
+(defadvice smartrep-map-internal (around disable-smartrep-echo-keystrokes activate)
+  (let ((echo-keystrokes 0))
+    ad-do-it))
