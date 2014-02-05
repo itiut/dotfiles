@@ -30,11 +30,14 @@
 (defun my/smart-other-window ()
   "Split window if no more than one window exists, and move other window."
   (interactive)
-  (when (one-window-p)
-    (if (< (frame-pixel-width) (frame-pixel-height))
-        (split-window-vertically)
-      (split-window-horizontally)))
-  (other-window 1))
+  (if (one-window-p)
+      (progn
+        (if (< (frame-pixel-width) (frame-pixel-height))
+            (split-window-vertically)
+          (split-window-horizontally))
+        (other-window 1)
+        (switch-to-buffer (get-buffer (car (helm-buffer-list)))))
+    (other-window 1)))
 
 (defun my/kill-region-or-backward-kill-word ()
   "Kill region if region is active and not empty. Otherwise kill a word just before point."
