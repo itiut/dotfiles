@@ -15,3 +15,6 @@
                        (tabbar-buffer-list)))))
 
      (setq tabbar-buffer-list-function 'my/tabbar-buffer-list)))
+
+;; tabbar-ruler
+(custom-set-variables '(tabbar-ruler-modified-symbol t))
