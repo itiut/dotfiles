@@ -43,10 +43,13 @@
     ;; flycheck
     flycheck flycheck-tip
 
+    ;; window, buffer management
+    popwin
+    tabbar tabbar-ruler
+
     direx
     gist
     quickrun
-    popwin
     recentf-ext
 
     ;;; programming
