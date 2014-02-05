@@ -8,6 +8,8 @@
 (desktop-save-mode 1)
 (add-to-list 'desktop-globals-to-save '(extended-command-history . 100))
 (add-to-list 'desktop-globals-to-save '(kill-ring . 100))
+(add-to-list 'desktop-modes-not-to-save 'dired-mode)
+(add-to-list 'desktop-modes-not-to-save 'fundamental-mode)
 
 ;; no backup file and no auto save file
 (custom-set-variables '(auto-save-default nil)
