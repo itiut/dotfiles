@@ -41,10 +41,10 @@
                       '(anzu-search-threshold 1000))
 
 ;; git-gutter-fringe
-(require 'git-gutter-fringe)
-(global-git-gutter-mode 1)
-(setq git-gutter:lighter ""
-      git-gutter-fr:side 'right-fringe)
+(require 'git-gutter-fringe+)
+(global-git-gutter+-mode 1)
+(custom-set-variables '(git-gutter+-lighter "")
+                      '(git-gutter-fr+-side 'right-fringe))
 
 ;; rainbow-delimiters
 (global-rainbow-delimiters-mode 1)

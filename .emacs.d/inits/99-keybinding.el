@@ -101,12 +101,13 @@
 (global-set-key (kbd "C-x %") 'anzu-query-replace-at-cursor-thing)
 
 ;; git-gutter
-(global-set-key (kbd "C-x v p") 'git-gutter:stage-hunk)
-(global-set-key (kbd "C-x v =") 'git-gutter:popup-hunk)
-(global-set-key (kbd "C-x v r") 'git-gutter:revert-hunk)
+(global-set-key (kbd "C-x v =") 'git-gutter+-show-hunk)
+(global-set-key (kbd "C-x v c") 'git-gutter+-commit)
+(global-set-key (kbd "C-x v p") 'git-gutter+-stage-hunks)
+(global-set-key (kbd "C-x v r") 'git-gutter+-revert-hunks)
 (smartrep-define-key
-    global-map "C-x" '(("n" . 'git-gutter:next-diff)
-                       ("p" . 'git-gutter:previous-diff)))
+    global-map "C-x" '(("n" . 'git-gutter+-next-hunk)
+                       ("p" . 'git-gutter+-previous-hunk)))
 
 ;; highlight-symbol
 (smartrep-define-key
