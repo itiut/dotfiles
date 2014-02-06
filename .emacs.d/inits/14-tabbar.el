@@ -12,6 +12,7 @@
        '(direx:direx-mode))
 
      (defun my/tabbar-buffer-list ()
+       "Ignore buffers depending on buffer name and major mode."
        (let ((re (regexp-opt my/tabbar-ignored-buffer-names)))
          (delq nil
                (mapcar #'(lambda (b)
@@ -24,6 +25,7 @@
      (setq tabbar-buffer-list-function 'my/tabbar-buffer-list)
 
      (defun my/tabbar-buffer-groups ()
+       "Group tabs by project name firstly when in project."
        (if buffer-file-name
            (progn
              (let ((project-root (locate-dominating-file default-directory ".git")))
