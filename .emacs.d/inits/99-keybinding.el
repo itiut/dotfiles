@@ -37,7 +37,7 @@
 (global-set-key (kbd "M-/") 'auto-complete)
 
 ;; tabbar-ruler
-(global-set-key (kbd "<C-tab>")           'tabbar-ruler-forward)
+(global-set-key (kbd "<C-tab>") 'tabbar-ruler-forward)
 (global-set-key (kbd "<C-S-iso-lefttab>") 'tabbar-ruler-backward)
 
 ;; C-q map
