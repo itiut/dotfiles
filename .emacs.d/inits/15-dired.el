@@ -2,6 +2,8 @@
 
 (eval-after-load 'dired
   '(progn
+     (define-key dired-mode-map (kbd "q") 'kill-this-buffer)
+
      ;; enable dired-find-alternate-file
      (put 'dired-find-alternate-file 'disabled nil)
      (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file) ; open in current buffer
