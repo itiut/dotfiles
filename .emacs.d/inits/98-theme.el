@@ -16,6 +16,8 @@
 ;; tabbar-ruler
 (eval-after-load 'tabbar-ruler
   '(progn
+     (set-face-attribute 'tabbar-default nil
+                         :height 150)
      (set-face-attribute 'tabbar-selected nil
                          :foreground (face-foreground 'mode-line-buffer-id)
                          :background my/bg-color)
