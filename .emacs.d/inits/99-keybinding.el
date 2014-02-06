@@ -39,11 +39,6 @@
 ;; tabbar-ruler
 (global-set-key (kbd "<C-tab>")           'tabbar-ruler-forward)
 (global-set-key (kbd "<C-S-iso-lefttab>") 'tabbar-ruler-backward)
-(smartrep-define-key
-    global-map "C-x" '(("<up>"    . 'tabbar-ruler-up)
-                       ("<down>"  . 'tabbar-ruler-up)
-                       ("<right>" . 'tabbar-ruler-forward)
-                       ("<left>"  . 'tabbar-ruler-backward)))
 
 ;; C-q map
 (defvar my/ctrl-q-map (make-sparse-keymap)
