@@ -1,6 +1,9 @@
 ;;;; tabbar setting
 
-(eval-after-load 'tabbar
+;; tabbar-ruler
+(custom-set-variables '(tabbar-ruler-modified-symbol t))
+
+(eval-after-load 'tabbar-ruler
   '(progn
      (defvar my/tabbar-ignored-buffer-names
        '("*Helm" "*helm"))
@@ -18,7 +21,14 @@
                             (t b)))
                        (tabbar-buffer-list)))))
 
-     (setq tabbar-buffer-list-function 'my/tabbar-buffer-list)))
+     (setq tabbar-buffer-list-function 'my/tabbar-buffer-list)
 
-;; tabbar-ruler
-(custom-set-variables '(tabbar-ruler-modified-symbol t))
+     (defun my/tabbar-buffer-groups ()
+       (if buffer-file-name
+           (progn
+             (let ((project-root (locate-dominating-file default-directory ".git")))
+               (and project-root
+                    (list (file-name-nondirectory (directory-file-name project-root))))))
+         (tabbar-buffer-groups)))
+
+     (setq tabbar-buffer-groups-function 'my/tabbar-buffer-groups)))
