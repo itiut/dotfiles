@@ -43,7 +43,7 @@
      (set-face-attribute 'tabbar-default nil
                          :height 150)
      (set-face-attribute 'tabbar-selected nil
-                         :foreground (face-foreground 'mode-line-buffer-id)
+                         :foreground my/green
                          :background my/bg-color)
      (set-face-attribute 'tabbar-unselected nil
                          :foreground my/fg-color
