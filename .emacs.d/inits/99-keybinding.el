@@ -118,6 +118,8 @@
                        ("?"   . 'highlight-symbol-remove-all)))
 
 ;; M-g map
+(global-set-key (kbd "M-g .") 'helm-ag)
+(global-set-key (kbd "M-g >") 'helm-ag-pop-stack)
 (global-set-key (kbd "M-g M-f") 'ffap)
 (global-set-key (kbd "M-g M-q") 'quickrun)
 (global-set-key (kbd "M-g M-w") 'quickrun-with-arg)

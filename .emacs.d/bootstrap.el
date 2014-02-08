@@ -34,6 +34,7 @@
     ;;; utility
     ;; helm
     helm
+    helm-ag
     helm-descbinds
     helm-ls-git
 
