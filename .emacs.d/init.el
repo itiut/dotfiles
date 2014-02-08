@@ -16,4 +16,5 @@
 
 ;; init-loader
 (require 'init-loader)
+(custom-set-variables '(init-loader-show-log-after-init nil))
 (init-loader-load)
