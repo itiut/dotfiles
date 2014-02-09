@@ -11,9 +11,11 @@
     (global-whitespace-mode . "")
     ;; major modes
     (emacs-lisp-mode . "elisp")
-    (fundamental-mode . "text")
+    (fundamental-mode . "fund")
     (git-gutter+-commit-mode . "git-commit")
-    (lisp-interaction-mode . "lisp-i")))
+    (lisp-interaction-mode . "lisp-i")
+    (text-mode . "text")
+    ))
 
 (defun clean-mode-line ()
   (interactive)
