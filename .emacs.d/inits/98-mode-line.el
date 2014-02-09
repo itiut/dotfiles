@@ -9,11 +9,13 @@
     (global-whitespace-mode . "")
     (isearch-mode . "")
     (view-mode . " view")
+    (visual-line-mode . " vline")
     (whitespace-mode . "")
     ;; major modes
     (emacs-lisp-mode . "elisp")
     (fundamental-mode . "fund")
     (git-gutter+-commit-mode . "git-commit")
+    (gfm-mode . "gfm")
     (help-mode . "help")
     (lisp-interaction-mode . "lisp-i")
     (text-mode . "text")
