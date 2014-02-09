@@ -69,6 +69,7 @@
 
     ;;; theme
     monokai-theme
+    powerline
     ))
 
 (dolist (package my/packages)
