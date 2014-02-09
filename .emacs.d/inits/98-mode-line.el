@@ -1,6 +1,31 @@
 ;;;; mode-line setting
-(require 'powerline)
 
+(defvar mode-line-cleaner-alist
+  '(
+    ;; minor modes
+    (auto-complete-mode . " ac")
+    (isearch-mode . "")
+    (whitespace-mode . "")
+    (global-whitespace-mode . "")
+    ;; major modes
+    (emacs-lisp-mode . "EL")))
+
+(defun clean-mode-line ()
+  (interactive)
+  (loop for cleaner in mode-line-cleaner-alist
+        do (let* ((mode (car cleaner))
+                  (mode-str (cdr cleaner))
+                  (old-mode-str (cdr (assq mode minor-mode-alist))))
+             (when old-mode-str
+               (setcar old-mode-str mode-str))
+             ;; major mode
+             (when (eq mode major-mode)
+               (setq mode-name mode-str)))))
+
+(add-hook 'after-change-major-mode-hook 'clean-mode-line)
+
+;; powerline
+(require 'powerline)
 (custom-set-variables '(powerline-default-separator 'nil))
 
 (defpowerline powerline-input-mode
