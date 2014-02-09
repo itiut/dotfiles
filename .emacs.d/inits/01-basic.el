@@ -21,10 +21,9 @@
 (global-auto-revert-mode 1)
 (custom-set-variables '(auto-revert-check-vc-info t))
 
-;; disable vc-mode
-(custom-set-variables '(vc-handled-backends nil)
+;; vc-mode
+(custom-set-variables '(vc-handled-backends '(Git))
                       '(vc-follow-symlinks t))
-(remove-hook 'find-file-hooks 'vc-find-file-hook)
 
 ;; server
 (require 'server)

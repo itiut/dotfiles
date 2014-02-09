@@ -54,6 +54,36 @@
      ((string= "undecided" encoding) "ascii")
      (t encoding))))
 
+(defface powerline-active-right-1
+  '((t (:background "#49483E" :inherit mode-line)))
+  "Powerline active right face 1."
+  :group 'powerline)
+
+(defface powerline-active-right-2
+  '((t (:background "#75715E" :inherit mode-line)))
+  "Powerline active right face 2."
+  :group 'powerline)
+
+(defface powerline-inactive-right-1
+  '((t (:background "#3E3D31" :inherit mode-line-inactive)))
+  "Powerline inactive right face 1"
+  :group 'powerline)
+
+(defface powerline-inactive-right-2
+  '((t (:background "#49483E" :inherit mode-line-inactive)))
+  "Powerline inactive right face 2."
+  :group 'powerline)
+
+(defface powerline-active-hud-bar
+  '((t (:background "#A6E22E" :inherit mode-line)))
+  "Powerline active hud bar face."
+  :group 'powerline)
+
+(defface powerline-inactive-hud-bar
+  '((t (:background "#67930F" :inherit mode-line-inactive)))
+  "Powerline inactive hud bar face."
+  :group 'powerline)
+
 (defun my/powerline-theme ()
   "Setup the default mode-line."
   (interactive)
@@ -62,6 +92,9 @@
                   (:eval
                    (let* ((active (powerline-selected-window-active))
                           (mode-line (if active 'mode-line 'mode-line-inactive))
+                          (face-right-1 (if active 'powerline-active-right-1 'powerline-inactive-right-1))
+                          (face-right-2 (if active 'powerline-active-right-2 'powerline-inactive-right-2))
+                          (face-hud (if active 'powerline-active-hud-bar 'powerline-inactive-hud-bar))
                           (face1 (if active 'powerline-active1 'powerline-inactive1))
                           (face2 (if active 'powerline-active2 'powerline-inactive2))
                           (separator-left (intern (format "powerline-%s-%s"
@@ -81,24 +114,22 @@
                                        (powerline-raw erc-modified-channels-object face1 'l))
                                      (powerline-major-mode face1 'l)
                                      (powerline-process face1)
-                                     (powerline-minor-modes face1 'l)
+                                     (powerline-minor-modes nil 'l)
                                      (powerline-narrow face1 'l)
-                                     (powerline-raw " " face1)
+                                     (powerline-raw " " nil)
                                      (funcall separator-left face1 face2)
                                      (powerline-vc face2 'r)))
                           (rhs (list (powerline-raw global-mode-string face2 'r)
-                                     (powerline-file-format nil 'l)
-                                     (powerline-raw " | ")
-                                     (powerline-file-encoding nil 'r)
-                                     (funcall separator-right face2 face1)
-                                     (powerline-raw "\uE0A1" face1 'l)
-                                     (powerline-raw "%4l" face1 'l)
-                                     (powerline-raw ":" face1 'l)
-                                     (powerline-raw "%3c" face1 'r)
-                                     (funcall separator-right face1 mode-line)
-                                     (powerline-hud face2 face1))))
+                                     (powerline-file-format face-right-1 'l)
+                                     (powerline-raw " | " face-right-1)
+                                     (powerline-file-encoding face-right-1 'r)
+                                     (powerline-raw "\uE0A1" face-right-2 'l)
+                                     (powerline-raw "%4l" face-right-2 'l)
+                                     (powerline-raw ":" face-right-2 'l)
+                                     (powerline-raw "%3c" face-right-2 'r)
+                                     (powerline-hud face-hud mode-line))))
                      (concat (powerline-render lhs)
-                             (powerline-fill face2 (powerline-width rhs))
+                             (powerline-fill nil (powerline-width rhs))
                              (powerline-render rhs)))))))
 
 (my/powerline-theme)
