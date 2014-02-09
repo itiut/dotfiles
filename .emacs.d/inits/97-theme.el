@@ -8,34 +8,40 @@
 ;; monokai
 (load-theme 'monokai t)
 
-(defvar my/fg-color (face-foreground 'default))
-(defvar my/bg-color (face-background 'default))
-(defvar my/comments-color (face-foreground 'shadow))
-(defvar my/hl-line-color (face-background 'hl-line))
-(defvar my/green (face-foreground 'success))
-(defvar my/orange (face-foreground 'error))
+(defvar monokai/fg (face-foreground 'default))
+(defvar monokai/bg (face-background 'default))
+(defvar monokai/comments (face-foreground 'shadow))
+(defvar monokai/hl-line (face-background 'hl-line))
+(defvar monokai/yellow (face-background 'warning))
+(defvar monokai/orange (face-foreground 'error))
+(defvar monokai/red (face-foreground 'compilation-error-face))
+(defvar monokai/magenta (face-foreground 'ee-marked))
+(defvar monokai/violet (face-foreground 'escape-glyph))
+(defvar monokai/blue (face-foreground 'link))
+(defvar monokai/cyan (face-foreground 'compilation-column-face))
+(defvar monokai/green (face-foreground 'success))
 
 ;; helm-ls-git
 (eval-after-load 'helm-ls-git
   '(progn
      (set-face-attribute 'helm-ls-git-modified-not-staged-face nil
-                         :foreground my/orange)
+                         :foreground monokai/orange)
      (set-face-attribute 'helm-ls-git-modified-and-staged-face nil
-                         :foreground my/green)
+                         :foreground monokai/green)
      (set-face-attribute 'helm-ls-git-renamed-modified-face nil
-                         :foreground (face-foreground 'compilation-column-face)) ; cyan
+                         :foreground monokai/cyan)
      (set-face-attribute 'helm-ls-git-untracked-face nil
-                         :foreground (face-foreground 'compilation-error-face)) ; red
+                         :foreground monokai/red)
      (set-face-attribute 'helm-ls-git-added-copied-face nil
-                         :foreground my/green)
+                         :foreground monokai/green)
      (set-face-attribute 'helm-ls-git-added-modified-face nil
-                         :foreground my/orange)
+                         :foreground monokai/orange)
      (set-face-attribute 'helm-ls-git-deleted-not-staged-face nil
-                         :foreground (face-foreground 'escape-glyph)) ; violet
+                         :foreground monokai/violet)
      (set-face-attribute 'helm-ls-git-deleted-and-staged-face nil
-                         :foreground (face-foreground 'shadow)) ; gray
+                         :foreground monokai/comments)
      (set-face-attribute 'helm-ls-git-conflict-face nil
-                         :foreground (face-foreground 'ee-marked)))) ; magenta
+                         :foreground monokai/magenta)))
 
 ;; tabbar-ruler
 (eval-after-load 'tabbar-ruler
@@ -43,20 +49,20 @@
      (set-face-attribute 'tabbar-default nil
                          :height 150)
      (set-face-attribute 'tabbar-selected nil
-                         :foreground my/green
-                         :background my/bg-color)
+                         :foreground monokai/green
+                         :background monokai/bg)
      (set-face-attribute 'tabbar-unselected nil
-                         :foreground my/fg-color
-                         :background my/hl-line-color)
+                         :foreground monokai/fg
+                         :background monokai/hl-line)
      (set-face-attribute 'tabbar-unselected-modified nil
-                         :foreground (face-foreground 'error))))
+                         :foreground monokai/orange)))
 
 ;; yalinum
 (eval-after-load 'yalinum
   '(progn
      (set-face-attribute 'yalinum-face nil
-                         :foreground my/comments-color
-                         :background my/bg-color)
+                         :foreground monokai/comments
+                         :background monokai/bg)
      (set-face-attribute 'yalinum-bar-face nil
-                         :foreground my/fg-color
-                         :background my/hl-line-color)))
+                         :foreground monokai/fg
+                         :background monokai/hl-line)))
