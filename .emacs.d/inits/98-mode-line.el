@@ -6,13 +6,15 @@
     (auto-complete-mode . " ac")
     (auto-fill-function . " af")
     (flyspell-mode . "fs")
-    (isearch-mode . "")
-    (whitespace-mode . "")
     (global-whitespace-mode . "")
+    (isearch-mode . "")
+    (view-mode . " view")
+    (whitespace-mode . "")
     ;; major modes
     (emacs-lisp-mode . "elisp")
     (fundamental-mode . "fund")
     (git-gutter+-commit-mode . "git-commit")
+    (help-mode . "help")
     (lisp-interaction-mode . "lisp-i")
     (text-mode . "text")
     ))
@@ -31,42 +33,73 @@
 
 (add-hook 'after-change-major-mode-hook 'clean-mode-line)
 
-;; powerline
+;;; powerline
 (require 'powerline)
-(custom-set-variables '(powerline-default-separator 'nil))
 
-(defpowerline powerline-input-mode
-  (cond
-   (current-input-method "あ")
-   (t "Aa")))
+;; faces
+(defface powerline-active-input
+  '((t (:weight bold :inherit mode-line)))
+  "Powerline active input face."
+  :group 'powerline)
 
-(defpowerline powerline-file-format
-  (case (coding-system-eol-type buffer-file-coding-system)
-    (0 "unix")                          ; LF
-    (1 "dos")                           ; CRLF
-    (2 "mac")                           ; CR
-    (otherwise "?")))
+(defface powerline-inactive-input
+  `((t (:foreground ,monokai/bg :inherit mode-line-inactive)))
+  "Powerline inactive input face."
+  :group 'powerline)
 
-(defpowerline powerline-file-encoding
-  (let ((encoding
-         (replace-regexp-in-string "-\\(dos\\|unix\\|mac\\)$" "" (symbol-name buffer-file-coding-system))))
-    (cond
-     ((string= "undecided" encoding) "ascii")
-     (t encoding))))
+(defface powerline-active-input-us
+  `((t (:background ,monokai/violet :inherit powerline-active-input)))
+  "Powerline active input us face."
+  :group 'powerline)
+
+(defface powerline-inactive-input-us
+  `((t (:background ,monokai/violet :inherit powerline-inactive-input)))
+  "Powerline inactive input us face."
+  :group 'powerline)
+
+(defface powerline-active-input-ja
+  '((t (:background "#FC5C94" :inherit powerline-active-input)))
+  "Powerline active input ja face."
+  :group 'powerline)
+
+(defface powerline-inactive-input-ja
+  '((t (:background "#FC5C94" :inherit powerline-inactive-input)))
+  "Powerline inactive input ja face."
+  :group 'powerline)
+
+(defface powerline-active-input-smartrep
+  '((t (:background "#A45E0A" :inherit powerline-active-input)))
+  "Powerline active input smartrep face."
+  :group 'powerline)
+
+(defface powerline-inactive-input-smartrep
+  '((t (:background "#A45E0A" :inherit powerline-inactive-input)))
+  "Powerline inactive input smartrep face."
+  :group 'powerline)
+
+(defface powerline-active-left-2
+  '((t (:background "#49483E" :inherit mode-line)))
+  "Powerline active right face 2."
+  :group 'powerline)
+
+(defface powerline-inactive-left-2
+  '((t (:background "#3E3D31" :inherit mode-line-inactive)))
+  "Powerline inactive right face 2."
+  :group 'powerline)
 
 (defface powerline-active-right-1
-  '((t (:background "#49483E" :inherit mode-line)))
-  "Powerline active right face 1."
+  '((t (:inherit powerline-active-left-2)))
+  "Powerline active left face 1."
+  :group 'powerline)
+
+(defface powerline-inactive-right-2
+  '((t (:inherit powerline-inactive-left-2)))
+  "Powerline inactive left face 1."
   :group 'powerline)
 
 (defface powerline-active-right-2
   '((t (:background "#75715E" :inherit mode-line)))
   "Powerline active right face 2."
-  :group 'powerline)
-
-(defface powerline-inactive-right-1
-  '((t (:background "#3E3D31" :inherit mode-line-inactive)))
-  "Powerline inactive right face 1"
   :group 'powerline)
 
 (defface powerline-inactive-right-2
@@ -84,6 +117,56 @@
   "Powerline inactive hud bar face."
   :group 'powerline)
 
+;; functions
+(defun get-powerline-input-mode (&optional active)
+  (cond ((< 0 (length smartrep-mode-line-string)) (cons "SR" (if active
+                                                                   'powerline-active-input-smartrep
+                                                                 'powerline-inactive-input-smartrep)))
+        (current-input-method (cons "あ" (if active
+                                             'powerline-active-input-ja
+                                           'powerline-inactive-input-ja)))
+        (t (cons "Aa"  (if active
+                           'powerline-active-input-us
+                         'powerline-inactive-input-us)))))
+
+;; defpowerlins
+(defpowerline powerline-input-mode
+  (car (get-powerline-input-mode)))
+
+(powerline-input-mode)
+
+
+(defpowerline powerline-vc-1
+  (when (and (buffer-file-name (current-buffer))
+             vc-mode)
+    (propertize (replace-regexp-in-string " Git[-:]" " " (format-mode-line '(vc-mode vc-mode)))
+                'face `((:foreground ,monokai/blue :weight bold)))))
+
+(defpowerline powerline-file-status
+  (let ((str (cond
+              (buffer-read-only "")
+              ((buffer-modified-p) "*")
+              (t ""))))
+    (if (buffer-modified-p)
+        (propertize str
+                    'face `((:foreground ,monokai/orange :weight bold)))
+       str)))
+
+(defpowerline powerline-file-format
+  (case (coding-system-eol-type buffer-file-coding-system)
+    (0 "unix")                          ; LF
+    (1 "dos")                           ; CRLF
+    (2 "mac")                           ; CR
+    (otherwise "?")))
+
+(defpowerline powerline-file-encoding
+  (let ((encoding
+         (replace-regexp-in-string "-\\(dos\\|unix\\|mac\\)$" "" (symbol-name buffer-file-coding-system))))
+    (cond
+     ((string= "undecided" encoding) "ascii")
+     (t encoding))))
+
+;; powerline-theme
 (defun my/powerline-theme ()
   "Setup the default mode-line."
   (interactive)
@@ -92,37 +175,30 @@
                   (:eval
                    (let* ((active (powerline-selected-window-active))
                           (mode-line (if active 'mode-line 'mode-line-inactive))
+                          (face-input (cdr (get-powerline-input-mode active)))
+                          (face-left-2 (if active 'powerline-active-left-2 'powerline-inactive-left-2))
                           (face-right-1 (if active 'powerline-active-right-1 'powerline-inactive-right-1))
                           (face-right-2 (if active 'powerline-active-right-2 'powerline-inactive-right-2))
                           (face-hud (if active 'powerline-active-hud-bar 'powerline-inactive-hud-bar))
-                          (face1 (if active 'powerline-active1 'powerline-inactive1))
-                          (face2 (if active 'powerline-active2 'powerline-inactive2))
-                          (separator-left (intern (format "powerline-%s-%s"
-                                                          powerline-default-separator
-                                                          (car powerline-default-separator-dir))))
-                          (separator-right (intern (format "powerline-%s-%s"
-                                                           powerline-default-separator
-                                                           (cdr powerline-default-separator-dir))))
-                          (lhs (list (powerline-input-mode nil 'l)
-                                     (powerline-buffer-id nil 'l)
-                                     (powerline-raw "%*" nil 'l)
-                                     (when (and (boundp 'which-func-mode) which-func-mode)
-                                       (powerline-raw which-func-format nil 'l))
-                                     (powerline-raw " ")
-                                     (funcall separator-left mode-line face1)
-                                     (when (boundp 'erc-modified-channels-object)
-                                       (powerline-raw erc-modified-channels-object face1 'l))
-                                     (powerline-major-mode face1 'l)
-                                     (powerline-process face1)
+                          (lhs (list (powerline-input-mode face-input 'l)
+                                     (powerline-raw " " face-input)
+                                     (powerline-vc-1 face-left-2 'l)
+                                     (powerline-buffer-id face-left-2 'l)
+                                     ;; (powerline-raw "%*" face-left-2 'l)
+                                     (powerline-file-status face-left-2)
+                                     ;; (when (and (boundp 'which-func-mode) which-func-mode)
+                                     ;;   (powerline-raw which-func-format nil 'l))
+                                     (powerline-major-mode face-left-2 'l)
+                                     (powerline-raw " " face-left-2)
+                                     (powerline-process)
                                      (powerline-minor-modes nil 'l)
-                                     (powerline-narrow face1 'l)
-                                     (powerline-raw " " nil)
-                                     (funcall separator-left face1 face2)
-                                     (powerline-vc face2 'r)))
-                          (rhs (list (powerline-raw global-mode-string face2 'r)
+                                     (powerline-narrow nil 'l)
+                                     (powerline-raw " ")))
+                          (rhs (list (powerline-raw global-mode-string nil 'r)
                                      (powerline-file-format face-right-1 'l)
-                                     (powerline-raw " | " face-right-1)
-                                     (powerline-file-encoding face-right-1 'r)
+                                     (powerline-raw "|" face-right-1 'l)
+                                     (powerline-file-encoding face-right-1 'l)
+                                     (powerline-raw " " face-right-1)
                                      (powerline-raw "\uE0A1" face-right-2 'l)
                                      (powerline-raw "%4l" face-right-2 'l)
                                      (powerline-raw ":" face-right-2 'l)
