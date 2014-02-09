@@ -17,11 +17,6 @@
 ;; disable startup screen
 (setq inhibit-startup-screen t)
 
-;; mode line
-(line-number-mode 1)                    ; line number
-(column-number-mode 1)                  ; colum number
-(size-indication-mode 1)                ; file size
-
 ;; disable line wrap
 (setq-default truncate-lines t)
 
