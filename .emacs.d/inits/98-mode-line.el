@@ -4,11 +4,16 @@
   '(
     ;; minor modes
     (auto-complete-mode . " ac")
+    (auto-fill-function . " af")
+    (flyspell-mode . "fs")
     (isearch-mode . "")
     (whitespace-mode . "")
     (global-whitespace-mode . "")
     ;; major modes
-    (emacs-lisp-mode . "EL")))
+    (emacs-lisp-mode . "elisp")
+    (fundamental-mode . "text")
+    (git-gutter+-commit-mode . "git-commit")
+    (lisp-interaction-mode . "lisp-i")))
 
 (defun clean-mode-line ()
   (interactive)
