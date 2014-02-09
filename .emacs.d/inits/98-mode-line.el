@@ -92,7 +92,7 @@
   "Powerline active left face 1."
   :group 'powerline)
 
-(defface powerline-inactive-right-2
+(defface powerline-inactive-right-1
   '((t (:inherit powerline-inactive-left-2)))
   "Powerline inactive left face 1."
   :group 'powerline)
