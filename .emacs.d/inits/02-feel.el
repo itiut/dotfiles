@@ -49,11 +49,9 @@
 (defun my/open-line-above ()
   "Open a line above the cursor, like 'O' in Vim."
   (interactive)
-  (indent-according-to-mode)
-  (move-beginning-of-line nil)
-  (newline)
-  (let ((current-prefix-arg 1))
-    (call-interactively 'previous-line))
+  (beginning-of-line)
+  (newline-and-indent)
+  (forward-line -1)
   (indent-according-to-mode))
 
 (defun my/execute-on-guake (command)
