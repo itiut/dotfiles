@@ -8,17 +8,13 @@
     (flyspell-mode . "fs")
     (global-whitespace-mode . "")
     (isearch-mode . "")
-    (view-mode . " view")
     (visual-line-mode . " vline")
     (whitespace-mode . "")
     ;; major modes
     (emacs-lisp-mode . "elisp")
     (fundamental-mode . "fund")
     (git-gutter+-commit-mode . "git-commit")
-    (gfm-mode . "gfm")
-    (help-mode . "help")
     (lisp-interaction-mode . "lisp-i")
-    (text-mode . "text")
     ))
 
 (defun clean-mode-line ()
@@ -33,7 +29,18 @@
              (when (eq mode major-mode)
                (setq mode-name mode-str)))))
 
+(defun downcase-mode-line ()
+  ;; minor mode
+  (dolist (li minor-mode-alist)
+    (let ((cell (cdr li))
+          (str (car li)))
+      (when (stringp str)
+        (setcar cell (downcase str)))))
+  ;; major mode
+  (setq mode-name (downcase mode-name)))
+
 (add-hook 'after-change-major-mode-hook 'clean-mode-line)
+(add-hook 'after-change-major-mode-hook 'downcase-mode-line)
 
 ;;; powerline
 (require 'powerline)
