@@ -30,10 +30,11 @@
                (setq mode-name mode-str)))))
 
 (defun downcase-mode-line ()
+  (interactive)
   ;; minor mode
   (dolist (li minor-mode-alist)
-    (let ((cell (cdr li))
-          (str (car li)))
+    (let* ((cell (cdr li))
+           (str (car cell)))
       (when (char-or-string-p str)
         (setcar cell (downcase str)))))
   ;; major mode
