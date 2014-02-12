@@ -12,13 +12,13 @@
     (whitespace-mode . "")
     ;; major modes
     (emacs-lisp-mode . "elisp")
+    (enh-ruby-mode . ("enh-ruby" erm-e-w-status))
     (fundamental-mode . "fund")
     (git-gutter+-commit-mode . "git-commit")
     (lisp-interaction-mode . "lisp-i")
     ))
 
 (defun clean-mode-line ()
-  (interactive)
   (loop for cleaner in mode-line-cleaner-alist
         do (let* ((mode (car cleaner))
                   (mode-str (cdr cleaner))
@@ -30,7 +30,6 @@
                (setq mode-name mode-str)))))
 
 (defun downcase-mode-line ()
-  (interactive)
   ;; minor mode
   (dolist (li minor-mode-alist)
     (let* ((cell (cdr li))

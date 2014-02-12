@@ -47,9 +47,13 @@
 
 (eval-after-load 'enh-ruby-mode '(my/eval-after-load-ruby-mode-common))
 
-(defun my/ruby-mode-hook ()
+(defun my/ruby-mode-common-hook ()
   (add-to-list 'ac-sources 'ac-source-rsense)
   (rubocop-mode 1))
 
-(add-hook 'ruby-mode-hook 'my/ruby-mode-hook)
-(add-hook 'enh-ruby-mode-hook 'my/ruby-mode-hook)
+(defun my/enh-ruby-mode-hook ()
+  (abbrev-mode -1))
+
+(add-hook 'ruby-mode-hook 'my/ruby-mode-common-hook)
+(add-hook 'enh-ruby-mode-hook 'my/ruby-mode-common-hook)
+(add-hook 'enh-ruby-mode-hook 'my/enh-ruby-mode-hook)
