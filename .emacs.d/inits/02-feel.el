@@ -56,6 +56,23 @@
     (call-interactively 'previous-line))
   (indent-according-to-mode))
 
+(defun my/execute-on-guake (command)
+  "Execute `command' on Guake Terminal."
+  (interactive)
+  (start-process-shell-command "guake" nil (format "guake -e \"%s\"" command)))
+
+(defun my/toggle-guake ()
+  "Toggle visibility of Guake Terminal."
+  (interactive)
+  (start-process-shell-command "guake" nil "guake -t"))
+
+(defun my/cd-on-guake ()
+  "Move to current directory in Guake Terminal, then show Guake Terminal."
+  (interactive)
+  (my/execute-on-guake (format "cd %s" default-directory))
+  (my/toggle-guake))
+
+
 ;;; advices
 ;; region based isearch when region is active
 (defadvice isearch-mode (around isearch-mode-default-string (forward &optional regexp op-fun recursive-edit word-p) activate)
