@@ -131,8 +131,8 @@
 ;; functions
 (defun get-powerline-input-mode (&optional active)
   (cond ((< 0 (length smartrep-mode-line-string)) (cons "SR" (if active
-                                                                   'powerline-active-input-smartrep
-                                                                 'powerline-inactive-input-smartrep)))
+                                                                 'powerline-active-input-smartrep
+                                                               'powerline-inactive-input-smartrep)))
         (current-input-method (cons "あ" (if active
                                              'powerline-active-input-ja
                                            'powerline-inactive-input-ja)))
@@ -161,7 +161,7 @@
     (if (buffer-modified-p)
         (propertize str
                     'face `((:foreground ,monokai/orange :weight bold)))
-       str)))
+      str)))
 
 (defpowerline powerline-file-format
   (case (coding-system-eol-type buffer-file-coding-system)
