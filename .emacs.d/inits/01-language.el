@@ -7,7 +7,8 @@
 ;; imput method
 (when (require 'mozc nil 'noerror)
   (custom-set-variables
-   '(default-input-method "japanese-mozc"))
+   '(default-input-method "japanese-mozc")
+   '(mozc-candidate-style 'echo-area))
 
   (defun my/activate-input-method ()
     "Activate input method if input method is not active."
