@@ -58,8 +58,8 @@
 
 (defun my/execute-on-guake (command)
   "Execute `command' on Guake Terminal."
-  (interactive)
-  (start-process-shell-command "guake" nil (format "guake -e \"%s\"" command)))
+  (interactive "MCommand: ")
+  (start-process-shell-command "guake" nil (format "guake -e '%s'" command)))
 
 (defun my/toggle-guake ()
   "Toggle visibility of Guake Terminal."
