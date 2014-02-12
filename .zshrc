@@ -121,24 +121,3 @@ zle -N zle-keymap-select auto-fu-zle-keymap-select
 # z.sh
 _Z_CMD=j
 source $ZSHDIR/z/z.sh
-
-case ${TERM} in
-# gnome-terminal
-kterm*|xterm)
-    precmd() {
-        # print user name and host name on window title
-        echo -ne "\033]0;${USER}@${HOST}\007"
-    }
-;;
-# screen, byobu
-screen|screen-bce)
-    preexec() {
-        # print process name on title
-        echo -ne "\ek#${1%% *}\e\\"
-    }
-    precmd() {
-        # print current directory name on title
-        echo -ne "\ek${PWD:t}\e\\"
-    }
-;;
-esac
