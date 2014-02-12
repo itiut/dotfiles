@@ -34,10 +34,11 @@
   (dolist (li minor-mode-alist)
     (let ((cell (cdr li))
           (str (car li)))
-      (when (stringp str)
+      (when (char-or-string-p str)
         (setcar cell (downcase str)))))
   ;; major mode
-  (setq mode-name (downcase mode-name)))
+  (when (char-or-string-p mode-name)
+    (setq mode-name (downcase mode-name))))
 
 (add-hook 'after-change-major-mode-hook 'clean-mode-line)
 (add-hook 'after-change-major-mode-hook 'downcase-mode-line)
