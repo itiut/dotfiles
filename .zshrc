@@ -121,3 +121,6 @@ zle -N zle-keymap-select auto-fu-zle-keymap-select
 # z.sh
 _Z_CMD=j
 source $ZSHDIR/z/z.sh
+
+# zsh-syntax-highlighting
+source $ZSHDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

@@ -14,3 +14,6 @@
 [submodule "lib/git-check"]
 	path = lib/git-check
 	url = git://github.com/yonchu/git-check.git
+[submodule ".zsh.d/zsh-syntax-highlighting"]
+	path = .zsh.d/zsh-syntax-highlighting
+	url = git://github.com/zsh-users/zsh-syntax-highlighting.git
