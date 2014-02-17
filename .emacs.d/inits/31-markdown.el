@@ -4,7 +4,7 @@
 
 (eval-after-load 'markdown-mode
   '(progn
-     (when (= (call-process-shell-command "which" nil nil nil "ghpreview") 0)
+     (when (executable-find "ghpreview")
        (defun my/run-ghpreview ()
          (interactive)
          (if (not buffer-file-name)
