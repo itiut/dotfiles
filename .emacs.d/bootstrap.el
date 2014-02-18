@@ -41,6 +41,9 @@
     ;; auto-complete
     auto-complete fuzzy popup
 
+    ;; yasnippet
+    yasnippet
+
     ;; flycheck
     flycheck flycheck-tip
 
@@ -54,6 +57,10 @@
     recentf-ext
 
     ;;; programming
+    ;; C/C++
+    auto-complete-clang-async
+    c-eldoc
+
     ;; Ruby
     enh-ruby-mode
     inf-ruby

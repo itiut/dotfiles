@@ -28,6 +28,8 @@
 
  ;; modes in which whitespace mode is enabled
  '(whitespace-global-modes '(
+                             c-mode
+                             c++-mode
                              emacs-lisp-mode
                              enh-ruby-mode
                              gfm-mode
