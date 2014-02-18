@@ -51,9 +51,5 @@
   (add-to-list 'ac-sources 'ac-source-rsense)
   (rubocop-mode 1))
 
-(defun my/enh-ruby-mode-hook ()
-  (abbrev-mode -1))
-
 (add-hook 'ruby-mode-hook 'my/ruby-mode-common-hook)
 (add-hook 'enh-ruby-mode-hook 'my/ruby-mode-common-hook)
-(add-hook 'enh-ruby-mode-hook 'my/enh-ruby-mode-hook)
