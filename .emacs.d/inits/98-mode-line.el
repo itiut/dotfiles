@@ -149,7 +149,7 @@
 (defpowerline powerline-vc-1
   (when (and (buffer-file-name (current-buffer))
              vc-mode)
-    (propertize (replace-regexp-in-string " Git[-:]" " " (format-mode-line '(vc-mode vc-mode)))
+    (propertize (replace-regexp-in-string " Git[-:@]" " " (format-mode-line '(vc-mode vc-mode)))
                 'face `((:foreground ,monokai/blue :weight bold)))))
 
 (defpowerline powerline-file-status
