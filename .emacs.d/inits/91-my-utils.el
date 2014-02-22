@@ -44,6 +44,7 @@
   (forward-line -1)
   (indent-according-to-mode))
 
+
 ;;; guake
 ;;;###autoload
 (defun my/execute-on-guake (command)
