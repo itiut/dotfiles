@@ -5,6 +5,7 @@
   (locate-dominating-file default-directory ".git"))
 
 
+;;; edit
 ;;;###autoload
 (defun my/smart-beginning-of-line (old-point)
   "Move point to the first non-whitespace character or beginning-of-line."
@@ -43,6 +44,7 @@
   (forward-line -1)
   (indent-according-to-mode))
 
+;;; guake
 ;;;###autoload
 (defun my/execute-on-guake (command)
   "Execute `command' on Guake Terminal."
