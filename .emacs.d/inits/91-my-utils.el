@@ -51,10 +51,11 @@
   (start-process-shell-command "guake" nil "guake -t"))
 
 ;;;###autoload
-(defun my/cd-on-guake ()
+(defun my/cd-on-guake (&optional directory)
   "Move to current directory in Guake Terminal, then show Guake Terminal."
   (interactive)
-  (my/execute-on-guake (format "cd %s" default-directory))
+  (let ((directory (or directory default-directory)))
+    (my/execute-on-guake (format "cd %s" directory)))
   (my/toggle-guake))
 
 (provide 'my/utils)
