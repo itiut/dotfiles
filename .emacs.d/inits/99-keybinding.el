@@ -14,6 +14,7 @@
 (global-set-key (kbd "C-t") 'my/smart-other-window)
 (global-set-key (kbd "C-w") 'my/kill-region-or-backward-kill-word)
 (global-set-key (kbd "C-\\") 'my/cd-on-guake)
+(global-set-key (kbd "C-M-\\") 'my/cd-project-root-on-guake)
 (global-set-key (kbd "C-S-k") 'kill-whole-line)
 (global-set-key (kbd "C-S-o") 'my/open-line-above)
 (global-set-key (kbd "C-x K") 'kill-this-buffer)

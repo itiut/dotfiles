@@ -65,4 +65,10 @@
     (my/execute-on-guake (format "cd %s" directory)))
   (my/toggle-guake))
 
+;;;###autoload
+(defun my/cd-project-root-on-guake ()
+  "Move to project root directory in Guake Terminal."
+  (interactive)
+  (my/cd-on-guake (my/find-project-root)))
+
 (provide 'my/utils)
