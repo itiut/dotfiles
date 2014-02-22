@@ -1,5 +1,10 @@
 ;;;; my own utilities
 
+(defun my/find-project-root ()
+  "Find and return project root directory when in git project. Otherwise return nil."
+  (locate-dominating-file default-directory ".git"))
+
+
 ;;;###autoload
 (defun my/smart-beginning-of-line (old-point)
   "Move point to the first non-whitespace character or beginning-of-line."
