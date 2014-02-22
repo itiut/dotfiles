@@ -26,7 +26,7 @@
 
      (defun my/tabbar-buffer-groups ()
        "Group tabs by project name firstly when in project."
-       (let ((project-root (locate-dominating-file default-directory ".git")))
+       (let ((project-root (my/find-project-root)))
          (if (and buffer-file-name project-root)
              (list (file-name-nondirectory (directory-file-name project-root)))
            (tabbar-buffer-groups))))
