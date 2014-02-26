@@ -11,9 +11,10 @@
 (add-to-list 'desktop-modes-not-to-save 'dired-mode)
 (add-to-list 'desktop-modes-not-to-save 'fundamental-mode)
 
-;; no backup file and no auto save file
+;; do not create auto-save files, backup files, lock files
 (custom-set-variables '(auto-save-default nil)
                       '(backup-inhibited t)
+                      '(create-lockfiles nil)
                       '(delete-auto-save-files t)
                       '(make-backup-files nil))
 
