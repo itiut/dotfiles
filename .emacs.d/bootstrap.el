@@ -53,6 +53,7 @@
 
     direx
     gist
+    guide-key
     quickrun
     recentf-ext
 

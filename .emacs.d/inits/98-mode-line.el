@@ -7,6 +7,7 @@
     (auto-fill-function . " af")
     (flyspell-mode . "fs")
     (global-whitespace-mode . "")
+    (guide-key-mode . "")
     (isearch-mode . "")
     (visual-line-mode . " vline")
     (whitespace-mode . "")

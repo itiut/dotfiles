@@ -6,7 +6,7 @@
 (eval-after-load 'tabbar-ruler
   '(progn
      (defvar my/tabbar-ignored-buffer-names
-       '("*Helm" "*helm"))
+       '("*Helm" "*helm" "*guide-key*"))
 
      (defvar my/tabbar-ignored-buffer-major-modes
        '(direx:direx-mode))
