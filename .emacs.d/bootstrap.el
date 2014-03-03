@@ -56,6 +56,7 @@
     guide-key
     quickrun
     recentf-ext
+    zeal-at-point
 
     ;;; programming
     ;; C/C++
