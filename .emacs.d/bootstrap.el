@@ -73,6 +73,7 @@
     ;;; markup language
     markdown-mode
     yaml-mode
+    web-mode
 
     ;;; theme
     monokai-theme
