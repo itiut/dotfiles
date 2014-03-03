@@ -36,6 +36,7 @@
                              html-mode
                              js2-mode
                              ruby-mode
+                             web-mode
                              yaml-mode
                              )))
 
