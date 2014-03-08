@@ -1,8 +1,8 @@
 ;;;; basic setting
 
 ;; history
-(setq history-length 1000
-      history-delete-duplicates t)
+(custom-set-variables '(history-length 1000)
+                      '(history-delete-duplicates t))
 
 ;; desktop-save
 (desktop-save-mode 1)

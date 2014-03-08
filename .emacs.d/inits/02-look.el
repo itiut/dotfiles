@@ -9,16 +9,16 @@
   (scroll-bar-mode -1)
 
   ;; frame title
-  (setq frame-title-format
-        '((buffer-file-name "%f" (dired-directory dired-directory "%b"))
-          " - Emacs"
-          emacs-version)))
+  (custom-set-variables '(frame-title-format
+                          '((buffer-file-name "%f" (dired-directory dired-directory "%b"))
+                            " - Emacs"
+                            emacs-version))))
 
 ;; disable startup screen
-(setq inhibit-startup-screen t)
+(custom-set-variables '(inhibit-startup-screen t))
 
 ;; disable line wrap
-(setq-default truncate-lines t)
+(custom-set-variables '(truncate-lines t))
 
 ;; highlight
 (global-hl-line-mode 1)                              ; current line

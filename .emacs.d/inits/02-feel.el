@@ -1,16 +1,16 @@
 ;;;; feel setting
 
 ;; scroll line by line
-(setq scroll-conservatively 10000
-      scroll-step 1)
+(custom-set-variables '(scroll-conservatively 10000)
+                      '(scroll-step 1))
 
 ;; yes-no-no-p
 (defalias 'yes-or-no-p 'y-or-n-p)
-(setq confirm-kill-emacs 'y-or-n-p)
+(custom-set-variables '(confirm-kill-emacs 'y-or-n-p))
 
-;; ignore case when completion
-(setq read-buffer-completion-ignore-case t
-      read-file-name-completion-ignore-case t)
+;; ignore case when completing
+(custom-set-variables '(read-buffer-completion-ignore-case t)
+                      '(read-file-name-completion-ignore-case t))
 
 ;; point-undo
 (require 'point-undo)
