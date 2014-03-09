@@ -11,11 +11,17 @@ init_submodules() {
     git submodule update --init
 }
 
-link_bin_and_dotfiles() {
-    echo_with_program_name 'link bin'
-    ln --symbolic --force --verbose $PWD/bin $HOME
+create_link_to_home() {
+    ln --symbolic --force --verbose $1 $HOME
+}
 
-    echo_with_program_name 'link dotfiles'
+link_bin() {
+    echo_with_program_name "link bin in $PWD"
+    create_link_to_home $PWD/bin
+}
+
+_link_dotfiles() {
+    echo_with_program_name "link dotfiles in $PWD"
     for dotfile in .?*; do
         case $dotfile in
             ..)
@@ -27,23 +33,28 @@ link_bin_and_dotfiles() {
             .gitmodules)
                 continue;;
             *)
-                ln --symbolic --force --verbose $PWD/$dotfile $HOME;;
+                create_link_to_home $PWD/$dotfile;;
         esac
     done
 }
 
-link_dropbox_shared_dotfiles() {
-    echo_with_program_name 'link dropbox shared dotfiles'
-    local paths=$HOME/Dropbox/.share/.?*
-    for path in $paths; do
-        case $(basename $path) in
-            .gitconfig.local)
-                ln --symbolic --force --verbose $path $HOME;;
-        esac
-    done
+link_dotfiles() {
+    if [ $# -eq 1 ]; then
+        path=$1
+    else
+        path=$PWD
+    fi
+
+    oldpath=$PWD
+    cd $path
+
+    _link_dotfiles
+
+    cd $oldpath
 }
 
 cd $(dirname $0)
 init_submodules
-link_bin_and_dotfiles
-link_dropbox_shared_dotfiles
+link_bin
+link_dotfiles
+link_dotfiles $HOME/Dropbox/.share
