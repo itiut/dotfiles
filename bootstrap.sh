@@ -13,7 +13,7 @@ init_submodules() {
 
 link_bin_and_dotfiles() {
     echo_with_program_name 'link bin'
-    ln -is $PWD/bin $HOME
+    ln --symbolic --force --verbose $PWD/bin $HOME
 
     echo_with_program_name 'link dotfiles'
     for dotfile in .?*; do
@@ -27,7 +27,7 @@ link_bin_and_dotfiles() {
             .gitmodules)
                 continue;;
             *)
-                ln -is $PWD/$dotfile $HOME;;
+                ln --symbolic --force --verbose $PWD/$dotfile $HOME;;
         esac
     done
 }
@@ -38,7 +38,7 @@ link_dropbox_shared_dotfiles() {
     for path in $paths; do
         case $(basename $path) in
             .gitconfig.local)
-                ln -is $path $HOME;;
+                ln --symbolic --force --verbose $path $HOME;;
         esac
     done
 }
