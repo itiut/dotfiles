@@ -32,6 +32,8 @@ _link_dotfiles() {
                 continue;;
             .gitmodules)
                 continue;;
+            .zsh_history)
+                continue;;
             *)
                 create_link_to_home $PWD/$dotfile;;
         esac
