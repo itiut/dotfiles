@@ -2,16 +2,20 @@
 set -eu
 PROGRAM=$(basename $0)
 
+echo_with_program_name() {
+    echo "[$PROGRAM] $1"
+}
+
 init_submodules() {
-    echo "[$PROGRAM] init submodules"
+    echo_with_program_name 'init submodules'
     git submodule update --init
 }
 
 link_bin_and_dotfiles() {
-    echo "[$PROGRAM] link bin"
+    echo_with_program_name 'link bin'
     ln -is $PWD/bin $HOME
 
-    echo "[$PROGRAM] link dotfiles"
+    echo_with_program_name 'link dotfiles'
     for dotfile in .?*; do
         case $dotfile in
             ..)
@@ -29,7 +33,7 @@ link_bin_and_dotfiles() {
 }
 
 link_dropbox_shared_dotfiles() {
-    echo "[$PROGRAM] link dropbox shared dotfiles"
+    echo_with_program_name 'link dropbox shared dotfiles'
     local paths=$HOME/Dropbox/.share/.?*
     for path in $paths; do
         case $(basename $path) in
