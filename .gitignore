@@ -11,7 +11,10 @@
 .emacs.d/ac-comphist.dat
 .emacs.d/auto-save-list
 .emacs.d/elpa
+.emacs.d/development/*
 .emacs.d/history
 .emacs.d/session*
 .emacs.d/tramp
 .emacs.d/var
+
+!.gitkeep
