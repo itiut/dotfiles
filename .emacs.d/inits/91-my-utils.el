@@ -5,6 +5,18 @@
   (locate-dominating-file default-directory ".git"))
 
 
+;;; basic
+;;;###autoload
+(defun my/revert-buffer ()
+  "Interactive call to `revert-buffer'. Ignoring the auto-save file and not requesting for confirmation.
+When current buffer is modified, the command refused to revert it, unless you call with prefix arguments."
+  (interactive)
+  (when (and (buffer-modified-p)
+             (not current-prefix-arg))
+    (error "Current buffer has been modified"))
+  (revert-buffer 'ignore-auto 'noconfirm))
+
+
 ;;; edit
 ;;;###autoload
 (defun my/smart-beginning-of-line (old-point)
