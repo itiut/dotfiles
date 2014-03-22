@@ -81,6 +81,9 @@ When current buffer is modified, the command refused to revert it, unless you ca
 (defun my/cd-project-root-on-guake ()
   "Move to project root directory in Guake Terminal."
   (interactive)
-  (my/cd-on-guake (my/find-project-root)))
+  (let ((project-root (my/find-project-root)))
+    (if project-root
+        (my/cd-on-guake project-root)
+      (my/cd-on-guake))))
 
 (provide 'my/utils)
