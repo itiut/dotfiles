@@ -28,6 +28,7 @@
 	dic = diff --cached
 	f = fetch --prune
 	info = remote show origin
+	sb = show-branch
 	st = status
 	sh = show
 	this = !git init && git add . && git commit -m \"Initial commit\"
