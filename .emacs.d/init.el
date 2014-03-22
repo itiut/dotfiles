@@ -1,4 +1,4 @@
-(require 'cl)
+(require 'cl-lib)
 
 ;; Emacs package system
 (require 'package)
