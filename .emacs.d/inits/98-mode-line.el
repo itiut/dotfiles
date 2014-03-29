@@ -3,6 +3,7 @@
 (defvar mode-line-cleaner-alist
   '(
     ;; minor modes
+    (abbrev-mode . " ab")
     (auto-complete-mode . " ac")
     (auto-fill-function . " af")
     (flyspell-mode . "fs")
