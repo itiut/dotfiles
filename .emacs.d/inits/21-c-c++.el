@@ -14,5 +14,13 @@
   ;; c-eldoc
   (c-turn-on-eldoc-mode))
 
+(defun my/c-mode-hook ()
+  (setq quickrun-option-cmdopt "-std=c99 -O2"))
+
+(defun my/c++-mode-hook ()
+  (setq quickrun-option-cmdopt "-std=c++11 -O2"))
+
 (add-hook 'c-mode-hook 'my/c-c++-mode-hook)
+(add-hook 'c-mode-hook 'my/c-mode-hook)
 (add-hook 'c++-mode-hook 'my/c-c++-mode-hook)
+(add-hook 'c++-mode-hook 'my/c++-mode-hook)
