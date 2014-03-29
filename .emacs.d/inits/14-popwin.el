@@ -6,3 +6,6 @@
 
 ;; direx
 (push '(direx:direx-mode :position left :width 40 :dedicated t) popwin:special-display-config)
+
+;; quickrun
+(push '("*quickrun*") popwin:special-display-config)
