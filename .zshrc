@@ -32,7 +32,7 @@ alias e="emacsclient --no-wait --alternate-editor=vim"
 alias g="git"
 alias l="ls"
 alias o="xdg-open"
-alias t="tig"
+alias t="tig --all"
 alias v="vim"
 
 # history file
