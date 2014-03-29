@@ -1,6 +1,9 @@
 ;;;; tabbar setting
 
 ;; tabbar-ruler
+(add-hook 'emacs-startup-hook '(lambda ()
+                                 (require 'tabbar-ruler)))
+
 (custom-set-variables '(tabbar-ruler-modified-symbol t))
 
 (eval-after-load 'tabbar-ruler
