@@ -12,6 +12,18 @@
 ;; auto indent
 (electric-indent-mode 1)
 
+(defvar my/electric-indent-disable-modes '(
+                                           gfm-mode
+                                           markdown-mode
+                                           yaml-mode
+                                           ))
+
+(defun my/electric-indent-hook (c)
+  (when (memq major-mode my/electric-indent-disable-modes)
+    'no-indent))
+
+(add-hook 'electric-indent-functions 'my/electric-indent-hook)
+
 ;; auto insert pair
 (electric-pair-mode 1)
 
