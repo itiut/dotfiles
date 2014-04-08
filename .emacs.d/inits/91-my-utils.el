@@ -27,14 +27,23 @@ When current buffer is modified, the command refused to revert it, unless you ca
     (beginning-of-line)))
 
 ;;;###autoload
+(defun my/smart-split-window ()
+  "Split current window according to its window size."
+  (interactive)
+  (let* ((edges (window-pixel-edges))
+         (width (- (nth 2 edges) (nth 0 edges)))
+         (height (- (nth 3 edges) (nth 1 edges))))
+    (if (< width height)
+        (split-window-vertically)
+      (split-window-horizontally))))
+
+;;;###autoload
 (defun my/smart-other-window ()
   "Split window if no more than one window exists, and move other window."
   (interactive)
   (if (one-window-p)
       (progn
-        (if (< (frame-pixel-width) (frame-pixel-height))
-            (split-window-vertically)
-          (split-window-horizontally))
+        (my/smart-split-window)
         (other-window 1)
         (switch-to-buffer (get-buffer (car (helm-buffer-list)))))
     (other-window 1)))

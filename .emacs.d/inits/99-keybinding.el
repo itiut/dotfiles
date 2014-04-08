@@ -18,6 +18,7 @@
 (global-set-key (kbd "C-M-\\") 'my/cd-project-root-on-guake)
 (global-set-key (kbd "C-S-k") 'kill-whole-line)
 (global-set-key (kbd "C-S-o") 'my/open-line-above)
+(global-set-key (kbd "C-x t") 'my/smart-split-window)
 (global-set-key (kbd "C-x K") 'kill-this-buffer)
 (global-set-key (kbd "C-x C-j") 'my/dired-jump)
 
