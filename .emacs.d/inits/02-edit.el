@@ -27,6 +27,12 @@
 ;; auto insert pair
 (electric-pair-mode 1)
 
+(defadvice newline-and-indent (before auto-newline-inside-curly-braces activate)
+  "Automatically insert additional newline after cursor when only cursor is inside curly braces."
+  (when (and (= (char-before) 123)
+             (= (char-after) 125))
+    (call-interactively 'open-line)))
+
 ;; delete region by BS, DEL, typing text
 (delete-selection-mode 1)
 
