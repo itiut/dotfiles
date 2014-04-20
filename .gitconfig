@@ -20,7 +20,7 @@
 	b = branch
 	ba = branch -a
 	bare = init --bare --shared=true
-	ci = commit
+	ci = commit --verbose
 	co = checkout
 	d = diff
 	dc = diff --cached
