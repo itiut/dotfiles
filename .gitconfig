@@ -27,6 +27,7 @@
 	di = diff
 	dic = diff --cached
 	f = fetch --prune
+	fixup = commit --amend -C HEAD
 	info = remote show origin
 	sb = show-branch --all
 	st = status
