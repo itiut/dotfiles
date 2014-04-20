@@ -17,8 +17,8 @@
 	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
 	a = add
 	aa = !git add --all && git status
-	b = branch
-	ba = branch -a
+	b = branch --verbose
+	ba = branch --all --verbose
 	bare = init --bare --shared=true
 	ci = commit --verbose
 	co = checkout
