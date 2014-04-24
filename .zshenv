@@ -28,3 +28,8 @@ export EDITOR=vim
 
 # anyenv
 eval "$(anyenv init -)"
+
+# local zshenv
+if [ -f $HOME/.zshenv.local ]; then
+    source $HOME/.zshenv.local
+fi
