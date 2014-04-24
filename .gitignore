@@ -1,6 +1,7 @@
 *~
 
 *.zsh_history
+.byobu/.screenrc
 .byobu/.ssh-agent
 
 ## emacs
