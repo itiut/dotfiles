@@ -5,7 +5,7 @@ export ZSHDIR=$HOME/.zsh.d
 typeset -U path
 path=(
     # user
-    $HOME{/.anyenv,/local,/Dropbox,}/bin(N-/)
+    $HOME{/.linuxbrew,/local,/Dropbox,}/bin(N-/)
     # Linux
     {/usr/local,/usr,}{/sbin,/bin}(N-/)
 )
@@ -26,8 +26,8 @@ manpath=(
 
 export EDITOR=vim
 
-# anyenv
-eval "$(anyenv init -)"
+# linuxbrew
+export LD_LIBRARY_PATH=$HOME/.linuxbrew/lib:$LD_LIBRARY_PATH
 
 # local zshenv
 if [ -f $HOME/.zshenv.local ]; then

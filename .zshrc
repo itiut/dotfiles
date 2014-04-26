@@ -2,10 +2,12 @@
 source $ZSHDIR/antigen/antigen.zsh
 antigen-use oh-my-zsh
 antigen-bundles <<EOBUNDLES
+brew
 bundler
 gem
 heroku
 npm
+rbenv
 vagrant
 EOBUNDLES
 antigen-theme $ZSHDIR/itiut.zsh-theme
