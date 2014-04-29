@@ -15,9 +15,11 @@
   (c-turn-on-eldoc-mode))
 
 (defun my/c-mode-hook ()
+  (setq flycheck-clang-language-standard "c99")
   (setq-local quickrun-option-cmdopt "-std=c99 -O2"))
 
 (defun my/c++-mode-hook ()
+  (setq flycheck-clang-language-standard "c++11")
   (setq-local quickrun-option-cmdopt "-std=c++11 -O2"))
 
 (add-hook 'c-mode-hook 'my/c-c++-mode-hook)
