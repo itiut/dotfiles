@@ -2,10 +2,12 @@
 source $ZSHDIR/antigen/antigen.zsh
 antigen-use oh-my-zsh
 antigen-bundles <<EOBUNDLES
+brew
 bundler
 gem
 heroku
 npm
+rbenv
 vagrant
 zsh-users/zsh-syntax-highlighting
 EOBUNDLES
