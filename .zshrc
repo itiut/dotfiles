@@ -4,6 +4,7 @@ antigen-use oh-my-zsh
 antigen-bundles <<EOBUNDLES
 brew
 bundler
+docker
 gem
 heroku
 npm
