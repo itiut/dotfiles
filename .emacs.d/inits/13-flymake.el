@@ -10,6 +10,7 @@
                                                      )))
 
 (defvar my/flycheck-enable-modes '(
+                                   c-mode
                                    c++-mode
                                    emacs-lisp-mode
                                    enh-ruby-mode
