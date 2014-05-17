@@ -3,16 +3,16 @@
 [core]
 	editor = vim
 	pager = less -r
-[color]
-	ui = auto
-[push]
-	default = simple
 [branch]
 	autosetuprebase = always
+[color]
+	ui = auto
 [merge]
 	ff = false
 [pull]
 	rebase = true
+[push]
+	default = simple
 [alias]
 	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
 	a = add
