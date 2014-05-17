@@ -7,6 +7,8 @@
 	autosetuprebase = always
 [color]
 	ui = auto
+[fetch]
+	prune = true
 [merge]
 	ff = false
 [pull]
@@ -27,8 +29,8 @@
 	dc = diff --cached
 	di = diff
 	dic = diff --cached
-	f = fetch --prune
-	fa = fetch --prune --all
+	f = fetch
+	fa = fetch --all
 	fixup = commit --amend -C HEAD
 	info = remote show origin
 	sb = show-branch --all
