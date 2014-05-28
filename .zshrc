@@ -17,11 +17,15 @@ antigen-apply
 
 # aliases
 alias -g C="| xclip -in -selection clipboard"
+alias -g E="2>&1 > /dev/null"
 alias -g G="| grep"
 alias -g H="| head"
 alias -g L="| less"
+alias -g N="> /dev/null"
 alias -g S="| sed"
 alias -g T="| tail"
+alias -g W="| wc"
+alias -g X="| xargs"
 
 alias ls="ls --classify --color"
 alias la="ls --almost-all"
