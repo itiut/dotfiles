@@ -12,7 +12,9 @@ init_submodules() {
 }
 
 create_link_to_home() {
-    ln --symbolic --force --verbose $1 $HOME
+    if [ ! -e $HOME/$(basename $1) ]; then
+        ln --symbolic --verbose $1 $HOME
+    fi
 }
 
 link_bin() {
