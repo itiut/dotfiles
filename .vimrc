@@ -1,46 +1,47 @@
 " encoding
 set encoding=utf-8
 
-" do not create backup files
-set nobackup
+" file
+set nobackup        " do not create backup files
+set noswapfile      " do not create swap files
 
-" do not create swap files
-set noswapfile
+" buffer
+set autoread        " automatically reload if changed outside
+set hidden          " hide buffer even if unsaved
 
-" print line numbers
-set number
+" syntax
+syntax enable
 
-" print file names on window title
-set title
-
-" print commands on status line
-set showcmd
-
-" always show status line
-set laststatus=2
-
-" highlight according parenthesis when closing
-set showmatch
-set matchtime=2
-
-" show tabs and trailing blanks
-set list
+" display
+set laststatus=2    " 2-line status
+set list            " tabs, trailing spaces
 set listchars=tab:»-,trail:-,extends:»,precedes:«
+set matchtime=2     " seconds to show matching brackets
+set nowrap          " disable line wrap
+set number          " line numbers
+set ruler           " line and column number of cursor
+set showcmd         " command characters
+set showmatch       " matching brackets
+set showmode        " current mode
+set title           " file name on window title
 
-" replace tab with spaces
-set expandtab
+" search
+set hlsearch        " highlight search matches
+set incsearch       " highlight first search match when typing search string
+set ignorecase      " ignore case
+set smartcase       " do not ignore case when search string contains uppercase letters
 
-" tab size
-set tabstop=4
-set shiftwidth=4
-set softtabstop=0
+" tab
+set expandtab       " replace tab with spaces
+set tabstop=4       " tab width
+set shiftwidth=4    " number of spaces for each indentation
 
 " indentation
 set autoindent
 set smartindent
 
+" key binding
 " ESC by C-g
 inoremap <C-g> <ESC>
-
-" syntax
-syntax enable
+" stop highlighting search matches by ESC ESC
+nnoremap <ESC><ESC> :noh<CR>
