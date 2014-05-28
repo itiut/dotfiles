@@ -16,17 +16,6 @@ antigen-theme $ZSHDIR/itiut.zsh-theme
 antigen-apply
 
 # aliases
-alias -g C="| xclip -in -selection clipboard"
-alias -g E="2>&1 > /dev/null"
-alias -g G="| grep"
-alias -g H="| head"
-alias -g L="| less"
-alias -g N="> /dev/null"
-alias -g S="| sed"
-alias -g T="| tail"
-alias -g W="| wc"
-alias -g X="| xargs"
-
 alias ls="ls --classify --color"
 alias la="ls --almost-all"
 alias ll="ls -l --all"
@@ -43,18 +32,33 @@ alias o="xdg-open"
 alias t="tig --all"
 alias v="vim"
 
-# automatically expand global aliases
-globalias() {
-   if [[ $LBUFFER =~ ' [A-Z0-9]+$' ]]; then
-     zle _expand_alias
-     zle expand-word
-   fi
-   zle self-insert
+# automatically expand abbreviations
+setopt extended_glob
+
+typeset -A abbreviations
+abbreviations=(
+    "C"    "| xclip -in -selection clipboard"
+    "E"    "2>&1 > /dev/null"
+    "G"    "| grep"
+    "H"    "| head"
+    "L"    "| less"
+    "N"    "> /dev/null"
+    "S"    "| sed"
+    "T"    "| tail"
+    "W"    "| wc"
+    "X"    "| xargs"
+)
+
+magic-abbrev-expand() {
+    local MATCH
+    LBUFFER=${LBUFFER%%(#m)[-_a-zA-Z0-9]#}
+    LBUFFER+=${abbreviations[$MATCH]:-$MATCH}
+    zle self-insert
 }
 
-zle -N globalias
+zle -N magic-abbrev-expand
 
-bindkey " " globalias
+bindkey " " magic-abbrev-expand
 bindkey "^ " magic-space        # control-space to bypass completion
 bindkey -M isearch " " magic-space # normal space during searches
 
