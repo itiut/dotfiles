@@ -27,7 +27,7 @@ set title           " file name on window title
 
 " search
 set hlsearch        " highlight search matches
-set incsearch       " highlight first search match when typing search string
+set incsearch       " start searching when typing search string
 set ignorecase      " ignore case
 set smartcase       " do not ignore case when search string contains uppercase letters
 
