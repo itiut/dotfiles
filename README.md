@@ -24,3 +24,9 @@ $ ~/.dotfiles/bootstrap.sh
 * link `$HOME/Dropbox/.share/.*` to `$HOME`
 
 When creating symbloic links, `bootstrap.sh` does not overwrite existing ones.
+
+Automatic setup by `ansible`
+----
+I use `ansible` to setup my Ubuntu machine automatically.
+
+Ansible playbooks for my Ubuntu machine are in [itiut/itiut-ansible-ubuntu](https://github.com/itiut/itiut-ansible-ubuntu).
