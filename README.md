@@ -18,6 +18,7 @@ $ ~/.dotfiles/bootstrap.sh
 
 `bootstrap.sh` does followings:
 
+* initialize submodules
 * link `dotfiles/bin` to `$HOME`
 * link `dotfiles/.*` to `$HOME`
   * except for `.git`, `.gitignore`, `.gitmodule` and `.zsh_history`
