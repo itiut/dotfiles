@@ -9,3 +9,5 @@ gsettings set com.canonical.Unity.Lenses remote-content-search none
 gsettings set com.canonical.indicator.datetime show-day true
 gsettings set com.canonical.indicator.datetime show-date true
 gsettings set com.canonical.indicator.datetime show-year true
+
+gsettings set org.gnome.gedit.preferences.editor create-backup-copy false
