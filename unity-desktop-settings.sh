@@ -4,6 +4,8 @@ gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshel
 gsettings set org.compiz.core:/org/compiz/profiles/unity/plugins/core/ vsize 2
 gsettings set org.compiz.core:/org/compiz/profiles/unity/plugins/core/ hsize 3
 
+gsettings set org.gnome.desktop.session idle-delay 3600
+
 gsettings set com.canonical.Unity.Lenses remote-content-search none
 
 gsettings set com.canonical.indicator.datetime show-day true
