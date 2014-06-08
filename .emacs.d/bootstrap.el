@@ -64,9 +64,6 @@
     c-eldoc
 
     ;; Ruby
-    enh-ruby-mode
-    inf-ruby
-    rubocop
     ruby-end
 
     ;; JavaScript

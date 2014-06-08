@@ -1,8 +1,8 @@
 ;;;; Ruby mode setting
 
-(add-to-list 'interpreter-mode-alist '("ruby" . enh-ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.ru\\'" . enh-ruby-mode))
-(add-to-list 'auto-mode-alist '("\\Gemfile\\'" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.ru\\'" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\Gemfile\\'" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\Rakefile\\'" . ruby-mode))
 
 (custom-set-variables
  ;; ruby-mode
@@ -10,23 +10,18 @@
  '(ruby-deep-indent-paren-style nil)
  '(ruby-insert-encoding-magic-comment nil)
 
- ;; enh-ruby-mode
- '(enh-ruby-deep-indent-paren nil)
-
  ;; rsense
  '(rsense-home (expand-file-name "rsense" my/site-lisp-directory))
 
  ;; ruby-end
  '(ruby-end-insert-newline nil))
 
-(defun my/eval-after-load-ruby-mode-common ()
-  (require 'rsense)
-  (require 'ruby-end))
-
 (eval-after-load 'ruby-mode
   '(progn
-     (my/eval-after-load-ruby-mode-common)
+     (require 'rsense)
+     (require 'ruby-end)
 
+     ;; this indentation problem will be fixed in Emacs 24.4
      (defadvice ruby-indent-line (after unindent-closing-paren activate)
        (let ((column (current-column))
              indent offset)
@@ -45,11 +40,7 @@
            (when (> offset 0)
              (forward-char offset)))))))
 
-(eval-after-load 'enh-ruby-mode '(my/eval-after-load-ruby-mode-common))
+(defun my/ruby-mode-hook ()
+  (add-to-list 'ac-sources 'ac-source-rsense))
 
-(defun my/ruby-mode-common-hook ()
-  (add-to-list 'ac-sources 'ac-source-rsense)
-  (rubocop-mode 1))
-
-(add-hook 'ruby-mode-hook 'my/ruby-mode-common-hook)
-(add-hook 'enh-ruby-mode-hook 'my/ruby-mode-common-hook)
+(add-hook 'ruby-mode-hook 'my/ruby-mode-hook)
