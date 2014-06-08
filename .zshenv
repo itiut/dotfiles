@@ -29,6 +29,12 @@ export EDITOR=vim
 # linuxbrew
 export LD_LIBRARY_PATH=$HOME/.linuxbrew/lib:$LD_LIBRARY_PATH
 
+# brewed golang
+path=(
+    $HOME/.linuxbrew/opt/go/libexec/bin(N-/)
+    $path
+)
+
 # brewed rbenv
 if which rbenv > /dev/null; then
     export RBENV_ROOT=$(brew --prefix)/var/rbenv
