@@ -12,7 +12,7 @@ path=(
 
 typeset -U fpath
 fpath=(
-    $ZSHDIR/site-functions
+    $HOME/.linuxbrew/share/zsh/site-functions(N-/)
     $fpath
 )
 
