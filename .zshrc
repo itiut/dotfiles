@@ -145,6 +145,11 @@ zle -N zle-line-init
 zstyle ':completion:*' completer _oldlist _complete
 zle -N zle-keymap-select auto-fu-zle-keymap-select
 
+# direnv
+if which direnv > /dev/null; then
+    eval "$(direnv hook $0)"
+fi
+
 # z.sh
 _Z_CMD=j
 source $ZSHDIR/z/z.sh
