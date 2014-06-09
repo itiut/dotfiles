@@ -1,0 +1,16 @@
+AllCops:
+  Includes:
+    - Rakefile
+    - Gemfile
+    - config.ru
+  Excludes:
+    - bin/*
+
+Documentation:
+  Enabled: false
+
+LineLength:
+  Max: 127
+
+ClassAndModuleChildren:
+  Enabled: false
