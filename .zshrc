@@ -130,6 +130,13 @@ function ls-and-git-status() {
 zle -N ls-and-git-status
 bindkey '^T' ls-and-git-status
 
+# open working directory in filer
+function open-working-directory-in-filer() {
+    xdg-open $PWD
+}
+zle -N open-working-directory-in-filer
+bindkey '^O' open-working-directory-in-filer
+
 # do not beep
 setopt no_beep
 
@@ -144,6 +151,7 @@ function zle-line-init () {
 zle -N zle-line-init
 zstyle ':completion:*' completer _oldlist _complete
 zle -N zle-keymap-select auto-fu-zle-keymap-select
+bindkey -M afu '^O' open-working-directory-in-filer
 
 # direnv
 if which direnv > /dev/null; then
