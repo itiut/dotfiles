@@ -16,9 +16,9 @@ antigen-theme $ZSHDIR/itiut.zsh-theme
 antigen-apply
 
 # aliases
-alias ls="ls --classify --color"
-alias la="ls --almost-all"
-alias ll="ls -l --all"
+alias ls="ls -F --color"
+alias la="ls -A"
+alias ll="ls -l -a"
 alias cp="cp --interactive"
 alias mv="mv --interactive"
 alias rm="rm --interactive"
