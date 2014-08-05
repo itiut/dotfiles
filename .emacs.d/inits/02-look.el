@@ -12,7 +12,11 @@
   (custom-set-variables '(frame-title-format
                           '((buffer-file-name "%f" (dired-directory dired-directory "%b"))
                             " - Emacs"
-                            emacs-version))))
+                            emacs-version)))
+
+  ;; maximize frame
+  (add-hook 'emacs-startup-hook '(lambda ()
+                                   (set-frame-parameter nil 'fullscreen 'maximized))))
 
 ;; disable startup screen
 (custom-set-variables '(inhibit-startup-screen t))
