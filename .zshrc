@@ -19,9 +19,9 @@ antigen-apply
 alias ls="ls -F -G"
 alias la="ls -A"
 alias ll="ls -l -a"
-alias cp="cp --interactive"
-alias mv="mv --interactive"
-alias rm="rm --interactive"
+alias cp="cp -i"
+alias mv="mv -i"
+alias rm="rm -i"
 
 alias a="./a.out"
 alias c="cd"
