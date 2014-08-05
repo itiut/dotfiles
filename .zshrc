@@ -28,7 +28,7 @@ alias c="cd"
 alias e="emacsclient --no-wait --alternate-editor=vim"
 alias g="git"
 alias l="ls"
-alias o="xdg-open"
+alias o="open"
 alias t="tig --all"
 alias v="vim"
 
@@ -132,7 +132,7 @@ bindkey '^T' ls-and-git-status
 
 # open working directory in filer
 function open-working-directory-in-filer() {
-    xdg-open $PWD
+    open $PWD
 }
 zle -N open-working-directory-in-filer
 bindkey '^O' open-working-directory-in-filer
