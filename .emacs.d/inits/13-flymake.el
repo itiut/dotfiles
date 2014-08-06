@@ -1,10 +1,8 @@
 ;;;; flymake setting
 
 ;; flycheck
-(require 'flycheck)
-(setq flycheck-mode-line-lighter " fc") ; defined by defconst in flycheck.el
-
-(custom-set-variables '(flycheck-display-errors-delay 0.5)
+(custom-set-variables '(flycheck-mode-line " fc")
+                      '(flycheck-display-errors-delay 0.5)
                       '(flycheck-disabled-checkers '(
                                                      emacs-lisp-checkdoc
                                                      )))
