@@ -1,6 +1,4 @@
-set show-date = relative
-set show-id = yes
-set show-line-numbers = yes
+set main-view = line-number:display=yes,interval=5 id date:display=relative author commit-title:graph=yes,refs=yes
 
 bind generic g move-first-line
 bind generic G move-last-line
