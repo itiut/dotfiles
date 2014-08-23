@@ -38,6 +38,7 @@ path=(
 # brewed rbenv
 if which rbenv > /dev/null; then
     export RBENV_ROOT=$(brew --prefix)/var/rbenv
+    eval "$(rbenv init -)"
 fi
 
 # local zshenv

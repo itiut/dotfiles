@@ -8,7 +8,6 @@ docker
 gem
 heroku
 npm
-rbenv
 vagrant
 zsh-users/zsh-syntax-highlighting
 EOBUNDLES
