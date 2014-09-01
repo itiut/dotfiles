@@ -1,5 +1,11 @@
 ;;;; my own utilities
 
+(defmacro my/with-suppressed-message (&rest body)
+  "Suppress new messages temporarily in the echo area and the `*Messages*' buffer while BODY is evaluated."
+  (declare (indent 0))
+  (let ((message-log-max nil))
+    `(with-temp-message (or (current-message) "") ,@body)))
+
 (defun my/find-project-root ()
   "Find and return project root directory when in git project. Otherwise return nil."
   (locate-dominating-file default-directory ".git"))
