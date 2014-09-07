@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 set -eu
+cd $(dirname $0)
 
 DONE="\033[32mDONE\033[0m"
 SKIP="\033[34mSKIP\033[0m"
@@ -65,6 +66,51 @@ update_formulas() {
     echo -e "[ $DONE ] Update Formulas"
 }
 
+_create_symlink() {
+    local target=$1
+    local link=$2
+
+    if [ -L $link ]; then
+        # symlink already exists
+        return 0
+
+    elif [ -e $link ]; then
+        # another file or directory exists
+        echo -e "[ $ERROR ] file or directory exists in $link."
+        return 1
+    fi
+
+    ln -sv $target $link
+}
+
+update_dotfiles() {
+    local dotfiles=(
+        ".Xmodmap"
+        ".aspell.conf"
+        ".gemrc"
+        ".gitconfig"
+        ".rspec"
+        ".rubocop.yml"
+        ".tigrc"
+        ".vimrc"
+    )
+    local private_dotfiles=(
+        ".gitconfig.local"
+        ".ssh/config"
+        ".zshenv.local"
+    )
+
+    for dotfile in ${dotfiles[@]}; do
+        _create_symlink $PWD/linked/$dotfile $HOME/$dotfile
+    done
+
+    for dotfile in ${private_dotfiles[@]}; do
+        _create_symlink $HOME/Dropbox/.share/$dotfile $HOME/$dotfile
+    done
+
+    echo -e "[ $DONE ] Update Dotfiles"
+}
+
 install_command_line_tools
 install_homebrew
 
@@ -97,3 +143,5 @@ cask alfred link
 
 cleanup
 EOBREWFILE
+
+update_dotfiles
