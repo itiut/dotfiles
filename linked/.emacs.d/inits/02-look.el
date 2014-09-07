@@ -47,6 +47,7 @@
 
 ;; rainbow-delimiters
 (global-rainbow-delimiters-mode 1)
+(add-to-list 'rainbow-delimiters-ignore-modes 'fundamental-mode) ; avoid conflicting with helm
 
 ;; yalinum
 (global-yalinum-mode 1)
