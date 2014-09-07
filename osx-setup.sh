@@ -115,6 +115,7 @@ update_dotfiles() {
         ".emacs.d"
         ".gemrc"
         ".gitconfig"
+        ".rbenv/default-gems"
         ".rspec"
         ".rubocop.yml"
         ".tigrc"
@@ -184,6 +185,7 @@ install git
 install gist
 install hub
 install rbenv
+install rbenv-default-gems
 install ruby-build
 install ssh-copy-id
 install tig

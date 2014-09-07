@@ -1,0 +1,6 @@
+bundler
+pry
+pry-doc
+rbenv-rehash
+rubocop
+ruby-lint
