@@ -21,15 +21,15 @@
     ))
 
 (defun clean-mode-line ()
-  (loop for cleaner in mode-line-cleaner-alist
-        do (let* ((mode (car cleaner))
-                  (mode-str (cdr cleaner))
-                  (old-mode-str (cdr (assq mode minor-mode-alist))))
-             (when old-mode-str
-               (setcar old-mode-str mode-str))
-             ;; major mode
-             (when (eq mode major-mode)
-               (setq mode-name mode-str)))))
+  (cl-loop for cleaner in mode-line-cleaner-alist
+           do (let* ((mode (car cleaner))
+                     (mode-str (cdr cleaner))
+                     (old-mode-str (cdr (assq mode minor-mode-alist))))
+                (when old-mode-str
+                  (setcar old-mode-str mode-str))
+                ;; major mode
+                (when (eq mode major-mode)
+                  (setq mode-name mode-str)))))
 
 (defun downcase-mode-line ()
   ;; minor mode
@@ -165,7 +165,7 @@
       str)))
 
 (defpowerline powerline-file-format
-  (case (coding-system-eol-type buffer-file-coding-system)
+  (cl-case (coding-system-eol-type buffer-file-coding-system)
     (0 "unix")                          ; LF
     (1 "dos")                           ; CRLF
     (2 "mac")                           ; CR
