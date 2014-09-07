@@ -59,7 +59,7 @@ update_formulas() {
                 # already linked
                 continue
             fi
-        fi 
+        fi
 
         eval "brew $line"
     done
@@ -80,6 +80,9 @@ _create_symlink() {
         return 1
     fi
 
+    if [ ! -e $(dirname $link) ]; then
+        mkdir -pv $(dirname $link)
+    fi
     ln -sv $target $link
 }
 
@@ -93,6 +96,7 @@ update_dotfiles() {
         ".rubocop.yml"
         ".tigrc"
         ".vimrc"
+        ".zsh.d/itiut.zsh-theme"
     )
     local private_dotfiles=(
         ".gitconfig.local"
