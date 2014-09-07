@@ -139,6 +139,35 @@ update_dotfiles() {
     echo -e "[ $DONE ] Update Dotfiles"
 }
 
+install_login_shell() {
+    local zsh_paths=(
+        "/usr/local/bin/zsh"
+        "/bin/zsh"
+    )
+
+    for path in ${zsh_paths[@]}; do
+        if ls $path &> /dev/null; then
+            if [ "$path" = "$SHELL" ]; then
+                # already set to $path
+                echo -e "[ $SKIP ] Login shell is already installed."
+                return 0
+            fi
+
+            # set to $path
+            if ! cat /etc/shells | grep $path &> /dev/null; then
+                sudo sh -c "echo $path >> /etc/shells"
+            fi
+            chsh -s $path
+            echo -e "[ $DONE ] Install Login shell"
+            return 0
+        fi
+    done
+
+    # not found
+    echo "[ $ERROR ] Login shell is not found."
+    return 1
+}
+
 install_command_line_tools
 install_homebrew
 
@@ -174,3 +203,4 @@ EOBREWFILE
 
 update_repositories
 update_dotfiles
+install_login_shell
