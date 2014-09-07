@@ -6,21 +6,18 @@ typeset -U path
 path=(
     # user
     $HOME{/.linuxbrew,/local,/Dropbox,}/bin(N-/)
-    # Linux
+    # system
     {/usr/local,/usr,}{/sbin,/bin}(N-/)
 )
 
 typeset -U fpath
 fpath=(
-    {$HOME/.linuxbrew,/usr/local}/share/zsh/site-functions(N-/)
+    {$(brew --prefix),/usr/local}/share/zsh/site-functions(N-/)
     $fpath
 )
 
 typeset -U manpath
 manpath=(
-    # user
-    $HOME/local/share/man(N-/)
-    # Linux
     {/usr/local,/usr}/share/man(N-/)
 )
 
