@@ -142,15 +142,16 @@ setopt no_beep
 # do not print matching errors by glob
 setopt no_nomatch
 
+# TODO: use zsh-autosuggestions?
 # auto-fu.zsh
-source $ZSHDIR/auto-fu.zsh/auto-fu.zsh
-function zle-line-init () {
-    auto-fu-init
-}
-zle -N zle-line-init
-zstyle ':completion:*' completer _oldlist _complete
-zle -N zle-keymap-select auto-fu-zle-keymap-select
-bindkey -M afu '^O' open-working-directory-in-filer
+#source $ZSHDIR/auto-fu.zsh/auto-fu.zsh
+#function zle-line-init () {
+#    auto-fu-init
+#}
+#zle -N zle-line-init
+#zstyle ':completion:*' completer _oldlist _complete
+#zle -N zle-keymap-select auto-fu-zle-keymap-select
+#bindkey -M afu '^O' open-working-directory-in-filer
 
 # direnv
 if which direnv > /dev/null; then
