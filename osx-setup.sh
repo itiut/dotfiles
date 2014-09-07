@@ -43,13 +43,13 @@ update_formulas() {
 
         local commands=($line)
         if [ "${commands[0]}" = "install" ]; then
-            if brew list | grep "${commands[1]##*/}" &> /dev/null; then
+            if brew list -1 | grep -x "${commands[1]##*/}" &> /dev/null; then
                 # already installed formula
                 continue
             fi
 
         elif [ "${commands[0]}" = "cask" ] && [ "${commands[1]}" = "install" ]; then
-            if brew cask list | grep "${commands[2]}" &> /dev/null; then
+            if brew cask list -1 | grep -x "${commands[2]}" &> /dev/null; then
                 # already installed cask formula
                 continue
             fi
