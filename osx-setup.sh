@@ -66,6 +66,27 @@ update_formulas() {
     echo -e "[ $DONE ] Update Formulas"
 }
 
+_update_repository() {
+    local repository=$1
+    local directory=$2
+
+    if [ -d $directory ]; then
+        # already cloned
+        cd $directory
+        git pull
+        cd - > /dev/null
+
+    else
+        hub clone $repository $directory
+    fi
+}
+
+update_repositories() {
+    _update_repository "zsh-users/antigen" "$HOME/.zsh.d/antigen"
+    _update_repository "rupa/z"            "$HOME/.zsh.d/z"
+    echo -e "[ $DONE ] Update Repositories"
+}
+
 _create_symlink() {
     local target=$1
     local link=$2
@@ -148,4 +169,5 @@ cask alfred link
 cleanup
 EOBREWFILE
 
+update_repositories
 update_dotfiles
