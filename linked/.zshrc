@@ -3,10 +3,15 @@ source $ZSHDIR/antigen/antigen.zsh
 antigen-use oh-my-zsh
 
 antigen-bundle zsh-users/zsh-completions src
+antigen-bundle zsh-users/zsh-history-substring-search
 antigen-bundle zsh-users/zsh-syntax-highlighting
 
 antigen-theme $ZSHDIR/itiut.zsh-theme
 antigen-apply
+
+# zsh-history-substring-search
+bindkey "^P" history-substring-search-up
+bindkey "^N" history-substring-search-down
 
 # aliases
 alias ls="ls -F -G"
@@ -63,13 +68,6 @@ fi
 
 # remove superflous blanks from commands
 setopt hist_reduce_blanks
-
-# search history
-autoload history-search-end
-zle -N history-beginning-search-backward-end history-search-end
-zle -N history-beginning-search-forward-end history-search-end
-bindkey "^P" history-beginning-search-backward-end
-bindkey "^N" history-beginning-search-forward-end
 
 # automatically list choices on an ambiguous completion
 setopt auto_list
