@@ -6,6 +6,7 @@
 
 # Emacs
 *.elc
+linked/.emacs.d/.cask
 linked/.emacs.d/.emacs.desktop*
 linked/.emacs.d/.mc-lists.el
 linked/.emacs.d/.recentf
