@@ -84,6 +84,7 @@ _update_repository() {
 update_repositories() {
     _update_repository "zsh-users/antigen" "$HOME/.zsh.d/antigen"
     _update_repository "rupa/z"            "$HOME/.zsh.d/z"
+    _update_repository "git@bitbucket.org:itiut/fonts.git" "$HOME/.fonts"
     echo -e "[ $DONE ] Update Repositories"
 }
 
