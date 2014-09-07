@@ -177,17 +177,17 @@ update_formulas <<EOBREWFILE
 update
 upgrade
 
-install the_silver_searcher
 install aspell
 install cask
 install emacs --cocoa --japanese --srgb --with-gnutls
-install git
 install gist
+install git
 install hub
 install rbenv
 install rbenv-default-gems
 install ruby-build
 install ssh-copy-id
+install the_silver_searcher
 install tig
 install zsh
 
