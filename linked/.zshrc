@@ -9,9 +9,10 @@ antigen-bundle zsh-users/zsh-syntax-highlighting
 antigen-theme $ZSHDIR/itiut.zsh-theme
 antigen-apply
 
-# zsh-history-substring-search
+## zsh-history-substring-search
 bindkey "^P" history-substring-search-up
 bindkey "^N" history-substring-search-down
+
 
 # aliases
 alias ls="ls -F -G"
@@ -27,8 +28,12 @@ alias e="emacsclient --no-wait --alternate-editor=vim"
 alias g="git"
 alias l="ls"
 alias o="open"
-alias t="tig --all"
 alias v="vim"
+
+alias be="bundle exec"
+
+alias t="tig"
+alias ta="tig --all"
 
 # automatically expand abbreviations
 setopt extended_glob
