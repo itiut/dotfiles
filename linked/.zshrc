@@ -1,16 +1,10 @@
 # antigen
 source $ZSHDIR/antigen/antigen.zsh
 antigen-use oh-my-zsh
-antigen-bundles <<EOBUNDLES
-brew
-bundler
-docker
-gem
-heroku
-npm
-vagrant
-zsh-users/zsh-syntax-highlighting
-EOBUNDLES
+
+antigen-bundle zsh-users/zsh-completions src
+antigen-bundle zsh-users/zsh-syntax-highlighting
+
 antigen-theme $ZSHDIR/itiut.zsh-theme
 antigen-apply
 
