@@ -5,7 +5,8 @@
                       '(recentf-exclude '("\\.recentf\\'"))
                       '(recentf-save-file (expand-file-name ".recentf" user-emacs-directory)))
 
-(run-with-idle-timer 30 t 'recentf-save-list)
+(run-with-idle-timer 30 t '(lambda ()
+                             (my/with-suppressed-message (recentf-save-list))))
 
 ;; recentf-ext
 (require 'recentf-ext)
