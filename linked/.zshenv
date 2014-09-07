@@ -37,7 +37,7 @@ path=(
 
 # rbenv
 if which rbenv > /dev/null; then
-    eval "$(rbenv init -)"
+    eval "$(rbenv init - zsh)"
 fi
 
 # local zshenv
