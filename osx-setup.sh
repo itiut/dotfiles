@@ -118,6 +118,8 @@ update_dotfiles() {
         ".tigrc"
         ".vimrc"
         ".zsh.d/itiut.zsh-theme"
+        ".zshenv"
+        ".zshrc"
     )
     local private_dotfiles=(
         ".gitconfig.local"
