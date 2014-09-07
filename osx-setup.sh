@@ -115,6 +115,7 @@ update_dotfiles() {
         ".emacs.d"
         ".gemrc"
         ".gitconfig"
+        ".pryrc"
         ".rbenv/default-gems"
         ".rspec"
         ".rubocop.yml"
