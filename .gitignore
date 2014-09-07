@@ -14,9 +14,9 @@ linked/.emacs.d/ac-comphist.dat
 linked/.emacs.d/auto-save-list
 linked/.emacs.d/elpa
 linked/.emacs.d/eshell
-linked/.emacs.d/development/*
 linked/.emacs.d/history
 linked/.emacs.d/session*
+linked/.emacs.d/site-lisp/*
 linked/.emacs.d/tramp
 linked/.emacs.d/var
 
