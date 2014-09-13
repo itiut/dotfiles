@@ -5,11 +5,16 @@
   (c-set-offset 'innamespace 0)
   (c-set-offset 'arglist-close 0)
 
+  ;; auto-complete-clang
+  (require 'auto-complete-clang)
+  (add-to-list 'ac-sources 'ac-source-clang)
+  (setq-local ac-delay 0.5)             ; Default value 0.1 is too fast.
+
   ;; auto-complete-clang-async
-  (when (executable-find "clang-complete")
-    (require 'auto-complete-clang-async)  ; TODO: autoload?
-    (add-to-list 'ac-sources 'ac-source-clang-async)
-    (ac-clang-launch-completion-process))
+  ;; (when (executable-find "clang-complete")
+  ;;   (require 'auto-complete-clang-async)  ; TODO: autoload?
+  ;;   (add-to-list 'ac-sources 'ac-source-clang-async)
+  ;;   (ac-clang-launch-completion-process))
 
   ;; c-eldoc
   (c-turn-on-eldoc-mode))

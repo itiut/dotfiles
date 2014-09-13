@@ -58,7 +58,8 @@
 
 ;;; programming
 ;; C/C++
-(depends-on "auto-complete-clang-async")
+(depends-on "auto-complete-clang" :git "https://github.com/yuttie/auto-complete-clang" :branch "fix-missing-standard-include-files")
+;; (depends-on "auto-complete-clang-async")
 (depends-on "c-eldoc")
 
 ;; Ruby
