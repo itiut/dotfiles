@@ -201,6 +201,7 @@ cask install google-japanese-ime
 cask install iterm2
 cask install java
 cask install menumeters
+cask install virtualbox
 cask alfred link
 
 cleanup
