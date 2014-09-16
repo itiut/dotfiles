@@ -55,6 +55,8 @@
 (define-key my/ctrl-q-map (kbd "b") 'describe-bindings)
 (define-key my/ctrl-q-map (kbd "k") 'describe-key)
 (define-key my/ctrl-q-map (kbd "?") 'zeal-at-point)
+(define-key my/ctrl-q-map (kbd "C-a") 'align-regexp)
+(define-key my/ctrl-q-map (kbd "C-s") 'sort-lines)
 
 ;; expand-region
 (global-set-key (kbd "C-@") 'er/expand-region)
