@@ -16,6 +16,9 @@ defaults write com.apple.dock tilesize -int 28
 ## position left
 defaults write com.apple.dock orientation -string "left"
 
+## disable auto-rearrange spaces
+defaults write com.apple.dock mru-spaces -bool false
+
 ## restart dock
 killall Dock
 
