@@ -7,10 +7,10 @@ set -eu
 
 # Dock
 # ====
-## autohide 
-defaults write com.apple.dock autohide -bool true 
+## autohide
+defaults write com.apple.dock autohide -bool true
 
-## size 
+## size
 defaults write com.apple.dock tilesize -int 28
 
 ## position left
@@ -34,7 +34,7 @@ defaults write com.apple.dashboard mcx-disabled -bool true
 
 # Energy Saver
 # ====
-## Turn display off after: 30 minutes (Battery), 1 hour (Adapter) 
+## Turn display off after: 30 minutes (Battery), 1 hour (Adapter)
 
 # Keyboard
 # ====
