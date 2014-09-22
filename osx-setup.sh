@@ -184,6 +184,8 @@ install emacs --cocoa --japanese --srgb --with-gnutls
 install gist
 install git
 install hub
+install mysql
+install pyenv
 install rbenv
 install rbenv-default-gems
 install ruby-build

@@ -32,10 +32,9 @@ path=(
     $path
 )
 
-# rbenv
-if which rbenv > /dev/null; then
-    eval "$(rbenv init - zsh)"
-fi
+# brewed envs
+if which pyenv > /dev/null; then eval "$(pyenv init - zsh)"; fi
+if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 
 # local zshenv
 if [ -f $HOME/.zshenv.local ]; then
