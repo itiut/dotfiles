@@ -11,7 +11,6 @@
                                    c-mode
                                    c++-mode
                                    emacs-lisp-mode
-                                   enh-ruby-mode
                                    js2-mode
                                    ruby-mode
                                    ))
