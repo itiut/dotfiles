@@ -1,4 +1,4 @@
-export LSCOLORS=gxfxxxxxcxxxxxxxxxgxgx
+export LSCOLORS=GxFxcxdxCxegedabagacad
 export LS_COLORS='di=01;36:ln=01;35:ex=01;32'
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 

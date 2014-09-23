@@ -15,7 +15,11 @@ bindkey "^N" history-substring-search-down
 
 
 # aliases
-alias ls="ls -F -G"
+if ls --color &> /dev/null; then
+    alias ls="ls -F --color"    # coreutils
+else
+    alias ls="ls -F -G"         # BSD
+fi
 alias la="ls -A"
 alias ll="ls -l -a"
 alias cp="cp -i"
