@@ -13,6 +13,7 @@ set hidden          " hide buffer even if unsaved
 syntax enable
 
 " display
+colorscheme desert
 set laststatus=2    " 2-line status
 set list            " tabs, trailing spaces
 set listchars=tab:»-,trail:-,extends:»,precedes:«
