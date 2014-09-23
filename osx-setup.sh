@@ -180,6 +180,7 @@ upgrade
 
 install aspell
 install cask
+install coreutils
 install emacs --cocoa --japanese --srgb --with-gnutls
 install gist
 install git

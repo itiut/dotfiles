@@ -12,7 +12,7 @@ path=(
 
 typeset -U fpath
 fpath=(
-    {$(brew --prefix),/usr/local}/share/zsh/site-functions(N-/)
+    /usr/local/share/zsh/site-functions(N-/)
     $fpath
 )
 
@@ -23,16 +23,25 @@ manpath=(
 
 export EDITOR=vim
 
-# linuxbrew
-export LD_LIBRARY_PATH=$HOME/.linuxbrew/lib:$LD_LIBRARY_PATH
+# brew formulas
+if which brew > /dev/null; then
+    path=(
+        $(brew --prefix)/opt/coreutils/libexec/gnubin(N-/)
+        $(brew --prefix)/opt/go/libexec/bin(N-/)
+        $path
+    )
+    fpath=(
+        $(brew --prefix)/share/zsh/site-functions(N-/)
+        $fpath
+    )
+    manpath=(
+        $(brew --prefix)/opt/coreutils/libexec/gnuman(N-/)
+        $manpath
+    )
+    export LD_LIBRARY_PATH=$(brew --prefix)/lib:$LD_LIBRARY_PATH
+fi
 
-# brewed golang
-path=(
-    $HOME/.linuxbrew/opt/go/libexec/bin(N-/)
-    $path
-)
-
-# brewed envs
+# envs
 if which pyenv > /dev/null; then eval "$(pyenv init - zsh)"; fi
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 
