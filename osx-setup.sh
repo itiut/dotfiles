@@ -18,7 +18,7 @@ install_command_line_tools() {
     fi
 
     xcode-select --install
-    # TODO: need to wait?
+    wait                        # TODO: need to wait?
     echo -e "[ $DONE ] Install Command Line Tools"
 }
 
