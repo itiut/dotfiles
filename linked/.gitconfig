@@ -15,6 +15,11 @@
 	rebase = true
 [push]
 	default = simple
+[url "git://github.com/"]
+	insteadOf = https://github.com/
+[url "git@github.com:"]
+	pushInsteadOf = git://github.com/
+	pushInsteadOf = https://github.com/
 [alias]
 	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
 	a = add
