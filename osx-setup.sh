@@ -126,6 +126,7 @@ update_dotfiles() {
         ".zsh.d/itiut.zsh-theme"
         ".zshenv"
         ".zshrc"
+        ".zshrc.darwin"
     )
     local private_dotfiles=(
         ".gitconfig.local"

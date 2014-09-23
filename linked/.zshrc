@@ -14,12 +14,13 @@ bindkey "^P" history-substring-search-up
 bindkey "^N" history-substring-search-down
 
 
-# aliases
-if ls --color &> /dev/null; then
-    alias ls="ls -F --color"    # coreutils
-else
-    alias ls="ls -F -G"         # BSD
+# OS specific settings
+if [[ "$OSTYPE" =~ [a-z]+ ]] && [ -f $HOME/.zshrc.$MATCH ]; then
+    source $HOME/.zshrc.$MATCH
 fi
+
+# aliases
+alias ls="ls -F $_MY_LS_COLOR"
 alias la="ls -A"
 alias ll="ls -l -a"
 alias cp="cp -i"
@@ -31,7 +32,7 @@ alias c="cd"
 alias e="emacsclient --no-wait --alternate-editor=vim"
 alias g="git"
 alias l="ls"
-alias o="open"
+alias o="$_MY_OPEN"
 alias v="vim"
 
 alias be="bundle exec"
@@ -44,7 +45,7 @@ setopt extended_glob
 
 typeset -A abbreviations
 abbreviations=(
-    "C"    "| xclip -in -selection clipboard"
+    "C"    "| $_MY_CLIP"
     "E"    "2>&1 > /dev/null"
     "G"    "| grep"
     "H"    "| head"

@@ -1,0 +1,3 @@
+_MY_LS_COLOR="--color"
+_MY_CLIP="xclip -in -selection clipboard"
+_MY_OPEN="xdg-open"
