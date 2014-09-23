@@ -97,8 +97,8 @@ setopt print_eight_bit
 setopt correct
 
 # run `ls` after `cd`
-function _ls() { ls }
-add-zsh-hook chpwd _ls
+function _my_ls() { ls }
+add-zsh-hook chpwd _my_ls
 
 # run `cd ..` or insert '^' by ^
 function cdup-or-insert-circumflex() {
