@@ -82,8 +82,10 @@ _update_repository() {
 }
 
 update_repositories() {
-    _update_repository "zsh-users/antigen" "$HOME/.zsh.d/antigen"
-    _update_repository "rupa/z"            "$HOME/.zsh.d/z"
+    _update_repository "zsh-users/antigen"                 "$HOME/.zsh.d/antigen"
+    _update_repository "seebi/dircolors-solarized"         "$HOME/.zsh.d/dircolors-solarized"
+    _update_repository "mbadolato/iTerm2-Color-Schemes"    "$HOME/.zsh.d/iTerm2-Color-Schemes"
+    _update_repository "rupa/z"                            "$HOME/.zsh.d/z"
     _update_repository "git@bitbucket.org:itiut/fonts.git" "$HOME/.fonts"
     echo -e "[ $DONE ] Update Repositories"
 }
@@ -138,6 +140,8 @@ update_dotfiles() {
     for dotfile in ${private_dotfiles[@]}; do
         _create_symlink $HOME/Dropbox/.share/$dotfile $HOME/$dotfile
     done
+
+    _create_symlink $HOME/.zsh.d/dircolors-solarized/dircolors.ansi-universal $HOME/.dircolors
 
     echo -e "[ $DONE ] Update Dotfiles"
 }
