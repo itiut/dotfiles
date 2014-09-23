@@ -42,3 +42,5 @@
 	st = status
 	sh = show
 	this = !git init && git add . && git commit -m \"Initial commit\"
+[ghq]
+	root = ~/src

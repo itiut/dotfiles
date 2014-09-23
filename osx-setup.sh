@@ -199,6 +199,8 @@ install the_silver_searcher
 install tig
 install zsh
 
+install motemen/ghq/ghq
+
 install caskroom/cask/brew-cask
 cask install alfred
 cask install bettertouchtool
