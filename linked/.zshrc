@@ -132,7 +132,7 @@ bindkey '^T' ls-and-git-status
 
 # open working directory in filer
 function open-working-directory-in-filer() {
-    open $PWD
+    o $PWD
 }
 zle -N open-working-directory-in-filer
 bindkey '^O' open-working-directory-in-filer
