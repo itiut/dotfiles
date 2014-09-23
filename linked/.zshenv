@@ -19,7 +19,9 @@ fpath=(
 typeset -U manpath
 manpath=(
     {/usr/local,/usr}/share/man(N-/)
+    ${(s/:/)$(manpath)}         # Add CommandLineTools man in OS X
 )
+export MANPATH
 
 export EDITOR=vim
 
