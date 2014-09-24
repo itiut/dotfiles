@@ -97,17 +97,12 @@ _create_symlink() {
     if [ -L $link ]; then
         # symlink already exists
         return 0
-
-    elif [ -e $link ]; then
-        # another file or directory exists
-        echo -e "[ $ERROR ] file or directory exists in $link."
-        return 1
     fi
 
     if [ ! -e $(dirname $link) ]; then
         mkdir -pv $(dirname $link)
     fi
-    ln -sv $target $link
+    ln -fsv $target $link
 }
 
 update_dotfiles() {
