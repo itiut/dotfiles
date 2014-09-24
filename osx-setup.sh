@@ -70,7 +70,7 @@ _create_symlink() {
     local target=$1
     local link=$2
 
-    if [ -L $link ]; then
+    if [ -L $link ] && [ "$(readlink $link)" == "$target" ]; then
         # symlink already exists
         return 0
     fi
@@ -78,7 +78,7 @@ _create_symlink() {
     if [ ! -e $(dirname $link) ]; then
         mkdir -pv $(dirname $link)
     fi
-    ln -fsv $target $link
+    ln -fnsv $target $link
 }
 
 update_dotfiles() {
@@ -113,7 +113,7 @@ update_dotfiles() {
         _create_symlink $HOME/Dropbox/.share/$dotfile $HOME/$dotfile
     done
 
-    _create_symlink $HOME/.zsh.d/dircolors-solarized/dircolors.ansi-universal $HOME/.dircolors
+    _create_symlink $HOME/src/github.com/seebi/dircolors-solarized/dircolors.ansi-universal $HOME/.dircolors
 
     echo -e "[ $DONE ] Update Dotfiles"
 }
