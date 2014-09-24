@@ -1,5 +1,5 @@
 # antigen
-source $ZSHDIR/antigen/antigen.zsh
+source $REPODIR/github.com/zsh-users/antigen/antigen.zsh
 antigen-use oh-my-zsh
 
 antigen-bundle zsh-users/zsh-completions src
@@ -163,4 +163,4 @@ fi
 
 # z.sh
 _Z_CMD=j
-source $ZSHDIR/z/z.sh
+source $REPODIR/github.com/rupa/z/z.sh

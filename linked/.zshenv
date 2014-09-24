@@ -1,5 +1,6 @@
 export LANG=en_US.UTF-8
 
+export REPODIR=$HOME/src
 export ZSHDIR=$HOME/.zsh.d
 
 typeset -U path

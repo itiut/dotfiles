@@ -121,25 +121,20 @@ update_dotfiles() {
 _update_repository() {
     local repository=$1
     ghq get -u $repository
-    if [ $# -eq 1 ]; then
-        return 0
-    fi
-
-    local link=$2
-    if [ -n "$link" ]; then
-        local target="$(ghq list -p ${repository})"
-        if [ -n "$target" ];then
-            _create_symlink $target $link
-        fi
-    fi
 }
 
 update_repositories() {
-    _update_repository "zsh-users/antigen"              "$HOME/.zsh.d/antigen"
-    _update_repository "seebi/dircolors-solarized"      "$HOME/.zsh.d/dircolors-solarized"
-    _update_repository "mbadolato/iTerm2-Color-Schemes" "$HOME/.zsh.d/iTerm2-Color-Schemes"
-    _update_repository "rupa/z"                         "$HOME/.zsh.d/z"
-    _update_repository "git@bitbucket.org:itiut/fonts"
+    local repos=(
+        "mbadolato/iTerm2-Color-Schemes"
+        "rupa/z"
+        "seebi/dircolors-solarized"
+        "zsh-users/antigen"
+        "git@bitbucket.org:itiut/fonts"
+    )
+
+    for repo in ${repos[@]}; do
+        _update_repository $repo
+    done
     echo -e "[ $DONE ] Update Repositories"
 }
 
