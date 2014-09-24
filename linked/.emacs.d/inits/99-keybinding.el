@@ -29,6 +29,7 @@
 (global-set-key (kbd "C-x C-i") 'helm-semantic-or-imenu)
 (global-set-key (kbd "C-x C-l") 'helm-ls-git-ls)
 (global-set-key (kbd "C-x C-r") 'helm-recentf)
+(global-set-key (kbd "C-x M-l") 'helm-ghq)
 (global-set-key (kbd "C-z") 'helm-resume)
 (global-set-key (kbd "M-o") 'helm-occur)
 (global-set-key (kbd "M-O") 'helm-multi-occur)
