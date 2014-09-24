@@ -66,30 +66,6 @@ update_formulas() {
     echo -e "[ $DONE ] Update Formulas"
 }
 
-_update_repository() {
-    local repository=$1
-    local directory=$2
-
-    if [ -d $directory ]; then
-        # already cloned
-        cd $directory
-        git pull
-        cd - > /dev/null
-
-    else
-        hub clone $repository $directory
-    fi
-}
-
-update_repositories() {
-    _update_repository "zsh-users/antigen"                 "$HOME/.zsh.d/antigen"
-    _update_repository "seebi/dircolors-solarized"         "$HOME/.zsh.d/dircolors-solarized"
-    _update_repository "mbadolato/iTerm2-Color-Schemes"    "$HOME/.zsh.d/iTerm2-Color-Schemes"
-    _update_repository "rupa/z"                            "$HOME/.zsh.d/z"
-    _update_repository "git@bitbucket.org:itiut/fonts.git" "$HOME/.fonts"
-    echo -e "[ $DONE ] Update Repositories"
-}
-
 _create_symlink() {
     local target=$1
     local link=$2
@@ -140,6 +116,31 @@ update_dotfiles() {
     _create_symlink $HOME/.zsh.d/dircolors-solarized/dircolors.ansi-universal $HOME/.dircolors
 
     echo -e "[ $DONE ] Update Dotfiles"
+}
+
+_update_repository() {
+    local repository=$1
+    ghq get -u $repository
+    if [ $# -eq 1 ]; then
+        return 0
+    fi
+
+    local link=$2
+    if [ -n "$link" ]; then
+        local target="$(ghq list -p ${repository})"
+        if [ -n "$target" ];then
+            _create_symlink $target $link
+        fi
+    fi
+}
+
+update_repositories() {
+    _update_repository "zsh-users/antigen"              "$HOME/.zsh.d/antigen"
+    _update_repository "seebi/dircolors-solarized"      "$HOME/.zsh.d/dircolors-solarized"
+    _update_repository "mbadolato/iTerm2-Color-Schemes" "$HOME/.zsh.d/iTerm2-Color-Schemes"
+    _update_repository "rupa/z"                         "$HOME/.zsh.d/z"
+    _update_repository "git@bitbucket.org:itiut/fonts"
+    echo -e "[ $DONE ] Update Repositories"
 }
 
 install_login_shell() {
@@ -212,6 +213,6 @@ cask alfred link
 cleanup
 EOBREWFILE
 
-update_repositories
 update_dotfiles
+update_repositories
 install_login_shell
