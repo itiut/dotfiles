@@ -107,9 +107,9 @@ setopt print_eight_bit
 # correct the spelling of commands
 setopt correct
 
-# run `ls` after `cd`
-function _my_ls() { ls }
-add-zsh-hook chpwd _my_ls
+# automatically run `ls` after `cd`
+function auto-ls() { ls }
+add-zsh-hook chpwd auto-ls
 
 # run `cd ..` or insert '^' by ^
 function cdup-or-insert-circumflex() {
