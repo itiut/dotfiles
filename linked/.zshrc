@@ -5,7 +5,6 @@ antigen-use oh-my-zsh
 antigen-bundle zsh-users/zsh-completions src
 antigen-bundle zsh-users/zsh-history-substring-search
 antigen-bundle zsh-users/zsh-syntax-highlighting
-antigen-bundle tarruda/zsh-autosuggestions
 
 antigen-theme $ZSHDIR/itiut.zsh-theme
 antigen-apply
@@ -15,6 +14,7 @@ bindkey "^P" history-substring-search-up
 bindkey "^N" history-substring-search-down
 
 ## zsh-autosuggestions
+antigen-bundle tarruda/zsh-autosuggestions # workaround for tab completion
 function zle-line-init() {
     zle autosuggest-start
 }
