@@ -126,7 +126,6 @@ _update_repository() {
 update_repositories() {
     local repos=(
         "mbadolato/iTerm2-Color-Schemes"
-        "rupa/z"
         "seebi/dircolors-solarized"
         "zsh-users/antigen"
         "git@bitbucket.org:itiut/fonts"
