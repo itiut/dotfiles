@@ -6,6 +6,9 @@ antigen-bundle zsh-users/zsh-completions src
 antigen-bundle zsh-users/zsh-history-substring-search
 antigen-bundle zsh-users/zsh-syntax-highlighting
 
+_Z_CMD=j
+antigen-bundle rupa/z
+
 antigen-theme $ZSHDIR/itiut.zsh-theme
 antigen-apply
 
@@ -156,7 +159,3 @@ setopt no_nomatch
 if which direnv > /dev/null; then
     eval "$(direnv hook $0)"
 fi
-
-# z.sh
-_Z_CMD=j
-source $REPODIR/github.com/rupa/z/z.sh
