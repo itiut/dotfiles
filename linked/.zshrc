@@ -5,6 +5,7 @@ antigen-use oh-my-zsh
 antigen-bundle zsh-users/zsh-completions src
 antigen-bundle zsh-users/zsh-history-substring-search
 antigen-bundle zsh-users/zsh-syntax-highlighting
+antigen-bundle tarruda/zsh-autosuggestions
 
 antigen-theme $ZSHDIR/itiut.zsh-theme
 antigen-apply
@@ -12,6 +13,12 @@ antigen-apply
 ## zsh-history-substring-search
 bindkey "^P" history-substring-search-up
 bindkey "^N" history-substring-search-down
+
+## zsh-autosuggestions
+function zle-line-init() {
+    zle autosuggest-start
+}
+zle -N zle-line-init
 
 
 # OS specific settings
@@ -144,17 +151,6 @@ setopt no_beep
 
 # do not print matching errors by glob
 setopt no_nomatch
-
-# TODO: use zsh-autosuggestions?
-# auto-fu.zsh
-#source $ZSHDIR/auto-fu.zsh/auto-fu.zsh
-#function zle-line-init () {
-#    auto-fu-init
-#}
-#zle -N zle-line-init
-#zstyle ':completion:*' completer _oldlist _complete
-#zle -N zle-keymap-select auto-fu-zle-keymap-select
-#bindkey -M afu '^O' open-working-directory-in-filer
 
 # direnv
 if which direnv > /dev/null; then
