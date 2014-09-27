@@ -205,6 +205,7 @@ cask install virtualbox
 cask alfred link
 
 cleanup
+cask cleanup
 EOBREWFILE
 
 update_dotfiles
