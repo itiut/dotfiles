@@ -1,0 +1,79 @@
+(source gnu)
+(source melpa)
+
+;;; basic
+(depends-on "exec-path-from-shell")
+(depends-on "init-loader")
+
+;; edit
+(depends-on "expand-region")
+(depends-on "multiple-cursors")
+(depends-on "undo-tree")
+
+;; feel
+(depends-on "ace-jump-mode")
+(depends-on "goto-chg")
+(depends-on "jump-char")
+(depends-on "point-undo")
+(depends-on "smartrep")
+
+;; look
+(depends-on "anzu")
+(depends-on "git-gutter-fringe+")
+(depends-on "highlight-symbol")
+(depends-on "rainbow-delimiters")
+(depends-on "rainbow-mode")
+(depends-on "yalinum")
+
+;;; utility
+;; helm
+(depends-on "helm")
+(depends-on "helm-ag")
+(depends-on "helm-descbinds")
+(depends-on "helm-ghq")
+(depends-on "helm-ls-git")
+
+;; auto-complete
+(depends-on "auto-complete")
+(depends-on "fuzzy")
+(depends-on "popup")
+
+;; yasnippet
+(depends-on "yasnippet")
+
+;; flycheck
+(depends-on "flycheck")
+(depends-on "flycheck-tip")
+
+;; window, buffer management
+(depends-on "popwin")
+(depends-on "tabbar")
+(depends-on "tabbar-ruler")
+
+(depends-on "direx")
+(depends-on "gist")
+(depends-on "guide-key")
+(depends-on "quickrun")
+(depends-on "recentf-ext")
+(depends-on "zeal-at-point")
+
+;;; programming
+;; C/C++
+(depends-on "auto-complete-clang" :git "https://github.com/yuttie/auto-complete-clang" :branch "fix-missing-standard-include-files")
+;; (depends-on "auto-complete-clang-async")
+(depends-on "c-eldoc")
+
+;; Ruby
+(depends-on "ruby-end")
+
+;; JavaScript
+(depends-on "js2-mode")
+
+;;; markup language
+(depends-on "markdown-mode")
+(depends-on "yaml-mode")
+(depends-on "web-mode")
+
+;;; theme
+(depends-on "monokai-theme")
+(depends-on "powerline")
