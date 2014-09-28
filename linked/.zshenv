@@ -29,8 +29,8 @@ export EDITOR=vim
 # brew formulas
 if which brew > /dev/null; then
     path=(
-        $(brew --prefix)/opt/coreutils/libexec/gnubin(N-/)
-        $(brew --prefix)/opt/go/libexec/bin(N-/)
+        $(brew --prefix coreutils)/libexec/gnubin(N-/)
+        $(brew --prefix go)/libexec/bin(N-/)
         $path
     )
     fpath=(
@@ -38,7 +38,7 @@ if which brew > /dev/null; then
         $fpath
     )
     manpath=(
-        $(brew --prefix)/opt/coreutils/libexec/gnuman(N-/)
+        $(brew --prefix coreutils)/libexec/gnuman(N-/)
         $manpath
     )
     export LD_LIBRARY_PATH=$(brew --prefix)/lib:$LD_LIBRARY_PATH
