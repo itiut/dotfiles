@@ -41,7 +41,6 @@ if which brew > /dev/null; then
         $(brew --prefix coreutils)/libexec/gnuman(N-/)
         $manpath
     )
-    export LD_LIBRARY_PATH=$(brew --prefix)/lib:$LD_LIBRARY_PATH
 fi
 
 # envs
