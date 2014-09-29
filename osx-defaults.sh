@@ -2,11 +2,9 @@
 set -eu
 
 # Desktop & Screen Saver
-# ====
 ## Screen Saver Start after: Never
 
 # Dock
-# ====
 ## autohide
 defaults write com.apple.dock autohide -bool true
 
@@ -23,24 +21,19 @@ defaults write com.apple.dock mru-spaces -bool false
 killall Dock
 
 # Mission Control
-# ====
 ## disable Dashboard
 defaults write com.apple.dashboard mcx-disabled -bool true
 
 # Spotlight
-# ====
 ## Spotlight menu/window keyboard shortcut: unchecked
 
 # Displays
-# ====
 ## Resolution: Scaled to 1440 x 900
 
 # Energy Saver
-# ====
 ## Turn display off after: 30 minutes (Battery), 1 hour (Adapter)
 
 # Keyboard
-# ====
 ## key repeat
 defaults write -g KeyRepeat -int 2
 
@@ -51,25 +44,20 @@ defaults write -g InitialKeyRepeat -int 25
 defaults write -g "com.apple.keyboard.fnState" -bool true
 
 # Trackpad
-# ====
 ## tracking speed
 defaults write -g "com.apple.trackpad.scaling" -int 1
 
 # Bluetooth
-# ====
 ## Turn Bluetooth off
 
 # Sharing
-# ====
 ## Change Computer Name
 
 # Date & Time
-# ====
 ## menu bar format
 defaults write com.apple.menuextra.clock DateFormat -string "EEE MMM d  HH:mm"
 
 # Finder
-# ====
 ## show extensions
 defaults write -g AppleShowAllExtensions -bool true
 
