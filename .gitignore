@@ -1,22 +1,24 @@
 *~
 
 *.zsh_history
-.byobu/.screenrc
-.byobu/.ssh-agent
 
-## emacs
+# Emacs
 *.elc
-.emacs.d/.emacs.desktop*
-.emacs.d/.mc-lists.el
-.emacs.d/.recentf
-.emacs.d/ac-comphist.dat
-.emacs.d/auto-save-list
-.emacs.d/elpa
-.emacs.d/eshell
-.emacs.d/development/*
-.emacs.d/history
-.emacs.d/session*
-.emacs.d/tramp
-.emacs.d/var
+linked/.emacs.d/.cask
+linked/.emacs.d/.emacs.desktop*
+linked/.emacs.d/.mc-lists.el
+linked/.emacs.d/.recentf
+linked/.emacs.d/ac-comphist.dat
+linked/.emacs.d/auto-save-list
+linked/.emacs.d/elpa
+linked/.emacs.d/eshell
+linked/.emacs.d/history
+linked/.emacs.d/session*
+linked/.emacs.d/site-lisp/*
+linked/.emacs.d/tramp
+linked/.emacs.d/var
+
+linked/.byobu/.screenrc
+linked/.byobu/.ssh-agent
 
 !.gitkeep
