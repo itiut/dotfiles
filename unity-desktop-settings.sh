@@ -1,4 +1,5 @@
-#!/bin/sh
+#!/usr/bin/env bash
+set -eu
 
 gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ icon-size 24
 gsettings set org.compiz.core:/org/compiz/profiles/unity/plugins/core/ vsize 2
