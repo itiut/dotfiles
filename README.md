@@ -1,33 +1,24 @@
 dotfiles
 ====
-
 My dotfiles
 
-Environment
-----
 
+Environments
+----
+* OS X Mavericks 10.9
 * Ubuntu 14.04
 
-Usage
-----
-
-```sh
-$ git clone git@github.com:itiut/dotfiles.git ~/.dotfiles
-$ ~/.dotfiles/bootstrap.sh
-```
-
-`bootstrap.sh` does followings:
-
-* initialize submodules
-* link `dotfiles/bin` to `$HOME`
-* link `dotfiles/.*` to `$HOME`
-  * except for `.git`, `.gitignore`, `.gitmodule` and `.zsh_history`
-* link `$HOME/Dropbox/.share/.*` to `$HOME`
-
-When creating symbloic links, `bootstrap.sh` does not overwrite existing ones.
 
 Automatic setup by `ansible`
 ----
-I use `ansible` to setup my Ubuntu machine automatically.
+I use `ansible` to setup my environments automatically.
 
-Ansible playbooks for my Ubuntu machine are in [itiut/itiut-ansible-ubuntu](https://github.com/itiut/itiut-ansible-ubuntu).
+See [itiut/itiut-ansible-playbooks](https://github.com/itiut/itiut-ansible-playbooks).
+
+
+Files in this repository
+----
+| directory | files |
+| --- | ----- |
+| defaults | configuration scripts |
+| linked   | dotfiles linked to $HOME |
