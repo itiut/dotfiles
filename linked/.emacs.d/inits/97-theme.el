@@ -21,28 +21,6 @@
 (defvar monokai/cyan (face-foreground 'compilation-column-face))
 (defvar monokai/green (face-foreground 'success))
 
-;; helm-ls-git
-(eval-after-load 'helm-ls-git
-  '(progn
-     (set-face-attribute 'helm-ls-git-modified-not-staged-face nil
-                         :foreground monokai/orange)
-     (set-face-attribute 'helm-ls-git-modified-and-staged-face nil
-                         :foreground monokai/green)
-     (set-face-attribute 'helm-ls-git-renamed-modified-face nil
-                         :foreground monokai/cyan)
-     (set-face-attribute 'helm-ls-git-untracked-face nil
-                         :foreground monokai/red)
-     (set-face-attribute 'helm-ls-git-added-copied-face nil
-                         :foreground monokai/green)
-     (set-face-attribute 'helm-ls-git-added-modified-face nil
-                         :foreground monokai/orange)
-     (set-face-attribute 'helm-ls-git-deleted-not-staged-face nil
-                         :foreground monokai/violet)
-     (set-face-attribute 'helm-ls-git-deleted-and-staged-face nil
-                         :foreground monokai/comments)
-     (set-face-attribute 'helm-ls-git-conflict-face nil
-                         :foreground monokai/magenta)))
-
 ;; tabbar-ruler
 (eval-after-load 'tabbar-ruler
   '(progn
