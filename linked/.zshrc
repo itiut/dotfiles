@@ -9,6 +9,8 @@ antigen-bundle zsh-users/zsh-syntax-highlighting
 _Z_CMD=j
 antigen-bundle rupa/z
 
+antigen-bundle supercrabtree/k
+
 antigen-theme $ZSHDIR/itiut.zsh-theme
 antigen-apply
 
