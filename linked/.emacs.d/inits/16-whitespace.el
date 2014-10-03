@@ -31,7 +31,6 @@
                              c-mode
                              c++-mode
                              emacs-lisp-mode
-                             enh-ruby-mode
                              gfm-mode
                              html-mode
                              js2-mode

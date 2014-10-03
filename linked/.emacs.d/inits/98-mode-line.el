@@ -14,7 +14,6 @@
     (whitespace-mode . "")
     ;; major modes
     (emacs-lisp-mode . "elisp")
-    (enh-ruby-mode . ("enh-ruby" erm-e-w-status))
     (fundamental-mode . "fund")
     (git-gutter+-commit-mode . "git-commit")
     (lisp-interaction-mode . "lisp-i")
