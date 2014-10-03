@@ -6,14 +6,4 @@
                       '(flycheck-disabled-checkers '(
                                                      emacs-lisp-checkdoc
                                                      )))
-
-(defvar my/flycheck-enable-modes '(
-                                   c-mode
-                                   c++-mode
-                                   emacs-lisp-mode
-                                   js2-mode
-                                   ruby-mode
-                                   ))
-
-(dolist (mode my/flycheck-enable-modes)
-  (add-hook (intern (format "%s-hook" mode)) 'flycheck-mode))
+(global-flycheck-mode 1)
