@@ -106,6 +106,7 @@
 (global-set-key (kbd "C-x v c") 'git-gutter+-commit)
 (global-set-key (kbd "C-x v p") 'git-gutter+-stage-hunks)
 (global-set-key (kbd "C-x v r") 'git-gutter+-revert-hunks)
+(global-set-key (kbd "C-x v u") '(lambda () (interactive) (git-gutter+-refresh)))
 (smartrep-define-key
     global-map "C-x" '(("n" . 'git-gutter+-next-hunk)
                        ("p" . 'git-gutter+-previous-hunk)))
