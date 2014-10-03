@@ -110,7 +110,7 @@ setopt print_eight_bit
 setopt correct
 
 # automatically run `ls` after `cd`
-function auto-ls() { ls }
+function auto-ls() { ls; }
 add-zsh-hook chpwd auto-ls
 
 # run `cd ..` or insert '^' by ^
