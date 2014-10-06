@@ -64,6 +64,7 @@
 (depends-on "c-eldoc")
 
 ;; Ruby
+(depends-on "robe")
 (depends-on "ruby-end")
 
 ;; JavaScript

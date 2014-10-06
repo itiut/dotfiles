@@ -11,16 +11,16 @@
  '(ruby-deep-indent-paren-style nil)
  '(ruby-insert-encoding-magic-comment nil)
 
- ;; rsense
- '(rsense-home (expand-file-name "rsense" my/site-lisp-directory))
-
  ;; ruby-end
  '(ruby-end-insert-newline nil))
 
 (eval-after-load 'ruby-mode
   '(progn
-     (require 'rsense)
      (require 'ruby-end)
+
+     ;; robe
+     (add-hook 'robe-mode-hook 'ac-robe-setup)
+     (add-hook 'ruby-mode-hook 'robe-mode)
 
      ;; this indentation problem will be fixed in Emacs 24.4
      (defadvice ruby-indent-line (after unindent-closing-paren activate)
@@ -40,8 +40,3 @@
            (indent-line-to indent)
            (when (> offset 0)
              (forward-char offset)))))))
-
-(defun my/ruby-mode-hook ()
-  (add-to-list 'ac-sources 'ac-source-rsense))
-
-(add-hook 'ruby-mode-hook 'my/ruby-mode-hook)
