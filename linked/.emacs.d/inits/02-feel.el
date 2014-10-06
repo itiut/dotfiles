@@ -13,7 +13,8 @@
                       '(read-file-name-completion-ignore-case t))
 
 ;; point-undo
-(require 'point-undo)
+(autoload 'point-undo "point-undo" nil t)
+(autoload 'point-redo "point-undo" nil t)
 
 ;; smartrep
 (require 'smartrep)
