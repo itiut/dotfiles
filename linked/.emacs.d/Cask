@@ -53,6 +53,7 @@
 (depends-on "direx")
 (depends-on "gist")
 (depends-on "guide-key")
+(depends-on "open-junk-file")
 (depends-on "quickrun")
 (depends-on "recentf-ext")
 (depends-on "zeal-at-point")
