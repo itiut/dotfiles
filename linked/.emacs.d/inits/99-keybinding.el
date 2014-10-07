@@ -12,6 +12,7 @@
 ;; built-in, basic, feel
 (global-set-key (kbd "<f5>") 'my/revert-buffer)
 (global-set-key (kbd "C-a") 'my/smart-beginning-of-line)
+(global-set-key (kbd "C-e") 'my/smart-end-of-line)
 (global-set-key (kbd "C-t") 'my/smart-other-window)
 (global-set-key (kbd "C-w") 'my/kill-region-or-backward-kill-word)
 (global-set-key (kbd "C-S-k") 'kill-whole-line)

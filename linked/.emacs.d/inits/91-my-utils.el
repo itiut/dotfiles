@@ -33,6 +33,14 @@ When current buffer is modified, the command refused to revert it, unless you ca
     (beginning-of-line)))
 
 ;;;###autoload
+(defun my/smart-end-of-line ()
+  "Move point to end-of-line or the last non-whitespace character."
+  (interactive)
+  (if (eolp)
+      (skip-syntax-backward "-")
+    (end-of-line)))
+
+;;;###autoload
 (defun my/smart-split-window ()
   "Split current window according to its window size."
   (interactive)
