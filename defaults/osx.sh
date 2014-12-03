@@ -9,7 +9,7 @@ set -eu
 defaults write com.apple.dock autohide -bool true
 
 ## size
-defaults write com.apple.dock tilesize -int 28
+defaults write com.apple.dock tilesize -int 36
 
 ## position left
 defaults write com.apple.dock orientation -string "left"
@@ -20,15 +20,14 @@ defaults write com.apple.dock mru-spaces -bool false
 ## restart dock
 killall Dock
 
-# Mission Control
-## disable Dashboard
-defaults write com.apple.dashboard mcx-disabled -bool true
+# Security & Privacy
+defaults write com.apple.screensaver askForPasswordDelay -int 5
 
 # Spotlight
 ## Spotlight menu/window keyboard shortcut: unchecked
 
 # Displays
-## Resolution: Scaled to 1440 x 900
+## Resolution: Scaled to 1680 x 1050
 
 # Energy Saver
 ## Turn display off after: 30 minutes (Battery), 1 hour (Adapter)
@@ -46,6 +45,9 @@ defaults write -g "com.apple.keyboard.fnState" -bool true
 # Trackpad
 ## tracking speed
 defaults write -g "com.apple.trackpad.scaling" -int 1
+
+## expose
+defaults write com.apple.dock showAppExposeGestureEnabled -bool true
 
 # Bluetooth
 ## Turn Bluetooth off
