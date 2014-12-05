@@ -29,10 +29,6 @@
 (show-paren-mode 1)                                  ; parens
 (custom-set-variables '(show-trailing-whitespace t)) ; spaces before EOL
 
-;; uniquify
-(require 'uniquify)
-(custom-set-variables '(uniquify-buffer-name-style 'post-forward-angle-brackets))
-
 ;; anzu
 (global-anzu-mode 1)
 (custom-set-variables '(anzu-mode-lighter "")
