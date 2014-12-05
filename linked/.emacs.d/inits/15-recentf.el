@@ -9,6 +9,5 @@
 (run-with-idle-timer 30 t '(lambda ()
                              (my/with-suppressed-message (recentf-save-list))))
 
-(eval-after-load 'recentf
-  '(progn
-     (require 'recentf-ext)))
+(with-eval-after-load 'recentf
+  (require 'recentf-ext))

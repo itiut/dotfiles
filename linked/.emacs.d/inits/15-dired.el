@@ -1,20 +1,19 @@
 ;;;; dired setting
 
-(eval-after-load 'dired
-  '(progn
-     (define-key dired-mode-map (kbd "q") 'kill-this-buffer)
+(with-eval-after-load 'dired
+  (define-key dired-mode-map (kbd "q") 'kill-this-buffer)
 
-     ;; enable dired-find-alternate-file
-     (put 'dired-find-alternate-file 'disabled nil)
-     (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file) ; open in current buffer
+  ;; enable dired-find-alternate-file
+  (put 'dired-find-alternate-file 'disabled nil)
+  (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file) ; open in current buffer
 
-     ;; dired-x
-     (custom-set-variables '(dired-bind-jump nil))
-     (require 'dired-x)
+  ;; dired-x
+  (custom-set-variables '(dired-bind-jump nil))
+  (require 'dired-x)
 
-     ;; wdired
-     (require 'wdired)
-     (define-key dired-mode-map (kbd "r") 'wdired-change-to-wdired-mode)))
+  ;; wdired
+  (require 'wdired)
+  (define-key dired-mode-map (kbd "r") 'wdired-change-to-wdired-mode))
 
 ;; direx
 (defun my/dired-jump ()

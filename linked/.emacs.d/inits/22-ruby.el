@@ -9,10 +9,9 @@
  ;; ruby-end
  '(ruby-end-insert-newline nil))
 
-(eval-after-load 'ruby-mode
-  '(progn
-     (require 'ruby-end)
+(with-eval-after-load 'ruby-mode
+  (require 'ruby-end)
 
-     ;; robe
-     (add-hook 'robe-mode-hook 'ac-robe-setup)
-     (add-hook 'ruby-mode-hook 'robe-mode)))
+  ;; robe
+  (add-hook 'robe-mode-hook 'ac-robe-setup)
+  (add-hook 'ruby-mode-hook 'robe-mode))
