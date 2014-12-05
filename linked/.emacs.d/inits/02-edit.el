@@ -9,9 +9,6 @@
  ;; ensure newline is inserted before EOF when saved
  '(require-final-newline t))
 
-;; auto indent
-(electric-indent-mode 1)
-
 (defvar my/electric-indent-disable-modes '(
                                            gfm-mode
                                            markdown-mode
@@ -26,12 +23,6 @@
 
 ;; auto insert pair
 (electric-pair-mode 1)
-
-(defadvice newline-and-indent (before auto-newline-inside-curly-braces activate)
-  "Automatically insert additional newline after cursor when only cursor is inside curly braces."
-  (when (ignore-errors (and (= (char-before) 123)
-                            (= (char-after) 125)))
-    (call-interactively 'open-line)))
 
 ;; delete region by BS, DEL, typing text
 (delete-selection-mode 1)
