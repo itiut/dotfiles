@@ -20,23 +20,4 @@
 
      ;; robe
      (add-hook 'robe-mode-hook 'ac-robe-setup)
-     (add-hook 'ruby-mode-hook 'robe-mode)
-
-     ;; this indentation problem will be fixed in Emacs 24.4
-     (defadvice ruby-indent-line (after unindent-closing-paren activate)
-       (let ((column (current-column))
-             indent offset)
-         (save-excursion
-           (back-to-indentation)
-           (let ((state (syntax-ppss)))
-             (setq offset (- column (current-column)))
-             (when (and (or (eq (char-after) ?\))
-                            (and (eq (char-after) ?\})
-                                 (eq (char-after (1+ (point))) ?\))))
-                        (not (zerop (car state))))
-               (goto-char (cadr state))
-               (setq indent (current-indentation)))))
-         (when indent
-           (indent-line-to indent)
-           (when (> offset 0)
-             (forward-char offset)))))))
+     (add-hook 'ruby-mode-hook 'robe-mode)))
