@@ -32,6 +32,8 @@
      (set-face-attribute 'tabbar-unselected nil
                          :foreground monokai/fg
                          :background monokai/hl-line)
+     (set-face-attribute 'tabbar-selected-modified nil
+                         :foreground monokai/orange)
      (set-face-attribute 'tabbar-unselected-modified nil
                          :foreground monokai/orange)))
 
