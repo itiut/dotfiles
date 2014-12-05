@@ -11,7 +11,7 @@ antigen-bundle rupa/z
 
 antigen-bundle supercrabtree/k
 
-antigen-theme $ZSHDIR/itiut.zsh-theme
+antigen-theme $ZSHDIR itiut
 antigen-apply
 
 ## zsh-history-substring-search
