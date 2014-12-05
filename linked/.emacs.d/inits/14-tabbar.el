@@ -8,6 +8,18 @@
 
 (eval-after-load 'tabbar-ruler
   '(progn
+     ;; https://bitbucket.org/bamanzi/dotemacs-elite/issue/24/tabbar-ruler-not-work-in-emacs-244-keep
+     ;; store tabbar-cache into a real hash,
+     ;; rather than in frame parameters
+     (defvar tabbar-caches (make-hash-table :test 'equal))
+     (defun tabbar-create-or-get-tabbar-cache ()
+       "Return a frame-local hash table that acts as a memoization
+       cache for tabbar. Create one if the frame doesn't have one yet."
+       (or (gethash (selected-frame) tabbar-caches)
+           (let ((frame-cache (make-hash-table :test 'equal)))
+             (puthash (selected-frame) frame-cache tabbar-caches)
+             frame-cache)))
+
      (defvar my/tabbar-ignored-buffer-names
        '("*Helm" "*helm" "*guide-key*"))
 
