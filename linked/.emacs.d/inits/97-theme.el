@@ -14,11 +14,11 @@
 (defvar monokai/hl-line (face-background 'hl-line))
 (defvar monokai/yellow (face-foreground 'warning))
 (defvar monokai/orange (face-foreground 'error))
-(defvar monokai/red (face-foreground 'compilation-error-face))
-(defvar monokai/magenta (face-foreground 'ee-marked))
+;; (defvar monokai/red (face-foreground 'compilation-error-face))
+;; (defvar monokai/magenta (face-foreground 'ee-marked))
 (defvar monokai/violet (face-foreground 'escape-glyph))
 (defvar monokai/blue (face-foreground 'link))
-(defvar monokai/cyan (face-foreground 'compilation-column-face))
+;; (defvar monokai/cyan (face-foreground 'compilation-column-face))
 (defvar monokai/green (face-foreground 'success))
 
 ;; tabbar-ruler
