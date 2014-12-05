@@ -1,5 +1,6 @@
 ;;;; recentf setting
 
+(recentf-mode 1)
 (custom-set-variables '(recentf-max-saved-items 1000)
                       '(recentf-auto-cleanup 600)
                       '(recentf-exclude '("\\.recentf\\'"))
