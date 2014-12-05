@@ -172,7 +172,9 @@
 
 (defpowerline powerline-file-encoding
   (let ((encoding
-         (replace-regexp-in-string "-\\(dos\\|unix\\|mac\\)$" "" (symbol-name buffer-file-coding-system))))
+         (replace-regexp-in-string "^prefer-" ""
+                                   (replace-regexp-in-string "-\\(dos\\|unix\\|mac\\)$" ""
+                                                             (symbol-name buffer-file-coding-system)))))
     (cond
      ((string= "undecided" encoding) "ascii")
      (t encoding))))
