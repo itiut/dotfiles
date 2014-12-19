@@ -42,6 +42,9 @@ defaults write -g InitialKeyRepeat -int 25
 ## use function keys
 defaults write -g "com.apple.keyboard.fnState" -bool true
 
+## spelling: US English
+defaults write -g NSSpellCheckerAutomaticallyIdentifiesLanguages -bool false
+
 # Trackpad
 ## tracking speed
 defaults write -g "com.apple.trackpad.scaling" -int 1
