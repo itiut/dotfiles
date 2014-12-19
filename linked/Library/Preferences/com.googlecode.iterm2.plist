@@ -608,8 +608,6 @@
 	<true/>
 	<key>MaxVertically</key>
 	<false/>
-	<key>NSColorPanelMode</key>
-	<string>7</string>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/src/github.com/itiut/dotfiles/linked/Library/Preferences</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -635,18 +633,10 @@
 	<array/>
 	<key>NSTableView Sort Ordering KeyBingingTable</key>
 	<array/>
-	<key>NSWindow Frame NSColorPanel</key>
-	<string>367 342 214 309 0 0 1680 1028 </string>
-	<key>NSWindow Frame NSFontPanel</key>
-	<string>929 227 445 270 0 0 1680 1028 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>667 322 924 485 0 0 1680 1028 </string>
+	<string>302 309 924 485 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>4 0 1676 1028 0 0 1680 1028 </string>
-	<key>NSWindow Frame iTerm Window 1</key>
-	<string>4 0 1676 1028 0 0 1680 1028 </string>
-	<key>NSWindow Frame iTerm Window 2</key>
-	<string>37 4 1410 874 0 0 1440 878 </string>
+	<string>0 -14 1680 1041 0 0 1680 1027 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1933,7 +1923,7 @@
 			<key>Right Option Key Sends</key>
 			<integer>0</integer>
 			<key>Rows</key>
-			<integer>9999</integer>
+			<integer>60</integer>
 			<key>Screen</key>
 			<integer>-1</integer>
 			<key>Scrollback Lines</key>
@@ -2097,7 +2087,7 @@
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
-			<integer>6</integer>
+			<integer>2</integer>
 			<key>Working Directory</key>
 			<string>/Users/itiut</string>
 		</dict>
@@ -2168,7 +2158,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2014-09-29T17:01:17Z</date>
+	<date>2014-12-19T01:54:52Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Secure Input</key>
