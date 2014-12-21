@@ -45,6 +45,9 @@ defaults write -g "com.apple.keyboard.fnState" -bool true
 ## spelling: US English
 defaults write -g NSSpellCheckerAutomaticallyIdentifiesLanguages -bool false
 
+## Full Keyboard Access: All controls
+defaults write -g AppleKeyboardUIMode -int 2
+
 # Trackpad
 ## tracking speed
 defaults write -g "com.apple.trackpad.scaling" -int 1
