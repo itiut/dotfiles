@@ -3,26 +3,25 @@ export LANG=en_US.UTF-8
 export REPODIR=$HOME/src
 export ZSHDIR=$HOME/.zsh.d
 
-typeset -U path
-path=(
-    # user
-    $HOME{/.linuxbrew,/local,/Dropbox,}/bin(N-/)
-    # system
-    {/usr/local,/usr,}{/sbin,/bin}(N-/)
-)
+typeset -Ux path fpath manpath
 
-typeset -U fpath
+if [ -x /usr/libexec/path_helper ]; then
+    eval `/usr/libexec/path_helper -s`
+fi
+
+path=(
+    $HOME{/.linuxbrew,/local,/Dropbox,}/bin(N-/)
+    $path
+)
 fpath=(
     /usr/local/share/zsh/site-functions(N-/)
     $fpath
 )
-
-typeset -U manpath
 manpath=(
     {/usr/local,/usr}/share/man(N-/)
     ${(s/:/)$(manpath)}         # Add CommandLineTools man in OS X
+    $manpath
 )
-export MANPATH
 
 export EDITOR=vim
 
