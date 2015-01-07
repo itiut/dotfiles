@@ -3,7 +3,7 @@ export LANG=en_US.UTF-8
 export REPODIR=$HOME/src
 export ZSHDIR=$HOME/.zsh.d
 
-typeset -Ux path fpath manpath
+typeset -U path fpath manpath
 
 if [ -x /usr/libexec/path_helper ]; then
     eval `/usr/libexec/path_helper -s`
@@ -22,6 +22,7 @@ manpath=(
     ${(s/:/)$(manpath)}         # Add CommandLineTools man in OS X
     $manpath
 )
+export MANPATH
 
 export EDITOR=vim
 
