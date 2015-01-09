@@ -57,6 +57,7 @@ setopt extended_glob
 
 typeset -A abbreviations
 abbreviations=(
+    "A"    "| awk"
     "C"    "| $_MY_CLIP"
     "E"    "2>&1 > /dev/null"
     "G"    "| grep"
