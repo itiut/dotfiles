@@ -24,6 +24,7 @@ function zle-line-init() {
     zle autosuggest-start
 }
 zle -N zle-line-init
+bindkey '^Q' autosuggest-toggle
 
 
 # OS specific settings
