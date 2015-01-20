@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 set -eu
 
+# General
+## disable auto-save
+defaults write -g NSCloseAlwaysConfirmsChanges -bool true
+
 # Desktop & Screen Saver
 ## Screen Saver Start after: Never
 
