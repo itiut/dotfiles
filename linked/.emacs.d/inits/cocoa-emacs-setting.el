@@ -15,3 +15,5 @@
 
 ;; type a backslash on a JIS keyboard
 (define-key global-map [165] [92])
+;; use M-\ key binding on a JIS keyboard
+(global-set-key (kbd "M-¥") (global-key-binding (kbd "M-\\")))
