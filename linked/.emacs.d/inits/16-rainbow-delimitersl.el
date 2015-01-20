@@ -13,5 +13,4 @@
                                              yaml-mode
                                              ))
 
-(dolist (mode my/rainbow-delimiters-enable-modes)
-  (add-hook (intern (format "%s-hook" mode)) 'rainbow-delimiters-mode))
+(my/add-hook-to-modes my/rainbow-delimiters-enable-modes 'rainbow-delimiters-mode)

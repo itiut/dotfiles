@@ -27,7 +27,6 @@
   (setq flycheck-clang-language-standard "c++11")
   (setq-local quickrun-option-cmdopt "-std=c++11 -O2"))
 
-(add-hook 'c-mode-hook 'my/c-c++-mode-hook)
+(my/add-hook-to-modes '(c-mode c++-mode) 'my/c-c++-mode-hook)
 (add-hook 'c-mode-hook 'my/c-mode-hook)
-(add-hook 'c++-mode-hook 'my/c-c++-mode-hook)
 (add-hook 'c++-mode-hook 'my/c++-mode-hook)
