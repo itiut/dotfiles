@@ -48,7 +48,6 @@
 ;; window, buffer management
 (depends-on "popwin")
 (depends-on "tabbar")
-(depends-on "tabbar-ruler")
 
 (depends-on "direx")
 (depends-on "gist")

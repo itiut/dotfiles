@@ -41,9 +41,9 @@
 (global-set-key (kbd "M-/") 'auto-complete)
 
 ;; tabbar-ruler
-(global-set-key (kbd "<C-tab>") 'tabbar-ruler-forward)
-(global-set-key (kbd "<C-S-tab>") 'tabbar-ruler-backward)
-(global-set-key (kbd "<C-S-iso-lefttab>") 'tabbar-ruler-backward)
+(global-set-key (kbd "<C-tab>") 'tabbar-forward-tab)
+(global-set-key (kbd "<C-S-tab>") 'tabbar-backward-tab)
+(global-set-key (kbd "<C-S-iso-lefttab>") 'tabbar-backward-tab)
 
 ;; C-q map
 (defvar my/ctrl-q-map (make-sparse-keymap)
