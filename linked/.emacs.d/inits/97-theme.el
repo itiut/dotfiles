@@ -21,6 +21,29 @@
 ;; (defvar monokai/cyan (face-foreground 'compilation-column-face))
 (defvar monokai/green (face-foreground 'success))
 
+;; tabbar
+(with-eval-after-load 'tabbar
+  (set-face-attribute 'tabbar-default nil
+                      :inherit 'default
+                      :height 1.0
+                      :background monokai/hl-line
+                      :box nil)
+  (set-face-attribute 'tabbar-button nil
+                      :box nil)
+  (set-face-attribute 'tabbar-selected nil
+                      :weight 'bold
+                      :foreground monokai/green
+                      :background monokai/bg
+                      :box nil)
+  (set-face-attribute 'tabbar-unselected nil
+                      :foreground monokai/fg
+                      :box nil)
+  (set-face-attribute 'tabbar-modified nil
+                      :inherit 'tabbar-unselected
+                      :weight 'bold
+                      :foreground monokai/orange
+                      :box nil))
+
 ;; tabbar-ruler
 (with-eval-after-load 'tabbar-ruler
   (set-face-attribute 'tabbar-default nil

@@ -1,6 +1,7 @@
 ;;;; tabbar setting
 
 (tabbar-mode 1)
+(custom-set-variables '(tabbar-separator '(1.0)))
 
 (with-eval-after-load 'tabbar
   (defvar my/tabbar-ignored-buffer-names
