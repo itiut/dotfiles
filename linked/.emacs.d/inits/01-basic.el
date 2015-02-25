@@ -24,7 +24,10 @@
 
 ;; vc-mode
 (custom-set-variables '(vc-handled-backends '(Git))
-                      '(vc-follow-symlinks t))
+                      '(vc-follow-symlinks t)
+                      '(vc-ignore-dir-regexp (format "\\(%s\\)\\|\\(%s\\)"
+                                                     vc-ignore-dir-regexp
+                                                     tramp-file-name-regexp)))
 
 ;; server
 (require 'server)
