@@ -2,12 +2,17 @@
 
 ;; font
 (set-face-attribute 'default nil
-                    :family "Ricty for Powerline"
+                    :family "Source Code Pro for Powerline"
                     :height 150)
 
-;; workaround for cute japanese font
-(set-fontset-font nil 'japanese-jisx0208
-                  (font-spec :family "Ricty for Powerline"))
+;; japanese font
+(dolist (charset '(japanese-jisx0208 japanese-jisx0212 katakana-jisx0201))
+  (set-fontset-font nil charset
+                    (font-spec :family "Ricty Diminished")))
+
+;; adjust japanese font width to ascii font
+(add-to-list 'face-font-rescale-alist
+             '("Ricty.*" . 1.2))
 
 ;; assign Meta to command key, Super to option key
 (setq mac-command-modifier 'meta
