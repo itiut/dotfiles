@@ -11,8 +11,8 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 local git_info='$(git_prompt_info)$(git_prompt_status)'
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$reset_color%}%{$fg_bold[blue]%} "
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_bold[green]%}✔"
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg_bold[red]%}✘"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_bold[green]%} ✔"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg_bold[red]%} ✘"
 
 ZSH_THEME_GIT_PROMPT_ADDED="%{$fg_bold[green]%} ✚"
 ZSH_THEME_GIT_PROMPT_AHEAD="%{$fg_bold[magenta]%} ⬆"
@@ -24,7 +24,7 @@ ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg_bold[magenta]%} ═"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg_bold[cyan]%} ✭"
 
 PROMPT="
- %(?.%{$fg[green]%}✔.%{$fg[red]%}✘)  \
+ %(?.%{$fg[green]%}✔.%{$fg[red]%}✘) \
 %{$fg_bold[green]%}%n \
 %{$reset_color%}%{$fg[white]%}: \
 %{$fg_bold[yellow]%}%~ \
