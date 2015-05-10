@@ -14,5 +14,4 @@
   (define-key view-mode-map (kbd "?") 'View-search-regexp-backward)
   (define-key view-mode-map (kbd "N") 'View-search-last-regexp-backward))
 
-(defvar my/view-enable-modes '(Man-mode))
-(my/add-hook-to-modes my/view-enable-modes 'view-mode)
+(add-hook 'Man-mode-hook 'view-mode)
