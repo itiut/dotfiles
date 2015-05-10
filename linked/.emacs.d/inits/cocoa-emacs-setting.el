@@ -14,6 +14,9 @@
 (add-to-list 'face-font-rescale-alist
              '("Ricty.*" . 1.2))
 
+;; enable menu bar
+(menu-bar-mode +1)
+
 ;; assign Meta to command key, Super to option key
 (setq mac-command-modifier 'meta
       mac-option-modifier 'super)
