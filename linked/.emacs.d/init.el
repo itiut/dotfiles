@@ -1,10 +1,5 @@
 (require 'cl-lib)
 
-;; for linuxbrew-ed cask
-(let ((linuxbrew/site-lisp (expand-file-name "~/.linuxbrew/share/emacs/site-lisp")))
-  (when (file-directory-p linuxbrew/site-lisp)
-    (add-to-list 'load-path linuxbrew/site-lisp)))
-
 ;; Emacs package system
 (require 'cask)
 (cask-initialize)
