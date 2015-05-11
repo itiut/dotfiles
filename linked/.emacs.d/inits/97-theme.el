@@ -2,8 +2,17 @@
 
 ;; font
 (set-face-attribute 'default nil
-                    :family "Ricty for Powerline"
+                    :family "Source Code Pro for Powerline"
                     :height 110)
+
+;; japanese font
+(dolist (charset '(japanese-jisx0208 japanese-jisx0212 katakana-jisx0201))
+  (set-fontset-font t charset
+                    (font-spec :family "Ricty Diminished")))
+
+;; adjust japanese font width to ascii font
+(add-to-list 'face-font-rescale-alist
+             '("Ricty.*" . 1.2))
 
 ;; monokai
 (load-theme 'monokai t)
