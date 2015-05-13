@@ -9,6 +9,8 @@
     (flyspell-mode . "fs")
     (global-whitespace-mode . "")
     (guide-key-mode . "")
+    (helm-gtags-mode . "")
+    (highlight-symbol-mode . "")
     (isearch-mode . "")
     (visual-line-mode . " vline")
     (whitespace-mode . "")
