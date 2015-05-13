@@ -28,6 +28,7 @@
  '(whitespace-action '(auto-cleanup)))
 
 (defun my/prog-mode-hook ()
+  (helm-gtags-mode +1)
   (highlight-symbol-mode +1)
   (rainbow-delimiters-mode +1)
   (whitespace-mode +1))
