@@ -28,7 +28,8 @@
  '(whitespace-action '(auto-cleanup)))
 
 (defun my/prog-mode-hook ()
-  (whitespace-mode +1)
-  (rainbow-delimiters-mode +1))
+  (highlight-symbol-mode +1)
+  (rainbow-delimiters-mode +1)
+  (whitespace-mode +1))
 
 (add-hook 'prog-mode-hook 'my/prog-mode-hook)

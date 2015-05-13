@@ -113,17 +113,9 @@
                        ("p" . 'git-gutter+-previous-hunk)))
 
 ;; highlight-symbol
-(smartrep-define-key
-    global-map "M-s" '(("M-s" . 'highlight-symbol-next)
-                       ("n"   . 'highlight-symbol-next)
-                       ("p"   . 'highlight-symbol-prev)
-                       ("j"   . 'highlight-symbol-next-in-defun)
-                       ("k"   . 'highlight-symbol-prev-in-defun)
-                       ("l"   . 'highlight-symbol-list-all)
-                       ("o"   . 'highlight-symbol-occur)
-                       ("%"   . 'highlight-symbol-query-replace)
-                       ("."   . 'highlight-symbol-at-point)
-                       ("?"   . 'highlight-symbol-remove-all)))
+(global-set-key (kbd "<f3>") 'highlight-symbol-next)
+(global-set-key (kbd "<S-f3>") 'highlight-symbol-prev)
+(global-set-key (kbd "<M-f3>") 'highlight-symbol-query-replace)
 
 ;; M-g map
 (global-set-key (kbd "M-g .") 'helm-ag)
