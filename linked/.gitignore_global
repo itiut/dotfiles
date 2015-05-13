@@ -1,1 +1,7 @@
+# OSX
 .DS_Store
+
+# GNU global
+GPATH
+GRTAGS
+GTAGS
