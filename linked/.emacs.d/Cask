@@ -64,6 +64,9 @@
 ;; (depends-on "auto-complete-clang-async")
 (depends-on "c-eldoc")
 
+;; Python
+(depends-on "jedi")
+
 ;; Ruby
 (depends-on "robe")
 (depends-on "ruby-end")
