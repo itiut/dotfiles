@@ -19,7 +19,7 @@ fpath=(
 )
 manpath=(
     {/usr/local,/usr}/share/man(N-/)
-    ${(s/:/)$(manpath)}         # Add CommandLineTools man in OS X
+    ${(s/:/)$(man -w)}          # Add CommandLineTools man on OS X
     $manpath
 )
 export MANPATH
