@@ -5,6 +5,7 @@
 
 (with-eval-after-load 'helm
   (helm-descbinds-mode)
+  (helm-projectile-on)
 
   (define-key helm-map (kbd "C-w") 'backward-kill-word)
   (define-key helm-map (kbd "C-M-n") 'helm-next-source)

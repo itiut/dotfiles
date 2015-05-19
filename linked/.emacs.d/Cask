@@ -33,6 +33,9 @@
 (depends-on "helm-ghq")
 (depends-on "helm-gtags")
 (depends-on "helm-ls-git")
+(depends-on "helm-projectile")
+
+(depends-on "projectile")
 
 ;; auto-complete
 (depends-on "auto-complete")

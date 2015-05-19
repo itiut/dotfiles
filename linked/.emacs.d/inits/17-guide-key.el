@@ -10,10 +10,12 @@
                                     "C-c C-c"
                                     "C-c C-s"
                                     "C-c C-t"
-                                    "C-c C-x")))
+                                    "C-c C-x")
+                          (projectile-mode "C-c p")))
                       '(guide-key/highlight-command-regexp
                         (regexp-opt '("describe"
                                       "rectangle"
-                                      "markdown")))
+                                      "markdown"
+                                      "projectile")))
                       '(guide-key/popup-window-position 'bottom)
                       '(guide-key/text-scale-amount -0.25))

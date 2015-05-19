@@ -14,6 +14,7 @@ linked/.emacs.d/auto-save-list
 linked/.emacs.d/elpa
 linked/.emacs.d/eshell
 linked/.emacs.d/history
+linked/.emacs.d/projectile*
 linked/.emacs.d/session*
 linked/.emacs.d/site-lisp/*
 linked/.emacs.d/tramp
