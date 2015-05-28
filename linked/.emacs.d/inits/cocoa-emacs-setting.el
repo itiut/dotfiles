@@ -14,3 +14,6 @@
 (define-key global-map [165] [92])
 ;; use M-\ key binding on a JIS keyboard
 (global-set-key (kbd "M-¥") (global-key-binding (kbd "M-\\")))
+
+;; make helm-man compatible with man 1.6
+(custom-set-variables '(helm-man-format-switches "%s"))
