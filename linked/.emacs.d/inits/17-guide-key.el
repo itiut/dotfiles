@@ -11,7 +11,8 @@
                                     "C-c C-s"
                                     "C-c C-t"
                                     "C-c C-x")
-                          (projectile-mode "C-c p")))
+                          (projectile-mode "C-c p")
+                          (rspec-mode "C-c ,")))
                       '(guide-key/highlight-command-regexp
                         (regexp-opt '("describe"
                                       "rectangle"
