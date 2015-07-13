@@ -80,8 +80,9 @@
 
 ;;; markup language
 (depends-on "markdown-mode")
-(depends-on "yaml-mode")
+(depends-on "scss-mode")
 (depends-on "web-mode")
+(depends-on "yaml-mode")
 
 ;;; theme
 (depends-on "monokai-theme")

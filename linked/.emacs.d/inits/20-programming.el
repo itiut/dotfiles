@@ -34,3 +34,4 @@
   (whitespace-mode +1))
 
 (add-hook 'prog-mode-hook 'my/prog-mode-hook)
+(add-hook 'css-mode-hook 'my/prog-mode-hook)
