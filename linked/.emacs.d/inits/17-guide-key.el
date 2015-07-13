@@ -15,7 +15,6 @@
                       '(guide-key/highlight-command-regexp
                         (regexp-opt '("describe"
                                       "rectangle"
-                                      "markdown"
-                                      "projectile")))
+                                      "markdown")))
                       '(guide-key/popup-window-position 'bottom)
                       '(guide-key/text-scale-amount -0.25))
