@@ -52,15 +52,23 @@ When current buffer is modified, the command refused to revert it, unless you ca
       (split-window-horizontally))))
 
 ;;;###autoload
-(defun my/smart-other-window ()
-  "Split window if no more than one window exists, and move other window."
+(defun my/smart-next-window ()
   (interactive)
-  (if (one-window-p)
-      (progn
-        (my/smart-split-window)
-        (other-window 1)
-        (switch-to-buffer (get-buffer (car (helm-buffer-list)))))
-    (other-window 1)))
+  (my/smart-other-window +1))
+
+;;;###autoload
+(defun my/smart-previous-window ()
+  (interactive)
+  (my/smart-other-window -1))
+
+(defun my/smart-other-window (count &optional all-frames)
+  "Split window if no more than one window exists, and move other window."
+  (let ((do-split-p (one-window-p)))
+    (when do-split-p
+      (my/smart-split-window))
+    (other-window count all-frames)
+    (when do-split-p
+      (switch-to-buffer (get-buffer (car (helm-buffer-list)))))))
 
 ;;;###autoload
 (defun my/kill-region-or-backward-kill-word ()
