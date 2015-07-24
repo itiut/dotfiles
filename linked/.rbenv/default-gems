@@ -2,6 +2,9 @@ awesome_print
 bundler
 pry
 pry-doc
+pry-byebug
 rbenv-rehash
+rspec
 rubocop
+rubocop-rspec
 ruby-lint
