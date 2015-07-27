@@ -78,6 +78,9 @@
 ;; JavaScript
 (depends-on "js2-mode")
 
+;; Shell script
+(depends-on "dockerfile-mode")
+
 ;;; markup language
 (depends-on "markdown-mode")
 (depends-on "emmet-mode")
