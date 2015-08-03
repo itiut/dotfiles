@@ -41,6 +41,7 @@ if which brew > /dev/null; then
         $(brew --prefix coreutils)/libexec/gnuman(N-/)
         $manpath
     )
+    source $(brew --prefix awscli)/share/zsh/site-functions/_aws
 fi
 
 # envs
