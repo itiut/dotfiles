@@ -108,7 +108,6 @@
 
 ;; git-gutter
 (global-set-key (kbd "C-x v =") 'git-gutter+-show-hunk)
-(global-set-key (kbd "C-x v c") 'git-gutter+-commit)
 (global-set-key (kbd "C-x v p") 'git-gutter+-stage-hunks)
 (global-set-key (kbd "C-x v r") 'git-gutter+-revert-hunks)
 (global-set-key (kbd "C-x v u") '(lambda () (interactive) (git-gutter+-refresh)))
@@ -119,6 +118,7 @@
 ;; magit
 (global-set-key (kbd "M-g M-g") 'magit-status)
 (global-set-key (kbd "C-x v b") 'magit-blame)
+(global-set-key (kbd "C-x v c") 'magit-commit)
 (global-set-key (kbd "C-x v f") 'magit-log-buffer-file)
 (global-set-key (kbd "C-x v l") 'magit-log-current)
 
