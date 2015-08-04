@@ -103,6 +103,9 @@
 (global-set-key (kbd "C-x M-%") 'anzu-query-replace-at-cursor)
 (global-set-key (kbd "C-x %") 'anzu-query-replace-at-cursor-thing)
 
+;; vc
+(global-set-key (kbd "C-x v d") 'vc-diff)
+
 ;; git-gutter
 (global-set-key (kbd "C-x v =") 'git-gutter+-show-hunk)
 (global-set-key (kbd "C-x v c") 'git-gutter+-commit)
@@ -112,6 +115,13 @@
 (smartrep-define-key
     global-map "C-x" '(("n" . 'git-gutter+-next-hunk)
                        ("p" . 'git-gutter+-previous-hunk)))
+
+;; magit
+(global-set-key (kbd "M-g M-g") 'magit-status)
+(global-set-key (kbd "C-x v b") 'magit-blame)
+(global-set-key (kbd "C-x v f") 'magit-log-buffer-file)
+(global-set-key (kbd "C-x v l") 'magit-log-current)
+
 
 ;; highlight-symbol
 (global-set-key (kbd "<f3>") 'highlight-symbol-next)

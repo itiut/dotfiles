@@ -31,12 +31,6 @@
                       '(anzu-deactivate-region t)
                       '(anzu-search-threshold 1000))
 
-;; git-gutter-fringe
-(require 'git-gutter-fringe+)
-(global-git-gutter+-mode 1)
-(custom-set-variables '(git-gutter+-lighter "")
-                      '(git-gutter-fr+-side 'right-fringe))
-
 ;; yalinum
 (global-yalinum-mode 1)
 

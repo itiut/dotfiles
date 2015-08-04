@@ -19,7 +19,6 @@
 
 ;; look
 (depends-on "anzu")
-(depends-on "git-gutter-fringe+")
 (depends-on "highlight-symbol")
 (depends-on "rainbow-delimiters")
 (depends-on "rainbow-mode")
@@ -49,12 +48,16 @@
 (depends-on "flycheck")
 (depends-on "flycheck-tip")
 
+;; VCS
+(depends-on "gist")
+(depends-on "git-gutter-fringe+")
+(depends-on "magit")
+
 ;; window, buffer management
 (depends-on "popwin")
 (depends-on "tabbar")
 
 (depends-on "direx")
-(depends-on "gist")
 (depends-on "guide-key")
 (depends-on "open-junk-file")
 (depends-on "quickrun")
