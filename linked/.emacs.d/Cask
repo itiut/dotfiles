@@ -84,6 +84,8 @@
 ;; Shell script
 (depends-on "dockerfile-mode")
 
+(depends-on "terraform-mode")
+
 ;;; markup language
 (depends-on "markdown-mode")
 (depends-on "emmet-mode")
