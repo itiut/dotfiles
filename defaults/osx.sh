@@ -52,6 +52,9 @@ defaults write -g NSSpellCheckerAutomaticallyIdentifiesLanguages -bool false
 ## Full Keyboard Access: All controls
 defaults write -g AppleKeyboardUIMode -int 2
 
+## input \ instead of ¥ by default on JIS Keyboard
+defaults write com.apple.inputmethod.Kotoeri JIMPrefCharacterForYenKey -int 1
+
 # Trackpad
 ## tracking speed
 defaults write -g "com.apple.trackpad.scaling" -int 1
