@@ -79,6 +79,7 @@
 (depends-on "ruby-end")
 
 ;; JavaScript
+(depends-on "coffee-mode")
 (depends-on "js2-mode")
 
 ;; Shell script
