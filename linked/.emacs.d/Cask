@@ -64,7 +64,7 @@
 (depends-on "recentf-ext")
 (depends-on "zeal-at-point")
 
-;;; programming
+;;; languages
 ;; C/C++
 (depends-on "auto-complete-clang" :git "https://github.com/yuttie/auto-complete-clang" :branch "fix-missing-standard-include-files")
 ;; (depends-on "auto-complete-clang-async")
@@ -82,18 +82,19 @@
 (depends-on "coffee-mode")
 (depends-on "js2-mode")
 
-;; Shell script
+;; scripting
 (depends-on "dockerfile-mode")
-
 (depends-on "terraform-mode")
 
-;;; markup language
-(depends-on "markdown-mode")
+;; web
 (depends-on "emmet-mode")
 (depends-on "haml-mode")
 (depends-on "scss-mode")
 (depends-on "web-mode")
 (depends-on "yaml-mode")
+
+;; editing
+(depends-on "markdown-mode")
 
 ;;; theme
 (depends-on "monokai-theme")
