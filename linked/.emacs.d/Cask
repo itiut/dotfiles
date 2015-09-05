@@ -89,6 +89,7 @@
 ;; web
 (depends-on "emmet-mode")
 (depends-on "haml-mode")
+(depends-on "json-mode")
 (depends-on "scss-mode")
 (depends-on "web-mode")
 (depends-on "yaml-mode")
