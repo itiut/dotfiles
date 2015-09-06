@@ -1,11 +1,11 @@
 require: rubocop-rspec
 
 AllCops:
-  Includes:
+  Include:
     - Rakefile
     - Gemfile
     - config.ru
-  Excludes:
+  Exclude:
     - bin/*
 
 Documentation:
