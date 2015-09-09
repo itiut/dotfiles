@@ -642,7 +642,7 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>80 443 592 584 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>4 0 1676 1027 0 0 1680 1027 </string>
+	<string>4 0 1675 1027 0 0 1680 1027 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1968,7 +1968,7 @@
 			<key>Send Code When Idle</key>
 			<false/>
 			<key>Set Local Environment Vars</key>
-			<true/>
+			<false/>
 			<key>Shortcut</key>
 			<string></string>
 			<key>Silence Bell</key>
@@ -2101,7 +2101,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>453269695.06445301</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>453269695.064695</real>
+	<real>463479206.43958402</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -2170,7 +2170,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-05-14T03:57:37Z</date>
+	<date>2015-09-09T07:14:51Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Secure Input</key>
