@@ -5,3 +5,6 @@
 GPATH
 GRTAGS
 GTAGS
+
+# bundler
+/vendor/bundle
