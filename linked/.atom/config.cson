@@ -1,0 +1,22 @@
+"*":
+  editor:
+    invisibles:
+      space: " "
+    fontFamily: "Source Code Pro for Powerline"
+    showIndentGuide: true
+    showInvisibles: true
+  core:
+    themes: [
+      "atom-dark-ui"
+      "monokai"
+    ]
+  "exception-reporting":
+    userId: "2264dd7b-1231-b952-fb24-584fa4f58c74"
+  welcome:
+    showOnStartup: false
+  linter: {}
+  "linter-rubocop": {}
+  "autocomplete-plus": {}
+".c.source":
+  editor:
+    tabLength: 4
