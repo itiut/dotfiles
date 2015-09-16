@@ -95,6 +95,7 @@
 (depends-on "yaml-mode")
 
 ;; editing
+(depends-on "gitignore-mode")
 (depends-on "markdown-mode")
 
 ;;; theme
