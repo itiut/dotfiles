@@ -1,0 +1,16 @@
+*.elc
+.cask
+.emacs.desktop*
+.mc-lists.el
+.python-environments
+.recentf
+ac-comphist.dat
+auto-save-list
+elpa
+eshell
+history
+projectile*
+session*
+site-lisp/*
+tramp
+var
