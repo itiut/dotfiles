@@ -15,7 +15,8 @@
   welcome:
     showOnStartup: false
   linter: {}
-  "linter-rubocop": {}
+  "linter-rubocop":
+    executablePath: "/Users/itiut/.rbenv/shims/rubocop"
   "autocomplete-plus": {}
 ".c.source":
   editor:
