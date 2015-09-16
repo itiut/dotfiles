@@ -7,7 +7,7 @@
     showInvisibles: true
   core:
     themes: [
-      "atom-dark-ui"
+      "one-dark-ui"
       "monokai"
     ]
   "exception-reporting":
