@@ -79,6 +79,9 @@ defaults write -g AppleShowAllExtensions -bool true
 ## show hidden files
 defaults write com.apple.finder AppleShowAllFiles -bool true
 
+## show full path on title bar
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+
 ## hide files on desktop
 defaults write com.apple.finder CreateDesktop -bool false
 
