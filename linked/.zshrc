@@ -9,23 +9,12 @@ antigen-bundle zsh-users/zsh-syntax-highlighting
 _Z_CMD=j
 antigen-bundle rupa/z
 
-antigen-bundle supercrabtree/k
-
 antigen-theme $ZSHDIR itiut
 antigen-apply
 
 ## zsh-history-substring-search
 bindkey "^P" history-substring-search-up
 bindkey "^N" history-substring-search-down
-
-## zsh-autosuggestions
-antigen-bundle tarruda/zsh-autosuggestions # workaround for tab completion
-function zle-line-init() {
-    zle autosuggest-start
-}
-zle -N zle-line-init
-bindkey '^Q' autosuggest-toggle
-
 
 # OS specific settings
 if [[ "$OSTYPE" =~ [a-z]+ ]] && [ -f $HOME/.zshrc.$MATCH ]; then
