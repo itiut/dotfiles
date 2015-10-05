@@ -18,6 +18,9 @@
   "linter-rubocop":
     executablePath: "/Users/itiut/.rbenv/shims/rubocop"
   "autocomplete-plus": {}
+  term2: {}
+  "autocomplete-python": {}
+  "linter-flake8": {}
 ".c.source":
   editor:
     tabLength: 4
