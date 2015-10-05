@@ -1,7 +1,6 @@
 ;;;; helm setting
 
 (custom-set-variables '(helm-truncate-lines t)
-                      '(helm-gtags-suggested-key-mapping t)
                       '(helm-ls-git-show-abs-or-relative 'relative))
 
 (with-eval-after-load 'helm
@@ -14,6 +13,10 @@
 
 ;; helm-gtags
 (with-eval-after-load 'helm-gtags
+  (define-key helm-gtags-mode-map (kbd "C-t") 'helm-gtags-pop-stack)
+  (define-key helm-gtags-mode-map (kbd "M-r") 'helm-gtags-find-rtag)
+  (define-key helm-gtags-mode-map (kbd "M-s") 'helm-gtags-find-symbol)
+  (define-key helm-gtags-mode-map (kbd "M-t") 'helm-gtags-find-tag)
   (smartrep-define-key
       helm-gtags-mode-map "C-c" '((">" . 'helm-gtags-next-history)
                                   ("<" . 'helm-gtags-previous-history))))

@@ -6,8 +6,9 @@
 ;; move windows by S-{cursor}
 (windmove-default-keybindings)
 
-;; disable minimize
+;; unset keys
 (global-unset-key (kbd "C-z"))
+(global-unset-key (kbd "C-x C-n"))
 
 ;; built-in, basic, feel
 (global-set-key (kbd "<f5>") 'my/revert-buffer)
@@ -19,6 +20,8 @@
 (global-set-key (kbd "C-x t") 'my/smart-split-window)
 (global-set-key (kbd "C-x K") 'kill-this-buffer)
 (global-set-key (kbd "C-x C-j") 'my/dired-jump)
+(global-set-key (kbd "M-*") 'tags-loop-continue)
+(global-set-key (kbd "M-,") 'pop-tag-mark)
 (global-set-key (kbd "M-[") 'my/smart-previous-window)
 (global-set-key (kbd "M-]") 'my/smart-next-window)
 
