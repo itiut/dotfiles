@@ -25,14 +25,14 @@
 (show-paren-mode 1)                                  ; parens
 (custom-set-variables '(show-trailing-whitespace t)) ; spaces before EOL
 
+;; linum
+(global-linum-mode +1)
+
 ;; anzu
 (global-anzu-mode 1)
 (custom-set-variables '(anzu-mode-lighter "")
                       '(anzu-deactivate-region t)
                       '(anzu-search-threshold 1000))
-
-;; yalinum
-(global-yalinum-mode 1)
 
 ;;; advices
 (defadvice smartrep-map-internal (around disable-smartrep-echo-keystrokes activate)

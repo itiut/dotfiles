@@ -22,7 +22,6 @@
 (depends-on "highlight-symbol")
 (depends-on "rainbow-delimiters")
 (depends-on "rainbow-mode")
-(depends-on "yalinum")
 
 ;;; utility
 ;; helm
@@ -50,7 +49,7 @@
 
 ;; VCS
 (depends-on "gist")
-(depends-on "git-gutter-fringe+")
+(depends-on "git-gutter")
 (depends-on "magit")
 
 ;; window, buffer management

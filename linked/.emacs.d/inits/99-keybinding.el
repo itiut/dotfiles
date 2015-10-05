@@ -110,13 +110,12 @@
 (global-set-key (kbd "C-x v d") 'vc-diff)
 
 ;; git-gutter
-(global-set-key (kbd "C-x v =") 'git-gutter+-show-hunk)
-(global-set-key (kbd "C-x v p") 'git-gutter+-stage-hunks)
-(global-set-key (kbd "C-x v r") 'git-gutter+-revert-hunks)
-(global-set-key (kbd "C-x v u") '(lambda () (interactive) (git-gutter+-refresh)))
+(global-set-key (kbd "C-x v =") 'git-gutter:popup-hunk)
+(global-set-key (kbd "C-x v p") 'git-gutter:stage-hunk)
+(global-set-key (kbd "C-x v r") 'git-gutter:revert-hunk)
 (smartrep-define-key
-    global-map "C-x" '(("n" . 'git-gutter+-next-hunk)
-                       ("p" . 'git-gutter+-previous-hunk)))
+    global-map "C-x" '(("n" . 'git-gutter:next-hunk)
+                       ("p" . 'git-gutter:previous-hunk)))
 
 ;; magit
 (global-set-key (kbd "M-g M-g") 'magit-status)

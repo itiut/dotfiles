@@ -11,8 +11,7 @@
                                                      vc-ignore-dir-regexp
                                                      tramp-file-name-regexp)))
 
-;; git-gutter-fringe
-(require 'git-gutter-fringe+)
-(global-git-gutter+-mode +1)
-(custom-set-variables '(git-gutter+-lighter "")
-                      '(git-gutter-fr+-side 'right-fringe))
+;; git-gutter
+(global-git-gutter-mode +1)
+(custom-set-variables '(git-gutter:ask-p nil)
+                      '(git-gutter:lighter ""))
