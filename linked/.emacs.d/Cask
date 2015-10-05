@@ -70,6 +70,12 @@
 ;; (depends-on "auto-complete-clang-async")
 (depends-on "c-eldoc")
 
+;; Go
+(depends-on "go-autocomplete")
+(depends-on "go-eldoc")
+(depends-on "go-mode")
+(depends-on "helm-go-package")
+
 ;; Python
 (depends-on "jedi")
 

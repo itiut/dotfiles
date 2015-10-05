@@ -5,7 +5,7 @@
 (cask-initialize)
 
 ;; exec-path-from-shell
-(exec-path-from-shell-copy-env "LANG")
+(exec-path-from-shell-copy-envs '("GOPATH" "LANG"))
 (exec-path-from-shell-initialize)
 
 (defvar my/site-lisp-directory
