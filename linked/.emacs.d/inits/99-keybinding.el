@@ -131,7 +131,7 @@
 (global-set-key (kbd "<M-f3>") 'highlight-symbol-query-replace)
 
 ;; M-g map
-(global-set-key (kbd "M-g .") 'helm-ag)
+(global-set-key (kbd "M-g .") 'helm-do-ag)
 (global-set-key (kbd "M-g >") 'helm-ag-pop-stack)
 (global-set-key (kbd "M-g M-f") 'ffap)
 (global-set-key (kbd "M-g M-q") 'quickrun)
