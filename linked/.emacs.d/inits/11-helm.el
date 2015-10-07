@@ -7,6 +7,8 @@
   (helm-descbinds-mode)
   (helm-projectile-on)
 
+  (add-to-list 'helm-boring-buffer-regexp-list '"\\*magit")
+
   (define-key helm-map (kbd "C-w") 'backward-kill-word)
   (define-key helm-map (kbd "C-M-n") 'helm-next-source)
   (define-key helm-map (kbd "C-M-p") 'helm-previous-source))
