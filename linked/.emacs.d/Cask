@@ -102,6 +102,7 @@
 ;; editing
 (depends-on "gitignore-mode")
 (depends-on "markdown-mode")
+(depends-on "toml-mode")
 
 ;;; theme
 (depends-on "monokai-theme")
