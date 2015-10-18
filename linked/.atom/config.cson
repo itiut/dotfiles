@@ -10,6 +10,7 @@
       "one-dark-ui"
       "monokai"
     ]
+    openEmptyEditorOnStart: false
   "exception-reporting":
     userId: "2264dd7b-1231-b952-fb24-584fa4f58c74"
   welcome:
