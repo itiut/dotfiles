@@ -46,7 +46,6 @@ fi
 
 # envs
 export GOPATH=$HOME
-if which direnv > /dev/null; then eval "$(direnv hook zsh)"; fi
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 
 # local zshenv
