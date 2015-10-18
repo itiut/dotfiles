@@ -148,6 +148,13 @@ setopt no_beep
 # do not print matching errors by glob
 setopt no_nomatch
 
+# aws
+aws() {
+    unset -f aws
+    source /usr/local/share/zsh/site-functions/_aws
+    aws "$@"
+}
+
 # direnv
 if which direnv > /dev/null; then
     eval "$(direnv hook zsh)"

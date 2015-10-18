@@ -36,7 +36,6 @@ if which brew > /dev/null; then
         /usr/local/opt/coreutils/libexec/gnuman(N-/)
         $manpath
     )
-    source /usr/local/share/zsh/site-functions/_aws
 fi
 
 # envs
