@@ -30,7 +30,6 @@ export EDITOR=vim
 if which brew > /dev/null; then
     path=(
         $(brew --prefix coreutils)/libexec/gnubin(N-/)
-        $(brew --prefix go)/libexec/bin(N-/)
         $path
     )
     fpath=(
