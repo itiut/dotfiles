@@ -17,3 +17,7 @@
 
 ;; make helm-man compatible with man 1.6
 (custom-set-variables '(helm-man-format-switches "%s"))
+
+;; key binding
+(global-set-key (kbd "C-\\") 'my/cd-on-iterm)
+(global-set-key (kbd "C-M-\\") 'my/cd-project-root-on-iterm)

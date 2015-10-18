@@ -103,18 +103,48 @@ When current buffer is modified, the command refused to revert it, unless you ca
 
 ;;;###autoload
 (cl-defun my/cd-on-guake (&optional (directory default-directory))
-  "Move to current directory in Guake Terminal, then show Guake Terminal."
+  "Move to current directory on Guake Terminal, then show Guake Terminal."
   (interactive)
   (my/execute-on-guake (format "cd %s" directory))
   (my/toggle-guake))
 
 ;;;###autoload
 (defun my/cd-project-root-on-guake ()
-  "Move to project root directory in Guake Terminal."
+  "Move to project root directory on Guake Terminal."
   (interactive)
   (let ((project-root (my/find-project-root)))
     (if project-root
         (my/cd-on-guake project-root)
       (my/cd-on-guake))))
+
+
+;;; iterm
+;;;###autoload
+(defun my/execute-on-iterm (command)
+  "Execute `command' on iTerm."
+  (interactive "MCommand: ")
+  (do-applescript
+   (format "tell application \"iTerm\"
+              activate
+              tell current session of current terminal
+                write text \"%s\"
+              end tell
+            end tell"
+           command)))
+
+;;;###autoload
+(cl-defun my/cd-on-iterm (&optional (directory default-directory))
+  "Move to current directory on iTerm."
+  (interactive)
+  (my/execute-on-iterm (format "cd %s" directory)))
+
+;;;###autoload
+(defun my/cd-project-root-on-iterm ()
+  "Move to project root directory on iTerm."
+  (interactive)
+  (let ((project-root (my/find-project-root)))
+    (if project-root
+        (my/cd-on-iterm project-root)
+      (my/cd-on-iterm))))
 
 (provide 'my/utils)
