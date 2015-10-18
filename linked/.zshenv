@@ -10,7 +10,7 @@ if [ -x /usr/libexec/path_helper ]; then
 fi
 
 path=(
-    $HOME{/.linuxbrew,/local,/Dropbox,}/bin(N-/)
+    $HOME{/local,/Dropbox,}/bin(N-/)
     $path
 )
 fpath=(
@@ -29,18 +29,14 @@ export EDITOR=vim
 # brew formulas
 if which brew > /dev/null; then
     path=(
-        $(brew --prefix coreutils)/libexec/gnubin(N-/)
+        /usr/local/opt/coreutils/libexec/gnubin(N-/)
         $path
     )
-    fpath=(
-        $(brew --prefix)/share/zsh/site-functions(N-/)
-        $fpath
-    )
     manpath=(
-        $(brew --prefix coreutils)/libexec/gnuman(N-/)
+        /usr/local/opt/coreutils/libexec/gnuman(N-/)
         $manpath
     )
-    source $(brew --prefix awscli)/share/zsh/site-functions/_aws
+    source /usr/local/share/zsh/site-functions/_aws
 fi
 
 # envs
