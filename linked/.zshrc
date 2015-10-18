@@ -150,5 +150,5 @@ setopt no_nomatch
 
 # direnv
 if which direnv > /dev/null; then
-    eval "$(direnv hook $0)"
+    eval "$(direnv hook zsh)"
 fi
