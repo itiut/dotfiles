@@ -16,11 +16,14 @@
     showOnStartup: false
   linter: {}
   "linter-rubocop":
-    executablePath: "/Users/itiut/.rbenv/shims/rubocop"
+    command: "/Users/itiut/.rbenv/shims/rubocop"
   "autocomplete-plus": {}
   term2: {}
   "autocomplete-python": {}
   "linter-flake8": {}
+  "atom-beautify":
+    _analyticsUserId: "0cbb3648-7ba7-4603-b64a-f29f607de2e6"
+  "linter-htmlhint": {}
 ".c.source":
   editor:
     tabLength: 4
