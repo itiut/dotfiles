@@ -25,6 +25,7 @@
   "atom-beautify":
     _analyticsUserId: "0cbb3648-7ba7-4603-b64a-f29f607de2e6"
   "linter-htmlhint": {}
+  "linter-tidy": {}
 ".c.source":
   editor:
     tabLength: 4
