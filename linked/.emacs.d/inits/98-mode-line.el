@@ -12,6 +12,7 @@
     (helm-gtags-mode . "")
     (highlight-symbol-mode . "")
     (isearch-mode . "")
+    (ruby-end-mode . "")
     (visual-line-mode . " vline")
     (whitespace-mode . "")
     ;; major modes
