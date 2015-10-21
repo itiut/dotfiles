@@ -174,13 +174,10 @@
     (otherwise "?")))
 
 (defpowerline powerline-file-encoding
-  (let ((encoding
-         (replace-regexp-in-string "^prefer-" ""
-                                   (replace-regexp-in-string "-\\(dos\\|unix\\|mac\\)$" ""
-                                                             (symbol-name buffer-file-coding-system)))))
-    (cond
-     ((string= "undecided" encoding) "ascii")
-     (t encoding))))
+  (let ((encoding (coding-system-type buffer-file-coding-system)))
+    (if (eq encoding 'undecided)
+        "utf-8"
+      (symbol-name encoding))))
 
 ;; powerline-theme
 (defun my/powerline-theme ()
