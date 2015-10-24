@@ -10,8 +10,10 @@
 
   ;; frame title
   (custom-set-variables '(frame-title-format
-                          '((buffer-file-name "%f" (dired-directory dired-directory "%b"))
-                            " - Emacs"
+                          '((:eval (if buffer-file-name
+                                       (abbreviate-file-name buffer-file-name)
+                                     (or dired-directory "%b")))
+                            " - Emacs "
                             emacs-version))))
 
 ;; disable startup screen
