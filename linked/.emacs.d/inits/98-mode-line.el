@@ -18,7 +18,6 @@
     ;; major modes
     (emacs-lisp-mode . "elisp")
     (fundamental-mode . "fund")
-    (git-gutter+-commit-mode . "git-commit")
     (lisp-interaction-mode . "lisp-i")
     ))
 

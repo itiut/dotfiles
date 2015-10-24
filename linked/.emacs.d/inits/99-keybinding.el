@@ -123,7 +123,6 @@
 (global-set-key (kbd "C-x v f") 'magit-log-buffer-file)
 (global-set-key (kbd "C-x v l") 'magit-log-current)
 
-
 ;; highlight-symbol
 (global-set-key (kbd "<f3>") 'highlight-symbol-next)
 (global-set-key (kbd "<S-f3>") 'highlight-symbol-prev)
