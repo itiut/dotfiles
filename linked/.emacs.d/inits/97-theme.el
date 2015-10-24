@@ -52,27 +52,3 @@
                       :weight 'bold
                       :foreground monokai/orange
                       :box nil))
-
-;; tabbar-ruler
-(with-eval-after-load 'tabbar-ruler
-  (set-face-attribute 'tabbar-default nil
-                      :height 150)
-  (set-face-attribute 'tabbar-selected nil
-                      :foreground monokai/green
-                      :background monokai/bg)
-  (set-face-attribute 'tabbar-unselected nil
-                      :foreground monokai/fg
-                      :background monokai/hl-line)
-  (set-face-attribute 'tabbar-selected-modified nil
-                      :foreground monokai/orange)
-  (set-face-attribute 'tabbar-unselected-modified nil
-                      :foreground monokai/orange))
-
-;; yalinum
-(with-eval-after-load 'yalinum
-  (set-face-attribute 'yalinum-face nil
-                      :foreground monokai/comments
-                      :background monokai/bg)
-  (set-face-attribute 'yalinum-bar-face nil
-                      :foreground monokai/fg
-                      :background monokai/hl-line))
