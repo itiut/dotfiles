@@ -1,5 +1,9 @@
 ;;;; basic setting
 
+;; language
+(set-language-environment 'Japanese)
+(prefer-coding-system 'utf-8-unix)
+
 ;; history
 (custom-set-variables '(history-length 1000)
                       '(history-delete-duplicates t))
