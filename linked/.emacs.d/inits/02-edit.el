@@ -12,7 +12,6 @@
 (defvar my/electric-indent-disable-modes '(
                                            gfm-mode
                                            markdown-mode
-                                           yaml-mode
                                            ))
 
 (defun my/electric-indent-hook (c)
