@@ -74,6 +74,9 @@
 (depends-on "go-mode")
 (depends-on "helm-go-package")
 
+;; PHP
+(depends-on "php-mode")
+
 ;; Python
 (depends-on "jedi")
 
