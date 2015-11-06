@@ -89,6 +89,9 @@ defaults write com.apple.finder CreateDesktop -bool false
 defaults write com.apple.finder NewWindowTarget -string "PfHm"
 defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/"
 
+## Enable copy text in Quick Look
+defaults write com.apple.finder QLEnableTextSelection -bool true
+
 ## do not create .DS_Store on network volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
