@@ -20,19 +20,21 @@
     userId: "2264dd7b-1231-b952-fb24-584fa4f58c74"
   welcome:
     showOnStartup: false
-  linter: {}
-  "linter-rubocop":
-    command: "/Users/itiut/.rbenv/shims/rubocop"
-  "autocomplete-plus": {}
-  term2: {}
-  "autocomplete-python": {}
-  "linter-flake8": {}
   "atom-beautify":
     _analyticsUserId: "0cbb3648-7ba7-4603-b64a-f29f607de2e6"
-  "linter-htmlhint": {}
-  "linter-tidy": {}
-  "git-plus": {}
-  "spell-check": {}
+  "autocomplete-plus": {}
+  "autocomplete-python": {}
+  "expand-region": {}
   "git-diff":
     showIconsInEditorGutter: true
-  "expand-region": {}
+  "git-plus": {}
+  "highlight-line": {}
+  "highlight-selected": {}
+  linter: {}
+  "linter-flake8": {}
+  "linter-htmlhint": {}
+  "linter-rubocop":
+    command: "/Users/itiut/.rbenv/shims/rubocop"
+  "linter-tidy": {}
+  "spell-check": {}
+  term2: {}
