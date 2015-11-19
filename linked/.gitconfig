@@ -45,3 +45,7 @@
 	this = !git init && git add . && git commit -m \"Initial commit\"
 [ghq]
 	root = ~/src
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
