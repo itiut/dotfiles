@@ -11,6 +11,10 @@
       "monokai"
     ]
     openEmptyEditorOnStart: false
+    packagesWithKeymapsDisabled: [
+      "linter"
+      "term2"
+    ]
   "exception-reporting":
     userId: "2264dd7b-1231-b952-fb24-584fa4f58c74"
   welcome:
