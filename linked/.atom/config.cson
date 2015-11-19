@@ -31,3 +31,6 @@
   "linter-htmlhint": {}
   "linter-tidy": {}
   "git-plus": {}
+  "spell-check": {}
+  "git-diff":
+    showIconsInEditorGutter: true
