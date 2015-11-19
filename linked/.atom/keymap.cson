@@ -33,3 +33,7 @@
   'ctrl-m': 'editor:newline'
   'ctrl-x n': 'git-diff:move-to-next-diff'
   'ctrl-x p': 'git-diff:move-to-previous-diff'
+
+'body':
+  'cmd-k -': 'pane:split-down'
+  'cmd-k |': 'pane:split-right'
