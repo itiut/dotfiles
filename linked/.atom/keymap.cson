@@ -23,3 +23,10 @@
 # This file uses CoffeeScript Object Notation (CSON).
 # If you are unfamiliar with CSON, you can read more about it here:
 # https://github.com/bevry/cson#what-is-cson
+
+'atom-workspace atom-text-editor':
+  'ctrl-a': 'editor:move-to-first-character-of-line'
+  'ctrl-i': 'editor:auto-indent'
+  'ctrl-m': 'editor:newline'
+  'ctrl-x n': 'git-diff:move-to-next-diff'
+  'ctrl-x p': 'git-diff:move-to-previous-diff'
