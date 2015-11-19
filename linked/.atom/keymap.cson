@@ -25,6 +25,9 @@
 # https://github.com/bevry/cson#what-is-cson
 
 'atom-workspace atom-text-editor':
+  'ctrl-?': 'core:redo'
+  'ctrl-@': 'expand-region:expand'
+  'ctrl-`': 'expand-region:shrink'
   'ctrl-a': 'editor:move-to-first-character-of-line'
   'ctrl-i': 'editor:auto-indent'
   'ctrl-m': 'editor:newline'

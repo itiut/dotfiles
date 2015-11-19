@@ -35,3 +35,4 @@
   "spell-check": {}
   "git-diff":
     showIconsInEditorGutter: true
+  "expand-region": {}
