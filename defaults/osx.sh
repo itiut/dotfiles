@@ -97,3 +97,8 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
 ## restart Finder
 killall Finder
+
+# Karabiner
+karabiner=/Applications/Karabiner.app/Contents/Library/bin/karabiner
+$karabiner set general.disable_internal_keyboard_if_external_keyboard_exsits 1
+$karabiner set remap.doublepresscommandQ 1
