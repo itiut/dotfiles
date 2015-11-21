@@ -25,6 +25,8 @@
 # https://github.com/bevry/cson#what-is-cson
 
 'atom-text-editor:not([mini])':
+  'alt-g n': 'linter:next-error'
+  'alt-g p': 'linter:previous-error'
   'cmd-shift-e': 'emmet:expand-abbreviation'
 
 'atom-workspace atom-text-editor':
