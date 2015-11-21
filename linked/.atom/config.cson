@@ -41,4 +41,9 @@
   "linter-tidy": {}
   "one-dark-ui": {}
   "spell-check": {}
+  "status-bar": {}
+  tabs:
+    enableVcsColoring: true
   term2: {}
+  "tree-view":
+    hideIgnoredNames: true
