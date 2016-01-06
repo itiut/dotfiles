@@ -9,3 +9,6 @@
 # atom.workspace.observeTextEditors (editor) ->
 #   editor.onDidSave ->
 #     console.log "Saved! #{editor.getPath()}"
+
+# temporarily fix PATH for ghq
+process.env.PATH = ['/usr/local/bin/', process.env.PATH].join(':')
