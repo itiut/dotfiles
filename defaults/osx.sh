@@ -56,6 +56,9 @@ defaults write -g AppleKeyboardUIMode -int 2
 defaults write com.apple.inputmethod.Kotoeri JIMPrefCharacterForYenKey -int 1
 
 # Trackpad
+## look up & data detectors
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerTapGesture -int 2
+
 ## tracking speed
 defaults write -g "com.apple.trackpad.scaling" -int 1
 
