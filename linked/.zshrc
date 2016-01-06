@@ -73,12 +73,6 @@ bindkey " " magic-abbrev-expand
 bindkey "^ " magic-space        # control-space to bypass completion
 bindkey -M isearch " " magic-space # normal space during searches
 
-# history file
-HISTDIR=$HOME/Dropbox/.share/.zsh_history
-if [ -d $HISTDIR ]; then
-    HISTFILE=$HISTDIR/$(hostname).zsh_history
-fi
-
 # remove superflous blanks from commands
 setopt hist_reduce_blanks
 
