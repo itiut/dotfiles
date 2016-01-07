@@ -48,12 +48,12 @@ defaults write -g "com.apple.keyboard.fnState" -bool true
 
 ## spelling: US English
 defaults write -g NSSpellCheckerAutomaticallyIdentifiesLanguages -bool false
+defaults write -g NSPreferredSpellServerLanguage -string "en"
 
 ## Full Keyboard Access: All controls
 defaults write -g AppleKeyboardUIMode -int 2
 
-## input \ instead of ¥ by default on JIS Keyboard
-defaults write com.apple.inputmethod.Kotoeri JIMPrefCharacterForYenKey -int 1
+## Change Caps Lock to Option or something
 
 # Trackpad
 ## look up & data detectors
