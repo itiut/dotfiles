@@ -32,8 +32,7 @@
   linter: {}
   "linter-flake8": {}
   "linter-htmlhint": {}
-  "linter-rubocop":
-    command: "/Users/itiut/.rbenv/shims/rubocop"
+  "linter-rubocop": {}
   "linter-tidy": {}
   "one-dark-ui": {}
   "spell-check": {}
