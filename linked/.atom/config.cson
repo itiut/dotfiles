@@ -1,30 +1,28 @@
 "*":
-  editor:
-    fontFamily: "Source Code Pro, Ricty Diminished"
-    invisibles:
-      space: " "
-    showIndentGuide: true
-    showInvisibles: true
+  "atom-beautify":
+    _analyticsUserId: "0cbb3648-7ba7-4603-b64a-f29f607de2e6"
+  "autocomplete-plus": {}
+  "autocomplete-python": {}
   core:
-    themes: [
-      "one-dark-ui"
-      "monokai"
-    ]
     openEmptyEditorOnStart: false
     packagesWithKeymapsDisabled: [
       "emmet"
       "highlight-line"
       "linter"
     ]
+    themes: [
+      "one-dark-ui"
+      "monokai"
+    ]
+  editor:
+    fontFamily: "Source Code Pro, Ricty Diminished"
+    invisibles:
+      space: " "
+    showIndentGuide: true
+    showInvisibles: true
+  emmet: {}
   "exception-reporting":
     userId: "2264dd7b-1231-b952-fb24-584fa4f58c74"
-  welcome:
-    showOnStartup: false
-  "atom-beautify":
-    _analyticsUserId: "0cbb3648-7ba7-4603-b64a-f29f607de2e6"
-  "autocomplete-plus": {}
-  "autocomplete-python": {}
-  emmet: {}
   "expand-region": {}
   "git-diff":
     showIconsInEditorGutter: true
@@ -45,3 +43,5 @@
   term2: {}
   "tree-view":
     hideIgnoredNames: true
+  welcome:
+    showOnStartup: false
