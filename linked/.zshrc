@@ -18,7 +18,7 @@ bindkey "^N" history-substring-search-down
 
 # OS specific settings
 if [[ "$OSTYPE" =~ [a-z]+ ]] && [ -f $HOME/.zshrc.$MATCH ]; then
-    source $HOME/.zshrc.$MATCH
+  source $HOME/.zshrc.$MATCH
 fi
 
 # aliases
@@ -47,24 +47,24 @@ setopt extended_glob
 
 typeset -A abbreviations
 abbreviations=(
-    "A"    "| awk"
-    "C"    "| $_MY_CLIP"
-    "E"    "2>&1 > /dev/null"
-    "G"    "| grep"
-    "H"    "| head"
-    "L"    "| less"
-    "N"    "> /dev/null"
-    "S"    "| sed"
-    "T"    "| tail"
-    "W"    "| wc"
-    "X"    "| xargs"
+  "A"  "| awk"
+  "C"  "| $_MY_CLIP"
+  "E"  "2>&1 > /dev/null"
+  "G"  "| grep"
+  "H"  "| head"
+  "L"  "| less"
+  "N"  "> /dev/null"
+  "S"  "| sed"
+  "T"  "| tail"
+  "W"  "| wc"
+  "X"  "| xargs"
 )
 
 magic-abbrev-expand() {
-    local MATCH
-    LBUFFER=${LBUFFER%%(#m)[-_a-zA-Z0-9]#}
-    LBUFFER+=${abbreviations[$MATCH]:-$MATCH}
-    zle self-insert
+  local MATCH
+  LBUFFER=${LBUFFER%%(#m)[-_a-zA-Z0-9]#}
+  LBUFFER+=${abbreviations[$MATCH]:-$MATCH}
+  zle self-insert
 }
 
 zle -N magic-abbrev-expand
@@ -100,38 +100,38 @@ add-zsh-hook chpwd auto-ls
 
 # run `cd ..` or insert '^' by ^
 function cdup-or-insert-circumflex() {
-    if [[ -z "$BUFFER" ]]; then
-        echo
-        cd ..
-        zle reset-prompt
-        echo "\n"                   # avoid being not displayed when PROMPT contains newline
-    else
-        zle self-insert '^'
-    fi
+  if [[ -z "$BUFFER" ]]; then
+    echo
+    cd ..
+    zle reset-prompt
+    echo "\n"                   # avoid being not displayed when PROMPT contains newline
+  else
+    zle self-insert '^'
+  fi
 }
 zle -N cdup-or-insert-circumflex
 bindkey '\^' cdup-or-insert-circumflex
 
 # run `ls && git status` by C-t
 function ls-and-git-status() {
+  echo
+  ls
+
+  if [ "$(git rev-parse --is-inside-work-tree 2> /dev/null)" = 'true' ]; then
     echo
-    ls
+    echo -e "\e[0;33m--- git status ---\e[0m"
+    git status -sb
+  fi
 
-    if [ "$(git rev-parse --is-inside-work-tree 2> /dev/null)" = 'true' ]; then
-        echo
-        echo -e "\e[0;33m--- git status ---\e[0m"
-        git status -sb
-    fi
-
-    echo "\n"                   # avoid being not displayed when PROMPT contains newline
-    zle reset-prompt
+  echo "\n"                   # avoid being not displayed when PROMPT contains newline
+  zle reset-prompt
 }
 zle -N ls-and-git-status
 bindkey '^T' ls-and-git-status
 
 # open working directory in filer
 function open-working-directory-in-filer() {
-    o $PWD
+  o $PWD
 }
 zle -N open-working-directory-in-filer
 bindkey '^O' open-working-directory-in-filer
@@ -144,12 +144,12 @@ setopt no_nomatch
 
 # aws
 aws() {
-    unset -f aws
-    source /usr/local/share/zsh/site-functions/_aws
-    aws "$@"
+  unset -f aws
+  source /usr/local/share/zsh/site-functions/_aws
+  aws "$@"
 }
 
 # direnv
 if which direnv > /dev/null; then
-    eval "$(direnv hook zsh)"
+  eval "$(direnv hook zsh)"
 fi

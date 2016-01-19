@@ -3,7 +3,7 @@ export LS_COLORS='di=01;36:ln=01;35:ex=01;32' # GNU ls
 
 # prioritize dircolors
 if which dircolors > /dev/null && [ -f $HOME/.dircolors ]; then
-    eval $(dircolors $HOME/.dircolors)
+  eval $(dircolors $HOME/.dircolors)
 fi
 
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}

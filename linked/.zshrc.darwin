@@ -1,7 +1,7 @@
 if ls --color &> /dev/null; then
-    _MY_LS_COLOR="--color=auto"
+  _MY_LS_COLOR="--color=auto"
 else
-    _MY_LS_COLOR="-G"
+  _MY_LS_COLOR="-G"
 fi
 _MY_CLIP="pbcopy"
 _MY_OPEN="open"
