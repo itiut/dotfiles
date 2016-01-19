@@ -1,4 +1,5 @@
 export LANG=en_US.UTF-8
+export EDITOR=vim
 
 export REPODIR=$HOME/src
 export ZSHDIR=$HOME/.zsh.d
@@ -6,11 +7,12 @@ export ZSHDIR=$HOME/.zsh.d
 typeset -U path fpath manpath
 
 if [ -x /usr/libexec/path_helper ]; then
-  eval `/usr/libexec/path_helper -s`
+  eval "$(/usr/libexec/path_helper -s)"
 fi
 
 path=(
-  $HOME{/local,/Dropbox,}/bin(N-/)
+  /usr/local/opt/coreutils/libexec/gnubin(N-/)
+  $HOME{/Dropbox,}/bin(N-/)
   $path
 )
 fpath=(
@@ -18,25 +20,12 @@ fpath=(
   $fpath
 )
 manpath=(
+  /usr/local/opt/coreutils/libexec/gnuman(N-/)
   {/usr/local,/usr}/share/man(N-/)
-  ${(s/:/)$(man -w)}          # Add CommandLineTools man on OS X
+  ${(s/:/)$(man -w)}  # Add Xcode man pages on OS X before exporting MANPATH
   $manpath
 )
 export MANPATH
-
-export EDITOR=vim
-
-# brew formulas
-if which brew > /dev/null; then
-  path=(
-    /usr/local/opt/coreutils/libexec/gnubin(N-/)
-    $path
-  )
-  manpath=(
-    /usr/local/opt/coreutils/libexec/gnuman(N-/)
-    $manpath
-  )
-fi
 
 # envs
 export GOPATH=$HOME
