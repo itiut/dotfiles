@@ -32,6 +32,7 @@
   linter: {}
   "linter-flake8": {}
   "linter-htmlhint": {}
+  "linter-js-yaml": {}
   "linter-rubocop": {}
   "linter-tidy": {}
   "one-dark-ui": {}
