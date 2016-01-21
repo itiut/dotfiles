@@ -2,7 +2,7 @@
 source $REPODIR/github.com/b4b4r07/zplug/zplug
 
 zplug "lib/git", from:oh-my-zsh
-zplug $ZSHDIR, from:local, of:"itiut.zsh-theme"
+zplug $ZSHDIR, from:local, of:"itiut.zsh-theme", nice: 19
 
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-history-substring-search"
