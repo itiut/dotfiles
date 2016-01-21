@@ -1,16 +1,20 @@
-# antigen
-source $REPODIR/github.com/zsh-users/antigen/antigen.zsh
-antigen-use oh-my-zsh
+# zplug
+source $REPODIR/github.com/b4b4r07/zplug/zplug
 
-antigen-bundle zsh-users/zsh-completions src
-antigen-bundle zsh-users/zsh-history-substring-search
-antigen-bundle zsh-users/zsh-syntax-highlighting
+zplug "lib/git", from:oh-my-zsh
+zplug $ZSHDIR, from:local, of:"itiut.zsh-theme"
+
+zplug "zsh-users/zsh-completions"
+zplug "zsh-users/zsh-history-substring-search"
+zplug "zsh-users/zsh-syntax-highlighting"
 
 _Z_CMD=j
-antigen-bundle rupa/z
+zplug "rupa/z", of:"z.sh"
 
-antigen-theme $ZSHDIR itiut
-antigen-apply
+if ! zplug check; then
+  zplug install
+fi
+zplug load
 
 ## zsh-history-substring-search
 bindkey "^P" history-substring-search-up
