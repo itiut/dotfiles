@@ -3,5 +3,4 @@ if ls --color &> /dev/null; then
 else
   _MY_LS_COLOR="-G"
 fi
-_MY_CLIP="pbcopy"
 _MY_OPEN="open"
