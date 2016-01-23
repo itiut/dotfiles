@@ -4,6 +4,7 @@ source $REPODIR/github.com/b4b4r07/zplug/zplug
 zplug "lib/git", from:oh-my-zsh
 zplug $ZSHDIR, from:local, of:"itiut.zsh-theme", nice: 19
 
+zplug "t413/zsh-background-notify"
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-history-substring-search"
 zplug "zsh-users/zsh-syntax-highlighting"
