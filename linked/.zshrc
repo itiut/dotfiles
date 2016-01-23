@@ -12,14 +12,13 @@ zplug "zsh-users/zsh-syntax-highlighting"
 _Z_CMD=j
 zplug "rupa/z", of:"z.sh"
 
-if ! zplug check; then
-  zplug install
-fi
+zplug check || zplug install
 zplug load
 
-## zsh-history-substring-search
-bindkey "^P" history-substring-search-up
-bindkey "^N" history-substring-search-down
+if zplug check "zsh-users/zsh-history-substring-search"; then
+  bindkey '^P' history-substring-search-up
+  bindkey '^N' history-substring-search-down
+fi
 
 # aliases
 alias ls="${"$(alias ls)"[5,-2]} -F"  # defined in oh-my-zsh/lib/theme-and-appearance.zsh
