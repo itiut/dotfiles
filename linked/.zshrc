@@ -27,7 +27,7 @@ if [[ "$OSTYPE" =~ [a-z]+ ]] && [ -f $HOME/.zshrc.$MATCH ]; then
 fi
 
 # aliases
-alias ls="ls -F $_MY_LS_COLOR"
+alias ls="${"$(alias ls)"[5,-2]} -F"  # defined in oh-my-zsh/lib/theme-and-appearance.zsh
 alias la="ls -A"
 alias ll="ls -l -a"
 alias cp="cp -i"

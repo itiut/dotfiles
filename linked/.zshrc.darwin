@@ -1,5 +1,0 @@
-if ls --color &> /dev/null; then
-  _MY_LS_COLOR="--color=auto"
-else
-  _MY_LS_COLOR="-G"
-fi
