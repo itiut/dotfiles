@@ -1,7 +1,7 @@
 # zplug
 source $REPODIR/github.com/b4b4r07/zplug/zplug
 
-zplug "lib/git", from:oh-my-zsh
+zplug "lib/git", from:oh-my-zsh  # plugging all oh-my-zsh/lib
 zplug $ZSHDIR, from:local, of:"itiut.zsh-theme", nice: 19
 
 zplug "t413/zsh-background-notify"
@@ -39,7 +39,7 @@ alias c="cd"
 alias e="emacsclient --no-wait --alternate-editor=vim"
 alias g="git"
 alias l="ls"
-alias o="$_MY_OPEN"
+alias o="open_command"  # defined in oh-my-zsh/lib/functions.zsh
 alias v="vim"
 
 alias be="bundle exec"
