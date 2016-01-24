@@ -102,6 +102,10 @@ function cdup-or-insert-circumflex() {
   if [[ -z "$BUFFER" ]]; then
     echo
     cd ..
+    local precmd_func
+    for precmd_func in $precmd_functions; do
+      $precmd_func
+    done
     zle reset-prompt
     echo "\n"                   # avoid being not displayed when PROMPT contains newline
   else
