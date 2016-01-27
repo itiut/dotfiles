@@ -39,6 +39,12 @@
     rubyExecutablePath: "/Users/itiut/.rubies/ruby-2.3.0/bin/ruby"
   "linter-tidy": {}
   "one-dark-ui": {}
+  "ruby-test":
+    rspecAllCommand: "chruby_auto && rspec --tty spec"
+    rspecFileCommand: "chruby_auto && rspec --tty {relative_path}"
+    rspecSingleCommand: "chruby_auto && rspec --tty {relative_path}:{line_number}"
+    shell: "zsh"
+    specFramework: "rspec"
   "spell-check": {}
   "status-bar": {}
   tabs:
