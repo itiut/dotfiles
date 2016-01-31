@@ -5,7 +5,7 @@ My dotfiles
 
 Environments
 ----
-* OS X Mavericks 10.9
+* OS X El Capitan 10.11
 * Ubuntu 14.04
 
 
@@ -13,7 +13,7 @@ Automatic setup by `ansible`
 ----
 I use `ansible` to setup my environments automatically.
 
-See [itiut/itiut-ansible-playbooks](https://github.com/itiut/itiut-ansible-playbooks).
+See [itiut/osx-playbooks](https://github.com/itiut/osx-playbooks).
 
 
 Files in this repository
