@@ -41,5 +41,5 @@ ${git_info}
 %{$fg_bold[magenta]%}» %{$reset_color%}"
 
 RPROMPT="\
-%{$fg_bold[red]%}%(?..%? ↵)  \
-%{$reset_color%}%{$fg[green]%}⌚ %*%{$reset_color%}"
+%{$fg_bold[red]%}%(?..%? ↵) \
+%{$reset_color%}%{$fg[green]%} %D{%T}%{$reset_color%}"
