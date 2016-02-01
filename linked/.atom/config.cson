@@ -7,6 +7,7 @@
     openEmptyEditorOnStart: false
     packagesWithKeymapsDisabled: [
       "emmet"
+      "go-to-line"
       "highlight-line"
       "linter"
     ]

@@ -33,11 +33,13 @@
   'ctrl-?': 'core:redo'
   'ctrl-@': 'expand-region:expand'
   'ctrl-`': 'expand-region:shrink'
-  'ctrl-a': 'editor:move-to-first-character-of-line'
+  'ctrl-a': 'editor:move-to-first-character-of-line'  # override emacs-plus
   'ctrl-i': 'editor:auto-indent'
-  'ctrl-m': 'editor:newline'
   'ctrl-x n': 'git-diff:move-to-next-diff'
   'ctrl-x p': 'git-diff:move-to-previous-diff'
+
+'atom-workspace atom-text-editor.emacs-plus.mark-mode:not([mini])':
+  'ctrl-a': 'editor:select-to-first-character-of-line'  # override emacs-plus
 
 'body':
   'cmd-k -': 'pane:split-down'
