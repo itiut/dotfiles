@@ -27,6 +27,7 @@
 'atom-text-editor:not([mini])':
   'alt-g n': 'linter:next-error'
   'alt-g p': 'linter:previous-error'
+  'alt-y': 'clipboard-plus:toggle'
   'cmd-shift-e': 'emmet:expand-abbreviation'
 
 'atom-workspace atom-text-editor':
