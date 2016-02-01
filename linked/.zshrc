@@ -15,10 +15,9 @@ zplug "rupa/z", of:"z.sh"
 zplug check || zplug install
 zplug load
 
-if zplug check "zsh-users/zsh-history-substring-search"; then
-  bindkey '^P' history-substring-search-up
-  bindkey '^N' history-substring-search-down
-fi
+# zsh-users/zsh-history-substring-search
+bindkey '^P' history-substring-search-up
+bindkey '^N' history-substring-search-down
 
 # aliases
 alias ls="${"$(alias ls)"[5,-2]} -F"  # defined in oh-my-zsh/lib/theme-and-appearance.zsh
