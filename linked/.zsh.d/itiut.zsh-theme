@@ -19,10 +19,10 @@ export LESS_TERMCAP_us=$'\E[04;38;5;111m'
 # prompt
 local prompt_status='%(?..%K{red} %{$fg[black]%}✘ %? )%k'
 local prompt_time='%K{247} %{$fg[black]%}%D{%T} %k'
-local prompt_user='%K{239} %{$fg_bold[yellow]%}%n %k'
-local prompt_dir='%K{237} %{$fg_bold[cyan]%}%~ %k'
+local prompt_user='%K{237} %{$fg[yellow]%}%n %k'
+local prompt_dir='%K{236} %F{033}%~ %k'
 local prompt_git_info='$(git_prompt_info)$(git_prompt_status) %k'
-ZSH_THEME_GIT_PROMPT_PREFIX="%K{235} %{$fg_bold[blue]%} "
+ZSH_THEME_GIT_PROMPT_PREFIX="%K{235} %{$fg_bold[magenta]%} %{$fg_no_bold[magenta]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX=''
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_bold[green]%} ✔"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg_bold[red]%} ✘"
