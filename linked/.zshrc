@@ -21,24 +21,21 @@ bindkey '^N' history-substring-search-down
 
 # aliases
 alias ls="${"$(alias ls)"[5,-2]} -F"  # defined in oh-my-zsh/lib/theme-and-appearance.zsh
-alias la="ls -A"
-alias ll="ls -l -a"
-alias cp="cp -i"
-alias mv="mv -i"
-alias rm="rm -i"
+alias la='ls -A'
+alias ll='ls -l -a'
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -i'
 
-alias a="./a.out"
-alias c="cd"
-alias e="emacsclient --no-wait --alternate-editor=vim"
-alias g="git"
-alias l="ls"
-alias o="open_command"  # defined in oh-my-zsh/lib/functions.zsh
-alias v="vim"
-
-alias be="bundle exec"
-
-alias t="tig"
-alias ta="tig --all"
+alias be='bundle exec'
+alias c='cd'
+alias g='git'
+alias m='tmux new-session -A -s main'
+alias l='ls'
+alias o='open_command'  # defined in oh-my-zsh/lib/functions.zsh
+alias t='tig'
+alias ta='tig --all'
+alias v='vim'
 
 # automatically expand abbreviations
 setopt extended_glob
