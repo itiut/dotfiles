@@ -149,6 +149,6 @@ aws() {
 }
 
 # direnv
-if which direnv > /dev/null; then
+if whence direnv > /dev/null; then
   eval "$(direnv hook zsh)"
 fi
