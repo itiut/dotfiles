@@ -1,16 +1,16 @@
 # zplug
 source $REPODIR/github.com/b4b4r07/zplug/zplug
 
-zplug "lib/git", from:oh-my-zsh  # plugging all oh-my-zsh/lib
-zplug $ZSHDIR, from:local, of:"itiut.zsh-theme", nice: 19
+zplug 'lib/git', from:oh-my-zsh  # plugging all oh-my-zsh/lib
+zplug $ZSHDIR, from:local, of:'itiut.zsh-theme', nice: 19
 
-zplug "t413/zsh-background-notify"
-zplug "zsh-users/zsh-completions"
-zplug "zsh-users/zsh-history-substring-search"
-zplug "zsh-users/zsh-syntax-highlighting"
+zplug 't413/zsh-background-notify'
+zplug 'zsh-users/zsh-completions'
+zplug 'zsh-users/zsh-history-substring-search'
+zplug 'zsh-users/zsh-syntax-highlighting'
 
 _Z_CMD=j
-zplug "rupa/z", of:"z.sh"
+zplug 'rupa/z', of:'z.sh'
 
 zplug check || zplug install
 zplug load
@@ -42,17 +42,17 @@ setopt extended_glob
 
 typeset -A abbreviations
 abbreviations=(
-  "A"  "| awk"
-  "C"  "| clipcopy"
-  "E"  "2>&1 > /dev/null"
-  "G"  "| grep"
-  "H"  "| head"
-  "L"  "| less"
-  "N"  "> /dev/null"
-  "S"  "| sed"
-  "T"  "| tail"
-  "W"  "| wc"
-  "X"  "| xargs"
+  'A'  '| awk'
+  'C'  '| clipcopy'
+  'E'  '2>&1 > /dev/null'
+  'G'  '| grep'
+  'H'  '| head'
+  'L'  '| less'
+  'N'  '> /dev/null'
+  'S'  '| sed'
+  'T'  '| tail'
+  'W'  '| wc'
+  'X'  '| xargs'
 )
 
 magic-abbrev-expand() {
@@ -64,9 +64,9 @@ magic-abbrev-expand() {
 
 zle -N magic-abbrev-expand
 
-bindkey " " magic-abbrev-expand
-bindkey "^ " magic-space        # control-space to bypass completion
-bindkey -M isearch " " magic-space # normal space during searches
+bindkey ' ' magic-abbrev-expand
+bindkey '^ ' magic-space        # control-space to bypass completion
+bindkey -M isearch ' ' magic-space # normal space during searches
 
 # remove superflous blanks from commands
 setopt hist_reduce_blanks
@@ -103,7 +103,7 @@ function cdup-or-insert-circumflex() {
       $precmd_func
     done
     zle reset-prompt
-    echo "\n"                   # avoid being not displayed when PROMPT contains newline
+    echo '\n'  # avoid being not displayed when PROMPT contains newline
   else
     zle self-insert '^'
   fi
@@ -118,11 +118,11 @@ function ls-and-git-status() {
 
   if [ "$(git rev-parse --is-inside-work-tree 2> /dev/null)" = 'true' ]; then
     echo
-    echo -e "\e[0;33m--- git status ---\e[0m"
+    echo -e '\e[0;33m--- git status ---\e[0m'
     git status -sb
   fi
 
-  echo "\n"                   # avoid being not displayed when PROMPT contains newline
+  echo '\n'  # avoid being not displayed when PROMPT contains newline
   zle reset-prompt
 }
 zle -N ls-and-git-status
