@@ -98,6 +98,9 @@ defaults write com.apple.finder QLEnableTextSelection -bool true
 ## do not create .DS_Store on network volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
+## expand save panel by default
+defaults write -g NSNavPanelExpandedStateForSaveMode -bool true
+
 ## restart Finder
 killall Finder
 
