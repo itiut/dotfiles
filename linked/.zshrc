@@ -30,6 +30,7 @@ alias rm='rm -i'
 alias be='bundle exec'
 alias c='cd'
 alias g='git'
+alias gl='ghq look'
 alias m='tmux new-session -A -s main'
 alias l='ls'
 alias o='open_command'  # defined in oh-my-zsh/lib/functions.zsh
