@@ -1,5 +1,10 @@
 set main-view = line-number:display=yes,interval=5 id date:display=relative author commit-title:graph=yes,refs=yes
 
+set line-graphics = utf-8
+set split-view-width = 67%
+
+bind generic <C-b> move-page-up
+bind generic <C-f> move-page-down
 bind generic g move-first-line
 bind generic G move-last-line
 bind status C !git commit --verbose
