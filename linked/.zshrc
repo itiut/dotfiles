@@ -1,7 +1,20 @@
 # zplug
 source $REPODIR/github.com/b4b4r07/zplug/zplug
 
-zplug 'lib/git', from:oh-my-zsh  # plugging all oh-my-zsh/lib
+_omz_libs=(
+  clipboard
+  completion
+  directories
+  functions
+  git
+  grep
+  history
+  key-bindings
+  misc
+  termsupport
+  theme-and-appearance
+)
+zplug 'robbyrussell/oh-my-zsh', of:"lib/{${(j:,:)_omz_libs}}.zsh"
 zplug $ZSHDIR, from:local, of:'itiut.zsh-theme', nice: 19
 
 zplug 't413/zsh-background-notify'
