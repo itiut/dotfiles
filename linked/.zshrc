@@ -32,6 +32,36 @@ zplug load
 bindkey '^P' history-substring-search-up
 bindkey '^N' history-substring-search-down
 
+### zshoptions
+setopt extended_glob
+
+# remove superflous blanks from commands
+setopt hist_reduce_blanks
+
+# automatically list choices on an ambiguous completion
+setopt auto_list
+
+# make the completion list smaller
+setopt list_packed
+
+# insert the parameter-following character immediately after parameter names
+setopt auto_param_keys
+
+# automatically insert '/' after directory names
+setopt auto_param_slash
+
+# print 8-bit characters correctly
+setopt print_eight_bit
+
+# correct the spelling of commands
+setopt correct
+
+# do not beep
+setopt no_beep
+
+# do not print matching errors by glob
+setopt no_nomatch
+
 # aliases
 alias ls="$aliases[ls] -F"  # defined in oh-my-zsh/lib/theme-and-appearance.zsh
 alias la='ls -A'
@@ -52,8 +82,6 @@ alias ta='tig --all'
 alias v='vim'
 
 # automatically expand abbreviations
-setopt extended_glob
-
 typeset -A abbreviations
 abbreviations=(
   'A'  '| awk'
@@ -81,27 +109,6 @@ zle -N magic-abbrev-expand
 bindkey ' ' magic-abbrev-expand
 bindkey '^ ' magic-space        # control-space to bypass completion
 bindkey -M isearch ' ' magic-space # normal space during searches
-
-# remove superflous blanks from commands
-setopt hist_reduce_blanks
-
-# automatically list choices on an ambiguous completion
-setopt auto_list
-
-# make the completion list smaller
-setopt list_packed
-
-# insert the parameter-following character immediately after parameter names
-setopt auto_param_keys
-
-# automatically insert '/' after directory names
-setopt auto_param_slash
-
-# print 8-bit characters correctly
-setopt print_eight_bit
-
-# correct the spelling of commands
-setopt correct
 
 # automatically run `ls` after `cd`
 function auto-ls() { ls; }
@@ -148,12 +155,6 @@ function open-working-directory-in-filer() {
 }
 zle -N open-working-directory-in-filer
 bindkey '^O' open-working-directory-in-filer
-
-# do not beep
-setopt no_beep
-
-# do not print matching errors by glob
-setopt no_nomatch
 
 # aws
 aws() {
