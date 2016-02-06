@@ -1,4 +1,4 @@
-# zplug
+### zplug
 source $REPODIR/github.com/b4b4r07/zplug/zplug
 
 _omz_libs=(
@@ -62,7 +62,7 @@ setopt no_beep
 # do not print matching errors by glob
 setopt no_nomatch
 
-# aliases
+### aliases
 alias ls="$aliases[ls] -F"  # defined in oh-my-zsh/lib/theme-and-appearance.zsh
 alias la='ls -A'
 alias ll='ls -l -a'
@@ -81,7 +81,8 @@ alias t='tig'
 alias ta='tig --all'
 alias v='vim'
 
-# automatically expand abbreviations
+### functions and keybindings
+# automatically expand abbreviations by <space>
 typeset -A abbreviations
 abbreviations=(
   'A'  '| awk'
@@ -103,19 +104,17 @@ magic-abbrev-expand() {
   LBUFFER+=${abbreviations[$MATCH]:-$MATCH}
   zle self-insert
 }
-
 zle -N magic-abbrev-expand
-
-bindkey ' ' magic-abbrev-expand
-bindkey '^ ' magic-space        # control-space to bypass completion
-bindkey -M isearch ' ' magic-space # normal space during searches
+bindkey ' '  magic-abbrev-expand
+bindkey '^ ' magic-space  # skip expanding by <C-space>
+bindkey -M isearch ' ' magic-space  # insert a space in isearch
 
 # automatically run `ls` after `cd`
-function auto-ls() { ls; }
+auto-ls() { ls; }
 add-zsh-hook chpwd auto-ls
 
-# run `cd ..` or insert '^' by ^
-function cdup-or-insert-circumflex() {
+# run `cd ..` or insert '^' by <^>
+cdup-or-insert-circumflex() {
   if [[ -z "$BUFFER" ]]; then
     echo
     cd ..
@@ -132,8 +131,8 @@ function cdup-or-insert-circumflex() {
 zle -N cdup-or-insert-circumflex
 bindkey '\^' cdup-or-insert-circumflex
 
-# run `ls && git status` by C-t
-function ls-and-git-status() {
+# run `ls && git status` by <C-t>
+ls-and-git-status() {
   echo
   ls
 
@@ -149,12 +148,12 @@ function ls-and-git-status() {
 zle -N ls-and-git-status
 bindkey '^T' ls-and-git-status
 
-# open working directory in filer
-function open-working-directory-in-filer() {
+# open current directory by <C-o>
+open-current-directory() {
   open_command $PWD
 }
-zle -N open-working-directory-in-filer
-bindkey '^O' open-working-directory-in-filer
+zle -N open-current-directory
+bindkey '^O' open-current-directory
 
 # aws
 aws() {
@@ -163,7 +162,7 @@ aws() {
   aws "$@"
 }
 
-# direnv
+### envs
 if whence direnv > /dev/null; then
   eval "$(direnv hook zsh)"
 fi
