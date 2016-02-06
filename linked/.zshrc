@@ -54,19 +54,22 @@ setopt PRINT_EIGHT_BIT
 setopt NO_BEEP
 
 ### aliases
-alias ls="$aliases[ls] -F"  # defined in oh-my-zsh/lib/theme-and-appearance.zsh
-alias la='ls -A'
-alias ll='ls -l -a'
+# overrides
 alias cp='cp -i'
+alias diff='colordiff -u'
+alias ls="$aliases[ls] -F"  # defined in oh-my-zsh/lib/theme-and-appearance.zsh
 alias mv='mv -i'
 alias rm='rm -i'
 
+# abbreviations
 alias be='bundle exec'
 alias c='cd'
 alias g='git'
 alias gl='ghq look'
 alias m='tmux new-session -A -s main'
 alias l='ls'
+alias la='ls -A'
+alias ll='ls -l -a'
 alias o='open_command'  # defined in oh-my-zsh/lib/functions.zsh
 alias t='tig'
 alias ta='tig --all'
@@ -82,7 +85,9 @@ abbreviations=(
   'G'  '| grep'
   'H'  '| head'
   'L'  '| less'
-  'N'  '> /dev/null'
+  'N'  '&> /dev/null'
+  'N1' '> /dev/null'
+  'N2' '2> /dev/null'
   'S'  '| sed'
   'T'  '| tail'
   'W'  '| wc'
