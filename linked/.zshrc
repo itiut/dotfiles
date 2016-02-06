@@ -33,7 +33,7 @@ bindkey '^P' history-substring-search-up
 bindkey '^N' history-substring-search-down
 
 # aliases
-alias ls="${$(alias ls)[5,-2]} -F"  # defined in oh-my-zsh/lib/theme-and-appearance.zsh
+alias ls="$aliases[ls] -F"  # defined in oh-my-zsh/lib/theme-and-appearance.zsh
 alias la='ls -A'
 alias ll='ls -l -a'
 alias cp='cp -i'
