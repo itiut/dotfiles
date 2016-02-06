@@ -33,34 +33,25 @@ bindkey '^P' history-substring-search-up
 bindkey '^N' history-substring-search-down
 
 ### zshoptions
-setopt extended_glob
+# completion
+setopt AUTO_LIST
+setopt AUTO_PARAM_KEYS
+setopt AUTO_PARAM_SLASH
+setopt LIST_PACKED
 
-# remove superflous blanks from commands
-setopt hist_reduce_blanks
+# expansion and globbing
+setopt EXTENDED_GLOB
+setopt NO_NOMATCH
 
-# automatically list choices on an ambiguous completion
-setopt auto_list
+# history
+setopt HIST_REDUCE_BLANKS
 
-# make the completion list smaller
-setopt list_packed
+# input/output
+setopt CORRECT
+setopt PRINT_EIGHT_BIT
 
-# insert the parameter-following character immediately after parameter names
-setopt auto_param_keys
-
-# automatically insert '/' after directory names
-setopt auto_param_slash
-
-# print 8-bit characters correctly
-setopt print_eight_bit
-
-# correct the spelling of commands
-setopt correct
-
-# do not beep
-setopt no_beep
-
-# do not print matching errors by glob
-setopt no_nomatch
+# zle
+setopt NO_BEEP
 
 ### aliases
 alias ls="$aliases[ls] -F"  # defined in oh-my-zsh/lib/theme-and-appearance.zsh
