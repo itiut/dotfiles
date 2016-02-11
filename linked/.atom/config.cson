@@ -39,6 +39,8 @@
     command: "/Users/itiut/.gem/ruby/2.3.0/bin/rubocop"
   "linter-ruby":
     rubyExecutablePath: "/Users/itiut/.rubies/ruby-2.3.0/bin/ruby"
+  "linter-scss-lint":
+    executablePath: "/Users/itiut/.gem/ruby/2.3.0/bin/scss-lint"
   "linter-tidy": {}
   "one-dark-ui": {}
   "ruby-test":
@@ -51,7 +53,6 @@
   "status-bar": {}
   tabs:
     enableVcsColoring: true
-  term2: {}
   "tree-view":
     hideIgnoredNames: true
   welcome:
