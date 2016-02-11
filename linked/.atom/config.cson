@@ -14,7 +14,7 @@
     ]
     themes: [
       "one-dark-ui"
-      "monokai"
+      "base16-tomorrow-dark-theme"
     ]
   editor:
     fontFamily: "Source Code Pro, Ricty Diminished"
