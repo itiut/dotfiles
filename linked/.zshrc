@@ -74,6 +74,7 @@ alias o='open_command'  # defined in oh-my-zsh/lib/functions.zsh
 alias t='tig'
 alias ta='tig --all'
 alias v='vim'
+alias va='vagrant'
 
 ### functions and keybindings
 # automatically expand abbreviations by <space>
