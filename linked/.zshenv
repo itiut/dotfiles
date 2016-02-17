@@ -4,7 +4,7 @@ export EDITOR=vim
 export REPODIR=$HOME/src
 export ZSHDIR=$HOME/.zsh.d
 
-typeset -U path fpath manpath
+typeset -U path manpath
 
 if [ -x /usr/libexec/path_helper ]; then
   eval "$(/usr/libexec/path_helper -s)"
@@ -14,10 +14,6 @@ path=(
   /usr/local/opt/{coreutils,gnu-sed}/libexec/gnubin(N-/)
   $HOME{/Dropbox,}/bin(N-/)
   $path
-)
-fpath=(
-  /usr/local/share/zsh/site-functions(N-/)
-  $fpath
 )
 manpath=(
   /usr/local/opt/{coreutils,gnu-sed}/libexec/gnuman(N-/)
