@@ -66,7 +66,17 @@ alias be='bundle exec'
 alias c='cd'
 alias d='docker'
 alias dc='docker-compose'
-alias dm='docker-machine'
+if [ -x /usr/local/bin/dinghy ]; then
+  alias dm='dinghy'
+  alias dm-env='eval "$(dinghy shellinit)"'
+  alias dm-restart='dinghy restart && eval "$(dinghy shellinit)"'
+  alias dm-start='dinghy start && eval "$(dinghy shellinit)"'
+else
+  alias dm='docker-machine'
+  alias dm-env='eval "$(docker-machine env default)"'
+  alias dm-restart='docker-machine restart default && eval "$(docker-machine env default)"'
+  alias dm-start='docker-machine start default && eval "$(docker-machine env default)"'
+fi
 alias g='git'
 alias gl='ghq look'
 alias m='tmux new-session -A -s main'
