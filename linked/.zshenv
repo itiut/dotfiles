@@ -22,6 +22,7 @@ manpath=(
 export MANPATH
 
 # envs
+export FZF_DEFAULT_OPTS='--reverse --bind=ctrl-k:kill-line'
 export GOPATH=$HOME
 if [ -f /usr/local/opt/chruby/share/chruby/chruby.sh ]; then
   source /usr/local/opt/chruby/share/chruby/chruby.sh

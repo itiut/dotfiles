@@ -17,6 +17,7 @@ _omz_libs=(
 zplug 'robbyrussell/oh-my-zsh', of:"lib/{${(j:,:)_omz_libs}}.zsh"
 zplug $ZSHDIR, from:local, of:'itiut.zsh-theme', nice: 19
 
+zplug 'junegunn/fzf', of:'shell/*.zsh'
 zplug 't413/zsh-background-notify'
 zplug 'zsh-users/zsh-completions'
 zplug 'zsh-users/zsh-history-substring-search'
@@ -96,6 +97,7 @@ abbreviations=(
   'A'  '| awk'
   'C'  '| clipcopy'
   'E'  '2>&1 > /dev/null'
+  'F'  '| fzf'
   'G'  '| grep'
   'H'  '| head'
   'J'  '| jq'
@@ -103,7 +105,6 @@ abbreviations=(
   'N'  '&> /dev/null'
   'N1' '> /dev/null'
   'N2' '2> /dev/null'
-  'P'  '| peco'
   'S'  '| sed'
   'T'  '| tail'
   'W'  '| wc'
@@ -161,16 +162,16 @@ open-current-directory() {
 zle -N open-current-directory
 bindkey '^O' open-current-directory
 
-# run `ghq look` with peco by <C-]>
-peco-ghq-look () {
-  local repo="$(ghq list | peco --prompt='ghq look >')"
+# run `ghq look` with fzf by <C-]>
+fzf-ghq-look () {
+  local repo="$(ghq list | fzf-tmux)"
   if [ -n "$repo" ]; then
     BUFFER="ghq look $repo"
     zle accept-line
   fi
 }
-zle -N peco-ghq-look
-bindkey '^]' peco-ghq-look
+zle -N fzf-ghq-look
+bindkey '^]' fzf-ghq-look
 
 # aws
 aws() {
