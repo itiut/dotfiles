@@ -35,6 +35,9 @@
   'cmd-k -': 'pane:split-down'
   'cmd-k |': 'pane:split-right'
 
+'atom-workspace':
+  'ctrl-]': 'douglas:toggle'
+
 'atom-text-editor':
   'ctrl-?': 'core:redo'
   'ctrl-@': 'expand-region:expand'

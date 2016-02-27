@@ -103,6 +103,7 @@ abbreviations=(
   'N'  '&> /dev/null'
   'N1' '> /dev/null'
   'N2' '2> /dev/null'
+  'P'  '| peco'
   'S'  '| sed'
   'T'  '| tail'
   'W'  '| wc'
@@ -159,6 +160,17 @@ open-current-directory() {
 }
 zle -N open-current-directory
 bindkey '^O' open-current-directory
+
+# run `ghq look` with peco by <C-]>
+peco-ghq-look () {
+  local repo="$(ghq list | peco --prompt='ghq look >')"
+  if [ -n "$repo" ]; then
+    BUFFER="ghq look $repo"
+    zle accept-line
+  fi
+}
+zle -N peco-ghq-look
+bindkey '^]' peco-ghq-look
 
 # aws
 aws() {
