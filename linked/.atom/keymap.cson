@@ -31,24 +31,26 @@
 # Atom Flight Manual:
 # https://atom.io/docs/latest/using-atom-basic-customization#cson
 
+'body':
+  'cmd-k -': 'pane:split-down'
+  'cmd-k |': 'pane:split-right'
+
+'atom-text-editor':
+  'ctrl-?': 'core:redo'
+  'ctrl-@': 'expand-region:expand'
+  'ctrl-`': 'expand-region:shrink'
+  'ctrl-i': 'editor:auto-indent'
+  'ctrl-x n': 'git-diff:move-to-next-diff'
+  'ctrl-x p': 'git-diff:move-to-previous-diff'
+
 'atom-text-editor:not([mini])':
   'alt-g n': 'linter:next-error'
   'alt-g p': 'linter:previous-error'
   'alt-y': 'clipboard-plus:toggle'
   'cmd-shift-e': 'emmet:expand-abbreviation'
 
+# override emacs-plus C-a
 'atom-workspace atom-text-editor':
-  'ctrl-?': 'core:redo'
-  'ctrl-@': 'expand-region:expand'
-  'ctrl-`': 'expand-region:shrink'
-  'ctrl-a': 'editor:move-to-first-character-of-line'  # override emacs-plus
-  'ctrl-i': 'editor:auto-indent'
-  'ctrl-x n': 'git-diff:move-to-next-diff'
-  'ctrl-x p': 'git-diff:move-to-previous-diff'
-
+  'ctrl-a': 'editor:move-to-first-character-of-line'
 'atom-workspace atom-text-editor.emacs-plus.mark-mode:not([mini])':
-  'ctrl-a': 'editor:select-to-first-character-of-line'  # override emacs-plus
-
-'body':
-  'cmd-k -': 'pane:split-down'
-  'cmd-k |': 'pane:split-right'
+  'ctrl-a': 'editor:select-to-first-character-of-line'
