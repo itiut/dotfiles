@@ -98,6 +98,7 @@ abbreviations=(
   'E'  '2>&1 > /dev/null'
   'G'  '| grep'
   'H'  '| head'
+  'J'  '| jq'
   'L'  '| less'
   'N'  '&> /dev/null'
   'N1' '> /dev/null'
