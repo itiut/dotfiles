@@ -43,6 +43,8 @@
   "linter-scss-lint":
     executablePath: "/Users/itiut/.gem/ruby/2.3.0/bin/scss-lint"
   "linter-tidy": {}
+  "markdown-preview":
+    useGitHubStyle: true
   "one-dark-ui": {}
   "ruby-test":
     rspecAllCommand: "chruby_auto && rspec --tty spec"
