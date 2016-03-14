@@ -58,5 +58,6 @@
     enableVcsColoring: true
   "tree-view":
     hideIgnoredNames: true
+    squashDirectoryNames: true
   welcome:
     showOnStartup: false
