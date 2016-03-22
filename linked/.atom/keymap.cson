@@ -42,9 +42,6 @@
   'ctrl-?': 'core:redo'
   'ctrl-@': 'expand-region:expand'
   'ctrl-`': 'expand-region:shrink'
-  'ctrl-i': 'editor:auto-indent'
-  'ctrl-x n': 'git-diff:move-to-next-diff'
-  'ctrl-x p': 'git-diff:move-to-previous-diff'
 
 'atom-text-editor:not([mini])':
   'alt-g n': 'linter:next-error'
@@ -53,6 +50,9 @@
   'alt-R': 'symbols-view:return-from-declaration'
   'alt-y': 'clipboard-plus:toggle'
   'cmd-shift-e': 'emmet:expand-abbreviation'
+  'ctrl-i': 'editor:auto-indent'
+  'ctrl-x n': 'git-diff:move-to-next-diff'
+  'ctrl-x p': 'git-diff:move-to-previous-diff'
 
 # override emacs-plus C-a
 'atom-workspace atom-text-editor':
