@@ -49,6 +49,8 @@
 'atom-text-editor:not([mini])':
   'alt-g n': 'linter:next-error'
   'alt-g p': 'linter:previous-error'
+  'alt-r': 'symbols-view:go-to-declaration'
+  'alt-R': 'symbols-view:return-from-declaration'
   'alt-y': 'clipboard-plus:toggle'
   'cmd-shift-e': 'emmet:expand-abbreviation'
 
