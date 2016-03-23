@@ -32,8 +32,8 @@
 # https://atom.io/docs/latest/using-atom-basic-customization#cson
 
 'body':
-  'cmd-k -': 'pane:split-down'
-  'cmd-k |': 'pane:split-right'
+  'cmd-k -': 'pane:split-down-and-copy-active-item'
+  'cmd-k |': 'pane:split-right-and-copy-active-item'
 
 'atom-workspace':
   'ctrl-]': 'douglas:toggle'
