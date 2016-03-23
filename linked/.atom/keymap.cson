@@ -50,7 +50,6 @@
   'alt-R': 'symbols-view:return-from-declaration'
   'alt-y': 'clipboard-plus:toggle'
   'cmd-shift-e': 'emmet:expand-abbreviation'
-  'ctrl-i': 'editor:auto-indent'
   'ctrl-x n': 'git-diff:move-to-next-diff'
   'ctrl-x p': 'git-diff:move-to-previous-diff'
 
