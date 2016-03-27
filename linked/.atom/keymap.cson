@@ -54,6 +54,7 @@
   'cmd-k |': 'pane:split-right-and-copy-active-item'
 
 '.platform-darwin atom-text-editor:not([mini])':
+  'alt-¥': 'emacs-plus:delete-horizontal-space'
   'cmd-shift-e': 'emmet:expand-abbreviation'
 
 # override emacs-plus C-a
