@@ -163,7 +163,7 @@ zle -N open-current-directory
 bindkey '^O' open-current-directory
 
 # run `ghq look` with fzf by <C-]>
-fzf-ghq-look () {
+fzf-ghq-look() {
   local repo="$(ghq list | fzf-tmux)"
   if [ -n "$repo" ]; then
     BUFFER="ghq look $repo"
