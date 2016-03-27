@@ -31,10 +31,6 @@
 # Atom Flight Manual:
 # https://atom.io/docs/latest/using-atom-basic-customization#cson
 
-'body':
-  'cmd-k -': 'pane:split-down-and-copy-active-item'
-  'cmd-k |': 'pane:split-right-and-copy-active-item'
-
 'atom-workspace':
   'ctrl-]': 'douglas:toggle'
 
@@ -49,9 +45,16 @@
   'alt-r': 'symbols-view:go-to-declaration'
   'alt-R': 'symbols-view:return-from-declaration'
   'alt-y': 'clipboard-plus:toggle'
-  'cmd-shift-e': 'emmet:expand-abbreviation'
   'ctrl-x n': 'git-diff:move-to-next-diff'
   'ctrl-x p': 'git-diff:move-to-previous-diff'
+
+# OS X
+'.platform-darwin':
+  'cmd-k -': 'pane:split-down-and-copy-active-item'
+  'cmd-k |': 'pane:split-right-and-copy-active-item'
+
+'.platform-darwin atom-text-editor:not([mini])':
+  'cmd-shift-e': 'emmet:expand-abbreviation'
 
 # override emacs-plus C-a
 'atom-workspace atom-text-editor':
