@@ -10,6 +10,9 @@ indent_size = 2
 [*.{c,cpp,h,php}]
 indent_size = 4
 
+[*.go]
+indent_style = tab
+
 [*.py]
 indent_style = space
 indent_size = 4
