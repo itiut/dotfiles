@@ -29,6 +29,8 @@
   "expand-region": {}
   "git-diff":
     showIconsInEditorGutter: true
+  "git-diff-details":
+    enableSyntaxHighlighting: true
   "git-plus": {}
   "highlight-line": {}
   "highlight-selected": {}
