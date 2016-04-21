@@ -68,6 +68,10 @@
   'alt-¥': 'emacs-plus:delete-horizontal-space'
   'cmd-shift-e': 'emmet:expand-abbreviation'
 
+# override advanced-open-file C-k
+'.advanced-open-file atom-text-editor':
+  'ctrl-k': 'editor:cut-to-end-of-line'
+
 # override emacs-plus C-a
 'atom-workspace atom-text-editor':
   'ctrl-a': 'editor:move-to-first-character-of-line'
