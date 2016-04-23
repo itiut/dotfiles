@@ -38,6 +38,7 @@
   'ctrl-shift-tab ^ctrl': 'unset!'
 
 'atom-workspace':
+  'alt-g t': 'open-on-github:repository'
   'ctrl-]': 'douglas:toggle'
 
 'atom-text-editor':
