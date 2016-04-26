@@ -1,12 +1,8 @@
-export LSCOLORS=GxFxcxdxCxegedabagacad        # BSD ls
-export LS_COLORS='di=01;36:ln=01;35:ex=01;32' # GNU ls
-
 # prioritize dircolors
 if whence dircolors > /dev/null && [ -f $HOME/.dircolors ]; then
   eval "$(dircolors $HOME/.dircolors)"
+  zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 fi
-
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 # man page
 export LESS_TERMCAP_mb=$'\E[01;31m'
