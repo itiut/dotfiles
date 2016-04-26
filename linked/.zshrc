@@ -1,5 +1,5 @@
 ### zplug
-source $REPODIR/github.com/b4b4r07/zplug/zplug
+source $HOME/src/github.com/b4b4r07/zplug/zplug
 
 _omz_libs=(
   clipboard

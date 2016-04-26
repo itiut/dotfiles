@@ -1,11 +1,7 @@
 export LANG=en_US.UTF-8
 export EDITOR=vim
 
-export REPODIR=$HOME/src
-export ZSHDIR=$HOME/.zsh.d
-
 typeset -U path manpath
-
 if [ -x /usr/libexec/path_helper ]; then
   eval "$(/usr/libexec/path_helper -s)"
 fi
