@@ -15,7 +15,7 @@ _omz_libs=(
   theme-and-appearance
 )
 zplug 'robbyrussell/oh-my-zsh', of:"lib/{${(j:,:)_omz_libs}}.zsh"
-zplug $ZSHDIR, from:local, of:'itiut.zsh-theme', nice: 19
+zplug 'itiut/itiut.zsh-theme', of:'itiut.zsh-theme', nice: 19
 
 zplug 'junegunn/fzf', of:'shell/*.zsh'
 zplug 't413/zsh-background-notify'
