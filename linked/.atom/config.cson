@@ -38,6 +38,7 @@
   "highlight-line": {}
   "highlight-selected": {}
   linter: {}
+  "linter-clang": {}
   "linter-flake8": {}
   "linter-htmlhint": {}
   "linter-js-yaml": {}
