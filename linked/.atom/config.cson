@@ -43,11 +43,11 @@
   "linter-htmlhint": {}
   "linter-js-yaml": {}
   "linter-rubocop":
-    command: "/Users/itiut/.gem/ruby/2.3.0/bin/rubocop"
+    command: "/Users/itiut/.gem/ruby/2.3.1/bin/rubocop"
   "linter-ruby":
-    rubyExecutablePath: "/Users/itiut/.rubies/ruby-2.3.0/bin/ruby"
+    rubyExecutablePath: "/Users/itiut/.rubies/ruby-2.3.1/bin/ruby"
   "linter-scss-lint":
-    executablePath: "/Users/itiut/.gem/ruby/2.3.0/bin/scss-lint"
+    executablePath: "/Users/itiut/.gem/ruby/2.3.1/bin/scss-lint"
   "linter-tidy": {}
   "markdown-preview":
     useGitHubStyle: true
