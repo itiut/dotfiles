@@ -15,8 +15,8 @@ _omz_libs=(
   termsupport
   theme-and-appearance
 )
-zplug 'robbyrussell/oh-my-zsh', use:"lib/{${(j:,:)_omz_libs}}.zsh"
-zplug 'itiut/itiut.zsh-theme', nice:19
+zplug 'robbyrussell/oh-my-zsh', use:"lib/{${(j:,:)_omz_libs}}.zsh", nice:-1
+zplug 'itiut/itiut.zsh-theme'
 
 zplug 'junegunn/fzf', use:'shell/*.zsh'
 zplug 't413/zsh-background-notify'
