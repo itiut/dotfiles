@@ -113,7 +113,7 @@ magic-abbrev-expand() {
 }
 zle -N magic-abbrev-expand
 bindkey ' '  magic-abbrev-expand
-bindkey '^ ' magic-space  # skip expanding by <C-space>
+bindkey '^ ' magic-space  # skip expanding by <ctrl-space>
 bindkey -M isearch ' ' magic-space  # insert a space in isearch
 
 # automatically run `ls` after `cd`
@@ -149,14 +149,14 @@ ls-and-git-status() {
 zle -N ls-and-git-status
 bindkey '^[l' ls-and-git-status
 
-# open current directory by <C-o>
+# open current directory by <ctrl-o>
 open-current-directory() {
   open_command $PWD
 }
 zle -N open-current-directory
 bindkey '^O' open-current-directory
 
-# run `ghq look` with fzf by <C-]>
+# run `ghq look` with fzf by <ctrl-]>
 fzf-ghq-look() {
   local repo="$(ghq list | fzf-tmux)"
   if [ -n "$repo" ]; then
