@@ -132,7 +132,7 @@ cdup-or-insert-circumflex() {
 zle -N cdup-or-insert-circumflex
 bindkey '\^' cdup-or-insert-circumflex
 
-# run `ls && git status` by <C-t>
+# run `ls && git status` by <alt-l>
 ls-and-git-status() {
   echo
   ls
@@ -147,7 +147,7 @@ ls-and-git-status() {
   zle reset-prompt
 }
 zle -N ls-and-git-status
-bindkey '^T' ls-and-git-status
+bindkey '^[l' ls-and-git-status
 
 # open current directory by <C-o>
 open-current-directory() {
