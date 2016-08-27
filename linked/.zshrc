@@ -1,5 +1,6 @@
 ### zplug
-source $HOME/src/github.com/b4b4r07/zplug/init.zsh
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
 
 _omz_libs=(
   clipboard
