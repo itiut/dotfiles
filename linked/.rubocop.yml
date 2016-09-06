@@ -9,11 +9,11 @@ AllCops:
     - config.ru
   TargetRubyVersion: 2.3
 
-Documentation:
-  Enabled: false
-
-LineLength:
+Metrics/LineLength:
   Max: 127
 
-ClassAndModuleChildren:
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
   Enabled: false
