@@ -1,14 +1,5 @@
 require: rubocop-rspec
 
-AllCops:
-  Exclude:
-    - bin/*
-  Include:
-    - Rakefile
-    - Gemfile
-    - config.ru
-  TargetRubyVersion: 2.3
-
 Metrics/LineLength:
   Max: 127
 
