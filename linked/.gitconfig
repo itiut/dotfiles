@@ -29,6 +29,7 @@
 	b = branch --verbose
 	ba = branch --all --verbose
 	bare = init --bare --shared=true
+	delete-merged = !git branch --merged master | grep -v 'master$' | xargs -n 1 -r git branch -d
 	ci = commit --verbose
 	co = checkout
 	d = diff
