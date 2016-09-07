@@ -6,12 +6,12 @@ if [ -x /usr/libexec/path_helper ]; then
   eval "$(/usr/libexec/path_helper -s)"
 fi
 path=(
-  /usr/local/opt/{coreutils,gnu-sed}/libexec/gnubin(N-/)
+  /usr/local/opt/{coreutils,findutils,gnu-sed}/libexec/gnubin(N-/)
   $HOME{/Dropbox,}/bin(N-/)
   $path
 )
 manpath=(
-  /usr/local/opt/{coreutils,gnu-sed}/libexec/gnuman(N-/)
+  /usr/local/opt/{coreutils,findutils,gnu-sed}/libexec/gnuman(N-/)
   ${(s/:/)$(man -w)}  # Add Xcode man pages on OS X before exporting MANPATH
   $manpath
 )
