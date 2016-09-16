@@ -42,20 +42,14 @@
   "linter-flake8": {}
   "linter-htmlhint": {}
   "linter-js-yaml": {}
-  "linter-rubocop":
-    command: "/Users/itiut/.gem/ruby/2.3.1/bin/rubocop"
-  "linter-ruby":
-    rubyExecutablePath: "/Users/itiut/.rubies/ruby-2.3.1/bin/ruby"
-  "linter-scss-lint":
-    executablePath: "/Users/itiut/.gem/ruby/2.3.1/bin/scss-lint"
+  "linter-rubocop": {}
+  "linter-ruby": {}
+  "linter-scss-lint": {}
   "linter-tidy": {}
   "markdown-preview":
     useGitHubStyle: true
   "one-dark-ui": {}
   "ruby-test":
-    rspecAllCommand: "chruby_auto && rspec --tty spec"
-    rspecFileCommand: "chruby_auto && rspec --tty {relative_path}"
-    rspecSingleCommand: "chruby_auto && rspec --tty {relative_path}:{line_number}"
     shell: "zsh"
     specFramework: "rspec"
   "spell-check": {}

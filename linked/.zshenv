@@ -26,6 +26,7 @@ export GOPATH=$HOME
 if [ -f /usr/local/opt/chruby/share/chruby/chruby.sh ]; then
   source /usr/local/opt/chruby/share/chruby/chruby.sh
   source /usr/local/opt/chruby/share/chruby/auto.sh
+  chruby ruby-2.3.1
 fi
 
 # local zshenv
