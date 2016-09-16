@@ -20,6 +20,7 @@ export MANPATH
 # envs
 export FZF_DEFAULT_COMMAND='ag -l --nocolor --hidden --ignore .git --search-binary'
 export FZF_DEFAULT_OPTS='--reverse --bind=ctrl-k:kill-line'
+export FZF_ALT_C_COMMAND="find -L . \\( -path '*/\\.*' -o -path '*/node_modules' -o -fstype 'dev' -o -fstype 'proc' \\) -prune -o -type d -print 2> /dev/null | sed 1d | cut -b3-"
 export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
 export GOPATH=$HOME
 if [ -f /usr/local/opt/chruby/share/chruby/chruby.sh ]; then
