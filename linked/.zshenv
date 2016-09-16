@@ -18,7 +18,9 @@ manpath=(
 export MANPATH
 
 # envs
+export FZF_DEFAULT_COMMAND='ag -l --nocolor --hidden --ignore .git --search-binary'
 export FZF_DEFAULT_OPTS='--reverse --bind=ctrl-k:kill-line'
+export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
 export GOPATH=$HOME
 if [ -f /usr/local/opt/chruby/share/chruby/chruby.sh ]; then
   source /usr/local/opt/chruby/share/chruby/chruby.sh
