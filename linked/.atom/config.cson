@@ -46,6 +46,7 @@
   "linter-rubocop": {}
   "linter-ruby": {}
   "linter-scss-lint": {}
+  "linter-shellcheck": {}
   "linter-tidy": {}
   "markdown-preview":
     useGitHubStyle: true
