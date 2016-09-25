@@ -67,6 +67,7 @@
 
 '.platform-darwin atom-text-editor:not([mini])':
   'alt-¥': 'emacs-plus:delete-horizontal-space'
+  'cmd-/': 'api-docs:search-under-cursor'
   'cmd-shift-e': 'emmet:expand-abbreviation'
 
 # override advanced-open-file C-k

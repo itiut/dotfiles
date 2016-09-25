@@ -2,6 +2,11 @@
   "advanced-open-file":
     fuzzyMatch: true
     helmDirSwitch: true
+  "api-docs":
+    go: true
+    node: true
+    "ruby~2":
+      "3": true
   "atom-beautify":
     general:
       _analyticsUserId: "0cbb3648-7ba7-4603-b64a-f29f607de2e6"
@@ -11,6 +16,7 @@
   core:
     openEmptyEditorOnStart: false
     packagesWithKeymapsDisabled: [
+      "api-docs"
       "douglas"
       "emmet"
       "go-to-line"
