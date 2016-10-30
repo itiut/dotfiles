@@ -14,6 +14,9 @@
   "autocomplete-python": {}
   "clipboard-plus": {}
   core:
+    disabledPackages: [
+      "whitespace"
+    ]
     openEmptyEditorOnStart: false
     packagesWithKeymapsDisabled: [
       "api-docs"
