@@ -1,0 +1,50 @@
+[
+// Core
+  {
+    "key": "ctrl+alt+h",
+    "command": "deleteWordLeft",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+/",
+    "command": "redo",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+
+// Editor
+  {
+    "key": "alt+/",
+    "command": "editor.action.triggerSuggest",
+    "when": "editorHasCompletionItemProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+m",
+    "command": "editor.action.insertLineAfter",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "f7",
+    "command": "editor.action.sortLinesAscending",
+    "when": "editorHasSelection && editorTextFocus && !editorReadonly"
+  },
+
+// Workbench
+  {
+    "key": "ctrl+tab",
+    "command": "workbench.action.nextEditor"
+  },
+  {
+    "key": "ctrl+shift+tab",
+    "command": "workbench.action.previousEditor"
+  },
+
+// Git Project Manager
+  {
+    "key": "alt+cmd+p",
+    "command": "-gitProjectManager.openProject"
+  },
+  {
+    "key": "ctrl+]",
+    "command": "gitProjectManager.openProject"
+  }
+]
