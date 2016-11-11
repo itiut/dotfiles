@@ -45,7 +45,6 @@
   'ctrl-?': 'core:redo'
   'ctrl-@': 'expand-region:expand'
   'ctrl-`': 'expand-region:shrink'
-  'ctrl-m': 'unset!'  # disable bracket-matcher:go-to-matching-bracket
   'ctrl-shift-cmd-m': 'bracket-matcher:select-inside-brackets'
 
 'atom-text-editor:not([mini])':
