@@ -33,10 +33,7 @@
     ]
   editor:
     fontFamily: "Source Code Pro, Ricty Diminished"
-    invisibles:
-      space: " "
     showIndentGuide: true
-    showInvisibles: true
   emmet: {}
   "exception-reporting":
     userId: "2264dd7b-1231-b952-fb24-584fa4f58c74"
