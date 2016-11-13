@@ -17,7 +17,6 @@ manpath=(
 )
 export MANPATH
 
-# envs
 export FZF_DEFAULT_COMMAND='ag -l --nocolor --hidden --ignore .git --search-binary'
 export FZF_DEFAULT_OPTS='--reverse --bind=ctrl-k:kill-line'
 export FZF_ALT_C_COMMAND="find -L . \\( -path '*/\\.*' -o -path '*/node_modules' -o -fstype 'dev' -o -fstype 'proc' \\) -prune -o -type d -print 2> /dev/null | sed 1d | cut -b3-"
@@ -32,6 +31,7 @@ if [ -f /usr/local/opt/chruby/share/chruby/chruby.sh ]; then
     chruby "$(head -n 1 $HOME/.ruby-version)"
   fi
 fi
+export ZSH_THEME_ITIUT_DIRCOLORS_THEME_PATH=$HOME/src/github.com/seebi/dircolors-solarized/dircolors.256dark
 
 # local zshenv
 if [ -f $HOME/.zshenv.local ]; then
