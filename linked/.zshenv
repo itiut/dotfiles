@@ -31,7 +31,9 @@ if [ -f /usr/local/opt/chruby/share/chruby/chruby.sh ]; then
     chruby "$(head -n 1 $HOME/.ruby-version)"
   fi
 fi
-export ZSH_THEME_ITIUT_DIRCOLORS_THEME_PATH=$HOME/src/github.com/seebi/dircolors-solarized/dircolors.256dark
+export ZPLUG_HOME=$HOME/.zplug
+export TMUX_PLUGIN_MANAGER_PATH=$ZPLUG_HOME/repos/tmux-plugins
+export ZSH_THEME_ITIUT_DIRCOLORS_THEME_PATH=$ZPLUG_HOME/repos/seebi/dircolors-solarized/dircolors.256dark
 
 # local zshenv
 if [ -f $HOME/.zshenv.local ]; then

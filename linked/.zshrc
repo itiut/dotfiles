@@ -1,5 +1,4 @@
 ### zplug
-export ZPLUG_HOME=$HOME/.zplug
 source $ZPLUG_HOME/init.zsh
 
 _omz_libs=(
@@ -19,7 +18,9 @@ zplug 'robbyrussell/oh-my-zsh', use:"lib/{${(j:,:)_omz_libs}}.zsh", nice:-1
 zplug 'itiut/itiut.zsh-theme'
 
 zplug 'junegunn/fzf', use:'shell/*.zsh'
+zplug 'seebi/dircolors-solarized'
 zplug 't413/zsh-background-notify'
+zplug 'tmux-plugins/tpm'
 zplug 'zsh-users/zsh-completions'
 zplug 'zsh-users/zsh-history-substring-search'
 zplug 'zsh-users/zsh-syntax-highlighting'
