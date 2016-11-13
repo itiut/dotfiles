@@ -42,7 +42,7 @@
 	sb = show-branch --all
 	sh = show
 	st = status
-	this = !git init && git add . && git commit -m \"Initial commit\"
+	this = !git init && git add --all && git commit -m 'Initial commit'
 [ghq]
 	root = ~/src
 [filter "lfs"]
