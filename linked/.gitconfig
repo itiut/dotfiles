@@ -28,6 +28,7 @@
 	amend = commit --amend --verbose
 	b = branch --verbose
 	ba = branch --all --verbose
+	branches = branch --all --verbose
 	ci = commit --verbose
 	co = checkout
 	d = diff
@@ -35,14 +36,20 @@
 	delete-merged = !git branch --merged master | grep -v 'master$' | xargs -n 1 -r git branch -d
 	di = diff
 	dic = diff --cached
+	discard = checkout --
 	f = fetch
 	fa = fetch --all
 	fixup = commit --amend -C HEAD
 	info = remote show origin
+	remotes = remote -v
 	sb = show-branch --all
 	sh = show
 	st = status
+	stashes = !tig stash
+	tags = tag
 	this = !git init && git add --all && git commit -m 'Initial commit'
+	uncommit = reset --soft HEAD~
+	unstage = reset -q HEAD --
 [ghq]
 	root = ~/src
 [filter "lfs"]
