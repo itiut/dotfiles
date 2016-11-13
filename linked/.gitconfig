@@ -22,18 +22,17 @@
 	pushInsteadOf = git://github.com/
 	pushInsteadOf = https://github.com/
 [alias]
-	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
 	a = add
 	aa = !git add --all && git status
+	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
 	amend = commit --amend --verbose
 	b = branch --verbose
 	ba = branch --all --verbose
-	bare = init --bare --shared=true
-	delete-merged = !git branch --merged master | grep -v 'master$' | xargs -n 1 -r git branch -d
 	ci = commit --verbose
 	co = checkout
 	d = diff
 	dc = diff --cached
+	delete-merged = !git branch --merged master | grep -v 'master$' | xargs -n 1 -r git branch -d
 	di = diff
 	dic = diff --cached
 	f = fetch
@@ -41,8 +40,8 @@
 	fixup = commit --amend -C HEAD
 	info = remote show origin
 	sb = show-branch --all
-	st = status
 	sh = show
+	st = status
 	this = !git init && git add . && git commit -m \"Initial commit\"
 [ghq]
 	root = ~/src
