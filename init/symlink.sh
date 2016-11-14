@@ -5,6 +5,7 @@ PROJECT_ROOT=$(realpath $(dirname $0)/..)
 DOTFILES_DIR=$PROJECT_ROOT/linked
 DOTFILES_ADDITIONAL_TARGETS=(
   .atom
+  .Brewfile
   .emacs.d
   Library/Application\ Support/Code/User/keybindings.json
   Library/Application\ Support/Code/User/settings.json
