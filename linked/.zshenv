@@ -26,7 +26,7 @@ if [ -f /usr/local/opt/chruby/share/chruby/chruby.sh ]; then
   source /usr/local/opt/chruby/share/chruby/chruby.sh
   source /usr/local/opt/chruby/share/chruby/auto.sh
 
-  # for Atom
+  # for Atom, VS Code
   if [ -z $TERM ] && [ -f $HOME/.ruby-version ]; then
     chruby "$(head -n 1 $HOME/.ruby-version)"
   fi
