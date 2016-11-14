@@ -1,4 +1,4 @@
-.PHONY: test brew loginshell symlink
+.PHONY: test brew shell symlink
 
 test:
 	rake spec
@@ -6,8 +6,8 @@ test:
 brew:
 	./init/brew.sh
 
-loginshell:
-	./init/loginshell.sh
+shell:
+	./init/shell.sh
 
 symlink:
 	./init/symlink.sh

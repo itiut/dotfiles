@@ -12,8 +12,8 @@ Setup
 ----
 ```console
 $ make brew
-$ make loginshell  # after installing zsh
-$ make symlink     # after syncing ~/Dropbox/.share 
+$ make shell       # after installing zsh
+$ make symlink     # after syncing ~/Dropbox/.share
 ```
 
 
