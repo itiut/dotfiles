@@ -11,6 +11,12 @@
     ".envrc": "shellscript"
   },
 
+// Ruby
+  "ruby.lint": {
+    "rubocop": true,
+    "ruby": true
+  },
+
 // Git Project Manager
   "gitProjectManager.baseProjectsFolders": [
     "/Users/itiut/src"
