@@ -5,19 +5,22 @@ My dotfiles
 
 Environments
 ----
-* OS X El Capitan 10.11
+- OS X El Capitan 10.11
 
 
-Automatic setup by `ansible`
+Setup
 ----
-I use `ansible` to setup my environments automatically.
-
-See [itiut/osx-playbooks](https://github.com/itiut/osx-playbooks).
+```console
+$ make brew
+$ make loginshell  # after installing zsh
+$ make symlink     # after syncing ~/Dropbox/.share 
+```
 
 
 Files in this repository
 ----
 | directory | files |
 | --- | ----- |
-| defaults | configuration scripts |
-| linked   | dotfiles linked to $HOME |
+| init | init scripts |
+| linked | dotfiles linked to $HOME |
+| spec | serverspec tests for localhost |
