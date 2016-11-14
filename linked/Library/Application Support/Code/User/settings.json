@@ -1,23 +1,19 @@
 {
-// Editor
   "editor.fontFamily": "Source Code Pro, Ricty Diminished",
   "editor.fontSize": 14,
   "editor.formatOnType": true,
   "editor.renderIndentGuides": true,
   "editor.scrollBeyondLastLine": false,
 
-// Files
   "files.associations": {
     ".envrc": "shellscript"
   },
 
-// Ruby
   "ruby.lint": {
     "rubocop": true,
     "ruby": true
   },
 
-// Git Project Manager
   "gitProjectManager.baseProjectsFolders": [
     "/Users/itiut/src"
   ],
