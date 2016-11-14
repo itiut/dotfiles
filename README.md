@@ -6,7 +6,6 @@ My dotfiles
 Environments
 ----
 * OS X El Capitan 10.11
-* Ubuntu 14.04
 
 
 Automatic setup by `ansible`
