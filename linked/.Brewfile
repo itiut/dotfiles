@@ -42,7 +42,6 @@ brew 'tig'
 brew 'tmate'
 brew 'tmux'
 brew 'wakeonlan'
-brew 'zplug'
 brew 'zsh', args: ['without-etcdir']
 cask 'alfred'
 cask 'atom'

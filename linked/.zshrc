@@ -1,39 +1,41 @@
-### zplug
-source $ZPLUG_HOME/init.zsh
+### zgen
+if [ ! -d $HOME/.zgen ]; then
+  git clone https://github.com/tarjoilija/zgen.git $HOME/.zgen
+fi
+source $HOME/.zgen/zgen.zsh
 
-_omz_libs=(
-  clipboard
-  completion
-  directories
-  functions
-  git
-  grep
-  history
-  key-bindings
-  misc
-  termsupport
-  theme-and-appearance
-)
-zplug 'robbyrussell/oh-my-zsh', use:"lib/{${(j:,:)_omz_libs}}.zsh", nice:-1
-zplug 'itiut/itiut.zsh-theme'
+if ! zgen saved; then
+  # oh-my-zsh/lib/theme-and-appearance.zsh requires .dircolors to exist
+  # See https://github.com/robbyrussell/oh-my-zsh/commit/1b799e9762067f912c0eb807cd5a55d8f122adfd
+  if [ ! -L $HOME/.dircolors ]; then
+    zgen clone seebi/dircolors-solarized
+    ln -sv $(-zgen-get-clone-dir seebi/dircolors-solarized)/dircolors.256dark $HOME/.dircolors
+  fi
 
-zplug 'junegunn/fzf', use:'shell/*.zsh'
-zplug 'seebi/dircolors-solarized'
-zplug 't413/zsh-background-notify'
-zplug 'tmux-plugins/tpm'
-zplug 'zsh-users/zsh-completions'
-zplug 'zsh-users/zsh-history-substring-search'
-zplug 'zsh-users/zsh-syntax-highlighting'
+  _omz_libs=(clipboard completion directories functions git grep history key-bindings misc termsupport theme-and-appearance)
+  for lib in ${_omz_libs[@]}; do
+    zgen load robbyrussell/oh-my-zsh lib/$lib.zsh
+  done
+  zgen load itiut/itiut.zsh-theme itiut.zsh-theme  # depends on oh-my-zsh
 
-_Z_CMD=j
-zplug 'rupa/z', use:'z.sh'
+  zgen load junegunn/fzf shell
+  zgen load rupa/z
+  zgen load t413/zsh-background-notify
+  zgen load zsh-users/zsh-completions
+  zgen load zsh-users/zsh-history-substring-search
+  zgen load zsh-users/zsh-syntax-highlighting
 
-zplug check || zplug install
-zplug load
+  zgen save
+fi
 
 # zsh-users/zsh-history-substring-search
 bindkey '^P' history-substring-search-up
 bindkey '^N' history-substring-search-down
+
+### tpm
+if [ ! -d $HOME/.tmux/plugins/tpm ]; then
+  git clone https://github.com/tmux-plugins/tpm.git ~/.tmux/plugins/tpm
+fi
 
 ### zshoptions
 # completion
