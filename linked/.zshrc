@@ -1,14 +1,11 @@
 ### zgen
-if [ ! -d $HOME/.zgen ]; then
-  git clone https://github.com/tarjoilija/zgen.git $HOME/.zgen
-fi
 source $HOME/.zgen/zgen.zsh
 
 if ! zgen saved; then
   # oh-my-zsh/lib/theme-and-appearance.zsh requires .dircolors to exist
   # See https://github.com/robbyrussell/oh-my-zsh/commit/1b799e9762067f912c0eb807cd5a55d8f122adfd
+  zgen clone seebi/dircolors-solarized
   if [ ! -L $HOME/.dircolors ]; then
-    zgen clone seebi/dircolors-solarized
     ln -sv $(-zgen-get-clone-dir seebi/dircolors-solarized)/dircolors.256dark $HOME/.dircolors
   fi
 
@@ -31,11 +28,6 @@ fi
 # zsh-users/zsh-history-substring-search
 bindkey '^P' history-substring-search-up
 bindkey '^N' history-substring-search-down
-
-### tpm
-if [ ! -d $HOME/.tmux/plugins/tpm ]; then
-  git clone https://github.com/tmux-plugins/tpm.git ~/.tmux/plugins/tpm
-fi
 
 ### zshoptions
 # completion
