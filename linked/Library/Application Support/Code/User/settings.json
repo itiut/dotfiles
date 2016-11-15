@@ -15,7 +15,7 @@
   },
 
   "gitProjectManager.baseProjectsFolders": [
-    "/Users/itiut/src"
+    "~/src"
   ],
   "gitProjectManager.openInNewWindow": true,
   "gitProjectManager.storeRepositoriesBetweenSessions": true
