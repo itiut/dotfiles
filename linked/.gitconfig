@@ -4,10 +4,10 @@
 	editor = vim
 	pager = less -r
 	excludesfile = ~/.gitignore_global
-[branch]
-	autosetuprebase = always
 [color]
 	ui = auto
+[branch]
+	autosetuprebase = always
 [fetch]
 	prune = true
 [merge]
@@ -16,6 +16,9 @@
 	rebase = true
 [push]
 	default = simple
+	followTags = true
+[status]
+	showUntrackedFiles = all
 [url "https://github.com/"]
 	insteadOf = git://github.com/
 [url "git@github.com:"]
