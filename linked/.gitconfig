@@ -2,7 +2,6 @@
 	path = .gitconfig.local
 [core]
 	editor = vim
-	pager = less -r
 	excludesfile = ~/.gitignore_global
 [color]
 	ui = auto
