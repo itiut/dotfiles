@@ -8,6 +8,9 @@ cache:
   directories:
     - $(brew --cache)
   timeout: 86400
+branches:
+  only:
+    - master
 before_install:
   - bundle install
   - brew update
