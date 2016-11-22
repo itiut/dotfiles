@@ -19,7 +19,7 @@ if ! zgen saved; then
   zgen load rupa/z
   zgen load t413/zsh-background-notify
   zgen load zsh-users/zsh-completions src
-  zgen load zsh-users/zsh-syntax-highlighting
+  zgen load zsh-users/zsh-syntax-highlighting zsh-syntax-highlighting.zsh
   zgen load zsh-users/zsh-history-substring-search  # load after zsh-users/zsh-syntax-highlighting
 
   zgen load https://gist.github.com/13f1a097655dc00a2a08fa684d295d3c.git  # _aws
