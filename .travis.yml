@@ -3,6 +3,10 @@ rvm:
   - 2.3
 os:
   - osx
+cache:
+  bundler: true
+  directories:
+    - $(brew --cache)
 before_install:
   - bundle install
   - brew update
