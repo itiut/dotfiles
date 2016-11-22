@@ -7,9 +7,7 @@ before_install:
   - bundle install
   - brew update
   - brew --version
-  - which node
-  - test -x /usr/local/bin/node && ls -l /usr/local/bin/node && /usr/local/bin/node --version
-  - brew list node && sed -i "/^brew 'homebrew\/versions\/node.*'$/d" linked/.Brewfile
+  - brew list node && sed -e "/^brew 'homebrew\/versions\/node.*'$/d" -i .orig linked/.Brewfile
   - mkdir -p
       ~/Dropbox/.share/.aws
       ~/Dropbox/.share/.config
