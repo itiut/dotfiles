@@ -24,7 +24,7 @@ ln_s() {
   if [ -L "$HOME/$target" ]; then
     echo symlink exists, skip: $HOME/$target
   else
-    ln -sv "$target_dir/$target" "$HOME/$target"
+    ln -isv "$target_dir/$target" "$HOME/$target"
   fi
 }
 

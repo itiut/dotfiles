@@ -28,7 +28,7 @@ before_install:
 install:
   - travis_retry make brew
   - make shell
-  - make symlink
+  - yes | make symlink
 script:
   - make test
   - /usr/local/bin/zsh -cli 'true'
