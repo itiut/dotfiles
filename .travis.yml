@@ -26,3 +26,4 @@ install:
   - make symlink
 script:
   - make test
+  - /usr/local/bin/zsh -cli 'true'
