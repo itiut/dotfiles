@@ -21,7 +21,7 @@ before_install:
       ~/Dropbox/.share/.wakatime.cfg
       ~/Dropbox/.share/.zshenv.local
 install:
-  - make brew
+  - travis_retry make brew
   - make shell
   - make symlink
 script:
