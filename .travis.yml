@@ -4,6 +4,9 @@ rvm:
 os:
   - osx
 before_install:
+  - bundle install
+  - brew update
+  - brew --version
   - mkdir -p
       ~/Dropbox/.share/.aws
       ~/Dropbox/.share/.config
@@ -18,7 +21,6 @@ before_install:
       ~/Dropbox/.share/.wakatime.cfg
       ~/Dropbox/.share/.zshenv.local
 install:
-  - bundle install
   - make brew
   - make shell
   - make symlink
