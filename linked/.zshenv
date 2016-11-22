@@ -28,7 +28,8 @@ if [ -f /usr/local/opt/chruby/share/chruby/chruby.sh ]; then
 
   # for Atom, VS Code
   if [ -z $TERM ] && [ -f $HOME/.ruby-version ]; then
-    chruby "$(head -n 1 $HOME/.ruby-version)"
+    read < $HOME/.ruby-version
+    chruby $REPLY
   fi
 fi
 
