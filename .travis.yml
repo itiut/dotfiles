@@ -13,11 +13,14 @@ before_install:
   - brew update
   - brew --version
   - brew list node && sed -e "/^brew 'homebrew\/versions\/node.*'$/d" -i .orig linked/.Brewfile
-  - mkdir -p
-      $HOME/Library/Application\ Support/Code/User
+  - mkdir -pv
+      $HOME/.aws
+      $HOME/.config
+      $HOME/.ssh
       $HOME/Dropbox/.share/.aws
       $HOME/Dropbox/.share/.config
       $HOME/Dropbox/.share/.ssh
+      $HOME/Library/Application\ Support/Code/User
   - touch
       $HOME/Dropbox/.share/.aws/config
       $HOME/Dropbox/.share/.aws/credentials
