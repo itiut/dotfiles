@@ -139,7 +139,7 @@ ls-and-git-status() {
   echo
   ls
 
-  if [ "$(git rev-parse --is-inside-work-tree 2> /dev/null)" = 'true' ]; then
+  if git rev-parse --is-inside-work-tree &> /dev/null; then
     echo
     echo -e '\e[0;33m--- git status ---\e[0m'
     git status -sb
@@ -170,6 +170,6 @@ zle -N fzf-ghq-look
 bindkey '^]' fzf-ghq-look
 
 ### envs
-if whence direnv > /dev/null; then
+if (( ${+commands[direnv]} )); then
   eval "$(direnv hook zsh)"
 fi
