@@ -1,0 +1,26 @@
+language: ruby
+rvm:
+  - 2.3
+os:
+  - osx
+before_install:
+  - mkdir -p
+      ~/Dropbox/.share/.aws
+      ~/Dropbox/.share/.config
+      ~/Dropbox/.share/.ssh
+  - touch
+      ~/Dropbox/.share/.aws/config
+      ~/Dropbox/.share/.aws/credentials
+      ~/Dropbox/.share/.config/hub
+      ~/Dropbox/.share/.gist
+      ~/Dropbox/.share/.gitconfig.local
+      ~/Dropbox/.share/.ssh/config
+      ~/Dropbox/.share/.wakatime.cfg
+      ~/Dropbox/.share/.zshenv.local
+install:
+  - bundle install
+  - make brew
+  - make shell
+  - make symlink
+script:
+  - make test
