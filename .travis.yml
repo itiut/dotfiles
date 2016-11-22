@@ -14,18 +14,19 @@ before_install:
   - brew --version
   - brew list node && sed -e "/^brew 'homebrew\/versions\/node.*'$/d" -i .orig linked/.Brewfile
   - mkdir -p
-      ~/Dropbox/.share/.aws
-      ~/Dropbox/.share/.config
-      ~/Dropbox/.share/.ssh
+      $HOME/Library/Application\ Support/Code/User
+      $HOME/Dropbox/.share/.aws
+      $HOME/Dropbox/.share/.config
+      $HOME/Dropbox/.share/.ssh
   - touch
-      ~/Dropbox/.share/.aws/config
-      ~/Dropbox/.share/.aws/credentials
-      ~/Dropbox/.share/.config/hub
-      ~/Dropbox/.share/.gist
-      ~/Dropbox/.share/.gitconfig.local
-      ~/Dropbox/.share/.ssh/config
-      ~/Dropbox/.share/.wakatime.cfg
-      ~/Dropbox/.share/.zshenv.local
+      $HOME/Dropbox/.share/.aws/config
+      $HOME/Dropbox/.share/.aws/credentials
+      $HOME/Dropbox/.share/.config/hub
+      $HOME/Dropbox/.share/.gist
+      $HOME/Dropbox/.share/.gitconfig.local
+      $HOME/Dropbox/.share/.ssh/config
+      $HOME/Dropbox/.share/.wakatime.cfg
+      $HOME/Dropbox/.share/.zshenv.local
 install:
   - travis_retry make brew
   - make shell
