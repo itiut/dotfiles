@@ -22,6 +22,8 @@ if ! zgen saved; then
   zgen load zsh-users/zsh-syntax-highlighting
   zgen load zsh-users/zsh-history-substring-search  # load after zsh-users/zsh-syntax-highlighting
 
+  zgen load https://gist.github.com/13f1a097655dc00a2a08fa684d295d3c.git  # _aws
+
   zgen save
 fi
 
@@ -166,13 +168,6 @@ fzf-ghq-look() {
 }
 zle -N fzf-ghq-look
 bindkey '^]' fzf-ghq-look
-
-# aws
-aws() {
-  unset -f aws
-  source /usr/local/share/zsh/site-functions/_aws
-  aws "$@"
-}
 
 ### envs
 if whence direnv > /dev/null; then
