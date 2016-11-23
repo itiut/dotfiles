@@ -58,7 +58,7 @@ setopt NO_BEEP
 # overrides
 alias cp='cp -i'
 alias diff='colordiff -u'
-alias ls="$aliases[ls] -F"  # defined in oh-my-zsh/lib/theme-and-appearance.zsh
+alias ls="${aliases[ls]:-ls} -F"  # defined in oh-my-zsh/lib/theme-and-appearance.zsh
 alias mv='mv -i'
 alias rm='rm -i'
 
@@ -79,7 +79,7 @@ alias m='tmux new-session -A -s main'
 alias l='ls'
 alias la='ls -A'
 alias ll='ls -l -a'
-alias o='open_command'  # defined in oh-my-zsh/lib/functions.zsh
+alias o="${functions[(i)open_command]:-open}"  # defined in oh-my-zsh/lib/functions.zsh
 alias t='tig'
 alias ta='tig --all'
 alias tf='terraform'
@@ -153,7 +153,7 @@ bindkey '^[l' ls-and-git-status
 
 # open current directory by <ctrl-o>
 open-current-directory() {
-  open_command $PWD
+  o $PWD
 }
 zle -N open-current-directory
 bindkey '^O' open-current-directory
