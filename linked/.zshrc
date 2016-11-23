@@ -120,7 +120,7 @@ bindkey -M isearch ' ' magic-space  # insert a space in isearch
 
 # automatically run `ls` after `cd`
 auto-ls() { ls; }
-add-zsh-hook chpwd auto-ls
+chpwd_functions+=(auto-ls)
 
 # run `cd ..` or insert '^' by <^>
 cdup-or-insert-circumflex() {
