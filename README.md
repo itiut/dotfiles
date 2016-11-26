@@ -1,6 +1,8 @@
 dotfiles
 ====
-My dotfiles
+[![Build Status](https://travis-ci.org/itiut/dotfiles.svg?branch=master)](https://travis-ci.org/itiut/dotfiles)
+
+> :wrench: My dotfiles
 
 
 Environments

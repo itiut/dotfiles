@@ -1,0 +1,33 @@
+language: ruby
+rvm:
+- 2.3
+os:
+- osx
+cache:
+  bundler: true
+  directories:
+  - "$(brew --cache)"
+  timeout: 86400
+branches:
+  only:
+  - master
+before_install:
+- bundle install
+- brew update
+- brew --version
+- brew list node && sed -e "/^brew 'homebrew\/versions\/node.*'$/d" -i .orig linked/.Brewfile
+- mkdir -pv $HOME/.aws $HOME/.config $HOME/.ssh $HOME/Dropbox/.share/.aws $HOME/Dropbox/.share/.config
+  $HOME/Dropbox/.share/.ssh $HOME/Library/Application\ Support/Code/User
+- touch $HOME/Dropbox/.share/.aws/config $HOME/Dropbox/.share/.aws/credentials $HOME/Dropbox/.share/.config/hub
+  $HOME/Dropbox/.share/.gist $HOME/Dropbox/.share/.gitconfig.local $HOME/Dropbox/.share/.ssh/config
+  $HOME/Dropbox/.share/.wakatime.cfg $HOME/Dropbox/.share/.zshenv.local
+install:
+- travis_retry make brew
+- make shell
+- yes | make symlink
+script:
+- make test
+- "/usr/local/bin/zsh -cli 'true'"
+notifications:
+  slack:
+    secure: ghbpkzsDdi2456/xcwFqz/M2iQ1PYPh09laVaOFe/orugCF1UY1pSXEfgGEjxv0WA1ysDhOKFNyW7D3cel/6lFHyNfPHd/EIfaGs6zkm7LjnADXptYMYbNhZq9o0zzJRPQjdfYCwDQKKF4N9ZbZpFCRgB8imZ8OiZF4cx4dFNQHthE4M+rEJGJssY0X0yuY/5IbpFIv6U3wpqVFvBnf6So31zmiZoTzCaVEJDnUW6NIq2GiXxU0D31NJckAw77hdmPrrC2kQW76BE1zcwGlNSVnA+pDT2FZQU5NPFPQyiXUVGdQuanpIKYFebAwB0X7T15BpUJJ3OErso77GvJyPw065MSy+ojEA53v+oK5Nf1KXQJgCNeNCc+ubBKQRfRmMopY194gspCC9RKhf7RbaO11cHL96TaKjHB9SHbLDppYTozDyeuSVgfCkgcxMXan6M2/A/3zE+SdQ21gIWCYFBnp7GgMf6mFfDh/eHA0wpcta9EM1ToceBlgcnsA1zy5weeqMhRe7j1FYnM1QoFaodNO9OPcgGEMLBVKMoypmMuC+yGFqdVuEhCnerVMZ33SPZ0QWz4ZL19wxYyjzY7sSFXArbbxJsooZ3mfZlxbUkd2Lin+XLHT3p/4uczW34asi3wAy5AlDrd70CudkZL1NANFi6DtBPp9ucNjBmUPhuA4=

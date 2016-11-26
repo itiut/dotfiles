@@ -13,7 +13,7 @@ describe 'brew' do
   end
 
   describe 'bundle' do
-    describe command("brew bundle #{brewfile_path_option}") do
+    describe command("brew bundle check #{brewfile_path_option}") do
       its(:exit_status) { should eq(0) }
     end
   end
