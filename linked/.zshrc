@@ -159,16 +159,16 @@ open-current-directory() {
 zle -N open-current-directory
 bindkey '^O' open-current-directory
 
-# run `ghq look` with fzf by <ctrl-]>
-fzf-ghq-look() {
+# `cd` to the repository selected by ghq and fzf by <ctrl-]>
+fzf-cd-ghq() {
   local repo="$(ghq list | fzf-tmux)"
-  if [ -n "$repo" ]; then
-    BUFFER="ghq look $repo"
+  if [[ -n "$repo" ]]; then
+    BUFFER="cd $(ghq root)/$repo"
     zle accept-line
   fi
 }
-zle -N fzf-ghq-look
-bindkey '^]' fzf-ghq-look
+zle -N fzf-cd-ghq
+bindkey '^]' fzf-cd-ghq
 
 ### envs
 if (( ${+commands[direnv]} )); then
