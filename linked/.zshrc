@@ -28,7 +28,7 @@ if ! zgen saved; then
   zgen save
 fi
 
-LESS="-iMR"  # override oh-my-zsh/lib/misc.zsh
+LESS='-iMR'  # override oh-my-zsh/lib/misc.zsh
 
 # zsh-users/zsh-history-substring-search
 bindkey '^P' history-substring-search-up
@@ -125,7 +125,7 @@ chpwd_functions+=(auto-ls)
 
 # run `cd ..` or insert '^' by <^>
 cdup-or-insert-circumflex() {
-  if [[ -z "$BUFFER" ]]; then
+  if [[ -z $BUFFER ]]; then
     BUFFER='cd ..'
     zle accept-line
   else
@@ -159,20 +159,20 @@ open-current-directory() {
 zle -N open-current-directory
 bindkey '^O' open-current-directory
 
-# `cd` to the repository selected by ghq and fzf by <ctrl-]>
+# `cd` to the repository selected with ghq and fzf by <ctrl-]>
 fzf-cd-ghq() {
-  local repo="$(ghq list | fzf-tmux)"
-  if [[ -n "$repo" ]]; then
-    BUFFER="cd $(ghq root)/$repo"
-    zle accept-line
-  fi
+  local repo=$(ghq list | fzf-tmux --prompt 'cd> ')
+  [[ -z $repo ]] && return
+
+  BUFFER="cd $(ghq root)/$repo"
+  zle accept-line
 }
 zle -N fzf-cd-ghq
 bindkey '^]' fzf-cd-ghq
 
 # open the repository in the browser, selected with ghq and fzf by <alt-]>
 fzf-browse-ghq() {
-  local repo=$(ghq list | fzf-tmux)
+  local repo=$(ghq list | fzf-tmux --prompt 'browse> ')
   [[ -z $repo ]] && return
 
   if [[ ${repo:0:11} = 'github.com/' ]]; then
