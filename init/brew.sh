@@ -19,5 +19,18 @@ brew_bundle() {
   fi
 }
 
+show_took_time() {
+  local prev=$(date +%s) line
+  while IFS= read -r line; do
+    local now=$(date +%s)
+    if [[ "$line" =~ ^Succeeded\ in ]]; then
+      echo $line \($(( now - prev ))s\)
+    else
+      echo $line
+    fi
+    prev=$now
+  done
+}
+
 prepare_brew
-brew_bundle
+brew_bundle | show_took_time
