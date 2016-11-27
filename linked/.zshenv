@@ -24,7 +24,6 @@ export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
 export GOPATH=$HOME
 if [ -f /usr/local/opt/chruby/share/chruby/chruby.sh ]; then
   source /usr/local/opt/chruby/share/chruby/chruby.sh
-  source /usr/local/opt/chruby/share/chruby/auto.sh
 
   # for Atom, VS Code
   if [ -z $TERM ] && [ -f $HOME/.ruby-version ]; then
