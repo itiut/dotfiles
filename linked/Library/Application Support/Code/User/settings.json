@@ -6,6 +6,7 @@
   "editor.scrollBeyondLastLine": false,
 
   "files.associations": {
+    ".Brewfile": "shellscript",
     ".envrc": "shellscript"
   },
 
