@@ -19,7 +19,7 @@ brew_bundle() {
   fi
 }
 
-show_took_time() {
+show_taken_time() {
   local prev=$(date +%s) line
   while IFS= read -r line; do
     local now=$(date +%s)
@@ -33,4 +33,4 @@ show_took_time() {
 }
 
 prepare_brew
-brew_bundle | show_took_time
+brew_bundle | show_taken_time
