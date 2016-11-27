@@ -170,6 +170,26 @@ fzf-cd-ghq() {
 zle -N fzf-cd-ghq
 bindkey '^]' fzf-cd-ghq
 
+# open the repository in the browser, selected with ghq and fzf by <alt-]>
+fzf-browse-ghq() {
+  local repo=$(ghq list | fzf-tmux)
+  [[ -z $repo ]] && return
+
+  if [[ ${repo:0:11} = 'github.com/' ]]; then
+    hub browse ${repo:11}
+  else
+    local url=${$(git config --file $(ghq root)/$repo/.git/config --get remote.origin.url)%.git}
+    [[ -z $url ]] && return
+
+    if [[ ${url:0:4} == 'git@' ]]; then
+      url="https://${${url:4}/://}"
+    fi
+    o $url
+  fi
+}
+zle -N fzf-browse-ghq
+bindkey '^[]' fzf-browse-ghq
+
 ### envs
 if (( ${+commands[direnv]} )); then
   eval "$(direnv hook zsh)"
