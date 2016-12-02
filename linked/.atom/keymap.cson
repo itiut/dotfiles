@@ -39,20 +39,14 @@
 
 'atom-workspace':
   'alt-g t': 'open-on-github:repository'
-  'ctrl-]': 'douglas:toggle'
 
 'atom-text-editor':
   'ctrl-?': 'core:redo'
-  'ctrl-@': 'expand-region:expand'
-  'ctrl-`': 'expand-region:shrink'
   'ctrl-shift-cmd-m': 'bracket-matcher:select-inside-brackets'
 
 'atom-text-editor:not([mini])':
-  'alt-g n': 'linter:next-error'
-  'alt-g p': 'linter:previous-error'
   'alt-r': 'symbols-view:go-to-declaration'
   'alt-R': 'symbols-view:return-from-declaration'
-  'alt-y': 'clipboard-plus:toggle'
   'ctrl-x n': 'git-diff:move-to-next-diff'
   'ctrl-x p': 'git-diff:move-to-previous-diff'
 
@@ -66,8 +60,6 @@
 
 '.platform-darwin atom-text-editor:not([mini])':
   'alt-¥': 'emacs-plus:delete-horizontal-space'
-  'cmd-/': 'api-docs:search-under-cursor'
-  'cmd-shift-e': 'emmet:expand-abbreviation'
 
 # override advanced-open-file C-k
 '.advanced-open-file atom-text-editor':

@@ -2,29 +2,15 @@
   "advanced-open-file":
     fuzzyMatch: true
     helmDirSwitch: true
-  "api-docs":
-    go: true
-    node: true
-    "ruby~2":
-      "3": true
-  "atom-beautify":
-    general:
-      _analyticsUserId: "0cbb3648-7ba7-4603-b64a-f29f607de2e6"
   "autocomplete-plus": {}
-  "autocomplete-python": {}
-  "clipboard-plus": {}
   core:
     disabledPackages: [
       "whitespace"
     ]
     openEmptyEditorOnStart: false
     packagesWithKeymapsDisabled: [
-      "api-docs"
-      "douglas"
-      "emmet"
       "go-to-line"
       "highlight-line"
-      "linter"
     ]
     telemetryConsent: "limited"
     themes: [
@@ -34,35 +20,15 @@
   editor:
     fontFamily: "Source Code Pro, Ricty Diminished"
     showIndentGuide: true
-  emmet: {}
   "exception-reporting":
     userId: "2264dd7b-1231-b952-fb24-584fa4f58c74"
-  "expand-region": {}
   "git-diff":
     showIconsInEditorGutter: true
-  "git-diff-details":
-    enableSyntaxHighlighting: true
-  "git-plus": {}
-  "go-plus":
-    panelDisplayMode: "closed"
   "highlight-line": {}
   "highlight-selected": {}
-  linter: {}
-  "linter-clang": {}
-  "linter-flake8": {}
-  "linter-htmlhint": {}
-  "linter-js-yaml": {}
-  "linter-rubocop": {}
-  "linter-ruby": {}
-  "linter-scss-lint": {}
-  "linter-shellcheck": {}
-  "linter-tidy": {}
   "markdown-preview":
     useGitHubStyle: true
   "one-dark-ui": {}
-  "ruby-test":
-    shell: "zsh"
-    specFramework: "rspec"
   "spell-check": {}
   "status-bar": {}
   tabs:
