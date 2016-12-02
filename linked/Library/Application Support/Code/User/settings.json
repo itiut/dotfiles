@@ -5,6 +5,8 @@
   "editor.renderIndentGuides": true,
   "editor.scrollBeyondLastLine": false,
 
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+
   "files.associations": {
     ".Brewfile": "shellscript",
     ".envrc": "shellscript"
