@@ -48,6 +48,7 @@
 	sh = show
 	st = status
 	stashes = !tig stash
+	sync-master = !git fetch --all && git checkout master && git merge --ff-only origin/master && git push $USER master
 	tags = tag
 	this = !git init && git add --all && git commit -m 'Initial commit'
 	uncommit = reset --soft HEAD~
