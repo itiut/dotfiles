@@ -1,0 +1,9 @@
+#!/usr/bin/env zsh
+# Run `cd ..` or insert '^'
+
+if [[ -z $BUFFER ]]; then
+  BUFFER='cd ..'
+  zle accept-line
+else
+  zle self-insert '^'
+fi

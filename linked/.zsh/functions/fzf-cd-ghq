@@ -1,0 +1,8 @@
+#!/usr/bin/env zsh
+# `cd` to the repository selected with ghq and fzf
+
+local repo=$(ghq list | fzf-tmux --prompt 'cd> ')
+[[ -z $repo ]] && return
+
+BUFFER="cd $(ghq root)/$repo"
+zle accept-line

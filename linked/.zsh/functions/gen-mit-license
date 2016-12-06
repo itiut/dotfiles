@@ -1,0 +1,8 @@
+#!/usr/bin/env zsh
+# Generate a MIT License file named LICENSE.md
+
+echo 'Generate LICENSE.md...'
+curl -s -H 'Accept:application/vnd.github.drax-preview+json' https://api.github.com/licenses/mit \
+  | jq -j '.body' \
+  | sed "s/\[year\]/$(date +%Y)/;s/\[fullname\]/$(git config --get user.name)/" \
+  > LICENSE.md

@@ -25,6 +25,7 @@ if ! zgen saved; then
   zgen load zsh-users/zsh-history-substring-search  # load after zsh-users/zsh-syntax-highlighting
 
   zgen load https://gist.github.com/13f1a097655dc00a2a08fa684d295d3c.git  # _aws
+  zgen load ~/src/github.com/itiut/dotfiles/linked/.zsh/functions/init.zsh
 
   zgen save
 fi
@@ -123,73 +124,6 @@ bindkey -M isearch ' ' magic-space  # insert a space in isearch
 # automatically run `ls` after `cd`
 auto-ls() { ls; }
 chpwd_functions+=(auto-ls)
-
-# run `cd ..` or insert '^' by <^>
-cdup-or-insert-circumflex() {
-  if [[ -z $BUFFER ]]; then
-    BUFFER='cd ..'
-    zle accept-line
-  else
-    zle self-insert '^'
-  fi
-}
-zle -N cdup-or-insert-circumflex
-bindkey '\^' cdup-or-insert-circumflex
-
-# run `ls && git status` by <alt-l>
-ls-and-git-status() {
-  echo
-  ls
-
-  if git rev-parse --is-inside-work-tree &> /dev/null; then
-    echo
-    echo -e '\e[0;33m--- git status ---\e[0m'
-    git status -sb
-  fi
-
-  echo '\n'  # avoid being not displayed when PROMPT contains newline
-  zle reset-prompt
-}
-zle -N ls-and-git-status
-bindkey '^[l' ls-and-git-status
-
-# open current directory by <ctrl-o>
-open-current-directory() {
-  o $PWD
-}
-zle -N open-current-directory
-bindkey '^O' open-current-directory
-
-# `cd` to the repository selected with ghq and fzf by <ctrl-]>
-fzf-cd-ghq() {
-  local repo=$(ghq list | fzf-tmux --prompt 'cd> ')
-  [[ -z $repo ]] && return
-
-  BUFFER="cd $(ghq root)/$repo"
-  zle accept-line
-}
-zle -N fzf-cd-ghq
-bindkey '^]' fzf-cd-ghq
-
-# open the repository in the browser, selected with ghq and fzf by <alt-]>
-fzf-browse-ghq() {
-  local repo=$(ghq list | fzf-tmux --prompt 'browse> ')
-  [[ -z $repo ]] && return
-
-  if [[ ${repo:0:11} = 'github.com/' ]]; then
-    hub browse ${repo:11}
-  else
-    local url=${$(git config --file $(ghq root)/$repo/.git/config --get remote.origin.url)%.git}
-    [[ -z $url ]] && return
-
-    if [[ ${url:0:4} == 'git@' ]]; then
-      url="https://${${url:4}/://}"
-    fi
-    o $url
-  fi
-}
-zle -N fzf-browse-ghq
-bindkey '^[]' fzf-browse-ghq
 
 ### envs
 if (( ${+commands[direnv]} )); then

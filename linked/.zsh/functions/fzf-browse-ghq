@@ -1,0 +1,17 @@
+#!/usr/bin/env zsh
+# Open the repository in the browser, selected with ghq and fzf
+
+local repo=$(ghq list | fzf-tmux --prompt 'browse> ')
+[[ -z $repo ]] && return
+
+if [[ ${repo:0:11} = 'github.com/' ]]; then
+  hub browse ${repo:11}
+else
+  local url=${$(git config --file $(ghq root)/$repo/.git/config --get remote.origin.url)%.git}
+  [[ -z $url ]] && return
+
+  if [[ ${url:0:4} == 'git@' ]]; then
+    url="https://${${url:4}/://}"
+  fi
+  o $url
+fi
