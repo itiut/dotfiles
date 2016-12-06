@@ -24,7 +24,6 @@ if ! zgen saved; then
   zgen load zsh-users/zsh-syntax-highlighting zsh-syntax-highlighting.zsh
   zgen load zsh-users/zsh-history-substring-search  # load after zsh-users/zsh-syntax-highlighting
 
-  zgen load https://gist.github.com/13f1a097655dc00a2a08fa684d295d3c.git  # _aws
   zgen load ~/src/github.com/itiut/dotfiles/linked/.zsh/functions/init.zsh
 
   zgen save
