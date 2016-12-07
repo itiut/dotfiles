@@ -5,6 +5,10 @@
 	excludesfile = ~/.gitignore_global
 [color]
 	ui = auto
+[pager]
+	diff = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
+	log  = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
+	show = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
 [branch]
 	autosetuprebase = always
 [fetch]
