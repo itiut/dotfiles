@@ -1,5 +1,6 @@
 export LANG=en_US.UTF-8
 export EDITOR=vim
+export LESS='-iMR'
 
 typeset -U path manpath
 if [[ -x /usr/libexec/path_helper ]]; then

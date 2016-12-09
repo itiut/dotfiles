@@ -29,8 +29,6 @@ if ! zgen saved; then
   zgen save
 fi
 
-LESS='-iMR'  # override oh-my-zsh/lib/misc.zsh
-
 # zsh-users/zsh-history-substring-search
 bindkey '^P' history-substring-search-up
 bindkey '^N' history-substring-search-down
