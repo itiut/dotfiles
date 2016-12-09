@@ -3,12 +3,9 @@
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore_global
+	pager = diff-so-fancy | less
 [color]
 	ui = auto
-[pager]
-	diff = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
-	log  = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
-	show = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
 [branch]
 	autosetuprebase = always
 [fetch]
@@ -20,6 +17,8 @@
 [push]
 	default = simple
 	followTags = true
+[rebase]
+	autosquash = true
 [status]
 	showUntrackedFiles = all
 [url "https://github.com/"]
