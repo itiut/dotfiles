@@ -3,6 +3,7 @@
 autoload -Uz \
   cdup-or-insert-circumflex \
   fzf-cd-ghq \
+  fzf-git-commit-hash \
   gen-mit-license
 
 autoload -z \
@@ -22,6 +23,10 @@ bindkey '^[]' fzf-browse-ghq
 # fzf-cd-ghq by <ctrl-]>
 zle -N fzf-cd-ghq
 bindkey '^]' fzf-cd-ghq
+
+# fzf-git-commit-hash by <alt-@>
+zle -N fzf-git-commit-hash
+bindkey '^[@' fzf-git-commit-hash
 
 # ls-and-git-status by <alt-l>
 zle -N ls-and-git-status
