@@ -1,14 +1,17 @@
 {
   "recommendations": [
+    "abusaidm.html-snippets",
     "christian-kohler.path-intellisense",
     "dbaeumer.vscode-eslint",
     "EditorConfig.EditorConfig",
     "eg2.tslint",
     "felipecaputo.git-project-manager",
     "hiro-sun.vscode-emacs",
+    "liuji-jim.vue",
     "lukehoban.Go",
     "ms-vscode.Theme-TomorrowKit",
     "msjsdiag.debugger-for-chrome",
+    "Perkovec.emoji",
     "rebornix.Ruby",
     "robertohuertasm.vscode-icons",
     "seanmcbreen.Spell",
