@@ -1,4 +1,4 @@
-#/usr/bin/env bash
+#!/usr/bin/env bash
 set -eu
 
 PROJECT_ROOT=$(realpath $(dirname $0)/..)
