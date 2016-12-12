@@ -4,21 +4,18 @@ export LANG=en_US.UTF-8
 export EDITOR=vim
 export LESS='-iMR'
 
-typeset -U path manpath
-if [[ -x /usr/libexec/path_helper ]]; then
-  eval "$(/usr/libexec/path_helper -s)"
-fi
+typeset -Ux path manpath
 path=(
-  /usr/local/opt/{coreutils,findutils,gnu-sed}/libexec/gnubin(N-/)
   $HOME{/Dropbox,}/bin(N-/)
-  $path
+  /usr/local/opt/{coreutils,findutils,gnu-sed}/libexec/gnubin(N-/)
+  {/usr/local,/usr,}/bin(N-/)
+  {/usr,}/sbin(N-/)
 )
 manpath=(
   /usr/local/opt/{coreutils,findutils,gnu-sed}/libexec/gnuman(N-/)
-  ${(s/:/)$(man -w)}  # Add Xcode man pages on OS X before exporting MANPATH
-  $manpath
+  /usr{/local,}/share/man(N-/)
+  /Applications/Xcode.app/Contents/Developer/{,Toolchains/XcodeDefault.xctoolchain/}usr/share/man(N-/)
 )
-export MANPATH
 
 export FZF_DEFAULT_COMMAND='ag -l --nocolor --hidden --ignore .git --search-binary'
 export FZF_DEFAULT_OPTS='--reverse --bind=ctrl-k:kill-line'
