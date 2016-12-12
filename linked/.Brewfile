@@ -42,7 +42,7 @@ brew 'tig'
 brew 'tmate'
 brew 'tmux'
 brew 'tree'
-brew 'zsh', args: ['without-etcdir']
+brew 'zsh'
 cask 'alfred'
 cask 'atom'
 cask 'betterzipql'
