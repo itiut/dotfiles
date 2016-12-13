@@ -4,7 +4,7 @@ export LANG=en_US.UTF-8
 export EDITOR=vim
 export LESS='-iMR'
 
-typeset -Ux path manpath
+typeset -U path manpath
 path=(
   $HOME{/Dropbox,}/bin(N-/)
   /usr/local/opt/{coreutils,findutils,gnu-sed}/libexec/gnubin(N-/)
@@ -16,6 +16,7 @@ manpath=(
   /usr{/local,}/share/man(N-/)
   /Applications/Xcode.app/Contents/Developer/{,Toolchains/XcodeDefault.xctoolchain/}usr/share/man(N-/)
 )
+export PATH MANPATH
 
 export FZF_DEFAULT_COMMAND='ag -l --nocolor --hidden --ignore .git --search-binary'
 export FZF_DEFAULT_OPTS='--reverse --bind=ctrl-k:kill-line'
