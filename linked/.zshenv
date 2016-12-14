@@ -22,6 +22,7 @@ export FZF_DEFAULT_COMMAND='ag -l --nocolor --hidden --ignore .git --search-bina
 export FZF_DEFAULT_OPTS='--reverse --bind=ctrl-k:kill-line'
 export FZF_ALT_C_COMMAND='(git rev-parse --is-inside-work-tree &> /dev/null && git ls-tree -dr --name-only HEAD || tree -dfiN --noreport | sed "1d;s/ -> .*//" | cut -b3-)'
 export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
+export GHQ_ROOT=$HOME/src
 export GOPATH=$HOME
 if [[ -f /usr/local/opt/chruby/share/chruby/chruby.sh ]]; then
   source /usr/local/opt/chruby/share/chruby/chruby.sh

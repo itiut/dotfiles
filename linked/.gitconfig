@@ -56,8 +56,6 @@
 	this = !git init && git add --all && git commit -m 'Initial commit'
 	uncommit = reset --soft HEAD~
 	unstage = reset -q HEAD --
-[ghq]
-	root = ~/src
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
