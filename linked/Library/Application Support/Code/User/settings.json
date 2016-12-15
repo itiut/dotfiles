@@ -3,20 +3,18 @@
   "editor.fontSize": 14,
   "editor.formatOnType": true,
   "editor.renderIndentGuides": true,
+  "editor.renderLineHighlight": "all",
   "editor.scrollBeyondLastLine": false,
-
   "workbench.editor.enablePreviewFromQuickOpen": false,
-
+  "window.showFullPath": true,
   "files.associations": {
     ".Brewfile": "shellscript",
     ".envrc": "shellscript"
   },
-
   "ruby.lint": {
     "rubocop": true,
     "ruby": true
   },
-
   "gitProjectManager.baseProjectsFolders": [
     "~/src"
   ],
