@@ -17,6 +17,7 @@ if ! zgen saved; then
 
   zgen load /usr/local/opt/chruby/share/chruby/auto.sh
   zgen load /usr/local/opt/fzf/shell
+  zgen load mollifier/cd-gitroot
   zgen load rupa/z
   zgen load sindresorhus/pretty-time-zsh
   zgen load t413/zsh-background-notify
@@ -67,6 +68,7 @@ alias be='bundle exec'
 alias bupd='brew update && echo -e "\e[34m==>\e[0;1m Outdated Formulae\e[0m" && brew outdated'
 alias bupg='brew upgrade && brew cleanup -s'
 alias c='cd'
+alias cr='cd-gitroot'
 alias d='docker'
 alias dc='docker-compose'
 alias dm='docker-machine'
