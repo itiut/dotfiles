@@ -1,5 +1,5 @@
 [
-// Core
+// Default
   {
     "key": "ctrl+alt+h",
     "command": "deleteWordLeft",
@@ -9,6 +9,11 @@
     "key": "ctrl+shift+/",
     "command": "redo",
     "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "deleteWordLeft",
+    "when": "editorTextFocus && !editorReadonly && !editorHasSelection"
   },
 
 // Editor
@@ -28,8 +33,19 @@
     "when": "editorTextFocus && !editorReadOnly && editorHasSelection"
   },
   {
+    "key": "ctrl+j",
+    "command": "type",
+    "args": {
+      "text": "\n"
+    },
+    "when": "editorTextFocus && !editorReadOnly"
+  },
+  {
     "key": "ctrl+m",
-    "command": "editor.action.insertLineAfter",
+    "command": "type",
+    "args": {
+      "text": "\n"
+    },
     "when": "editorTextFocus && !editorReadOnly"
   },
   {
