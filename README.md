@@ -7,7 +7,7 @@ dotfiles
 
 Environments
 ----
-- OS X El Capitan 10.11
+- macOS Sierra
 
 
 Setup
