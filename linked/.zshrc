@@ -88,6 +88,9 @@ alias tf='terraform'
 alias v='vim'
 alias va='vagrant'
 
+alias load-keyboard='sudo kextload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/'
+alias unload-keyboard='sudo kextunload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/'
+
 ### functions and keybindings
 # automatically expand abbreviations by <space>
 typeset -A abbreviations
