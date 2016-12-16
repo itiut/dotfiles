@@ -1,5 +1,5 @@
 ### zgen
-source $HOME/.zgen/zgen.zsh
+source $HOME/src/github.com/tarjoilija/zgen/zgen.zsh
 
 if ! zgen saved; then
   # oh-my-zsh/lib/theme-and-appearance.zsh requires .dircolors to exist

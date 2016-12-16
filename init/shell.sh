@@ -2,7 +2,7 @@
 set -eu
 
 ZSH_PATH=/usr/local/bin/zsh
-ZGEN_PATH=$HOME/.zgen/zgen.zsh
+ZGEN_PATH=$HOME/src/github.com/tarjoilija/zgen/zgen.zsh
 TPM_PATH=$HOME/.tmux/plugins/tpm/tpm
 
 prepare_loginshell() {

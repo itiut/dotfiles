@@ -5,7 +5,7 @@ describe 'shell' do
     it { should have_login_shell('/usr/local/bin/zsh') }
   end
 
-  describe file(File.expand_path('.zgen/zgen.zsh', '~/')) do
+  describe file(File.expand_path('src/github.com/tarjoilija/zgen/zgen.zsh', '~/')) do
     it { should be_file }
     it { should be_executable.by_user(ENV['USER']) }
   end
