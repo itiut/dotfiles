@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -eu
 
-PROJECT_ROOT=$(realpath $(dirname $0)/..)
+PROJECT_ROOT=$(cd $(dirname $0)/.. && pwd)
 BREWFILE_PATH=$PROJECT_ROOT/linked/.Brewfile
 
 prepare_brew() {
