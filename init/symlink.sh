@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -eu
 
-PROJECT_ROOT=$(realpath $(dirname $0)/..)
+PROJECT_ROOT=$(cd $(dirname $0)/.. && pwd)
 DOTFILES_DIR=$PROJECT_ROOT/linked
 DOTFILES_ADDITIONAL_TARGETS=(
   .atom
