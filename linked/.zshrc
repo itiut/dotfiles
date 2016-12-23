@@ -66,7 +66,7 @@ alias rm='rm -i'
 # abbreviations
 alias be='bundle exec'
 alias bupd='brew update && echo -e "\e[34m==>\e[0;1m Outdated Formulae\e[0m" && brew outdated'
-alias bupg='brew upgrade && brew cleanup -s'
+alias bupg='brew upgrade && brew cleanup --prune=0'
 alias c='cd'
 alias cr='cd-gitroot'
 alias d='docker'
