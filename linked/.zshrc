@@ -17,10 +17,9 @@ if ! zgen saved; then
 
   zgen load /usr/local/opt/chruby/share/chruby/auto.sh
   zgen load /usr/local/opt/fzf/shell
+  zgen load marzocchi/zsh-notify
   zgen load mollifier/cd-gitroot
-  zgen load rupa/z
   zgen load sindresorhus/pretty-time-zsh
-  zgen load t413/zsh-background-notify
   zgen load zsh-users/zsh-completions src
   zgen load zsh-users/zsh-syntax-highlighting zsh-syntax-highlighting.zsh
   zgen load zsh-users/zsh-history-substring-search  # load after zsh-users/zsh-syntax-highlighting
