@@ -92,6 +92,7 @@ typeset -A abbreviations
 abbreviations=(
   'A'  '| awk'
   'C'  '| clipcopy'
+  'CD'  '&& cd $_'
   'E'  '2>&1 > /dev/null'
   'F'  '| fzf'
   'G'  '| grep'
