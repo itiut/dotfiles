@@ -1,4 +1,6 @@
 {
+  "C_Cpp.clang_format_formatOnSave": true,
+  "C_Cpp.clang_format_path": "/usr/local/bin/clang-format",
   "editor.fontFamily": "Source Code Pro, Ricty Diminished",
   "editor.fontSize": 14,
   "editor.formatOnType": true,
@@ -9,6 +11,7 @@
   "window.showFullPath": true,
   "files.associations": {
     ".Brewfile": "shellscript",
+    ".clang-format": "yaml",
     ".envrc": "shellscript"
   },
   "ruby.lint": {
