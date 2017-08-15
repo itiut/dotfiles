@@ -72,5 +72,9 @@
   {
     "key": "ctrl+]",
     "command": "gitProjectManager.openProject"
+  },
+  {
+    "key": "ctrl+shift+]",
+    "command": "gitProjectManager.refreshProjects"
   }
 ]
