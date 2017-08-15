@@ -8,7 +8,6 @@
   "editor.renderLineHighlight": "all",
   "editor.scrollBeyondLastLine": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
-  "window.showFullPath": true,
   "files.associations": {
     ".Brewfile": "shellscript",
     ".clang-format": "yaml",
@@ -22,5 +21,8 @@
     "~/src"
   ],
   "gitProjectManager.openInNewWindow": true,
-  "gitProjectManager.storeRepositoriesBetweenSessions": true
+  "gitProjectManager.storeRepositoriesBetweenSessions": true,
+  "workbench.colorTheme": "Tomorrow Night",
+  "workbench.iconTheme": "vscode-icons",
+  "window.title": "${activeEditorMedium}${separator}${rootName}"
 }
