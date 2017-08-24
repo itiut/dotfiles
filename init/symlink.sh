@@ -9,6 +9,7 @@ DOTFILES_ADDITIONAL_TARGETS=(
   .emacs.d
   Library/Application\ Support/Code/User/keybindings.json
   Library/Application\ Support/Code/User/settings.json
+  Library/Scripts
 )
 DOTFILES_DROPBOX_DIR=$HOME/Dropbox/.share
 DOTFILES_DROPBOX_ADDITIONAL_TARGETS=(

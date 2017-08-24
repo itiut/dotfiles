@@ -15,6 +15,7 @@ describe 'symlink' do
                  .emacs.d
                  Library/Application\ Support/Code/User/keybindings.json
                  Library/Application\ Support/Code/User/settings.json
+                 Library/Scripts
                  .aws/config
                  .aws/credentials
                  .config/hub
