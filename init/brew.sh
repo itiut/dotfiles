@@ -23,11 +23,7 @@ show_taken_time() {
   local prev=$(date +%s) line
   while IFS= read -r line; do
     local now=$(date +%s)
-    if [[ "$line" =~ ^Succeeded\ in ]]; then
-      echo $line \($(( now - prev ))s\)
-    else
-      echo $line
-    fi
+    echo $line \($(( now - prev ))s\)
     prev=$now
   done
 }

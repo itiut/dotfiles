@@ -1,13 +1,8 @@
 language: ruby
 rvm:
-- 2.3
+- 2.4
 os:
 - osx
-cache:
-  bundler: true
-  directories:
-  - "$(brew --cache)"
-  timeout: 86400
 branches:
   only:
   - master
