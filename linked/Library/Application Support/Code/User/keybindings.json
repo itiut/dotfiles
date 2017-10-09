@@ -54,6 +54,18 @@
     "when": "editorTextFocus && !editorReadonly && editorHasSelection"
   },
 
+// Explorer
+  {
+    "key": "a",
+    "command": "explorer.newFile",
+    "when": "explorerViewletVisible && filesExplorerFocus"
+  },
+  {
+    "key": "shift+a",
+    "command": "explorer.newFolder",
+    "when": "explorerViewletVisible && filesExplorerFocus"
+  },
+
 // Workbench
   {
     "key": "ctrl+tab",
