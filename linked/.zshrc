@@ -88,7 +88,7 @@ alias load-keyboard='sudo kextload /System/Library/Extensions/AppleUSBTopCase.ke
 alias unload-keyboard='sudo kextunload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/'
 
 ### functions and keybindings
-# automatically expand abbreviations by <space>
+# automatically expand abbreviations by <ctrl-space>
 typeset -A abbreviations
 abbreviations=(
   'A'  '| awk'
@@ -112,13 +112,11 @@ abbreviations=(
 magic-abbrev-expand() {
   local MATCH
   LBUFFER=${LBUFFER%%(#m)[-_a-zA-Z0-9]#}
-  LBUFFER+=${abbreviations[$MATCH]:-$MATCH}
-  zle self-insert
+  LBUFFER+="${abbreviations[$MATCH]:-$MATCH} "
 }
 zle -N magic-abbrev-expand
-bindkey ' '  magic-abbrev-expand
-bindkey '^ ' magic-space  # skip expanding by <ctrl-space>
-bindkey -M isearch ' ' magic-space  # insert a space in isearch
+bindkey '^@' magic-abbrev-expand
+# in addition, make iTerm2 send <ctrl-space> by <shift-space>
 
 # automatically run `ls` after `cd`
 auto-ls() { ls; }
