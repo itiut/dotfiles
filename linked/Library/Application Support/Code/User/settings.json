@@ -24,6 +24,7 @@
   ],
   "gitProjectManager.openInNewWindow": true,
   "gitProjectManager.storeRepositoriesBetweenSessions": true,
+  "python.pythonPath": "python3",
   "workbench.colorTheme": "Tomorrow Night",
   "workbench.iconTheme": "vscode-icons",
   "window.title": "${activeEditorMedium}${separator}${rootName}"
