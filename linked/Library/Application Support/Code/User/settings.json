@@ -24,6 +24,8 @@
   ],
   "gitProjectManager.openInNewWindow": true,
   "gitProjectManager.storeRepositoriesBetweenSessions": true,
+  "javascript.format.insertSpaceAfterConstructor": true,
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
   "python.pythonPath": "python3",
   "workbench.colorTheme": "Tomorrow Night",
   "workbench.iconTheme": "vscode-icons",
