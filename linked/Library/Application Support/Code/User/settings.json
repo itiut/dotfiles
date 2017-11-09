@@ -6,18 +6,12 @@
   "editor.fontFamily": "Source Code Pro, Ricty Diminished",
   "editor.fontSize": 14,
   "editor.formatOnType": true,
-  "editor.renderIndentGuides": true,
   "editor.renderLineHighlight": "all",
   "editor.scrollBeyondLastLine": false,
-  "workbench.editor.enablePreviewFromQuickOpen": false,
   "files.associations": {
     ".Brewfile": "shellscript",
     ".clang-format": "yaml",
     ".envrc": "shellscript"
-  },
-  "ruby.lint": {
-    "rubocop": true,
-    "ruby": true
   },
   "gitProjectManager.baseProjectsFolders": [
     "~/src"
@@ -27,7 +21,12 @@
   "javascript.format.insertSpaceAfterConstructor": true,
   "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
   "python.pythonPath": "python3",
+  "ruby.lint": {
+    "rubocop": true,
+    "ruby": true
+  },
+  "window.title": "${activeEditorMedium}${separator}${rootName}",
   "workbench.colorTheme": "Tomorrow Night",
-  "workbench.iconTheme": "vscode-icons",
-  "window.title": "${activeEditorMedium}${separator}${rootName}"
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.iconTheme": "vscode-icons"
 }
