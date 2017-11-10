@@ -1,21 +1,26 @@
+// $ jo -p recommendations=$(jo -a $(code --list-extensions))
 {
   "recommendations": [
-    "abusaidm.html-snippets",
-    "christian-kohler.path-intellisense",
-    "dbaeumer.vscode-eslint",
     "EditorConfig.EditorConfig",
+    "Perkovec.emoji",
+    "PeterJausovec.vscode-docker",
+    "abusaidm.html-snippets",
+    "chenxsan.vscode-standardjs",
+    "dbaeumer.vscode-eslint",
     "eg2.tslint",
     "felipecaputo.git-project-manager",
+    "hars.CppSnippets",
     "hiro-sun.vscode-emacs",
+    "jbenden.c-cpp-flylint",
     "liuji-jim.vue",
     "lukehoban.Go",
     "mkaufman.HTMLHint",
+    "ms-python.python",
+    "ms-vscode.cpptools",
     "ms-vscode.Theme-TomorrowKit",
     "msjsdiag.debugger-for-chrome",
-    "Perkovec.emoji",
     "rebornix.Ruby",
     "robertohuertasm.vscode-icons",
-    "WakaTime.vscode-wakatime",
     "ziyasal.vscode-open-in-github"
   ]
 }
