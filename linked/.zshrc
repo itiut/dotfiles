@@ -116,7 +116,6 @@ magic-abbrev-expand() {
 }
 zle -N magic-abbrev-expand
 bindkey '^@' magic-abbrev-expand
-# in addition, make iTerm2 send <ctrl-space> by <shift-space>
 
 # automatically run `ls` after `cd`
 auto-ls() { ls; }

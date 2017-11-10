@@ -1432,13 +1432,6 @@
 			</array>
 			<key>Keyboard Map</key>
 			<dict>
-				<key>0x20-0x20000</key>
-				<dict>
-					<key>Action</key>
-					<integer>11</integer>
-					<key>Text</key>
-					<string>0x00</string>
-				</dict>
 				<key>0x2d-0x40000</key>
 				<dict>
 					<key>Action</key>
@@ -1990,7 +1983,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-11-01T05:47:23Z</date>
+	<date>2017-11-10T13:04:10Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -2045,6 +2038,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.1.4.beta.1</string>
+	<string>3.1.5.beta.1</string>
 </dict>
 </plist>
