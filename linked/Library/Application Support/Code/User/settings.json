@@ -1,5 +1,10 @@
 {
-  "C_Cpp.clang_format_formatOnSave": true,
+  "[c]": {
+    "editor.formatOnSave": true
+  },
+  "[cpp]": {
+    "editor.formatOnSave": true
+  },
   "C_Cpp.clang_format_path": "/usr/local/bin/clang-format",
   "C_Cpp.intelliSenseEngine": "Default",
   "c-cpp-flylint.flexelint.enable": false,
