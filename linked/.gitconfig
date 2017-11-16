@@ -49,6 +49,7 @@
 	remotes = remote -v
 	sb = show-branch --all
 	sh = show
+	shallow-clone = clone --depth 1
 	st = status
 	stashes = !tig stash
 	sync-master = !git fetch --all && git checkout master && git merge --ff-only origin/master && git push $USER master
