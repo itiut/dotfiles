@@ -65,6 +65,16 @@
     "command": "explorer.newFolder",
     "when": "explorerViewletVisible && filesExplorerFocus"
   },
+  {
+    "key": "enter",
+    "command": "-renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus"
+  },
+  {
+    "key": "m",
+    "command": "renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus"
+  },
 
 // Workbench
   {
