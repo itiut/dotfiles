@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-# Open the repository in the browser, selected with ghq and fzf
+# Open the selected remote repository in the browser
 
 local repo=$(ghq list | fzf-tmux --prompt 'browse> ')
 [[ -z $repo ]] && return

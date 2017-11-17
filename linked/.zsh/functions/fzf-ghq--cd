@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-# `cd` to the repository selected with ghq and fzf
+# `cd` to the selected local repository
 
 local repo=$(ghq list | fzf-tmux --prompt 'cd> ')
 [[ -z $repo ]] && return
