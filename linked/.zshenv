@@ -22,6 +22,8 @@ export FZF_DEFAULT_COMMAND='ag -l --nocolor --hidden --ignore .git --search-bina
 export FZF_DEFAULT_OPTS='--reverse --bind=ctrl-k:kill-line'
 export FZF_ALT_C_COMMAND='(git rev-parse --is-inside-work-tree &> /dev/null && git ls-tree -dr --name-only HEAD || tree -dfiN --noreport | sed "1d;s/ -> .*//" | cut -b3-)'
 export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
+export FZF_TMUX=1
+export FZF_TMUX_HEIGHT=50%
 export GHQ_ROOT=$HOME/src
 export GIBO_BOILERPLATES=$HOME/src/github.com/github/gitignore
 export GOPATH=$HOME
