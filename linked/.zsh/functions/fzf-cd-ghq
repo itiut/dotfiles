@@ -4,5 +4,5 @@
 local repo=$(ghq list | fzf-tmux --prompt 'cd> ')
 [[ -z $repo ]] && return
 
-BUFFER="cd $(ghq root)/$repo"
+BUFFER="cd ${$(ghq root)/#$HOME/~}/$repo"
 zle accept-line
