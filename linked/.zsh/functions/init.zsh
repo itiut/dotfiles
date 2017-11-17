@@ -2,6 +2,7 @@
 ### autolaod
 autoload -Uz \
   cdup-or-insert-circumflex \
+  fzf-ghq \
   fzf-ghq--cd \
   fzf-git-commit-hash \
   gen-mit-license
@@ -15,6 +16,10 @@ autoload -z \
 # cdup-or-insert-circumflex by <^>
 zle -N cdup-or-insert-circumflex
 bindkey '\^' cdup-or-insert-circumflex
+
+# fzf-ghq by <ctrl-shift-]> or <ctrl-\>
+zle -N fzf-ghq
+bindkey '^\' fzf-ghq
 
 # fzf-ghq--browse by <alt-]>
 zle -N fzf-ghq--browse

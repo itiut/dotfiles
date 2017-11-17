@@ -1,0 +1,9 @@
+#!/usr/bin/env zsh
+# Insert the selected local repository path into the command line
+
+local repo=$(ghq list | fzf-tmux)
+[[ -z $repo ]] && return
+
+LBUFFER="${LBUFFER}${$(ghq root)/#$HOME/~}/$repo"
+zle reset-prompt
+typeset -f zle-line-init > /dev/null && zle zle-line-init
