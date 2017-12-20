@@ -58,22 +58,21 @@
   {
     "key": "a",
     "command": "explorer.newFile",
-    "when": "explorerViewletVisible && filesExplorerFocus"
+    "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
   },
   {
     "key": "shift+a",
     "command": "explorer.newFolder",
-    "when": "explorerViewletVisible && filesExplorerFocus"
+    "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
   },
   {
     "key": "enter",
-    "command": "-renameFile",
-    "when": "explorerViewletVisible && filesExplorerFocus"
+    "command": "-renameFile"
   },
   {
     "key": "m",
     "command": "renameFile",
-    "when": "explorerViewletVisible && filesExplorerFocus"
+    "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
   },
 
 // Workbench
