@@ -27,15 +27,6 @@ export FZF_TMUX_HEIGHT=50%
 export GHQ_ROOT=$HOME/src
 export GIBO_BOILERPLATES=$HOME/src/github.com/github/gitignore
 export GOPATH=$HOME
-if [[ -f /usr/local/opt/chruby/share/chruby/chruby.sh ]]; then
-  source /usr/local/opt/chruby/share/chruby/chruby.sh
-
-  # for Atom, VS Code
-  if [[ -z $TERM && -f $HOME/.ruby-version ]]; then
-    read < $HOME/.ruby-version
-    chruby $REPLY
-  fi
-fi
 
 # local zshenv
 if [[ -f $HOME/.zshenv.local ]]; then

@@ -15,7 +15,6 @@ if ! zgen saved; then
   done
   zgen load itiut/itiut.zsh-theme itiut.zsh-theme  # depends on oh-my-zsh
 
-  zgen load /usr/local/opt/chruby/share/chruby/auto.sh
   zgen load /usr/local/opt/fzf/shell
   zgen load marzocchi/zsh-notify
   zgen load mollifier/cd-gitroot
